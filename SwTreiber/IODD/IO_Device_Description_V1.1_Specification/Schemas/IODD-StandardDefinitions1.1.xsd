@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:include schemaLocation="IODD-Primitives1.1.xsd"/>
+	<xsd:include schemaLocation="IODD-Datatypes1.1.xsd"/>
+	<xsd:include schemaLocation="IODD-Variables1.1.xsd"/>
+	<xsd:include schemaLocation="IODD-Events1.1.xsd"/>
+	<xsd:element name="IODDStandardDefinitions" type="IODDStandardDefinitionsT">
+		<!-- unique, key -->
+		<xsd:unique name="Variable_Index">
+			<xsd:selector xpath=".//iodd:Variable"/>
+			<xsd:field xpath="@index"/>
+		</xsd:unique>
+		<xsd:key name="Variable_Id">
+			<xsd:selector xpath=".//iodd:Variable"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:key name="PrimaryLanguage_Id">
+			<xsd:selector xpath=".//iodd:PrimaryLanguage/iodd:Text"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<!-- keyref -->
+		<xsd:keyref name="_TextId" refer="PrimaryLanguage_Id">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@textId"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:complexType name="IODDStandardDefinitionsT">
+		<xsd:sequence>
+			<xsd:element name="DocumentInfo" type="DocumentInfoT"/>
+			<xsd:element name="DatatypeCollection" type="DatatypeCollectionT" minOccurs="0"/>
+			<xsd:element name="VariableCollection" type="IODDStandardVariableCollectionT"/>
+			<xsd:element name="ErrorTypeCollection" type="IODDStandardErrorTypeCollectionT">
+				<xsd:unique name="ErrorType_code">
+					<xsd:selector xpath="iodd:ErrorType"/>
+					<xsd:field xpath="@code"/>
+					<xsd:field xpath="@additionalCode"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="EventCollection" type="IODDStandardEventCollectionT">
+				<xsd:unique name="Event_code">
+					<xsd:selector xpath="iodd:Event"/>
+					<xsd:field xpath="@code"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="ExternalTextCollection" type="ExternalTextCollectionT">
+				<xsd:unique name="Language">
+					<xsd:selector xpath="iodd:PrimaryLanguage|iodd:Language"/>
+					<xsd:field xpath="@xml:lang"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="Stamp" type="StampT">
+				<xsd:annotation>
+					<xsd:documentation>Filled out by the IODD Checker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="IODDStandardVariableCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="Variable" type="IODDStandardVariableT" maxOccurs="unbounded">
+						<xsd:unique name="IODDStandardVariable_RecordItemInfo_Subindex">
+							<xsd:selector xpath="iodd:RecordItemInfo"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IODDStandardErrorTypeCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="ErrorType" type="ErrorType128T" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorType128T">
+		<xsd:complexContent>
+			<xsd:restriction base="ErrorTypeT">
+				<xsd:sequence>
+					<xsd:element name="Name" type="TextRefT"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="code" type="xsd:unsignedByte" fixed="128"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IODDStandardEventCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="Event" type="EventDescT" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="IODDStandardUnitDefinitions" type="IODDStandardUnitDefinitionsT">
+		<xsd:key name="UnitPrimaryLanguage_Id">
+			<xsd:selector xpath=".//iodd:PrimaryLanguage/iodd:Text"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<!-- keyref -->
+		<xsd:keyref name="Unit_TextId" refer="UnitPrimaryLanguage_Id">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@textId"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:complexType name="IODDStandardUnitDefinitionsT">
+		<xsd:sequence>
+			<xsd:element name="DocumentInfo" type="DocumentInfoT"/>
+			<xsd:element name="UnitCollection" type="UnitCollectionT"/>
+			<xsd:element name="ExternalTextCollection" type="ExternalTextCollectionT">
+				<xsd:unique name="UnitDefinitionsLanguage">
+					<xsd:selector xpath="iodd:PrimaryLanguage|iodd:Language"/>
+					<xsd:field xpath="@xml:lang"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="Stamp" type="StampT">
+				<xsd:annotation>
+					<xsd:documentation>Filled out by the IODD Checker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="IODDStandardVariableT">
+		<xsd:complexContent>
+			<xsd:extension base="VariableT">
+				<xsd:attribute name="mandatory" type="xsd:boolean" default="false"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UnitCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="Unit" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:attribute name="code" type="xsd:positiveInteger" use="required"/>
+							<xsd:attribute name="abbr" type="xsd:string" use="required"/>
+							<xsd:attribute name="textId" type="RefT" use="required"/>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalTextDocument xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD-Primitives1.1.xsd">
+	<DocumentInfo version="V1.1" releaseDate="2011-08-08" copyright="IO-Link Consortium"/>
+	<Language xml:lang="fr">
+		<!-- 0 - 999 Reserved -->
+		<Text id="STD_T_1000" value="Kelvin"/>
+		<Text id="STD_T_1001" value="degré Celsius"/>
+		<Text id="STD_T_1002" value="degré Fahrenheit"/>
+		<Text id="STD_T_1003" value="degré Rankine"/>
+		<Text id="STD_T_1004" value="radian"/>
+		<Text id="STD_T_1005" value="degré"/>
+		<Text id="STD_T_1006" value="minute"/>
+		<Text id="STD_T_1007" value="seconde"/>
+		<Text id="STD_T_1008" value="gon (ou grade)"/>
+		<Text id="STD_T_1009" value="tour"/>
+		<Text id="STD_T_1010" value="mètre"/>
+		<Text id="STD_T_1011" value="kilomètre"/>
+		<Text id="STD_T_1012" value="centimètre"/>
+		<Text id="STD_T_1013" value="millimètre"/>
+		<Text id="STD_T_1014" value="micromètre"/>
+		<Text id="STD_T_1015" value="nanomètre"/>
+		<Text id="STD_T_1016" value="picomètre"/>
+		<Text id="STD_T_1017" value="ängström"/>
+		<Text id="STD_T_1018" value="pied"/>
+		<Text id="STD_T_1019" value="pouce"/>
+		<Text id="STD_T_1020" value="yard"/>
+		<Text id="STD_T_1021" value="mille"/>
+		<Text id="STD_T_1022" value="mille nautique"/>
+		<Text id="STD_T_1023" value="mètre carré"/>
+		<Text id="STD_T_1024" value="kilomètre carré"/>
+		<Text id="STD_T_1025" value="centimètre carré"/>
+		<Text id="STD_T_1026" value="décimètre carré"/>
+		<Text id="STD_T_1027" value="millimètre carré"/>
+		<Text id="STD_T_1028" value="are"/>
+		<Text id="STD_T_1029" value="hectare"/>
+		<Text id="STD_T_1030" value="pouce carré"/>
+		<Text id="STD_T_1031" value="pied carré"/>
+		<Text id="STD_T_1032" value="yard carré"/>
+		<Text id="STD_T_1033" value="mille carré"/>
+		<Text id="STD_T_1034" value="mètre cube"/>
+		<Text id="STD_T_1035" value="décimètre cube"/>
+		<Text id="STD_T_1036" value="centimètre cube"/>
+		<Text id="STD_T_1037" value="millimètre cube"/>
+		<Text id="STD_T_1038" value="litre"/>
+		<Text id="STD_T_1039" value="centilitre"/>
+		<Text id="STD_T_1040" value="millilitre"/>
+		<Text id="STD_T_1041" value="hectolitre"/>
+		<Text id="STD_T_1042" value="pouce cube"/>
+		<Text id="STD_T_1043" value="pieds cubes"/>
+		<Text id="STD_T_1044" value="yard cube"/>
+		<Text id="STD_T_1045" value="mille cube"/>
+		<Text id="STD_T_1046" value="pinte américaine"/>
+		<Text id="STD_T_1047" value="quart américain"/>
+		<Text id="STD_T_1048" value="gallon américain"/>
+		<Text id="STD_T_1049" value="gallon impérial"/>
+		<Text id="STD_T_1050" value="boisseau (matière sèche)"/>
+		<Text id="STD_T_1051" value="baril de pétrol américain"/>
+		<Text id="STD_T_1052" value="baril liquide (américain)"/>
+		<Text id="STD_T_1053" value="pied cube standard"/>
+		<Text id="STD_T_1054" value="seconde"/>
+		<Text id="STD_T_1055" value="kiloseconde"/>
+		<Text id="STD_T_1056" value="milliseconde"/>
+		<Text id="STD_T_1057" value="microseconde"/>
+		<Text id="STD_T_1058" value="minute"/>
+		<Text id="STD_T_1059" value="heure"/>
+		<Text id="STD_T_1060" value="jour"/>
+		<Text id="STD_T_1061" value="mètre par seconde"/>
+		<Text id="STD_T_1062" value="millimètre par seconde"/>
+		<Text id="STD_T_1063" value="mètre par heure"/>
+		<Text id="STD_T_1064" value="kilomètre par heure"/>
+		<Text id="STD_T_1065" value="mille nautique par heure"/>
+		<Text id="STD_T_1066" value="pouce par seconde"/>
+		<Text id="STD_T_1067" value="pied par seconde"/>
+		<Text id="STD_T_1068" value="yard par seconde"/>
+		<Text id="STD_T_1069" value="pouce par minute"/>
+		<Text id="STD_T_1070" value="pied par minute"/>
+		<Text id="STD_T_1071" value="yard par minute"/>
+		<Text id="STD_T_1072" value="pouce par heure"/>
+		<Text id="STD_T_1073" value="pied par heure"/>
+		<Text id="STD_T_1074" value="yard par heure"/>
+		<Text id="STD_T_1075" value="mile par heure"/>
+		<Text id="STD_T_1076" value="mètre par seconde carré"/>
+		<Text id="STD_T_1077" value="hertz"/>
+		<Text id="STD_T_1078" value="térahertz"/>
+		<Text id="STD_T_1079" value="gigahertz"/>
+		<Text id="STD_T_1080" value="mégahertz"/>
+		<Text id="STD_T_1081" value="kilohertz"/>
+		<Text id="STD_T_1082" value="par seconde"/>
+		<Text id="STD_T_1083" value="par minute"/>
+		<Text id="STD_T_1084" value="tour par seconde"/>
+		<Text id="STD_T_1085" value="tour par minute"/>
+		<Text id="STD_T_1086" value="radian par seconde"/>
+		<Text id="STD_T_1087" value="par seconde carré"/>
+		<Text id="STD_T_1088" value="kilogramme"/>
+		<Text id="STD_T_1089" value="gramme"/>
+		<Text id="STD_T_1090" value="milligramme"/>
+		<Text id="STD_T_1091" value="mégagramme"/>
+		<Text id="STD_T_1092" value="tonne métrique"/>
+		<Text id="STD_T_1093" value="once"/>
+		<Text id="STD_T_1094" value="livre"/>
+		<Text id="STD_T_1095" value="tonne courte"/>
+		<Text id="STD_T_1096" value="tonne longue"/>
+		<Text id="STD_T_1097" value="kilogramme par mètre cube"/>
+		<Text id="STD_T_1098" value="mégagramme par mètre cube"/>
+		<Text id="STD_T_1099" value="kilogramme par décimètre cube"/>
+		<Text id="STD_T_1100" value="gramme par centimètre cube"/>
+		<Text id="STD_T_1101" value="gramme par mètre cube"/>
+		<Text id="STD_T_1102" value="tonne métrique par mètre cube"/>
+		<Text id="STD_T_1103" value="kilogramme par litre"/>
+		<Text id="STD_T_1104" value="gramme par millilitre"/>
+		<Text id="STD_T_1105" value="gramme par litre"/>
+		<Text id="STD_T_1106" value="livre par pouce cube"/>
+		<Text id="STD_T_1107" value="livre par pied cube"/>
+		<Text id="STD_T_1108" value="livre par gallon américain"/>
+		<Text id="STD_T_1109" value="tonne courte par yard cube"/>
+		<Text id="STD_T_1110" value="degré Twaddell"/>
+		<Text id="STD_T_1111" value="degré baumé lourd"/>
+		<Text id="STD_T_1112" value="degré baumé légère"/>
+		<Text id="STD_T_1113" value="degré API"/>
+		<Text id="STD_T_1114" value="unité de gravité spécifique"/>
+		<Text id="STD_T_1115" value="kilogramme par mètre"/>
+		<Text id="STD_T_1116" value="milligramme par mètre"/>
+		<Text id="STD_T_1117" value="tex"/>
+		<Text id="STD_T_1118" value="kilogramme par mètre carré"/>
+		<Text id="STD_T_1119" value="kilogrammètre par seconde"/>
+		<Text id="STD_T_1120" value="newton"/>
+		<Text id="STD_T_1121" value="méganewton"/>
+		<Text id="STD_T_1122" value="kilonewton"/>
+		<Text id="STD_T_1123" value="millinewton"/>
+		<Text id="STD_T_1124" value="micronewton"/>
+		<Text id="STD_T_1125" value="kilogrammètre carré par seconde"/>
+		<Text id="STD_T_1126" value="newton mètre"/>
+		<Text id="STD_T_1127" value="méganewton mètre"/>
+		<Text id="STD_T_1128" value="kilonewton mètre"/>
+		<Text id="STD_T_1129" value="millinewton mètre"/>
+		<Text id="STD_T_1130" value="pascal"/>
+		<Text id="STD_T_1131" value="gigapascal"/>
+		<Text id="STD_T_1132" value="mégapascal"/>
+		<Text id="STD_T_1133" value="kilopascal"/>
+		<Text id="STD_T_1134" value="millipascal"/>
+		<Text id="STD_T_1135" value="micropascal"/>
+		<Text id="STD_T_1136" value="hectopascal"/>
+		<Text id="STD_T_1137" value="bar"/>
+		<Text id="STD_T_1138" value="millibar"/>
+		<Text id="STD_T_1139" value="torr"/>
+		<Text id="STD_T_1140" value="atmosphère"/>
+		<Text id="STD_T_1141" value="livre-force par pouce carré"/>
+		<Text id="STD_T_1142" value="livre-force par pouce carré absolu"/>
+		<Text id="STD_T_1143" value="livre-force par pouce carré relatif"/>
+		<Text id="STD_T_1144" value="gramme-force par centimètre carré"/>
+		<Text id="STD_T_1145" value="kilogramme-force par centimètre carré"/>
+		<Text id="STD_T_1146" value="pouces d'eau"/>
+		<Text id="STD_T_1147" value="pouces d'eau à 4°C"/>
+		<Text id="STD_T_1148" value="pouces d'eau à 68°F"/>
+		<Text id="STD_T_1149" value="millimètre d'eau"/>
+		<Text id="STD_T_1150" value="millimètre d'eau à 4°C"/>
+		<Text id="STD_T_1151" value="millimètre d'eau à 68°F"/>
+		<Text id="STD_T_1152" value="pied d'eau"/>
+		<Text id="STD_T_1153" value="pied d'eau à 4°C"/>
+		<Text id="STD_T_1154" value="pied d'eau à 68°F"/>
+		<Text id="STD_T_1155" value="pouce de mercure"/>
+		<Text id="STD_T_1156" value="pouce de mercure à 0°C"/>
+		<Text id="STD_T_1157" value="millimètre de mercure"/>
+		<Text id="STD_T_1158" value="millimètre de mercure à 0°C"/>
+		<Text id="STD_T_1159" value="pascal-seconde"/>
+		<Text id="STD_T_1160" value="mètre carré par seconde"/>
+		<Text id="STD_T_1161" value="poise"/>
+		<Text id="STD_T_1162" value="centipoise"/>
+		<Text id="STD_T_1163" value="stoke"/>
+		<Text id="STD_T_1164" value="centistoke"/>
+		<Text id="STD_T_1165" value="newton par mètre"/>
+		<Text id="STD_T_1166" value="millinewton par mètre"/>
+		<Text id="STD_T_1167" value="joule"/>
+		<Text id="STD_T_1168" value="exajoule"/>
+		<Text id="STD_T_1169" value="pétajoule"/>
+		<Text id="STD_T_1170" value="térajoule"/>
+		<Text id="STD_T_1171" value="gigajoule"/>
+		<Text id="STD_T_1172" value="mégajoule"/>
+		<Text id="STD_T_1173" value="kilojoule"/>
+		<Text id="STD_T_1174" value="millijoule"/>
+		<Text id="STD_T_1175" value="wattheure"/>
+		<Text id="STD_T_1176" value="térawatt-heure"/>
+		<Text id="STD_T_1177" value="gigiawatt-heure"/>
+		<Text id="STD_T_1178" value="mégawatt-heure"/>
+		<Text id="STD_T_1179" value="kilowatt-heure"/>
+		<Text id="STD_T_1180" value="calorie"/>
+		<Text id="STD_T_1181" value="kilocalorie"/>
+		<Text id="STD_T_1182" value="mégacalorie"/>
+		<Text id="STD_T_1183" value="unité thermique britannique"/>
+		<Text id="STD_T_1184" value="decatherm"/>
+		<Text id="STD_T_1185" value="livre-force pied"/>
+		<Text id="STD_T_1186" value="watt"/>
+		<Text id="STD_T_1187" value="térawatt"/>
+		<Text id="STD_T_1188" value="gigawatt"/>
+		<Text id="STD_T_1189" value="mégawatt"/>
+		<Text id="STD_T_1190" value="kilowatt"/>
+		<Text id="STD_T_1191" value="milliwatt"/>
+		<Text id="STD_T_1192" value="microwatt"/>
+		<Text id="STD_T_1193" value="nanowatt"/>
+		<Text id="STD_T_1194" value="picowatt"/>
+		<Text id="STD_T_1195" value="mégacalorie par heure"/>
+		<Text id="STD_T_1196" value="mégajoule par heure"/>
+		<Text id="STD_T_1197" value="unité thermique britannique par heure"/>
+		<Text id="STD_T_1198" value="cheval-vapeur (électrique)"/>
+		<Text id="STD_T_1199" value="watt par mètre Kelvin"/>
+		<Text id="STD_T_1200" value="watt par mètre carré Kelvin"/>
+		<Text id="STD_T_1201" value="mètre carré Kelvin par watt"/>
+		<Text id="STD_T_1202" value="joule par Kelvin"/>
+		<Text id="STD_T_1203" value="kilojoule par Kelvin"/>
+		<Text id="STD_T_1204" value="joule par kilogramme Kelvin"/>
+		<Text id="STD_T_1205" value="kilojoule par kilogramme Kelvin"/>
+		<Text id="STD_T_1206" value="joule par kilogramme"/>
+		<Text id="STD_T_1207" value="mégajoule par kilogramme"/>
+		<Text id="STD_T_1208" value="kilojoule par kilogramme"/>
+		<Text id="STD_T_1209" value="ampère"/>
+		<Text id="STD_T_1210" value="kiloampère"/>
+		<Text id="STD_T_1211" value="milliampère"/>
+		<Text id="STD_T_1212" value="microampère"/>
+		<Text id="STD_T_1213" value="nanoampère"/>
+		<Text id="STD_T_1214" value="picoampère"/>
+		<Text id="STD_T_1215" value="coulomb"/>
+		<Text id="STD_T_1216" value="mégacoulomb"/>
+		<Text id="STD_T_1217" value="kilocoulomb"/>
+		<Text id="STD_T_1218" value="microcoulomb"/>
+		<Text id="STD_T_1219" value="nanocoulomb"/>
+		<Text id="STD_T_1220" value="picocoulomb"/>
+		<Text id="STD_T_1221" value="ampère-heure"/>
+		<Text id="STD_T_1222" value="coulomb par mètre cube"/>
+		<Text id="STD_T_1223" value="coulomb par millimètre cube"/>
+		<Text id="STD_T_1224" value="coulomb par centimètre cube"/>
+		<Text id="STD_T_1225" value="kilocoulomb par mètre cube"/>
+		<Text id="STD_T_1226" value="millicoulomb par mètre cube"/>
+		<Text id="STD_T_1227" value="microcoulomb par mètre cube"/>
+		<Text id="STD_T_1228" value="coulomb par mètre carré"/>
+		<Text id="STD_T_1229" value="coulomb par millimètre carré"/>
+		<Text id="STD_T_1230" value="coulomb par centimètre carré"/>
+		<Text id="STD_T_1231" value="kilocoulomb par mètre carré"/>
+		<Text id="STD_T_1232" value="millicoulomb par mètre carré"/>
+		<Text id="STD_T_1233" value="microcoulomb par mètre carré"/>
+		<Text id="STD_T_1234" value="volt par mètre"/>
+		<Text id="STD_T_1235" value="mégavolt par mètre"/>
+		<Text id="STD_T_1236" value="kilovolt par mètre"/>
+		<Text id="STD_T_1237" value="volt par centimètre"/>
+		<Text id="STD_T_1238" value="millivolt par mètre"/>
+		<Text id="STD_T_1239" value="microvolt par mètre"/>
+		<Text id="STD_T_1240" value="volt"/>
+		<Text id="STD_T_1241" value="mégavolt"/>
+		<Text id="STD_T_1242" value="kilovolt"/>
+		<Text id="STD_T_1243" value="millivolt"/>
+		<Text id="STD_T_1244" value="microvolt"/>
+		<Text id="STD_T_1245" value="farad"/>
+		<Text id="STD_T_1246" value="millifarad"/>
+		<Text id="STD_T_1247" value="microfarad"/>
+		<Text id="STD_T_1248" value="nanofarad"/>
+		<Text id="STD_T_1249" value="picofarad"/>
+		<Text id="STD_T_1250" value="farad par mètre"/>
+		<Text id="STD_T_1251" value="microfarad par mètre"/>
+		<Text id="STD_T_1252" value="nanofarad par mètre"/>
+		<Text id="STD_T_1253" value="picofarad par mètre"/>
+		<Text id="STD_T_1254" value="coulomb-mètre"/>
+		<Text id="STD_T_1255" value="ampère par mètre carré"/>
+		<Text id="STD_T_1256" value="méga-ampère par mètre carré"/>
+		<Text id="STD_T_1257" value="ampère par centimètre carré"/>
+		<Text id="STD_T_1258" value="kilo-ampère par mètre carré"/>
+		<Text id="STD_T_1259" value="ampère par mètre"/>
+		<Text id="STD_T_1260" value="kilo-ampère par mètre"/>
+		<Text id="STD_T_1261" value="ampère par centimètre"/>
+		<Text id="STD_T_1262" value="tesla"/>
+		<Text id="STD_T_1263" value="millitesla"/>
+		<Text id="STD_T_1264" value="microtesla"/>
+		<Text id="STD_T_1265" value="nanotesla"/>
+		<Text id="STD_T_1266" value="weber"/>
+		<Text id="STD_T_1267" value="milliweber"/>
+		<Text id="STD_T_1268" value="weber par mètre"/>
+		<Text id="STD_T_1269" value="kiloweber par mètre"/>
+		<Text id="STD_T_1270" value="henry"/>
+		<Text id="STD_T_1271" value="millihenry"/>
+		<Text id="STD_T_1272" value="microhenry"/>
+		<Text id="STD_T_1273" value="nanohenry"/>
+		<Text id="STD_T_1274" value="picohenry"/>
+		<Text id="STD_T_1275" value="henry par mètre"/>
+		<Text id="STD_T_1276" value="microhenry par mètre"/>
+		<Text id="STD_T_1277" value="nanohenry par mètre"/>
+		<Text id="STD_T_1278" value="ampère-mètre carré"/>
+		<Text id="STD_T_1279" value="newton mètre carré par ampère"/>
+		<Text id="STD_T_1280" value="weber-mètre"/>
+		<Text id="STD_T_1281" value="ohm"/>
+		<Text id="STD_T_1282" value="gigaohm"/>
+		<Text id="STD_T_1283" value="mégaohm"/>
+		<Text id="STD_T_1284" value="kiloohm"/>
+		<Text id="STD_T_1285" value="milliohm"/>
+		<Text id="STD_T_1286" value="microohm"/>
+		<Text id="STD_T_1287" value="siemens"/>
+		<Text id="STD_T_1288" value="kilosiemens"/>
+		<Text id="STD_T_1289" value="millisiemens"/>
+		<Text id="STD_T_1290" value="microsiemens"/>
+		<Text id="STD_T_1291" value="ohm-mètre"/>
+		<Text id="STD_T_1292" value="gigaohm-mètre"/>
+		<Text id="STD_T_1293" value="mégaohm-mètre"/>
+		<Text id="STD_T_1294" value="kiloohm-mètre"/>
+		<Text id="STD_T_1295" value="ohm-centimètre"/>
+		<Text id="STD_T_1296" value="milliohm-mètre"/>
+		<Text id="STD_T_1297" value="microohm-mètre"/>
+		<Text id="STD_T_1298" value="nanoohm-mètre"/>
+		<Text id="STD_T_1299" value="siemens par mètre"/>
+		<Text id="STD_T_1300" value="mégasiemens par mètre"/>
+		<Text id="STD_T_1301" value="kilosiemens par mètre"/>
+		<Text id="STD_T_1302" value="millisiemens par centimètre"/>
+		<Text id="STD_T_1303" value="microsiemens par millimètre"/>
+		<Text id="STD_T_1304" value="par henry"/>
+		<Text id="STD_T_1305" value="stéradian"/>
+		<Text id="STD_T_1306" value="watt par stéradian"/>
+		<Text id="STD_T_1307" value="watt par stéradian mètre carré"/>
+		<Text id="STD_T_1308" value="watt par mètre carré"/>
+		<Text id="STD_T_1309" value="lumen"/>
+		<Text id="STD_T_1310" value="lumen-seconde"/>
+		<Text id="STD_T_1311" value="lumen-heure"/>
+		<Text id="STD_T_1312" value="lumen par mètre carré"/>
+		<Text id="STD_T_1313" value="lumen par watt"/>
+		<Text id="STD_T_1314" value="lux"/>
+		<Text id="STD_T_1315" value="lux-seconde"/>
+		<Text id="STD_T_1316" value="candela"/>
+		<Text id="STD_T_1317" value="candela par mètre carré"/>
+		<Text id="STD_T_1318" value="gramme par seconde"/>
+		<Text id="STD_T_1319" value="gramme par minute"/>
+		<Text id="STD_T_1320" value="gramme par heure"/>
+		<Text id="STD_T_1321" value="gramme par jour"/>
+		<Text id="STD_T_1322" value="kilogramme par seconde"/>
+		<Text id="STD_T_1323" value="kilogramme par minute"/>
+		<Text id="STD_T_1324" value="kilogramme par heure"/>
+		<Text id="STD_T_1325" value="kilogramme par jour"/>
+		<Text id="STD_T_1326" value="tonne métrique par seconde"/>
+		<Text id="STD_T_1327" value="tonne métrique par minute"/>
+		<Text id="STD_T_1328" value="tonne métrique par heure"/>
+		<Text id="STD_T_1329" value="tonne métrique par jour"/>
+		<Text id="STD_T_1330" value="livre par seconde"/>
+		<Text id="STD_T_1331" value="livre par minute"/>
+		<Text id="STD_T_1332" value="livre par heure"/>
+		<Text id="STD_T_1333" value="livre par jour"/>
+		<Text id="STD_T_1334" value="tonne courte par seconde"/>
+		<Text id="STD_T_1335" value="tonne courte par minute"/>
+		<Text id="STD_T_1336" value="tonne courte par heure"/>
+		<Text id="STD_T_1337" value="tonne courte par jour"/>
+		<Text id="STD_T_1338" value="tonne longue par seconde"/>
+		<Text id="STD_T_1339" value="tonne longue par minute"/>
+		<Text id="STD_T_1340" value="tonne longue par heure"/>
+		<Text id="STD_T_1341" value="tonne longue par jour"/>
+		<Text id="STD_T_1342" value="pour cent"/>
+		<Text id="STD_T_1343" value="pour cent de solide par poids"/>
+		<Text id="STD_T_1344" value="pour cent de solide par volume"/>
+		<Text id="STD_T_1345" value="pour cent de qualité de vapeur"/>
+		<Text id="STD_T_1346" value="degré plato"/>
+		<Text id="STD_T_1347" value="mètre cube par seconde"/>
+		<Text id="STD_T_1348" value="mètre cube par minute"/>
+		<Text id="STD_T_1349" value="mètre cube par heure"/>
+		<Text id="STD_T_1350" value="mètre cube par jour"/>
+		<Text id="STD_T_1351" value="litre par seconde"/>
+		<Text id="STD_T_1352" value="litre par minute"/>
+		<Text id="STD_T_1353" value="litre par heure"/>
+		<Text id="STD_T_1354" value="litre par jour"/>
+		<Text id="STD_T_1355" value="mégalitre par jour"/>
+		<Text id="STD_T_1356" value="pied cube par seconde"/>
+		<Text id="STD_T_1357" value="pied cube par minute"/>
+		<Text id="STD_T_1358" value="pied cube par heure"/>
+		<Text id="STD_T_1359" value="pied cube par jour"/>
+		<Text id="STD_T_1360" value="pied cube standard par minute"/>
+		<Text id="STD_T_1361" value="pied cube standard par heure"/>
+		<Text id="STD_T_1362" value="gallon américain par seconde"/>
+		<Text id="STD_T_1363" value="gallon américain par minute"/>
+		<Text id="STD_T_1364" value="gallon américain par heure"/>
+		<Text id="STD_T_1365" value="gallon américain par jour"/>
+		<Text id="STD_T_1366" value="mégagallon américain par jour"/>
+		<Text id="STD_T_1367" value="gallon impérial par seconde"/>
+		<Text id="STD_T_1368" value="gallon impérial par minute"/>
+		<Text id="STD_T_1369" value="gallon impérial par heure"/>
+		<Text id="STD_T_1370" value="gallon impérial par jour"/>
+		<Text id="STD_T_1371" value="baril par seconde"/>
+		<Text id="STD_T_1372" value="baril par minute"/>
+		<Text id="STD_T_1373" value="baril par heure"/>
+		<Text id="STD_T_1374" value="baril par jour"/>
+		<!-- <Text id="STD_T_1375" value="..."/> -->
+		<Text id="STD_T_1376" value="milliwatt par mètre carré"/>
+		<Text id="STD_T_1377" value="microwatt par mètre carré"/>
+		<Text id="STD_T_1378" value="picowatt par mètre carré"/>
+		<Text id="STD_T_1379" value="pascal-seconde par mètre cube"/>
+		<Text id="STD_T_1380" value="newton-seconde par mètre"/>
+		<Text id="STD_T_1381" value="pascal-seconde par mètre"/>
+		<Text id="STD_T_1382" value="bel"/>
+		<Text id="STD_T_1383" value="décibel"/>
+		<Text id="STD_T_1384" value="mole"/>
+		<Text id="STD_T_1385" value="kilomole"/>
+		<Text id="STD_T_1386" value="millimole"/>
+		<Text id="STD_T_1387" value="micromole"/>
+		<Text id="STD_T_1388" value="kilogramme par mole"/>
+		<Text id="STD_T_1389" value="gramme par mole"/>
+		<Text id="STD_T_1390" value="mètre cube par mole"/>
+		<Text id="STD_T_1391" value="décimètre cube par mole"/>
+		<Text id="STD_T_1392" value="centimètre cube par mole"/>
+		<Text id="STD_T_1393" value="litre par mole"/>
+		<Text id="STD_T_1394" value="joule par mole"/>
+		<Text id="STD_T_1395" value="kilojoule par mole"/>
+		<Text id="STD_T_1396" value="joule par mole Kelvin"/>
+		<Text id="STD_T_1397" value="mole par mètre cube"/>
+		<Text id="STD_T_1398" value="mole par décimètre cube"/>
+		<Text id="STD_T_1399" value="mole par litre"/>
+		<Text id="STD_T_1400" value="mole par kilogramme"/>
+		<Text id="STD_T_1401" value="millimole par kilogramme"/>
+		<Text id="STD_T_1402" value="becquerel"/>
+		<Text id="STD_T_1403" value="mégabecquerel"/>
+		<Text id="STD_T_1404" value="kilobecquerel"/>
+		<Text id="STD_T_1405" value="becquerel par kilogramme"/>
+		<Text id="STD_T_1406" value="kilobecquerel par kilogramme"/>
+		<Text id="STD_T_1407" value="mégabecquerel par kilogramme"/>
+		<Text id="STD_T_1408" value="gray"/>
+		<Text id="STD_T_1409" value="milligray"/>
+		<Text id="STD_T_1410" value="rad"/>
+		<Text id="STD_T_1411" value="sievert"/>
+		<Text id="STD_T_1412" value="millisievert"/>
+		<Text id="STD_T_1413" value="rem"/>
+		<Text id="STD_T_1414" value="coulomb par kilogramme"/>
+		<Text id="STD_T_1415" value="millicoulomb par kilogramme"/>
+		<Text id="STD_T_1416" value="röntgen"/>
+		<Text id="STD_T_1417" value="par joule et mètre cube"/>
+		<!-- <Text id="STD_T_1418" value=""/> -->
+		<Text id="STD_T_1419" value="mètre cube par coulomb"/>
+		<Text id="STD_T_1420" value="volt par Kelvin"/>
+		<Text id="STD_T_1421" value="milivolt par Kelvin"/>
+		<Text id="STD_T_1422" value="pH"/>
+		<Text id="STD_T_1423" value="parties par million"/>
+		<Text id="STD_T_1424" value="parties par milliard"/>
+		<Text id="STD_T_1425" value="parties par mille"/>
+		<Text id="STD_T_1426" value="degré Brix"/>
+		<Text id="STD_T_1427" value="degré Balling"/>
+		<Text id="STD_T_1428" value="preuve par volume"/>
+		<Text id="STD_T_1429" value="preuve par masse"/>
+		<Text id="STD_T_1430" value="livre par gallon impérial"/>
+		<Text id="STD_T_1431" value="kilocalorie par seconde"/>
+		<Text id="STD_T_1432" value="kilocalorie par minute"/>
+		<Text id="STD_T_1433" value="kilocalorie par heure"/>
+		<Text id="STD_T_1434" value="kilocalorie par jour"/>
+		<Text id="STD_T_1435" value="mégacalorie par seconde"/>
+		<Text id="STD_T_1436" value="mégacalorie par minute"/>
+		<Text id="STD_T_1437" value="mégacalorie par jour"/>
+		<Text id="STD_T_1438" value="kilojoule par seconde"/>
+		<Text id="STD_T_1439" value="kilojoule par minute"/>
+		<Text id="STD_T_1440" value="kilojoule par heure"/>
+		<Text id="STD_T_1441" value="kilojoule par jour"/>
+		<Text id="STD_T_1442" value="mégajoule par seconde"/>
+		<Text id="STD_T_1443" value="mégajoule par minute"/>
+		<Text id="STD_T_1444" value="mégajoule par jour"/>
+		<Text id="STD_T_1445" value="unité thermique britannique par seconde"/>
+		<Text id="STD_T_1446" value="unité thermique britannique par minute"/>
+		<Text id="STD_T_1447" value="unité thermique britannique par jour"/>
+		<Text id="STD_T_1448" value="microgallon américain par seconde"/>
+		<Text id="STD_T_1449" value="milligallon américain par seconde"/>
+		<Text id="STD_T_1450" value="kilogallon américain par seconde"/>
+		<Text id="STD_T_1451" value="mégagallon américain par seconde"/>
+		<Text id="STD_T_1452" value="microgallon américain par minute"/>
+		<Text id="STD_T_1453" value="milligallon américain par seconde"/>
+		<Text id="STD_T_1454" value="kilogallon américain par minute"/>
+		<Text id="STD_T_1455" value="mégallon américain par minute"/>
+		<Text id="STD_T_1456" value="microgallon américain par heure"/>
+		<Text id="STD_T_1457" value="milligallon américain par heure"/>
+		<Text id="STD_T_1458" value="kilogallon américaine par heure"/>
+		<Text id="STD_T_1459" value="mégagallon américain par heure"/>
+		<Text id="STD_T_1460" value="microgallon américain par jour"/>
+		<Text id="STD_T_1461" value="milligallon américain par jour"/>
+		<Text id="STD_T_1462" value="kilogallon américain par jour"/>
+		<Text id="STD_T_1463" value="microgallon impérial par seconde"/>
+		<Text id="STD_T_1464" value="milligallon impérial par seconde"/>
+		<Text id="STD_T_1465" value="kilogallon impérial par seconde"/>
+		<Text id="STD_T_1466" value="mégagallon impérial par seconde"/>
+		<Text id="STD_T_1467" value="microgallon impérial par minute"/>
+		<Text id="STD_T_1468" value="milligallon impérial par minute"/>
+		<Text id="STD_T_1469" value="kilogallon impérial par minute"/>
+		<Text id="STD_T_1470" value="mégagallon impérial par minute"/>
+		<Text id="STD_T_1471" value="microgallon impérial par heure"/>
+		<Text id="STD_T_1472" value="milligallon impérial par heure"/>
+		<Text id="STD_T_1473" value="kilogallon impérial par heure"/>
+		<Text id="STD_T_1474" value="mégagallon impérial par heure"/>
+		<Text id="STD_T_1475" value="microgallon impérial par jour"/>
+		<Text id="STD_T_1476" value="milligallon impérial par jour"/>
+		<Text id="STD_T_1477" value="kilogallon impérial par jour"/>
+		<Text id="STD_T_1478" value="mégagallon impérial par jour"/>
+		<Text id="STD_T_1479" value="microbaril par seconde"/>
+		<Text id="STD_T_1480" value="millibaril par seconde"/>
+		<Text id="STD_T_1481" value="kilobaril par seconde"/>
+		<Text id="STD_T_1482" value="mégabaril par seconde"/>
+		<Text id="STD_T_1483" value="microbaril par minute"/>
+		<Text id="STD_T_1484" value="millibaril par minute"/>
+		<Text id="STD_T_1485" value="kilobaril par minute"/>
+		<Text id="STD_T_1486" value="mégabaril par minute"/>
+		<Text id="STD_T_1487" value="microbaril par heure"/>
+		<Text id="STD_T_1488" value="millibaril par heure"/>
+		<Text id="STD_T_1489" value="kilobaril par heure"/>
+		<Text id="STD_T_1490" value="mégabaril par heure"/>
+		<Text id="STD_T_1491" value="microbaril par jour"/>
+		<Text id="STD_T_1492" value="millibaril par jour"/>
+		<Text id="STD_T_1493" value="kilobaril par jour"/>
+		<Text id="STD_T_1494" value="mégabaril par jour"/>
+		<Text id="STD_T_1495" value="micromètre cube par seconde"/>
+		<Text id="STD_T_1496" value="millimètre cube par seconde"/>
+		<Text id="STD_T_1497" value="kilomètre cube par seconde"/>
+		<Text id="STD_T_1498" value="mégamètre cube par seconde"/>
+		<Text id="STD_T_1499" value="micromètre cube par minute"/>
+		<Text id="STD_T_1500" value="millimètre cube par minute"/>
+		<Text id="STD_T_1501" value="kilomètre cube par minute"/>
+		<Text id="STD_T_1502" value="mégamètre cube par minute"/>
+		<Text id="STD_T_1503" value="micromètre cube par heure"/>
+		<Text id="STD_T_1504" value="millimètre cube par heure"/>
+		<Text id="STD_T_1505" value="kilomètre cube par heure"/>
+		<Text id="STD_T_1506" value="mégamètre cube par heure"/>
+		<Text id="STD_T_1507" value="micromètre cube par jour"/>
+		<Text id="STD_T_1508" value="millimètre cube par jour"/>
+		<Text id="STD_T_1509" value="kilomètre cube par jour"/>
+		<Text id="STD_T_1510" value="mégamètre cube par jour"/>
+		<Text id="STD_T_1511" value="centimètre cube par seconde"/>
+		<Text id="STD_T_1512" value="centimètre cube par minute"/>
+		<Text id="STD_T_1513" value="centimètre cube par heure"/>
+		<Text id="STD_T_1514" value="centimètre cube par jour"/>
+		<Text id="STD_T_1515" value="kilocalorie par kilogramme"/>
+		<Text id="STD_T_1516" value="unité thermique britannique par livre"/>
+		<Text id="STD_T_1517" value="kilolitre"/>
+		<Text id="STD_T_1518" value="kilolitre par minute"/>
+		<Text id="STD_T_1519" value="kilolitre par heure"/>
+		<Text id="STD_T_1520" value="kilolitre par jour"/>
+		<!-- 1521 - 1550 vendor-specific -->
+		<Text id="STD_T_1551" value="siemens par centimètre"/>
+		<Text id="STD_T_1552" value="microsiemens par centimètre"/>
+		<Text id="STD_T_1553" value="millisiemens par mètre"/>
+		<Text id="STD_T_1554" value="microsiemens par mètre"/>
+		<Text id="STD_T_1555" value="mégaohm-centimètre"/>
+		<Text id="STD_T_1556" value="kiloohm-centimètre"/>
+		<Text id="STD_T_1557" value="pour cent de poids"/>
+		<Text id="STD_T_1558" value="milligramme par litre"/>
+		<Text id="STD_T_1559" value="microgramme par litre"/>
+		<Text id="STD_T_1560" value="pour cent de saturation"/>
+		<Text id="STD_T_1561" value="vpm"/>
+		<Text id="STD_T_1562" value="pour cent en volume"/>
+		<Text id="STD_T_1563" value="millimètre par minute"/>
+		<Text id="STD_T_1564" value="milligramme par décimètre cube"/>
+		<!-- <Text id="STD_T_1565" value="..."/> -->
+		<Text id="STD_T_1566" value="milligramme par mètre cube"/>
+		<Text id="STD_T_1567" value="carat (bijou)"/>
+		<Text id="STD_T_1568" value="livre (troy ou pharmaceutique)"/>
+		<Text id="STD_T_1569" value="once (troy ou pharmaceutique)"/>
+		<Text id="STD_T_1570" value="once liquide (américaine)"/>
+		<!-- <Text id="STD_T_1571" value="..."/> -->
+		<Text id="STD_T_1572" value="acre-pied"/>
+		<Text id="STD_T_1573" value="mètre cube normal"/>
+		<Text id="STD_T_1574" value="litre normal"/>
+		<Text id="STD_T_1575" value="mètre cube standard"/>
+		<Text id="STD_T_1576" value="litre standard"/>
+		<Text id="STD_T_1577" value="millilitre par seconde"/>
+		<Text id="STD_T_1578" value="millilitre par heure"/>
+		<Text id="STD_T_1579" value="millilitre par jour"/>
+		<Text id="STD_T_1580" value="acre-pied par seconde"/>
+		<Text id="STD_T_1581" value="acre-pied par minute"/>
+		<Text id="STD_T_1582" value="acre-pied par heure"/>
+		<Text id="STD_T_1583" value="acre-pied par jour"/>
+		<Text id="STD_T_1584" value="once liquide (américaine) par seconde"/>
+		<Text id="STD_T_1585" value="once liquide (américaine) par minute"/>
+		<Text id="STD_T_1586" value="once liquide (américaine) par heure"/>
+		<Text id="STD_T_1587" value="once liquide (américaine) par jour"/>
+		<Text id="STD_T_1588" value="mètre cube normal par seconde"/>
+		<Text id="STD_T_1589" value="mètre cube normal par minute"/>
+		<Text id="STD_T_1590" value="mètre cube normal par heure"/>
+		<Text id="STD_T_1591" value="mètre cube normal par jour"/>
+		<Text id="STD_T_1592" value="litre normal par seconde"/>
+		<Text id="STD_T_1593" value="litre normal par minute"/>
+		<Text id="STD_T_1594" value="litre normal par heure"/>
+		<Text id="STD_T_1595" value="litre normal par jour"/>
+		<Text id="STD_T_1596" value="mètre cube standard par seconde"/>
+		<Text id="STD_T_1597" value="mètre cube standard par minute"/>
+		<Text id="STD_T_1598" value="mètre cube standard par heure"/>
+		<Text id="STD_T_1599" value="mètre cube standard par jour"/>
+		<Text id="STD_T_1600" value="litre standard par seconde"/>
+		<Text id="STD_T_1601" value="litre standard par minute"/>
+		<Text id="STD_T_1602" value="litre standard par heure"/>
+		<Text id="STD_T_1603" value="litre standard par jour"/>
+		<Text id="STD_T_1604" value="pied cube standard par seconde"/>
+		<Text id="STD_T_1605" value="pied cube standard par jour"/>
+		<Text id="STD_T_1606" value="once par seconde"/>
+		<Text id="STD_T_1607" value="once par minute"/>
+		<Text id="STD_T_1608" value="once par heure"/>
+		<Text id="STD_T_1609" value="once par jour"/>
+		<Text id="STD_T_1610" value="pascal absolu"/>
+		<Text id="STD_T_1611" value="pascal relatif"/>
+		<Text id="STD_T_1612" value="gigapascal absolu"/>
+		<Text id="STD_T_1613" value="gigapascal relatif"/>
+		<Text id="STD_T_1614" value="mégapascal absolu"/>
+		<Text id="STD_T_1615" value="mégapascal relatif"/>
+		<Text id="STD_T_1616" value="kilopascal absolu"/>
+		<Text id="STD_T_1617" value="kilopascal relatif"/>
+		<Text id="STD_T_1618" value="millipascal absolu"/>
+		<Text id="STD_T_1619" value="millipascal relatif"/>
+		<Text id="STD_T_1620" value="micropascal absolu"/>
+		<Text id="STD_T_1621" value="micropascal relatif"/>
+		<Text id="STD_T_1622" value="hectopascal absolu"/>
+		<Text id="STD_T_1623" value="hectopascal relatif"/>
+		<Text id="STD_T_1624" value="gramme-force par centimètre carré absolu"/>
+		<Text id="STD_T_1625" value="gramme-force par centimètre carré relatif"/>
+		<Text id="STD_T_1626" value="kilogramme-force par centimètre carré absolu"/>
+		<Text id="STD_T_1627" value="kilogramme-force par centimètre carré relatif"/>
+		<Text id="STD_T_1628" value="densité standard à 4°C"/>
+		<Text id="STD_T_1629" value="densité standard à 15°C"/>
+		<Text id="STD_T_1630" value="densité standard à 20°C"/>
+		<Text id="STD_T_1631" value="cheval-vapeur (métrique)"/>
+		<Text id="STD_T_1632" value="parties par trillion"/>
+		<Text id="STD_T_1633" value="hectolitre par seconde"/>
+		<Text id="STD_T_1634" value="hectolitre par minute"/>
+		<Text id="STD_T_1635" value="hectolitre par heure"/>
+		<Text id="STD_T_1636" value="hectolitre par jour"/>
+		<Text id="STD_T_1637" value="baril liquide américain par seconde"/>
+		<Text id="STD_T_1638" value="baril liquide américain par minute"/>
+		<Text id="STD_T_1639" value="baril liquide américain par heure"/>
+		<Text id="STD_T_1640" value="baril liquide américain par jour"/>
+		<Text id="STD_T_1641" value="baril fédéral américain"/>
+		<Text id="STD_T_1642" value="baril fédéral américain par seconde"/>
+		<Text id="STD_T_1643" value="baril fédéral américain par minute"/>
+		<Text id="STD_T_1644" value="baril fédéral américain par heure"/>
+		<Text id="STD_T_1645" value="baril fédéral américain par jour"/>
+		<!-- 1646 - 1994 Reserved -->
+		<!-- 1995 Textual unit definition -->
+		<!-- 1996 Not used -->
+		<!-- 1997 None -->
+		<!-- 1998 unknown -->
+		<!-- 1999 special -->
+		<!-- 2000 - 32767 Reserved -->
+		<!-- 32768 - 65535 Manufacturer specific -->
+	</Language>
+	<Stamp crc="3749480069"><Checker name="IODD-Checker V1.1.1" version="V1.1.1.0"/></Stamp>
+</ExternalTextDocument>

@@ -1,0 +1,122 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_CompilerCpp_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2016-03-14, 10:36:54" FileAge="1457948214550" FileType="45637" CompNumb="2" />
+      <File Name="Sources/Events.h" FileDate="2016-03-14, 11:23:49" FileAge="1457951029013" FileType="131328" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133466" FileType="1048576" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133270" FileType="1048576" />
+      <File Name="Sources/Events.c" FileDate="2016-03-14, 11:23:49" FileAge="1457951029041" FileType="131328" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133444" FileType="1048576" />
+      <File Name="Static_Code/PDD/DAC_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133305" FileType="1048576" />
+      <File Name="Documentation/doxygen/BitIoLdd1_component.txt" FileDate="2016-03-13, 11:46:53" FileAge="1457866013820" FileType="45637" CompNumb="5" />
+      <File Name="Generated_Code/BitIoLdd3.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013558" FileType="45637" CompNumb="15" />
+      <File Name="Documentation/doxygen/SMasterLdd1_component.txt" FileDate="2016-03-14, 14:51:28" FileAge="1457963488522" FileType="45637" CompNumb="19" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2016-03-14, 10:36:54" FileAge="1457948214418" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/BitIoLdd3.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013542" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/BitIoLdd2.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013624" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2016-03-14, 11:23:48" FileAge="1457951028920" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/LedGreen.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013572" FileType="45637" CompNumb="10" />
+      <File Name="Documentation/doxygen/IntI2cLdd1_component.txt" FileDate="2016-03-14, 11:23:48" FileAge="1457951028643" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/LEDpin3.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013516" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/BitIoLdd2.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013611" FileType="45637" CompNumb="12" />
+      <File Name="Static_Code/PDD/UART0_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133824" FileType="1048576" />
+      <File Name="Generated_Code/BitIoLdd1.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013844" FileType="45637" CompNumb="5" />
+      <File Name="Documentation/doxygen/BitIoLdd3_component.txt" FileDate="2016-03-13, 11:46:53" FileAge="1457866013530" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/LedGreen.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013565" FileType="45637" CompNumb="10" />
+      <File Name="Static_Code/IO_Map/MKL25Z4.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133239" FileType="1048576" CompNumb="2" />
+      <File Name="Generated_Code/TU1.h" FileDate="2016-03-14, 10:36:53" FileAge="1457948213298" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/LEDpin3.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013506" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/LEDpin2.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013586" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/SMasterLdd1.h" FileDate="2016-03-14, 14:51:28" FileAge="1457963488402" FileType="45637" CompNumb="19" />
+      <File Name="Generated_Code/BitIoLdd1.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013832" FileType="45637" CompNumb="5" />
+      <File Name="Generated_Code/TU1.c" FileDate="2016-03-14, 10:36:53" FileAge="1457948213286" FileType="45637" CompNumb="24" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133855" FileType="1048576" />
+      <File Name="Generated_Code/LEDpin2.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013579" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/SMasterLdd1.c" FileDate="2016-03-14, 14:51:28" FileAge="1457963488460" FileType="45637" CompNumb="19" />
+      <File Name="Generated_Code/LEDpin1.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013805" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/LEDpin1.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013791" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2016-03-13, 09:02:14" FileAge="1457856134651" FileType="45637" />
+      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2016-03-14, 10:36:53" FileAge="1457948213528" FileType="45637" CompNumb="17" />
+      <File Name="Generated_Code/ASerialLdd1.c" FileDate="2016-03-14, 10:36:53" FileAge="1457948213514" FileType="45637" CompNumb="17" />
+      <File Name="Documentation/doxygen/ASerialLdd1_component.txt" FileDate="2016-03-14, 10:36:53" FileAge="1457948213501" FileType="45637" CompNumb="17" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2016-03-13, 09:02:14" FileAge="1457856134500" FileType="45637" CompNumb="2" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2016-03-13, 09:02:14" FileAge="1457856134234" FileType="8" CompNumb="2" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133393" FileType="1048576" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133358" FileType="1048576" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133372" FileType="1048576" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133434" FileType="1048576" />
+      <File Name="Documentation/doxygen/TU1_component.txt" FileDate="2016-03-14, 10:36:53" FileAge="1457948213274" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2016-03-14, 10:36:54" FileAge="1457948214323" FileType="45637" />
+      <File Name="Documentation/SetupSerialCommunication_SIGNALS.txt" FileDate="2016-03-14, 14:51:28" FileAge="1457963488793" FileType="3072" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133455" FileType="1048576" />
+      <File Name="Generated_Code/SPI.h" FileDate="2016-03-14, 14:51:28" FileAge="1457963488364" FileType="45637" CompNumb="18" />
+      <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133414" FileType="1048576" />
+      <File Name="Static_Code/PDD/MCG_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133404" FileType="1048576" />
+      <File Name="Generated_Code/SPI.c" FileDate="2016-03-14, 14:51:28" FileAge="1457963488307" FileType="45637" CompNumb="18" />
+      <File Name="Documentation/doxygen/TimerIntLdd1_component.txt" FileDate="2016-03-14, 10:36:53" FileAge="1457948213206" FileType="45637" CompNumb="23" />
+      <File Name="Documentation/doxygen/BitIoLdd2_component.txt" FileDate="2016-03-13, 11:46:53" FileAge="1457866013600" FileType="45637" CompNumb="12" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2016-03-13, 09:02:12" FileAge="1457856132732" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/UART.h" FileDate="2016-03-14, 10:36:53" FileAge="1457948213467" FileType="45637" CompNumb="16" />
+      <File Name="Project_Settings/Startup_Code/startup.c" FileDate="2016-03-13, 09:02:12" FileAge="1457856132482" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/UART.c" FileDate="2016-03-14, 10:36:53" FileAge="1457948213454" FileType="45637" CompNumb="16" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133871" FileType="1048576" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2016-03-13, 09:02:14" FileAge="1457856134664" FileType="45637" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2016-03-14, 14:51:28" FileAge="1457963488618" FileType="45637" CompNumb="2" />
+      <File Name="Static_Code/PDD/OSC_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133423" FileType="1048576" />
+      <File Name="Documentation/doxygen/RoutingReport_component.txt" FileDate="2016-03-13, 09:02:14" FileAge="1457856134522" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/IntI2cLdd1.h" FileDate="2016-03-14, 11:23:48" FileAge="1457951028474" FileType="45637" CompNumb="21" />
+      <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133562" FileType="1048576" />
+      <File Name="Static_Code/PDD/COP_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133294" FileType="1048576" />
+      <File Name="Generated_Code/IntI2cLdd1.c" FileDate="2016-03-14, 11:23:48" FileAge="1457951028598" FileType="45637" CompNumb="21" />
+      <File Name="Generated_Code/LedRed.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013785" FileType="45637" CompNumb="3" />
+      <File Name="Sources/main.h" FileDate="2016-03-13, 16:41:41" FileAge="1457883701652" FileType="128" />
+      <File Name="Generated_Code/LedRed.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013776" FileType="45637" CompNumb="3" />
+      <File Name="Documentation/SetupSerialCommunication_Settings.xml" FileDate="2016-03-14, 14:51:29" FileAge="1457963489047" FileType="3072" />
+      <File Name="Sources/main.c" FileDate="2016-03-14, 14:51:28" FileAge="1457963488569" FileType="128" />
+      <File Name="Documentation/doxygen/SetupSerialCommunication_project.txt" FileDate="2016-03-14, 10:36:54" FileAge="1457948214521" FileType="45637" CompNumb="2" />
+      <File Name="ProjectInfo.xml" FileDate="2016-03-14, 14:51:29" FileAge="1457963489750" FileType="45637" />
+      <File Name="Generated_Code/TI1.h" FileDate="2016-03-14, 10:36:53" FileAge="1457948213190" FileType="45637" CompNumb="22" />
+      <File Name="Static_Code/PDD/TSI_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133653" FileType="1048576" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133252" FileType="1048576" CompNumb="2" />
+      <File Name="Generated_Code/TI1.c" FileDate="2016-03-14, 10:36:53" FileAge="1457948213180" FileType="45637" CompNumb="22" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133283" FileType="1048576" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133321" FileType="1048576" />
+      <File Name="Generated_Code/I2C.h" FileDate="2016-03-14, 11:23:48" FileAge="1457951028676" FileType="45637" CompNumb="20" />
+      <File Name="Static_Code/PDD/FTFA_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133346" FileType="1048576" />
+      <File Name="Generated_Code/I2C.c" FileDate="2016-03-14, 11:23:48" FileAge="1457951028797" FileType="45637" CompNumb="20" />
+      <File Name="Documentation/SetupSerialCommunication.txt" FileDate="2016-03-14, 11:23:50" FileAge="1457951030417" FileType="3072" />
+      <File Name="Generated_Code/TimerIntLdd1.h" FileDate="2016-03-14, 10:36:53" FileAge="1457948213260" FileType="45637" CompNumb="23" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133489" FileType="1048576" />
+      <File Name="Generated_Code/WAIT1.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013658" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/LedBlue.h" FileDate="2016-03-13, 11:46:53" FileAge="1457866013496" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/TimerIntLdd1.c" FileDate="2016-03-14, 10:36:53" FileAge="1457948213248" FileType="45637" CompNumb="23" />
+      <File Name="Generated_Code/WAIT1.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013637" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2016-03-14, 11:23:48" FileAge="1457951028944" FileType="45637" CompNumb="2" />
+      <File Name="Generated_Code/LedBlue.c" FileDate="2016-03-13, 11:46:53" FileAge="1457866013485" FileType="45637" CompNumb="13" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133336" FileType="1048576" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2016-03-13, 09:02:13" FileAge="1457856133477" FileType="1048576" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2016-03-13, 09:02:14" FileAge="1457856134698" FileType="45637" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>8</CodeGenReference>
+</CodeGenerationInfo>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.io-link.com/IODD/2009/11" xsi:schemaLocation="http://www.io-link.com/IODD/2009/11 IODD1.0.1.xsd">
+	<DocumentInfo version="V1.1" releaseDate="2014-04-13" copyright="Copyright © 2014 by IQ² Development GmbH, Neckartenzlingen" />
+	<ProfileHeader>
+		<ProfileIdentification>IO-Link Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for IO-Link Devices</ProfileName>
+		<ProfileSource>IO-Link Consortium</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>1</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>IODD</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity vendorId="396" vendorName="Renesas Electronics Europe GmbH" deviceId="1622017">
+			<VendorText textId="TN_VendorText" />
+			<VendorUrl textId="TN_VendorUrl" />
+			<VendorLogo name="Renesas-logo.png" />
+			<DeviceFamily textId="TN_DeviceFamily" />
+			<DeviceVariantCollection>
+				<DeviceVariant productId="MAXREFDES23" deviceSymbol="Renesas-MAXREFDES23-pic.png" deviceIcon="Renesas-MAXREFDES23-icon.png">
+					<ProductName textId="TN_Variant" />
+					<ProductText textId="TD_Variant" />
+				</DeviceVariant>
+			</DeviceVariantCollection>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<VariableCollection>
+				<StdVariableRef id="V_DirectParameters_1" />
+				<StdVariableRef id="V_DirectParameters_2" />
+				<StdVariableRef id="V_SystemCommand"> <!-- 0x0002 -->
+					<StdSingleValueRef value="128" /> <!-- 0x80 - Device Reset -->
+					<SingleValue value="160"> <!-- 0xA0 -->
+						<Name textId="TN_SystemCommand_TeachIn" />
+					</SingleValue>
+				</StdVariableRef>
+				<StdVariableRef id="V_VendorName" defaultValue="Renesas Electronics Europe GmbH" />
+				<StdVariableRef id="V_VendorText" defaultValue="Major supplier of semiconductor solutions" />
+				<StdVariableRef id="V_ProductName" defaultValue="Santa Cruz (MAXREFDES23#)" />
+				<StdVariableRef id="V_ProductID" defaultValue="MAXREFDES23" />
+				<StdVariableRef id="V_ProductText" defaultValue="IO-Link Light Sensor" />
+				<StdVariableRef id="V_FirmwareRevision" />
+				<Variable id="V_LightSPLevel" index="256" defaultValue="128" accessRights="rw"> <!-- 0x0100 -->
+					<Datatype xsi:type="UIntegerT" bitLength="8" />
+					<Name textId="TN_V_LightSPLevel" />
+				</Variable>
+				<Variable id="V_LightSPHysteresis" index="257" defaultValue="16" accessRights="rw"> <!-- 0x0101 -->
+					<Datatype xsi:type="UIntegerT" bitLength="8" />
+					<Name textId="TN_V_LightSPHysteresis" />
+				</Variable>
+				<Variable id="V_SensorsChipSensivity" index="258" defaultValue="1" accessRights="rw"> <!-- 0x0102 -->
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_Sensivity_VeryHigh" />
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_Sensivity_High" />
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_Sensivity_Middle" />
+						</SingleValue>
+						<SingleValue value="3">
+							<Name textId="TN_Sensivity_Low" />
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_V_SensorsChipSensivity" />
+				</Variable>
+				<Variable id="V_SensorsChipTemperature" index="259" accessRights="ro" dynamic="true"> <!-- 0x0103 -->
+					<Datatype xsi:type="UIntegerT" bitLength="8" />
+					<Name textId="TN_V_SensorsChipTemperature" />
+				</Variable>
+			</VariableCollection>
+			<ProcessDataCollection>
+				<ProcessData id="P_Data">
+					<ProcessDataIn id="PI_Data" bitLength="16">
+						<Datatype xsi:type="RecordT" bitLength="16">
+							<RecordItem subindex="1" bitOffset="0">
+								<SimpleDatatype xsi:type="BooleanT">
+									<SingleValue xsi:type="BooleanValueT" value="false">
+										<Name textId="TN_OFF" />
+									</SingleValue>
+									<SingleValue xsi:type="BooleanValueT" value="true">
+										<Name textId="TN_ON" />
+									</SingleValue>
+								</SimpleDatatype>
+								<Name textId="TN_PI_LightSPFlag" />
+							</RecordItem>
+							<RecordItem subindex="2" bitOffset="8">
+								<SimpleDatatype xsi:type="UIntegerT" bitLength="8" />
+								<Name textId="TN_PI_LightIntensity" />
+							</RecordItem>
+						</Datatype>
+						<Name textId="TN_PI_Data" />
+					</ProcessDataIn>
+				</ProcessData>
+			</ProcessDataCollection>
+			<EventCollection>
+				<Event code="6144" mode="AppearDisappear" type="Message"> <!-- 0x1800 -->
+					<Name textId="TN_Event_DarknessWarning" />
+					<Description textId="TD_Event_DarknessWarning" />
+				</Event>
+				<Event code="16912" mode="SingleShot" type="Warning"> <!-- 0x4210 -->
+					<Name textId="TN_Event_DeviceTemperatureOverrun" />
+					<Description textId="TD_Event_DeviceTemperatureOverrun" />
+				</Event>
+				<Event code="20480" mode="SingleShot" type="Error"> <!-- 0x5000 -->
+					<Name textId="TN_Event_DeviceHardwareFault" />
+					<Description textId="TD_Event_DeviceHardwareFault" />
+				</Event>
+				<Event code="20753" mode="SingleShot" type="Warning"> <!-- 0x5111 -->
+					<Name textId="TN_Event_PrimarySupplyVoltageUnderrun" />
+					<Description textId="TD_Event_PrimarySupplyVoltageUnderrun" />
+				</Event>
+				<Event code="24576" mode="SingleShot" type="Error"> <!-- 0x6000 -->
+					<Name textId="TN_Event_DeviceSoftwareFault" />
+					<Description textId="TD_Event_DeviceSoftwareFault" />
+				</Event>
+				<Event code="30480" mode="SingleShot" type="Error"> <!-- 0x7710 -->
+					<Name textId="TN_Event_ShortCircuit" />
+					<Description textId="TD_Event_ShortCircuit" />
+				</Event>
+			</EventCollection>
+			<UserInterface>
+				<MenuCollection>
+					<Menu id="M_Identification">
+						<VariableRef variableId="V_VendorName" />
+						<VariableRef variableId="V_VendorText" />
+						<VariableRef variableId="V_ProductName" />
+						<VariableRef variableId="V_ProductID" />
+						<VariableRef variableId="V_ProductText" />
+						<VariableRef variableId="V_FirmwareRevision" />
+					</Menu>
+					<Menu id="M_Parameter">
+						<VariableRef variableId="V_SystemCommand" buttonValue="160" />
+						<VariableRef variableId="V_LightSPLevel" />
+						<VariableRef variableId="V_LightSPHysteresis" />
+						<VariableRef variableId="V_SensorsChipSensivity" />
+					</Menu>
+					<Menu id="M_Observation">
+						<VariableRef variableId="V_LightSPLevel" accessRightRestriction="ro" />
+						<VariableRef variableId="V_LightSPHysteresis" accessRightRestriction="ro" />
+					</Menu>
+					<Menu id="M_Diagnosis">
+						<VariableRef variableId="V_SystemCommand" buttonValue="128" />
+						<VariableRef variableId="V_SensorsChipTemperature" gradient="0.49" offset="-40" unitCode="1001" displayFormat="Dec" /> <!-- in °C -->
+					</Menu>
+				</MenuCollection>
+				<ObserverRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification" />
+					<ObservationMenu menuId="M_Observation" />
+				</ObserverRoleMenuSet>
+				<MaintenanceRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification" />
+					<ObservationMenu menuId="M_Observation" />
+					<DiagnosisMenu menuId="M_Diagnosis" />
+				</MaintenanceRoleMenuSet>
+				<SpecialistRoleMenuSet>
+					<IdentificationMenu menuId="M_Identification" />
+					<ParameterMenu menuId="M_Parameter" />
+					<ObservationMenu menuId="M_Observation" />
+					<DiagnosisMenu menuId="M_Diagnosis" />
+				</SpecialistRoleMenuSet>
+			</UserInterface>
+		</DeviceFunction>
+	</ProfileBody>
+	<CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.0">
+		<TransportLayers>
+			<PhysicalLayer physics="2" minCycleTime="1500" sioSupported="false" baudrate="COM3" />
+		</TransportLayers>
+	</CommNetworkProfile>
+	<ExternalTextCollection>
+		<PrimaryLanguage xml:lang="en">
+			<Text id="TN_OFF" value="OFF" />
+			<Text id="TN_ON" value="ON" />
+
+			<Text id="TN_Sensivity_VeryHigh" value="Very high" />
+			<Text id="TN_Sensivity_High" value="High" />
+			<Text id="TN_Sensivity_Middle" value="Middle" />
+			<Text id="TN_Sensivity_Low" value="Low" />
+
+			<Text id="TN_VendorText" value="Major supplier of semiconductor solutions" />
+			<Text id="TN_VendorUrl" value="http://www.renesas.eu" />
+			<Text id="TN_DeviceFamily" value="Sensors and Sensor Interface" />
+			<Text id="TN_Variant" value="Santa Cruz (MAXREFDES23#)" />
+			<Text id="TD_Variant" value="IO-Link Light Sensor" />
+
+			<Text id="TN_SystemCommand_TeachIn" value="Tech-in ambient light switch-point level" />
+
+			<Text id="TN_V_LightSPLevel" value="Ambient light switch-point level" />
+			<Text id="TN_V_LightSPHysteresis" value="Ambient light switch-point hysteresis" />
+			<Text id="TN_V_SensorsChipSensivity" value="MAX44008EDT+ sensors chip sensivity" />
+			<Text id="TN_V_SensorsChipTemperature" value="MAX44008EDT+ sensors chip temperature" />
+
+			<Text id="TN_PI_LightSPFlag" value="Ambient light switch-point flag" />
+			<Text id="TN_PI_LightIntensity" value="Ambient light intensity" />
+			<Text id="TN_PI_Data" value="Process Data Input" />
+
+			<Text id="TN_Event_DarknessWarning" value="Darkness warning" />
+			<Text id="TD_Event_DarknessWarning" value="Occurred when an ambient light intensity is very low" />
+			<Text id="TN_Event_DeviceTemperatureOverrun" value="Device temperature over-run" />
+			<Text id="TD_Event_DeviceTemperatureOverrun" value="Clear source of heat" />
+			<Text id="TN_Event_DeviceHardwareFault" value="Device hardware fault" />
+			<Text id="TD_Event_DeviceHardwareFault" value="Device exchange" />
+			<Text id="TN_Event_PrimarySupplyVoltageUnderrun" value="Primary supply voltage under-run" />
+			<Text id="TD_Event_PrimarySupplyVoltageUnderrun" value="Check tolerance" />
+			<Text id="TN_Event_DeviceSoftwareFault" value="Device software fault" />
+			<Text id="TD_Event_DeviceSoftwareFault" value="Check firmware revision" />
+			<Text id="TN_Event_ShortCircuit" value="Short circuit" />
+			<Text id="TD_Event_ShortCircuit" value="Check installation" />
+		</PrimaryLanguage>
+	</ExternalTextCollection>
+	<Stamp crc="3866231555"><Checker name="IODD-Checker V1.0.9" version="V1.0.9.0"/></Stamp>
+</IODevice>

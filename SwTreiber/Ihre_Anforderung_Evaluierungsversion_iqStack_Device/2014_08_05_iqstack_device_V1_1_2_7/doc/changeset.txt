@@ -1,0 +1,142 @@
+//******************************************************************************
+//
+//     Copyright © 2011-2013 by IQ² Development GmbH, Neckartenzlingen 
+//     All rights reserved
+//
+//******************************************************************************
+
+IQ Device stack change log
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.0 (released 06.11.2011)
+
+- first written and tested device stack version
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.1 (released 23.03.2012)
+
+- code and comments fitting to new version of io-link spec (Nov 2011)
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.2 (released 18.04.2012, web page)
+
+- doxy doc
+- macros of stack variables memory management for porting to hardware RAM segments
+- PD Input invalid control by AL_SetInput_req and AL_Control_req
+- add DL estabcom state
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.3 (released 12.08.2012, web page)
+
+- add prefix "dev_" to all files and "D" to all methods to distinguish with master stack
+- maintain both C and C++ compatibility with extern "C"
+- delete dev_porting module (all in dev_pl)
+- fix errors with m-seq types
+- check interbyte timeout and max cycle time
+- add get isdu response buffer (user copies data himself)
+- accelerate device message handler
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.4 (released 30.08.2012, web page)
+
+Fix some device stack errors:
+- Enable Startup command transfer
+- set subIndex = 0 for 8-bit ISDU access without subindex
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.1.5 (released 01.10.2013)
+
+- ISDU response (in function DAL_Read_ind()) does not require 
+  its length to take its data buffer.
+  Data buffer reference is available at once (as parameter of DAL_Read_ind()).
+  Response length can be set at the end of response by DAL_Read_rsp(length).
+  
+- Master message with ISDU start write flow control (0x70) restarts
+  completely ISDU state machine at any state of it (not only for Idle state). 
+  Idle message is not needed to finish ISDU reponse.
+  Thereby device does not response with no service while ISDU reponse is in progress.
+  Abort indication to device application is added in this case and by each abort from master.
+  See: IO-Link spec v1.1.1 Oct 2011, 7.3.6.2, p.93, Table 50 (0x10 row);
+                                     7.3.6.4, p.95, Figure 50 edge T8 (ISDUSendComplete)
+
+- In case of device response message with delay, stack responds after this delay if response is ready
+  or later when the response will be ready.
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.0 (released 01.02.2013)
+
+- IO-Link V1.0 support can be switched on/off by define DPL_BACK_COMPATIBLE_RevID_10.
+  Add connection with old master 1.0 indication to device application (DSM_SwitchToRevID10_ind()).
+
+- Change System manager configuration interface (see example of dev_appl.c, DA_InitDSM()):
+  1. Rename timeBase and multiplier to minCycleTimeBase and minCycleTimeMultiplier
+  2. Replace msequenceCapabilityPreoperate and msequenceCapabilityOperate 
+     by      msequenceODLengthPreoper      and msequenceODLengthOper    
+     
+- Change  DSM_DeviceMode() example (see example of dev_appl.c)
+  1. Reinit System manager and go to SIO by IDLE indication, if needed
+  2. Check and fit of changed by master identification parameters, if supported
+
+- Split common.h to separate dev_cmn.h for device stack and mst_cmn.h for master stack
+
+- DAL_NewOutput_ind() comes only if PD out is valid
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.1 (released 08.02.2013)
+
+- fix bug with interleave check for message handler PD indication
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.2 (released 15.04.2013)
+
+- add DPL_Init() called from DEV_IOL_Init()
+- fix bug with not initialized DSM_DeviceCom.lengthPDInBytes and DSM_DeviceCom.lengthPDOutBytes
+- replace all "#if SOME_MACRO == TRUE/FALSE" by "#ifdef SOME_MACRO"
+- replace division in DSM_PDLenBits2Bytes() by shift
+- add transfer buffer indication DPL_TransferBuf_ind() to receive whole master message,
+  it can be used instead of DPL_Transfer_ind() to receive it bytewise
+- add set PL mode preoperate/operate from system manager to indicate
+  in interrupt to PL switch to this modes (DPL_MODE_PREOPERATE/DPL_MODE_OPERATE)
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.3 (released 20.06.2013)
+
+- init DSM_DeviceCom.isInterleave = FALSE for non-interleave mode
+- rename DSM_MODE_IDENT_PREOPERATE and DSM_MODE_IDENT_OPERATE to
+  DSM_MODE_PREOPERATE and DSM_MODE_OPERATE
+- fix bug with report of DSM_MODE_IDENT_CHANGE from SM to device application
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.4 (released 27.08.2013)
+
+- add SM idle mode indication to dev appl after set it from dev appl
+- do not init device message response od buffer, if it is response state,
+  only for direct parameter access/event channel/ISDU idle
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.5 (released 31.10.2013)
+
+- remove event confirmation (from DL to AL) from message flow (interrupts)
+  to forever loop (DDL_EH_MainCycle)
+- insert one message cycle without event bit
+  after master event buffer read confirmation (write to event status dummy byte)
+  before sending further events und setting event bit once more
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.6 (released 13.01.2014)
+
+- fix typing mistake (rename MPL_PACK_CKS_FAST to DPL_PACK_CKS_FAST)
+- calculate master message checksum xor for every received byte in DPL_Transfer_ind
+  but at once for whole receive buffer in DPL_TransferBuf_ind
+- add check of master flow control also for ISDU response
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.7 (last released 05.08.2014)
+
+- move od r/w processing to the time of master/device message sending
+- fix bug with moment of pd cycle end in interleave mode
+
+----------------------------------------------------------------------------------------------------------
+Version 1.1.2.8 (current, not released)
+
+- 

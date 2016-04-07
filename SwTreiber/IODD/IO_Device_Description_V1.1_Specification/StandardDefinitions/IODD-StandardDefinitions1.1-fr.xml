@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalTextDocument xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD-Primitives1.1.xsd">
+	<DocumentInfo version="V1.1" releaseDate="2011-08-08" copyright="IO-Link Consortium"/>
+	<Language xml:lang="fr">
+		<Text id="STD_TN_Reserved" value="réservé"/>
+		<!-- Variables -->
+		<Text id="STD_TN_V_DirectParameters_1" value="Paramètres directs 1"/>
+		<Text id="STD_TN_MasterCycleTime" value="Temps de cycle principal"/>
+		<Text id="STD_TN_MinCycleTime" value="Temps de cycle min."/>
+		<Text id="STD_TN_M-SequenceCapability" value="Capacité de séquence M"/>
+		<Text id="STD_TN_RevisionID" value="IO-Link Version ID"/>
+		<Text id="STD_TN_ProcessDataIn" value="Données de processus - longueur d'entrée"/>
+		<Text id="STD_TN_ProcessDataOut" value="Données de processus - longueur de sortie"/>
+		<Text id="STD_TN_VendorID1" value="ID fournisseur 1"/>
+		<Text id="STD_TN_VendorID2" value="ID fournisseur 2"/>
+		<Text id="STD_TN_DeviceID1" value="ID appareil 1"/>
+		<Text id="STD_TN_DeviceID2" value="ID appareil 2"/>
+		<Text id="STD_TN_DeviceID3" value="ID appareil 3"/>
+		<Text id="STD_TN_V_DirectParameters_2" value="Paramètres directs 2"/>
+		<Text id="STD_TN_DeviceSpecific_1" value="Paramètre appareil spécifique 1"/>
+		<Text id="STD_TN_DeviceSpecific_2" value="Paramètre appareil spécifique 2"/>
+		<Text id="STD_TN_DeviceSpecific_3" value="Paramètre appareil spécifique 3"/>
+		<Text id="STD_TN_DeviceSpecific_4" value="Paramètre appareil spécifique 4"/>
+		<Text id="STD_TN_DeviceSpecific_5" value="Paramètre appareil spécifique 5"/>
+		<Text id="STD_TN_DeviceSpecific_6" value="Paramètre appareil spécifique 6"/>
+		<Text id="STD_TN_DeviceSpecific_7" value="Paramètre appareil spécifique 7"/>
+		<Text id="STD_TN_DeviceSpecific_8" value="Paramètre appareil spécifique 8"/>
+		<Text id="STD_TN_DeviceSpecific_9" value="Paramètre appareil spécifique 9"/>
+		<Text id="STD_TN_DeviceSpecific_10" value="Paramètre appareil spécifique 10"/>
+		<Text id="STD_TN_DeviceSpecific_11" value="Paramètre appareil spécifique 11"/>
+		<Text id="STD_TN_DeviceSpecific_12" value="Paramètre appareil spécifique 12"/>
+		<Text id="STD_TN_DeviceSpecific_13" value="Paramètre appareil spécifique 13"/>
+		<Text id="STD_TN_DeviceSpecific_14" value="Paramètre appareil spécifique 14"/>
+		<Text id="STD_TN_DeviceSpecific_15" value="Paramètre appareil spécifique 15"/>
+		<Text id="STD_TN_DeviceSpecific_16" value="Paramètre appareil spécifique 16"/>
+		<Text id="STD_TN_SystemCommand" value="Commande standard"/>
+		<Text id="STD_TN_SystemCommand_DeviceReset" value="Remise à zéro appareil"/>
+		<Text id="STD_TN_SystemCommand_ApplicationReset" value="Remise à zéro application"/>
+		<Text id="STD_TN_SystemCommand_RestoreFactorySettings" value="Rétablir les réglages en usine"/>
+		<Text id="STD_TN_V_DeviceAccessLocks" value="Appareil protégé d'accès"/>
+		<Text id="STD_TN_ParameterAccessLock" value="Appareil protégé d'accès d'écriture de paramètres"/>
+		<Text id="STD_TN_DataStorageLock" value="Protection de mémoire de données"/>
+		<Text id="STD_TN_LocalParameterizationLock" value="Protection de paramétrage local"/>
+		<Text id="STD_TN_LocalUserInterfaceLock" value="Protection d'interface utilisateur local"/>
+		<Text id="STD_TN_V_VendorName" value="Nom fournisseur"/>
+		<Text id="STD_TN_V_VendorText" value="Text fournisseur"/>
+		<Text id="STD_TN_V_ProductName" value="Nom de produit"/>
+		<Text id="STD_TN_V_ProductID" value="ID de produit"/>
+		<Text id="STD_TN_V_ProductText" value="Texte de produit"/>
+		<Text id="STD_TN_V_SerialNumber" value="Numéro de série"/>
+		<Text id="STD_TN_V_HardwareRevision" value="Version de matériel"/>
+		<Text id="STD_TN_V_FirmwareRevision" value="Version de micrologiciel"/>
+		<Text id="STD_TN_V_ApplicationSpecificTag" value="Etiquette électronique spécifique application"/>
+		<Text id="STD_TN_V_ErrorCount" value="Erreur de comptage"/>
+		<Text id="STD_TN_V_DeviceStatus" value="Etat d'appareil"/>
+		<Text id="STD_TN_DeviceStatus_OK" value="L'appareil est OK"/>
+		<Text id="STD_TN_DeviceStatus_MaintenanceRequired" value="Maintenance requise"/>
+		<Text id="STD_TN_DeviceStatus_OutOfSpecification" value="Hors spécification"/>
+		<Text id="STD_TN_DeviceStatus_FunctionalCheck" value="Contrôle de fonctionnement"/>
+		<Text id="STD_TN_DeviceStatus_Failure" value="Défaut"/>
+		<Text id="STD_TN_V_DetailedDeviceStatus" value="Etat d'appareil détaillé"/>
+		<Text id="STD_TN_V_ProcessDataInput" value="Entrée de données de processus"/>
+		<Text id="STD_TN_V_ProcessDataOutput" value="Sortie de données de processus"/>
+		<Text id="STD_TN_V_OffsetTime" value="Temps de décalage (offset time)"/>
+		<!-- ErrorTypes -->
+		<Text id="STD_TN_0x8000" value="Erreur d'application d'appareil - pas de détails"/>
+		<Text id="STD_TD_0x8000" value="Le service a été refusé par l'application d'appareil et aucune information détaillée sur l'incident n'est disponible"/>
+		<Text id="STD_TN_0x8011" value="Index non disponible"/>
+		<Text id="STD_TD_0x8011" value="L'accès se réalise dans un index non existant"/>
+		<Text id="STD_TN_0x8012" value="Sous-index non disponible"/>
+		<Text id="STD_TD_0x8012" value="L'accès se réalise dans un sous-index non existant"/>
+		<Text id="STD_TN_0x8020" value="Service temporairement non disponible"/>
+		<Text id="STD_TD_0x8020" value="Le paramètre n'est pas accessible dû à l'état actuel de l'application d'appareil"/>
+		<Text id="STD_TN_0x8021" value="Service temporairement non disponible - contrôle local"/>
+		<Text id="STD_TD_0x8021" value="Le paramètre n'est pas accessible dû à une opération locale courante sur l'appareil"/>
+		<Text id="STD_TN_0x8022" value="Service temporairement non disponible - contrôle d'appareil"/>
+		<Text id="STD_TD_0x8022" value="Le paramètre n'est pas accessible dû à l'état déporté déclenché de l'application d'appareil"/>
+		<Text id="STD_TN_0x8023" value="Accès refusé"/>
+		<Text id="STD_TD_0x8023" value="L'accès en écriture sur un paramètre seul "/>
+		<Text id="STD_TN_0x8030" value="Valeur de paramètre hors de portée"/>
+		<Text id="STD_TD_0x8030" value="La valeur du paramètre écrit est hors de sa plage de valeurs admissible"/>
+		<Text id="STD_TN_0x8031" value="La valeur du paramètre supérieure à la limite"/>
+		<Text id="STD_TD_0x8031" value="La valeur du paramètre écrit est au-dessus de sa plage de valeurs spécifiée"/>
+		<Text id="STD_TN_0x8032" value="La valeur du paramètre est inférieure à la limite"/>
+		<Text id="STD_TD_0x8032" value="La valeur du paramètre écrit est en dessous de sa plage de valeurs spécifiée"/>
+		<Text id="STD_TN_0x8033" value="Dépassement de la longueur de paramètre "/>
+		<Text id="STD_TD_0x8033" value="La longueur du paramètre écrit est au-dessus de sa longueur prédéfinie"/>
+		<Text id="STD_TN_0x8034" value="Sous-dépassement de la longueur de paramètre"/>
+		<Text id="STD_TD_0x8034" value="La longueur du paramètre écrit est en dessous de sa longueur prédéfinie"/>
+		<Text id="STD_TN_0x8035" value="Fonction non disponible"/>
+		<Text id="STD_TD_0x8035" value="La commande écrite n'est pas supportée par l'application d'appareil"/>
+		<Text id="STD_TN_0x8036" value="Fonction temporairement non disponible"/>
+		<Text id="STD_TD_0x8036" value="La commande écrite n'est pas disponible due à l'état actuel de l'application d'appareil"/>
+		<Text id="STD_TN_0x8040" value="Jeu de paramètres non valable"/>
+		<Text id="STD_TD_0x8040" value="Un paramètre unique écrit est en conflit avec les autres réglages de paramètres actuels"/>
+		<Text id="STD_TN_0x8041" value="Jeu de paramètres incompatible"/>
+		<Text id="STD_TD_0x8041" value="Des incompatibilités de paramètres sont trouvées à la fin du transfert de paramètres de bloc, le contrôle de plausibilité de l'appareil a échoué"/>
+		<Text id="STD_TN_0x8082" value="Application pas prête"/>
+		<Text id="STD_TD_0x8082" value="Le service lire ou écrire est refusé dû à une application temporairement non disponible"/>
+		<!-- Events -->
+		<Text id="STD_TN_0x0000" value="Pas de défaillance"/>
+		<Text id="STD_TN_0x1000" value="Défaillance générale"/>
+		<Text id="STD_TD_0x1000" value="Erreur inconnue"/>
+		<Text id="STD_TN_0x4000" value="Erreur de température"/>
+		<Text id="STD_TD_0x4000" value="Surcharge"/>
+		<Text id="STD_TN_0x4210" value="Température d'appareil dépassée"/>
+		<Text id="STD_TD_0x4210" value="Enlever la source de chaleur"/>
+		<Text id="STD_TN_0x4220" value="Température d'appareil sous-dépassée"/>
+		<Text id="STD_TD_0x4220" value="Appareil d'isolement"/>
+		<Text id="STD_TN_0x5000" value="Défaut de matériel d'appareil"/>
+		<Text id="STD_TD_0x5000" value="Echange d'appareil"/>
+		<Text id="STD_TN_0x5010" value="Défaillance de composant"/>
+		<Text id="STD_TD_0x5010" value="Réparation ou échange"/>
+		<Text id="STD_TN_0x5011" value="Perte de mémoire non volatile"/>
+		<Text id="STD_TD_0x5011" value="Contrôler les batteries"/>
+		<Text id="STD_TN_0x5012" value="Basses batteries"/>
+		<Text id="STD_TD_0x5012" value="Echanger les batteries"/>
+		<Text id="STD_TN_0x5100" value="Erreur d'alimentation générale"/>
+		<Text id="STD_TD_0x5100" value="Contrôler la disponibilité"/>
+		<Text id="STD_TN_0x5101" value="Fusible sauté / ouvert "/>
+		<Text id="STD_TD_0x5101" value="Echanger le fusible"/>
+		<Text id="STD_TN_0x5110" value="Alimentation primaire dépassée"/>
+		<Text id="STD_TD_0x5110" value="Contrôler la tolérance"/>
+		<Text id="STD_TN_0x5111" value="Alimentation primaire sous-dépassée"/>
+		<Text id="STD_TD_0x5111" value="Contrôler la tolérance"/>
+		<Text id="STD_TN_0x5112" value="Erreur d'alimentation secondaire (classe de port B)"/>
+		<Text id="STD_TD_0x5112" value="Contrôler la tolérance"/>
+		<Text id="STD_TN_0x6000" value="Erreur de logiciel d'appareil"/>
+		<Text id="STD_TD_0x6000" value="Contrôler la révision de micrologiciel"/>
+		<Text id="STD_TN_0x6320" value="Erreur de paramètre"/>
+		<Text id="STD_TD_0x6320" value="Contrôler la fiche technique et les valeurs"/>
+		<Text id="STD_TN_0x6321" value="Manque de paramètre"/>
+		<Text id="STD_TD_0x6321" value="Contrôler la fiche technique"/>
+		<Text id="STD_TN_0x6350" value="Paramètre a changé"/>
+		<Text id="STD_TD_0x6350" value="Contrôler la configuration"/>
+		<Text id="STD_TN_0x7700" value="Rupture de câble d'un appareil subordonné"/>
+		<Text id="STD_TD_0x7700" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7701" value="Rupture de câble de l'appareil subordonné 1"/>
+		<Text id="STD_TD_0x7701" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7702" value="Rupture de câble de l'appareil subordonné 2"/>
+		<Text id="STD_TD_0x7702" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7703" value="Rupture de câble de l'appareil subordonné 3"/>
+		<Text id="STD_TD_0x7703" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7704" value="Rupture de câble de l'appareil subordonné 4"/>
+		<Text id="STD_TD_0x7704" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7705" value="Rupture de câble de l'appareil subordonné 5"/>
+		<Text id="STD_TD_0x7705" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7706" value="Rupture de câble de l'appareil subordonné 6"/>
+		<Text id="STD_TD_0x7706" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7707" value="Rupture de câble de l'appareil subordonné 7"/>
+		<Text id="STD_TD_0x7707" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7708" value="Rupture de câble de l'appareil subordonné 8"/>
+		<Text id="STD_TD_0x7708" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7709" value="Rupture de câble de l'appareil subordonné 9"/>
+		<Text id="STD_TD_0x7709" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770A" value="Rupture de câble de l'appareil subordonné 10"/>
+		<Text id="STD_TD_0x770A" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770B" value="Rupture de câble de l'appareil subordonné 11"/>
+		<Text id="STD_TD_0x770B" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770C" value="Rupture de câble de l'appareil subordonné 12"/>
+		<Text id="STD_TD_0x770C" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770D" value="Rupture de câble de l'appareil subordonné 13"/>
+		<Text id="STD_TD_0x770D" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770E" value="Rupture de câble de l'appareil subordonné 14"/>
+		<Text id="STD_TD_0x770E" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x770F" value="Rupture de câble de l'appareil subordonné 15"/>
+		<Text id="STD_TD_0x770F" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7710" value="Court-circuit"/>
+		<Text id="STD_TD_0x7710" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x7711" value="Défaut à la masse"/>
+		<Text id="STD_TD_0x7711" value="Contrôler l'installation"/>
+		<Text id="STD_TN_0x8C00" value="Erreur de technologie spécifique application"/>
+		<Text id="STD_TD_0x8C00" value="Remise à zéro de l'appareil"/>
+		<Text id="STD_TN_0x8C01" value="Simulation active"/>
+		<Text id="STD_TD_0x8C01" value="Contrôler le mode de fonctionnement"/>
+		<Text id="STD_TN_0x8C10" value="Plage de variables de processus dépassée"/>
+		<Text id="STD_TD_0x8C10" value="Données de processus incertaines"/>
+		<Text id="STD_TN_0x8C20" value="Plage de mesure sous-dépassée"/>
+		<Text id="STD_TD_0x8C20" value="Contrôler l'application"/>
+		<Text id="STD_TN_0x8C30" value="Plage de variables de processus sous-dépassée"/>
+		<Text id="STD_TD_0x8C30" value="Données de processus incertaines"/>
+		<Text id="STD_TN_0x8C40" value="Maintenance requise - nettoyer"/>
+		<Text id="STD_TD_0x8C40" value="Nettoyer le dispositif"/>
+		<Text id="STD_TN_0x8C41" value="Maintenance requise - remplir à nouveau"/>
+		<Text id="STD_TD_0x8C41" value="Appareil de remplissage"/>
+		<Text id="STD_TN_0x8C42" value="Maintenance requise - usure"/>
+		<Text id="STD_TD_0x8C42" value="Echanger les composants usés"/>
+	</Language>
+	<Stamp crc="324026166"><Checker name="IODD-Checker V1.1.1" version="V1.1.1.0"/></Stamp>
+</ExternalTextDocument>

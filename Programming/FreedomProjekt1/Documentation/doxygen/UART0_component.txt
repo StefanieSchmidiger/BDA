@@ -1,0 +1,460 @@
+/*!
+  \page UART0 UART0 (Init_UART)
+**          This file implements the UART (UART0) module initialization
+**          according to the Peripheral Initialization settings, and
+**          defines interrupt service routines prototypes.
+**
+
+- \subpage UART0_settings
+- \subpage UART0_regs_overview  
+- \subpage UART0_regs_details
+- \ref UART0_module "Component documentation" 
+\page UART0_regs_overview Registers Initialization Overview
+This page contains the initialization values for the registers of the peripheral(s) configured
+by the component. 
+<table>
+<tr><td colspan="4" class="ttitle1">UART0 Initialization</td></tr>
+<tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
+<tr><td>0x4006A003</td><td>UART0_C2</td>
+<td class="regNotResetVal">0x0000000C</td>
+ <td>UART0_C2 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A000</td><td>UART0_BDH</td>
+<td class="regResetVal">0x00000000</td>
+ <td>UART0_BDH register, peripheral UART0.</td></tr>
+<tr><td>0x4006A001</td><td>UART0_BDL</td>
+<td class="regNotResetVal">0x00000008</td>
+ <td>UART0_BDL register, peripheral UART0.</td></tr>
+<tr><td>0x4006A008</td><td>UART0_MA1</td>
+<td class="regResetVal">0x00000000</td>
+ <td>UART0_MA1 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A009</td><td>UART0_MA2</td>
+<td class="regResetVal">0x00000000</td>
+ <td>UART0_MA2 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A00A</td><td>UART0_C4</td>
+<td class="regNotResetVal">0x0000000A</td>
+ <td>UART0_C4 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A002</td><td>UART0_C1</td>
+<td class="regNotResetVal">0x00000002</td>
+ <td>UART0_C1 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A004</td><td>UART0_S1</td>
+<td class="regNotResetVal">0x000000DF</td>
+ <td>UART0_S1 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A005</td><td>UART0_S2</td>
+<td class="regNotResetVal">0x000000C0</td>
+ <td>UART0_S2 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A00B</td><td>UART0_C5</td>
+<td class="regNotResetVal">0x00000002</td>
+ <td>UART0_C5 register, peripheral UART0.</td></tr>
+<tr><td>0x4006A006</td><td>UART0_C3</td>
+<td class="regResetVal">0x00000000</td>
+ <td>UART0_C3 register, peripheral UART0.</td></tr>
+</table>
+Color Denotes Reset Value
+<br/>
+\page UART0_regs_details Register Initialization Details
+This page contains detailed description of initialization values for the 
+registers of the peripheral(s) configured by the component. 
+
+<div class="reghdr1">UART0_C2</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">TIE</td><td colspan="1" rowspan="2">TCIE</td>
+<td colspan="1" rowspan="2">RIE</td><td colspan="1" rowspan="2">ILIE</td><td colspan="1" rowspan="2">TE</td>
+<td colspan="1" rowspan="2">RE</td><td colspan="1" rowspan="2">RWU</td><td colspan="1" rowspan="2">SBK</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A003</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000000C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>TIE</td><td>0x00</td><td>Transmit Interrupt Enable for TDRE</td>
+<tr><td>6</td><td>TCIE</td><td>0x00</td><td>Transmission Complete Interrupt Enable for TC</td>
+<tr><td>5</td><td>RIE</td><td>0x00</td><td>Receiver Interrupt Enable for RDRF</td>
+<tr><td>4</td><td>ILIE</td><td>0x00</td><td>Idle Line Interrupt Enable for IDLE</td>
+<tr><td>3</td><td>TE</td><td>0x01</td><td>Transmitter Enable</td>
+<tr><td>2</td><td>RE</td><td>0x01</td><td>Receiver Enable</td>
+<tr><td>1</td><td>RWU</td><td>0x00</td><td>Receiver Wakeup Control</td>
+<tr><td>0</td><td>SBK</td><td>0x00</td><td>Send Break</td>
+</tr></table>
+<div class="reghdr1">UART0_BDH</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">LBKDIE</td><td colspan="1" rowspan="2">RXEDGIE</td>
+<td colspan="1" rowspan="2">SBNS</td><td colspan="5" rowspan="2">SBR</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>LBKDIE</td><td>0x00</td><td>LIN Break Detect Interrupt Enable (for LBKDIF)</td>
+<tr><td>6</td><td>RXEDGIE</td><td>0x00</td><td>RX Input Active Edge Interrupt Enable (for RXEDGIF)</td>
+<tr><td>5</td><td>SBNS</td><td>0x00</td><td>Stop Bit Number Select</td>
+<tr><td>0 - 4</td><td>SBR</td><td>0x00</td><td>Baud Rate Modulo Divisor</td>
+</tr></table>
+<div class="reghdr1">UART0_BDL</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">SBR</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000008</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000004</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 7</td><td>SBR</td><td>0x00</td><td>Baud Rate Modulo Divisor</td>
+</tr></table>
+<div class="reghdr1">UART0_MA1</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">MA</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A008</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 7</td><td>MA</td><td>0x00</td><td>Match Address</td>
+</tr></table>
+<div class="reghdr1">UART0_MA2</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">MA</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A009</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 7</td><td>MA</td><td>0x00</td><td>Match Address</td>
+</tr></table>
+<div class="reghdr1">UART0_C4</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">MAEN1</td><td colspan="1" rowspan="2">MAEN2</td>
+<td colspan="1" rowspan="2">M10</td><td colspan="5" rowspan="2">OSR</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A00A</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000000A</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x0000000F</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>MAEN1</td><td>0x00</td><td>Match Address Mode Enable 1</td>
+<tr><td>6</td><td>MAEN2</td><td>0x00</td><td>Match Address Mode Enable 2</td>
+<tr><td>5</td><td>M10</td><td>0x00</td><td>10-bit Mode select</td>
+<tr><td>0 - 4</td><td>OSR</td><td>0x00</td><td>Over Sampling Ratio</td>
+</tr></table>
+<div class="reghdr1">UART0_C1</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">LOOPS</td><td colspan="1" rowspan="2">DOZEEN</td>
+<td colspan="1" rowspan="2">RSRC</td><td colspan="1" rowspan="2">M</td><td colspan="1" rowspan="2">WAKE</td>
+<td colspan="1" rowspan="2">ILT</td><td colspan="1" rowspan="2">PE</td><td colspan="1" rowspan="2">PT</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>LOOPS</td><td>0x00</td><td>Loop Mode Select</td>
+<tr><td>6</td><td>DOZEEN</td><td>0x00</td><td>Doze Enable</td>
+<tr><td>5</td><td>RSRC</td><td>0x00</td><td>Receiver Source Select</td>
+<tr><td>4</td><td>M</td><td>0x00</td><td>9-Bit or 8-Bit Mode Select</td>
+<tr><td>3</td><td>WAKE</td><td>0x00</td><td>Receiver Wakeup Method Select</td>
+<tr><td>2</td><td>ILT</td><td>0x00</td><td>Idle Line Type Select</td>
+<tr><td>1</td><td>PE</td><td>0x01</td><td>Parity Enable</td>
+<tr><td>0</td><td>PT</td><td>0x00</td><td>Parity Type</td>
+</tr></table>
+<div class="reghdr1">UART0_S1</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="1">TDRE</td><td colspan="1" rowspan="1">TC</td>
+<td colspan="1" rowspan="1">RDRF</td><td colspan="1" rowspan="2">IDLE</td><td colspan="1" rowspan="2">OR</td>
+<td colspan="1" rowspan="2">NF</td><td colspan="1" rowspan="2">FE</td><td colspan="1" rowspan="2">PF</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="1"></td><td colspan="1"></td><td colspan="1"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A004</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000000DF</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x000000C0</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>TDRE</td><td>0x01</td><td>Transmit Data Register Empty Flag</td>
+<tr><td>6</td><td>TC</td><td>0x01</td><td>Transmission Complete Flag</td>
+<tr><td>5</td><td>RDRF</td><td>0x00</td><td>Receive Data Register Full Flag</td>
+<tr><td>4</td><td>IDLE</td><td>0x01</td><td>Idle Line Flag</td>
+<tr><td>3</td><td>OR</td><td>0x01</td><td>Receiver Overrun Flag</td>
+<tr><td>2</td><td>NF</td><td>0x01</td><td>Noise Flag</td>
+<tr><td>1</td><td>FE</td><td>0x01</td><td>Framing Error Flag</td>
+<tr><td>0</td><td>PF</td><td>0x01</td><td>Parity Error Flag</td>
+</tr></table>
+<div class="reghdr1">UART0_S2</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">LBKDIF</td><td colspan="1" rowspan="2">RXEDGIF</td>
+<td colspan="1" rowspan="2">MSBF</td><td colspan="1" rowspan="2">RXINV</td><td colspan="1" rowspan="2">RWUID</td>
+<td colspan="1" rowspan="2">BRK13</td><td colspan="1" rowspan="2">LBKDE</td><td colspan="1" rowspan="1">RAF</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="1"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A005</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000000C0</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>LBKDIF</td><td>0x01</td><td>LIN Break Detect Interrupt Flag</td>
+<tr><td>6</td><td>RXEDGIF</td><td>0x01</td><td>UART _RX Pin Active Edge Interrupt Flag</td>
+<tr><td>5</td><td>MSBF</td><td>0x00</td><td>MSB First</td>
+<tr><td>4</td><td>RXINV</td><td>0x00</td><td>Receive Data Inversion</td>
+<tr><td>3</td><td>RWUID</td><td>0x00</td><td>Receive Wake Up Idle Detect</td>
+<tr><td>2</td><td>BRK13</td><td>0x00</td><td>Break Character Generation Length</td>
+<tr><td>1</td><td>LBKDE</td><td>0x00</td><td>LIN Break Detection Enable</td>
+<tr><td>0</td><td>RAF</td><td>0x00</td><td>Receiver Active Flag</td>
+</tr></table>
+<div class="reghdr1">UART0_C5</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">TDMAE</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">RDMAE</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">BOTHEDGE</td><td colspan="1" rowspan="2">RESYNCDIS</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A00B</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>TDMAE</td><td>0x00</td><td>Transmitter DMA Enable</td>
+<tr><td>5</td><td>RDMAE</td><td>0x00</td><td>Receiver Full DMA Enable</td>
+<tr><td>1</td><td>BOTHEDGE</td><td>0x01</td><td>Both Edge Sampling</td>
+<tr><td>0</td><td>RESYNCDIS</td><td>0x00</td><td>Resynchronization Disable</td>
+</tr></table>
+<div class="reghdr1">UART0_C3</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">R8T9</td><td colspan="1" rowspan="2">R9T8</td>
+<td colspan="1" rowspan="2">TXDIR</td><td colspan="1" rowspan="2">TXINV</td><td colspan="1" rowspan="2">ORIE</td>
+<td colspan="1" rowspan="2">NEIE</td><td colspan="1" rowspan="2">FEIE</td><td colspan="1" rowspan="2">PEIE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006A006</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>R8T9</td><td>0x00</td><td>Receive Bit 8 / Transmit Bit 9</td>
+<tr><td>6</td><td>R9T8</td><td>0x00</td><td>Receive Bit 9 / Transmit Bit 8</td>
+<tr><td>5</td><td>TXDIR</td><td>0x00</td><td>UART _TX Pin Direction in Single-Wire Mode</td>
+<tr><td>4</td><td>TXINV</td><td>0x00</td><td>Transmit Data Inversion</td>
+<tr><td>3</td><td>ORIE</td><td>0x00</td><td>Overrun Interrupt Enable</td>
+<tr><td>2</td><td>NEIE</td><td>0x00</td><td>Noise Error Interrupt Enable</td>
+<tr><td>1</td><td>FEIE</td><td>0x00</td><td>Framing Error Interrupt Enable</td>
+<tr><td>0</td><td>PEIE</td><td>0x00</td><td>Parity Error Interrupt Enable</td>
+</tr></table>
+*/
+/*!
+\page UART0_settings Component Settings
+\code
+**          Component name                                 : UART0
+**          Device                                         : UART0
+**          Settings                                       : 
+**            Clock gate                                   : Do not initialize
+**            Clock settings                               : 
+**              Clock source                               : PLL/FLL
+**              Baud rate divisor                          : 8
+**              Oversampling ratio                         : 10
+**              Baud rate                                  : 238312.727 baud
+**              Both edge sampling                         : Enabled
+**              Resynchronization                          : Enabled
+**            Transfer settings                            : 
+**              Data format                                : 8bit
+**              Bits ordering                              : LSB first
+**              Parity                                     : Even
+**              Stop bit number                            : 1
+**            Idle character counting                      : After start bit
+**            Break character generation length            : Short
+**            LIN Break detection                          : Disabled
+**            Stop in Wait mode                            : Disabled
+**            Receiver wakeup settings                     : 
+**              Receiver wakeup                            : Normal operation
+**              Receiver wake up method                    : Idle-line
+**              Receive wakeup idle detect                 : Don't set IDLE bit
+**              Match address settings                     : 
+**                Match address 1                          : Disabled
+**                Match address 1 value                    : 0
+**                Match address 2                          : Disabled
+**                Match address 2 value                    : 0
+**            Loops and Single wire settings               : 
+**              Loop mode                                  : Disabled
+**              Receiver source in Loop mode               : Loop mode
+**              TxD pin direction in Single-wire mode      : Input
+**            Receiver input                               : Not inverted
+**            Transmitter output                           : Not inverted
+**          Pins/Signals                                   : 
+**            Receiver pin                                 : Enabled
+**              Pin                                        : ADC0_DM0/ADC0_SE4a/PTE21/TPM1_CH1/UART0_RX
+**              Pin signal                                 : 
+**            Transmitter pin                              : Enabled
+**              Pin                                        : ADC0_DP0/ADC0_SE0/PTE20/TPM1_CH0/UART0_TX
+**              Pin signal                                 : 
+**            CTS pin                                      : Disabled
+**            RTS pin                                      : Disabled
+**          Interrupts/DMA                                 : 
+**            Common Tx/Rx interrupt                       : 
+**              Interrupt                                  : INT_UART0
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR name                                   : 
+**              Transmit empty request                     : Disabled
+**              Transmit empty request type                : IRQ
+**              Transmit complete request                  : Disabled
+**              Receiver full request                      : Disabled
+**              Receiver full request type                 : IRQ
+**              Idle line request                          : Disabled
+**              LIN break detect request                   : Disabled
+**              Rx active edge interrupt                   : Disabled
+**            Error Interrupt                              : 
+**              Error interrupt                            : INT_UART0
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR name                                   : 
+**              Overrun error interrupt                    : Disabled
+**              Noise error interrupt                      : Disabled
+**              Framing error interrupt                    : Disabled
+**              Parity error interrupt                     : Disabled
+**          Initialization                                 : 
+**            Send break                                   : Disabled
+**            Enable transmitter                           : Enabled
+**            Enable receiver                              : Enabled
+**            Call Init method                             : no
+<h1>
+\endcode
+*/

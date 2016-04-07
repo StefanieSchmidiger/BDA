@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xsd:simpleType name="IdT">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Za-z][A-Za-z0-9 _-]*[A-Za-z0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RefT">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Za-z][A-Za-z0-9 _-]*[A-Za-z0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SubindexT">
+		<xsd:restriction base="xsd:unsignedByte">
+			<xsd:minInclusive value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="BitCountT">
+		<xsd:restriction base="xsd:unsignedShort"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="IsduLengthT">
+		<xsd:restriction base="xsd:unsignedByte">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="232"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DeviceIdT">
+		<xsd:restriction base="xsd:unsignedInt">
+			<xsd:minInclusive value="1"/>
+			<xsd:maxInclusive value="16777215"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CharacterEncodingT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="UTF-8"/>
+			<xsd:enumeration value="US-ASCII"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="VersionT">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="V\d+(\.\d+){1,7}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AccessRightsT">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ro"/>
+			<xsd:enumeration value="rw"/>
+			<xsd:enumeration value="wo"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="TextDefinitionT">
+		<xsd:attribute name="id" type="IdT" use="required"/>
+		<xsd:attribute name="value" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TextRefT">
+		<xsd:attribute name="textId" type="RefT" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="CollectionT"/>
+	<xsd:complexType name="StampT">
+		<xsd:sequence>
+			<xsd:element name="Checker">
+				<xsd:complexType>
+					<xsd:attribute name="name" type="xsd:string" use="required"/>
+					<xsd:attribute name="version" type="VersionT" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="crc" type="xsd:unsignedInt" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ConditionT">
+		<xsd:attribute name="variableId" type="RefT" use="required"/>
+		<xsd:attribute name="subindex" type="SubindexT"/>
+		<xsd:attribute name="value" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ExternalTextCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="PrimaryLanguage" type="PrimaryLanguageT">
+						<xsd:unique name="Primary_LanguageRedefine_id">
+							<xsd:selector xpath="iodd:TextRedefine"/>
+							<xsd:field xpath="@id"/>
+						</xsd:unique>
+					</xsd:element>
+					<xsd:element name="Language" type="LanguageT" minOccurs="0" maxOccurs="unbounded">
+						<xsd:unique name="Language_id">
+							<xsd:selector xpath="iodd:Text"/>
+							<xsd:field xpath="@id"/>
+						</xsd:unique>
+						<xsd:unique name="LanguageRedefine_id">
+							<xsd:selector xpath="iodd:TextRedefine"/>
+							<xsd:field xpath="@id"/>
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentInfoT">
+		<xsd:annotation>
+			<xsd:documentation>This type defines document information.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="version" type="VersionT" use="required"/>
+		<xsd:attribute name="releaseDate" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:date">
+					<xsd:pattern value="\d{4}-\d{2}-\d{2}"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="copyright" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ObjectT">
+		<xsd:attribute name="id" type="IdT" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ExternalTextDocumentT">
+		<xsd:annotation>
+			<xsd:documentation>This type defines the structure of the file that contains external language dependent text definitions. One file can contain texts of only one language.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DocumentInfo" type="DocumentInfoT" minOccurs="0"/>
+			<xsd:element name="Language" type="LanguageT">
+				<xsd:unique name="ExternalTextDocument_Language_id">
+					<xsd:selector xpath="iodd:Text"/>
+					<xsd:field xpath="@id"/>
+				</xsd:unique>
+				<xsd:unique name="ExternalTextDocument_LanguageRedefine_id">
+					<xsd:selector xpath="iodd:TextRedefine"/>
+					<xsd:field xpath="@id"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="Stamp" type="StampT">
+				<xsd:annotation>
+					<xsd:documentation>Filled out by the IODD Checker.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ExternalTextDocument" type="ExternalTextDocumentT">
+		<xsd:annotation>
+			<xsd:documentation>This defines the root element of the file that contains external text definitions.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="LanguageT">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="Text" type="TextDefinitionT"/>
+			<xsd:element name="TextRedefine" type="TextDefinitionT"/>
+		</xsd:choice>
+		<xsd:attribute ref="xml:lang" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="PrimaryLanguageT">
+		<xsd:complexContent>
+			<xsd:restriction base="LanguageT">
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="Text" type="TextDefinitionT"/>
+					<xsd:element name="TextRedefine" type="TextDefinitionT"/>
+				</xsd:choice>
+			</xsd:restriction>
+			<!-- <xsd:attribute ref="xml:lang" use="required" fixed="en"/> -->
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

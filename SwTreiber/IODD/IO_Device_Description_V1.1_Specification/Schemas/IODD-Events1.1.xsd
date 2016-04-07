@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:include schemaLocation="IODD-Primitives1.1.xsd"/>
+	<xsd:complexType name="EventCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="StdEventRef" type="StdEventRefT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Event" type="EventDescT" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StdEventRefT">
+		<xsd:attribute name="code" type="xsd:unsignedShort" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="EventDescT">
+		<xsd:sequence>
+			<xsd:element name="Name" type="TextRefT"/>
+			<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="code" type="xsd:unsignedShort" use="required"/>
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="Notification"/>
+					<xsd:enumeration value="Warning"/>
+					<xsd:enumeration value="Error"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorTypeCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="StdErrorTypeRef" type="StdErrorTypeRefT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="ErrorType" type="ErrorType129T" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StdErrorTypeRefT">
+		<xsd:attribute name="code" type="xsd:unsignedByte" fixed="128"/>
+		<xsd:attribute name="additionalCode" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorType129T">
+		<xsd:complexContent>
+			<xsd:restriction base="ErrorTypeT">
+				<xsd:sequence>
+					<xsd:element name="Name" type="TextRefT"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="code" type="xsd:unsignedByte" fixed="129"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ErrorTypeT">
+		<xsd:sequence>
+			<xsd:element name="Name" type="TextRefT"/>
+			<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="code" type="xsd:unsignedByte"/>
+		<xsd:attribute name="additionalCode" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+</xsd:schema>

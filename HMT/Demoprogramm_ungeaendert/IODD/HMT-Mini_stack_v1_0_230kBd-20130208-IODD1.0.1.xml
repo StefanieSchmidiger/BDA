@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.io-link.com/IODD/2009/11"
+          xsi:schemaLocation="http://www.io-link.com/IODD/2009/11 IODD1.0.1.xsd">
+
+  <DocumentInfo version="V1.0" 
+                releaseDate="2013-02-08" 
+                copyright="Copyright 2012 HMT microelectronic AG"/>
+
+  <ProfileHeader>
+    <ProfileIdentification>IO-Link Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for IO-Link Devices</ProfileName>
+    <ProfileSource>IO-Link Consortium</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>1</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>IODD</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+
+  <ProfileBody>
+    <DeviceIdentity 
+      vendorId="422" 
+      vendorName="HMT" 
+      deviceId="1193046">
+      <!-- device id in decimal notation    hex:123456   = dec: 1193046 -->
+      
+      <VendorText textId="TI_VendorText"/>
+      <VendorUrl textId="TI_VendorUrl"/>
+      <VendorLogo name="HMT-logo.png"/>
+      <DeviceFamily textId="TI_DeviceFamily"/>
+      <DeviceVariantCollection>
+        <DeviceVariant productId="GENIE Explorer (230.4kBd)"
+                       deviceSymbol="HMT-TM96_variant_B_revB-pic.png"
+                       deviceIcon="HMT-TM96_variant_B_revB-icon.png">
+          <ProductName textId="TI_ProductName"/>
+          <ProductText textId="TI_ProductText"/>
+        </DeviceVariant>
+      </DeviceVariantCollection>
+    </DeviceIdentity>
+    <DeviceFunction>
+      
+      <!-- Type Definitions -->
+      <DatatypeCollection>
+
+        <!-- Process Data (Input) Type -->
+        <Datatype id="DT_ProcessDataIn" xsi:type="UIntegerT" bitLength="8">
+        </Datatype>
+
+        <Datatype id="DT_ProcessDataOut" xsi:type="UIntegerT" bitLength="8">
+        </Datatype>
+      </DatatypeCollection>
+
+      <!-- Variables -->
+      <VariableCollection>
+        
+        <StdVariableRef id="V_DirectParameters_1"/>
+        <StdVariableRef id="V_DirectParameters_2"/>
+
+        <StdDirectParameterRef id="V_DeviceSpecific_DirectParameters"  accessRights="rw">
+          <Datatype xsi:type="RecordT" bitLength="128" >
+            <RecordItem subindex="1" bitOffset="120">
+              <!--Mirror Input -->
+              <SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+                <ValueRange lowerValue="0" upperValue="255"/>
+              </SimpleDatatype>
+              <Name textId="TI_DeviceSpecific_1"/>
+            </RecordItem>
+            
+            <RecordItem subindex="2" bitOffset="112">
+              <SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+                <ValueRange lowerValue="0" upperValue="255"/>
+              </SimpleDatatype>
+              <Name textId="TI_DeviceSpecific_2"/>
+            </RecordItem>
+            
+            <RecordItem subindex="3" bitOffset="104">
+              <SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+                <!--<ValueRange lowerValue="0" upperValue="255"/>-->
+                <SingleValue xsi:type="UIntegerValueT" value="0">
+                  <Name textId="TI_DeviceSpecific_3_Enum0"/>
+                </SingleValue>
+                <SingleValue xsi:type="UIntegerValueT" value="1">
+                  <Name textId="TI_DeviceSpecific_3_Enum1"/>
+                </SingleValue>
+                <SingleValue xsi:type="UIntegerValueT" value="2">
+                  <Name textId="TI_DeviceSpecific_3_Enum2"/>
+                </SingleValue>
+              </SimpleDatatype>
+              <Name textId="TI_DeviceSpecific_3"/>
+            </RecordItem>
+            
+            <RecordItem subindex="4" bitOffset="96">
+              <!--THERM Register -->
+              <SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+                <ValueRange lowerValue="0" upperValue="255"/>
+              </SimpleDatatype>
+              <Name textId="TI_DeviceSpecific_5"/>
+            </RecordItem>
+            
+            <RecordItem subindex="5" bitOffset="88">
+              <!--TEMP Register -->
+              <SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+                <ValueRange lowerValue="0" upperValue="255"/>
+              </SimpleDatatype>
+              <Name textId="TI_DeviceSpecific_6"/>
+            </RecordItem>
+          </Datatype>
+          
+          <RecordItemInfo subindex="1" defaultValue="0"/>
+          <RecordItemInfo subindex="2" defaultValue="0"/>
+          <RecordItemInfo subindex="3" defaultValue="0"/>
+          <RecordItemInfo subindex="4" defaultValue="1"/>
+          <RecordItemInfo subindex="5" defaultValue="1"/>
+          
+          <Name textId="TI_UserSpecificParamters"/>
+    </StdDirectParameterRef>
+      </VariableCollection>
+
+      <!-- Process Data -->
+      <ProcessDataCollection>
+        <ProcessData id="PD_ProcessData">
+
+          <ProcessDataIn id="PD_ProcessDataIn" bitLength="8">
+            <DatatypeRef datatypeId="DT_ProcessDataIn" />
+            <Name textId="TI_ProcessDataIn"/>
+          </ProcessDataIn>
+          
+          <ProcessDataOut id="PD_ProcessDataOut" bitLength="8">
+            <DatatypeRef datatypeId="DT_ProcessDataOut" />
+            <Name textId="TI_ProcessDataOut" />
+          </ProcessDataOut>        
+        </ProcessData>
+      </ProcessDataCollection>
+
+      <!-- User Interface -->
+      <UserInterface>
+        <MenuCollection>
+
+          <!-- ===================== IDENTIFICATION MENU ==================  -->
+
+          <Menu id="ME_Ident">
+            <RecordItemRef variableId="V_DirectParameters_1" subindex="8" />
+            <!--Vendor ID 1-->
+            <RecordItemRef variableId="V_DirectParameters_1" subindex="9" />
+            <!--Vendor ID 2-->
+            <RecordItemRef variableId="V_DirectParameters_1" subindex="10" />
+            <!--Device ID 1-->
+            <RecordItemRef variableId="V_DirectParameters_1" subindex="11" />
+            <!--Device ID 2-->
+            <RecordItemRef variableId="V_DirectParameters_1" subindex="12" />
+            <!--Device ID 3-->
+          </Menu>
+
+          <Menu id="ME_Param">
+            <MenuRef menuId="ME_Direct_Parameters"> </MenuRef>
+          </Menu>
+
+          <Menu id="ME_Direct_Parameters">
+            <Name textId="TI_ME_Direct_Parameters"/>
+            <RecordItemRef variableId="V_DeviceSpecific_DirectParameters" subindex="1" />
+            <RecordItemRef variableId="V_DeviceSpecific_DirectParameters" subindex="2" accessRightRestriction="ro"/>
+            <RecordItemRef variableId="V_DeviceSpecific_DirectParameters" subindex="3" />
+          </Menu>
+
+        </MenuCollection>
+
+        <!--Menu declarations  -->
+        <!--ObservationRoleMenuSet is mandatory ! -->
+        <ObserverRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident"/>
+          <ParameterMenu menuId="ME_Param"/>
+        </ObserverRoleMenuSet>
+
+        <!--	MaintenanceRoleMenuSet(m) -->
+        <MaintenanceRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident"/>
+          <ParameterMenu menuId="ME_Param"/>
+        </MaintenanceRoleMenuSet>
+
+        <!--SpecialistRoleMenuSet(m) -->
+        <SpecialistRoleMenuSet>
+          <IdentificationMenu menuId="ME_Ident"/>
+          <ParameterMenu menuId="ME_Param"/>
+        </SpecialistRoleMenuSet>
+
+      </UserInterface>
+      <!-- cut! -->
+    </DeviceFunction>
+  </ProfileBody>
+
+  <CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.0">
+    <TransportLayers>
+      <!--Minimal cycle time of the slave; shown in 1 ?s -->
+      <PhysicalLayer physics="2" minCycleTime="3000" sioSupported="true" baudrate="COM3"/>
+    </TransportLayers>
+  </CommNetworkProfile>
+
+  <ExternalTextCollection>
+    <PrimaryLanguage xml:lang="en">
+      <Text id="TI_VendorText" value="HMT microelectronic AG"/>
+      <Text id="TI_VendorUrl" value="http://www.hmt.ch"/>
+      <Text id="TI_DeviceFamily" value="GENIE Family"/>
+      <Text id="TI_ProductName" value="GENIE Explorer (230.4kBaud)"/>
+      <Text id="TI_ProductText" value="GENIE Explorer (230.4kBaud)"/>
+      <Text id="TI_ProcessDataIn" value="Process Data In"/>
+      <Text id="TI_ProcessDataOut" value="Process Data Out"/>
+      <Text id="TI_ME_Direct_Parameters" value="Direct parameters"/>
+      <Text id="TI_DeviceSpecific_1" value="Mirror Output"/>
+      <Text id="TI_DeviceSpecific_2" value="Mirror Input"/>
+
+      <Text id="TI_DeviceSpecific_3" value="Process Input Selection"/>
+      <Text id="TI_DeviceSpecific_3_Enum0" value="Digital Input"/>
+      <Text id="TI_DeviceSpecific_3_Enum1" value="Analog Input"/>
+      <Text id="TI_DeviceSpecific_3_Enum2" value="Saw-tooth"/>
+      <Text id="TI_UserSpecificParamters" value="User specific parameters"/>
+
+      <Text id="TI_DeviceSpecific_5" value="THERM Register"/>
+      <Text id="TI_DeviceSpecific_6" value="TEMP Register"/>
+    </PrimaryLanguage>
+
+  </ExternalTextCollection>
+  <Stamp crc="3540845564"><Checker name="IODD-Checker V1.0.6" version="V1.0.6.0"/></Stamp>
+</IODevice>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:include schemaLocation="IODD-Primitives1.1.xsd"/>
+	<xsd:complexType name="DatatypeCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="Datatype" type="DatatypeT" maxOccurs="unbounded">
+						<xsd:unique name="DatatypeCollectionRecord_Subindex">
+							<xsd:selector xpath="iodd:RecordItem"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DatatypeT" abstract="true">
+		<xsd:attribute name="id" type="IdT"/>
+	</xsd:complexType>
+	<xsd:complexType name="DatatypeRefT">
+		<xsd:attribute name="datatypeId" type="RefT" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="SimpleDatatypeT" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="DatatypeT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ComplexDatatypeT" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="DatatypeT">
+				<xsd:attribute name="subindexAccessSupported" type="xsd:boolean" default="true"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ArrayT">
+		<xsd:complexContent>
+			<xsd:extension base="ComplexDatatypeT">
+				<xsd:choice>
+					<xsd:element name="SimpleDatatype" type="SimpleDatatypeT">
+						<xsd:unique name="Array_SimpleDatatype_Value">
+							<xsd:selector xpath="iodd:SingleValue|iodd:ValueRange"/>
+							<xsd:field xpath="@value|@lowerValue"/>
+						</xsd:unique>
+					</xsd:element>
+					<xsd:element name="DatatypeRef" type="DatatypeRefT"/>
+				</xsd:choice>
+				<xsd:attribute name="count" type="SubindexT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RecordT">
+		<xsd:complexContent>
+			<xsd:extension base="ComplexDatatypeT">
+				<xsd:sequence maxOccurs="unbounded">
+					<xsd:element name="RecordItem" type="RecordItemT"/>
+				</xsd:sequence>
+				<xsd:attribute name="bitLength" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="BitCountT">
+							<xsd:minInclusive value="1"/>
+							<xsd:maxInclusive value="1856"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RecordItemT">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="SimpleDatatype" type="SimpleDatatypeT">
+					<xsd:unique name="RecordItem_SimpleDatatype_Value">
+						<xsd:selector xpath="iodd:SingleValue|iodd:ValueRange"/>
+						<xsd:field xpath="@value|@lowerValue"/>
+					</xsd:unique>
+				</xsd:element>
+				<xsd:element name="DatatypeRef" type="DatatypeRefT"/>
+			</xsd:choice>
+			<xsd:element name="Name" type="TextRefT"/>
+			<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="subindex" type="SubindexT" use="required"/>
+		<xsd:attribute name="bitOffset" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="BitCountT">
+					<xsd:maxInclusive value="1855"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="accessRightRestriction" type="AccessRightsT"/>
+	</xsd:complexType>
+	<xsd:complexType name="NumberT" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IntegerT">
+		<xsd:complexContent>
+			<xsd:extension base="NumberT">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="SingleValue" type="IntegerValueT"/>
+						<xsd:element name="ValueRange" type="IntegerValueRangeT"/>
+					</xsd:choice>
+				</xsd:sequence>
+				<xsd:attribute name="bitLength" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="BitCountT">
+							<xsd:minInclusive value="2"/>
+							<xsd:maxInclusive value="64"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UIntegerT">
+		<xsd:complexContent>
+			<xsd:extension base="NumberT">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="SingleValue" type="UIntegerValueT"/>
+						<xsd:element name="ValueRange" type="UIntegerValueRangeT"/>
+					</xsd:choice>
+				</xsd:sequence>
+				<xsd:attribute name="bitLength" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="BitCountT">
+							<xsd:minInclusive value="2"/>
+							<xsd:maxInclusive value="64"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Float32T">
+		<xsd:complexContent>
+			<xsd:extension base="NumberT">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="SingleValue" type="Float32ValueT"/>
+						<xsd:element name="ValueRange" type="Float32ValueRangeT"/>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BooleanT">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT">
+				<xsd:sequence>
+					<xsd:element name="SingleValue" type="BooleanValueT" minOccurs="0" maxOccurs="2"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OctetStringT">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT">
+				<xsd:attribute name="fixedLength" type="IsduLengthT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StringT">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT">
+				<xsd:attribute name="fixedLength" type="IsduLengthT" use="required"/>
+				<xsd:attribute name="encoding" type="CharacterEncodingT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TimeT">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TimeSpanT">
+		<xsd:complexContent>
+			<xsd:extension base="SimpleDatatypeT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AbstractValueT" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SingleValueT" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="AbstractValueT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ValueRangeT" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="AbstractValueT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BooleanValueT">
+		<xsd:complexContent>
+			<xsd:extension base="SingleValueT">
+				<xsd:attribute name="value" type="xsd:boolean" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IntegerValueT">
+		<xsd:complexContent>
+			<xsd:extension base="SingleValueT">
+				<xsd:attribute name="value" type="xsd:long" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IntegerValueRangeT">
+		<xsd:complexContent>
+			<xsd:extension base="ValueRangeT">
+				<xsd:attribute name="lowerValue" type="xsd:long" use="required"/>
+				<xsd:attribute name="upperValue" type="xsd:long" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UIntegerValueT">
+		<xsd:complexContent>
+			<xsd:extension base="SingleValueT">
+				<xsd:attribute name="value" type="xsd:unsignedLong" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UIntegerValueRangeT">
+		<xsd:complexContent>
+			<xsd:extension base="ValueRangeT">
+				<xsd:attribute name="lowerValue" type="xsd:unsignedLong" use="required"/>
+				<xsd:attribute name="upperValue" type="xsd:unsignedLong" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Float32ValueT">
+		<xsd:complexContent>
+			<xsd:extension base="SingleValueT">
+				<xsd:attribute name="value" type="xsd:float" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Float32ValueRangeT">
+		<xsd:complexContent>
+			<xsd:extension base="ValueRangeT">
+				<xsd:attribute name="lowerValue" type="xsd:float" use="required"/>
+				<xsd:attribute name="upperValue" type="xsd:float" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProcessDataUnionT" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>This datatype is a union of all process data definitions. Thus the size equals the size of the largest process data definition.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="DatatypeT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProcessDataInUnionT">
+		<xsd:complexContent>
+			<xsd:extension base="ProcessDataUnionT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProcessDataOutUnionT">
+		<xsd:complexContent>
+			<xsd:extension base="ProcessDataUnionT"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

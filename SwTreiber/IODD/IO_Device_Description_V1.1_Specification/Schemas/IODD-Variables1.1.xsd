@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:include schemaLocation="IODD-Primitives1.1.xsd"/>
+	<xsd:include schemaLocation="IODD-Datatypes1.1.xsd"/>
+	<xsd:complexType name="VariableCollectionT">
+		<xsd:complexContent>
+			<xsd:extension base="CollectionT">
+				<xsd:sequence>
+					<xsd:element name="StdVariableRef" type="StdVariableRefT" minOccurs="2" maxOccurs="unbounded">
+						<xsd:unique name="StdVariableRef_value">
+							<xsd:selector xpath="iodd:StdSingleValueRef|iodd:SingleValue|iodd:ValueRange"/>
+							<xsd:field xpath="@value|@lowerValue"/>
+						</xsd:unique>
+						<xsd:unique name="StdVariableRef_StdRecordItemRef_Subindex">
+							<xsd:selector xpath="iodd:StdRecordItemRef"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+					<xsd:element name="DirectParameterOverlay" type="AbstractVariableT" minOccurs="0">
+						<xsd:unique name="DirectParameterOverlay_RecordItemInfo_Subindex">
+							<xsd:selector xpath="iodd:RecordItemInfo"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+					<xsd:element name="Variable" minOccurs="0" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="VariableT">
+									<xsd:attribute name="defaultValue"/>
+								</xsd:extension>
+							</xsd:complexContent>
+						</xsd:complexType>
+						<xsd:unique name="Variable_RecordItemInfo_Subindex">
+							<xsd:selector xpath="iodd:RecordItemInfo"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StdDataItemRefT" abstract="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="StdSingleValueRef" type="StdSingleValueRefT"/>
+			<xsd:element name="SingleValue">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="SingleValueT">
+							<xsd:attribute name="value" use="required"/>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="ValueRange">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="ValueRangeT">
+							<xsd:attribute name="lowerValue" use="required"/>
+							<xsd:attribute name="upperValue" use="required"/>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:choice>
+		<xsd:attribute name="defaultValue"/>
+	</xsd:complexType>
+	<xsd:complexType name="StdVariableRefT">
+		<xsd:complexContent>
+			<xsd:extension base="StdDataItemRefT">
+				<xsd:sequence>
+					<xsd:element name="StdRecordItemRef" type="StdRecordItemRefT" minOccurs="0" maxOccurs="unbounded">
+						<xsd:unique name="StdRecordItemRef_value">
+							<xsd:selector xpath="iodd:StdSingleValueRef|iodd:SingleValue|iodd:ValueRange"/>
+							<xsd:field xpath="@value|@lowerValue"/>
+						</xsd:unique>
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="id" type="IdT" use="required"/>
+				<xsd:attribute name="fixedLengthRestriction" type="SubindexT"/>
+				<xsd:attribute name="excludedFromDataStorage" type="xsd:boolean" default="false"/>				
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StdRecordItemRefT">
+		<xsd:complexContent>
+			<xsd:extension base="StdDataItemRefT">
+				<xsd:attribute name="subindex" type="SubindexT" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="StdSingleValueRefT">
+		<xsd:attribute name="value" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="DataItemT">
+		<xsd:complexContent>
+			<xsd:extension base="ObjectT">
+				<xsd:choice>
+					<xsd:element name="Datatype" type="DatatypeT">
+						<xsd:unique name="DatatypeRecord_Subindex">
+							<xsd:selector xpath="iodd:RecordItem"/>
+							<xsd:field xpath="@subindex"/>
+						</xsd:unique>
+					</xsd:element>
+					<xsd:element name="DatatypeRef" type="DatatypeRefT"/>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RecordItemInfoT">
+		<xsd:attribute name="subindex" type="SubindexT" use="required"/>
+		<xsd:attribute name="defaultValue"/>
+		<xsd:attribute name="modifiesOtherVariables" type="xsd:boolean" default="false"/>
+		<xsd:attribute name="excludedFromDataStorage" type="xsd:boolean" default="false"/>
+	</xsd:complexType>
+	<xsd:complexType name="VariableT">
+		<xsd:complexContent>
+			<xsd:extension base="AbstractVariableT">
+				<xsd:attribute name="index" type="xsd:unsignedShort" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AbstractVariableT">
+		<xsd:complexContent>
+			<xsd:extension base="DataItemT">
+				<xsd:sequence>
+					<xsd:element name="RecordItemInfo" type="RecordItemInfoT" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element name="Name" type="TextRefT"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute name="accessRights" type="AccessRightsT" use="required"/>
+				<xsd:attribute name="dynamic" type="xsd:boolean" default="false"/>
+				<xsd:attribute name="modifiesOtherVariables" type="xsd:boolean" default="false"/>
+				<xsd:attribute name="excludedFromDataStorage" type="xsd:boolean" default="false"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

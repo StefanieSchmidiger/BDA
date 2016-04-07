@@ -1,0 +1,343 @@
+
+IsrSetupAtmel.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000234  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001c0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000005  00800100  00800100  00000234  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000234  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000264  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000058  00000000  00000000  000002a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000035c  00000000  00000000  000002fc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000204  00000000  00000000  00000658  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000024f  00000000  00000000  0000085c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000a8  00000000  00000000  00000aac  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000023c  00000000  00000000  00000b54  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000000d6  00000000  00000000  00000d90  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000038  00000000  00000000  00000e66  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__vector_24>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a5 30       	cpi	r26, 0x05	; 5
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 5f 00 	call	0xbe	; 0xbe <main>
+  88:	0c 94 de 00 	jmp	0x1bc	; 0x1bc <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <i2c_init>:
+#include <util/twi.h>
+#include <avr/interrupt.h>
+
+void i2c_init(void)
+{
+	OSCCAL = 0xFF;				// select  highest possible frequency with RC generator
+  90:	8f ef       	ldi	r24, 0xFF	; 255
+  92:	80 93 66 00 	sts	0x0066, r24
+	CLKPR = 0b10000000;
+  96:	e1 e6       	ldi	r30, 0x61	; 97
+  98:	f0 e0       	ldi	r31, 0x00	; 0
+  9a:	80 e8       	ldi	r24, 0x80	; 128
+  9c:	80 83       	st	Z, r24
+	CLKPR = 0b10000000;
+  9e:	80 83       	st	Z, r24
+	TWBR = 10;		// SCL frequency 300kHz
+  a0:	8a e0       	ldi	r24, 0x0A	; 10
+  a2:	80 93 b8 00 	sts	0x00B8, r24
+	sei();			// global interrupt enable
+  a6:	78 94       	sei
+  a8:	08 95       	ret
+
+000000aa <i2c_start>:
+}
+
+void i2c_start(void)
+{
+	// transmit START condition
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN) | (1<<TWIE);
+  aa:	85 ea       	ldi	r24, 0xA5	; 165
+  ac:	80 93 bc 00 	sts	0x00BC, r24
+  b0:	08 95       	ret
+
+000000b2 <pinSetup>:
+    }
+}
+
+void pinSetup(void)
+{
+	DDRC |= (1 << VCC_BIT);
+  b2:	39 9a       	sbi	0x07, 1	; 7
+	DDRB |= (1 << GND_BIT);		// set pins to output
+  b4:	26 9a       	sbi	0x04, 6	; 4
+	DDRC |= (1 << LED_BIT);
+  b6:	3a 9a       	sbi	0x07, 2	; 7
+
+	PORTC |= _BV(VCC_BIT);		// set VCC pin to high
+  b8:	41 9a       	sbi	0x08, 1	; 8
+	PORTB &= ~(_BV(GND_BIT));	// set GND pin to low
+  ba:	2e 98       	cbi	0x05, 6	; 5
+  bc:	08 95       	ret
+
+000000be <main>:
+// ----- global variables ---------
+uint8_t i2cData[2];
+
+int main(void)
+{
+	pinSetup();	// setup VCC, GND and LED pins
+  be:	0e 94 59 00 	call	0xb2	; 0xb2 <pinSetup>
+	i2c_init();	// setup TWI
+  c2:	0e 94 48 00 	call	0x90	; 0x90 <i2c_init>
+	sei();			// enable global interrupts
+  c6:	78 94       	sei
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  c8:	2f ef       	ldi	r18, 0xFF	; 255
+  ca:	83 ed       	ldi	r24, 0xD3	; 211
+  cc:	90 e3       	ldi	r25, 0x30	; 48
+  ce:	21 50       	subi	r18, 0x01	; 1
+  d0:	80 40       	sbci	r24, 0x00	; 0
+  d2:	90 40       	sbci	r25, 0x00	; 0
+  d4:	e1 f7       	brne	.-8      	; 0xce <main+0x10>
+  d6:	00 c0       	rjmp	.+0      	; 0xd8 <main+0x1a>
+  d8:	00 00       	nop
+	_delay_ms(1000);
+	i2c_start();	// request 2 bytes of I2C data
+  da:	0e 94 55 00 	call	0xaa	; 0xaa <i2c_start>
+    while (1) 
+    {
+		_delay_us(150);
+		//i2c_init();
+		PORTC ^= _BV(LED_BIT);				// toggle LED
+  de:	c4 e0       	ldi	r28, 0x04	; 4
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  e0:	87 e5       	ldi	r24, 0x57	; 87
+  e2:	92 e0       	ldi	r25, 0x02	; 2
+  e4:	01 97       	sbiw	r24, 0x01	; 1
+  e6:	f1 f7       	brne	.-4      	; 0xe4 <main+0x26>
+  e8:	00 c0       	rjmp	.+0      	; 0xea <main+0x2c>
+  ea:	00 00       	nop
+  ec:	88 b1       	in	r24, 0x08	; 8
+  ee:	8c 27       	eor	r24, r28
+  f0:	88 b9       	out	0x08, r24	; 8
+		i2c_start();
+  f2:	0e 94 55 00 	call	0xaa	; 0xaa <i2c_start>
+		PORTC ^= _BV(LED_BIT);				// toggle LED
+  f6:	88 b1       	in	r24, 0x08	; 8
+  f8:	8c 27       	eor	r24, r28
+  fa:	88 b9       	out	0x08, r24	; 8
+    }
+  fc:	f1 cf       	rjmp	.-30     	; 0xe0 <main+0x22>
+
+000000fe <__vector_24>:
+	PORTB &= ~(_BV(GND_BIT));	// set GND pin to low
+}
+
+
+ISR(TWI_vect)
+{
+  fe:	1f 92       	push	r1
+ 100:	0f 92       	push	r0
+ 102:	0f b6       	in	r0, 0x3f	; 63
+ 104:	0f 92       	push	r0
+ 106:	11 24       	eor	r1, r1
+ 108:	2f 93       	push	r18
+ 10a:	8f 93       	push	r24
+ 10c:	9f 93       	push	r25
+ 10e:	af 93       	push	r26
+ 110:	bf 93       	push	r27
+ 112:	ef 93       	push	r30
+ 114:	ff 93       	push	r31
+	static uint8_t i2cDataTemp[2];
+	if((TWSR & 0xF8) == TW_START)					// start condition successfully transmitted
+ 116:	80 91 b9 00 	lds	r24, 0x00B9
+ 11a:	88 7f       	andi	r24, 0xF8	; 248
+ 11c:	88 30       	cpi	r24, 0x08	; 8
+ 11e:	39 f4       	brne	.+14     	; 0x12e <__vector_24+0x30>
+	{
+		TWDR = 0b10011011;							// load address(1001101x) and read(1) into data register
+ 120:	8b e9       	ldi	r24, 0x9B	; 155
+ 122:	80 93 bb 00 	sts	0x00BB, r24
+		TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWIE);				// start transmission of address
+ 126:	85 e8       	ldi	r24, 0x85	; 133
+ 128:	80 93 bc 00 	sts	0x00BC, r24
+ 12c:	3b c0       	rjmp	.+118    	; 0x1a4 <__vector_24+0xa6>
+	}
+	else if ( ((TW_STATUS & 0xF8) == TW_MT_SLA_ACK) || ((TW_STATUS & 0xF8) == TW_MR_SLA_ACK) ) // address+read/write acknowledged
+ 12e:	80 91 b9 00 	lds	r24, 0x00B9
+ 132:	88 7f       	andi	r24, 0xF8	; 248
+ 134:	88 31       	cpi	r24, 0x18	; 24
+ 136:	29 f0       	breq	.+10     	; 0x142 <__vector_24+0x44>
+ 138:	80 91 b9 00 	lds	r24, 0x00B9
+ 13c:	88 7f       	andi	r24, 0xF8	; 248
+ 13e:	80 34       	cpi	r24, 0x40	; 64
+ 140:	21 f4       	brne	.+8      	; 0x14a <__vector_24+0x4c>
+	{
+		TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA) | (1<<TWIE); // start TWI module and acknowledge data after reception
+ 142:	85 ec       	ldi	r24, 0xC5	; 197
+ 144:	80 93 bc 00 	sts	0x00BC, r24
+ 148:	2d c0       	rjmp	.+90     	; 0x1a4 <__vector_24+0xa6>
+	}
+	else /*if((TW_STATUS & 0xF8) == TW_MR_DATA_ACK)*/			// data received and acknowledge sent
+	{
+		static uint8_t byteNumber=0;
+		i2cDataTemp[byteNumber] = TWDR;	// data structure from sensor, B1: 0 0 0 0  b10 b9 b8 b7       B2: b6 b5 b4 b3  b2 b1 x x
+ 14a:	80 91 02 01 	lds	r24, 0x0102
+ 14e:	90 91 bb 00 	lds	r25, 0x00BB
+ 152:	e8 2f       	mov	r30, r24
+ 154:	f0 e0       	ldi	r31, 0x00	; 0
+ 156:	e0 50       	subi	r30, 0x00	; 0
+ 158:	ff 4f       	sbci	r31, 0xFF	; 255
+ 15a:	90 83       	st	Z, r25
+		byteNumber++;
+ 15c:	8f 5f       	subi	r24, 0xFF	; 255
+ 15e:	80 93 02 01 	sts	0x0102, r24
+		if(byteNumber == 2)							// 2nd byte was sent -> send STOP
+ 162:	82 30       	cpi	r24, 0x02	; 2
+ 164:	e1 f4       	brne	.+56     	; 0x19e <__vector_24+0xa0>
+		{
+			TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);	// transmit STOP condition. disable with endless data acquiry
+ 166:	84 e9       	ldi	r24, 0x94	; 148
+ 168:	80 93 bc 00 	sts	0x00BC, r24
+			//TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA) | (1<<TWIE); // endless data acquiry enable, request 1st byte again
+			byteNumber = 0;							// overwrite data the next time
+ 16c:	10 92 02 01 	sts	0x0102, r1
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+ 170:	f8 94       	cli
+			ATOMIC_BLOCK(ATOMIC_FORCEON)			// write i2cData into global array
+			{
+				i2cData[0]=(0x3F & (i2cDataTemp[0]/4))|((uint8_t)(i2cDataTemp[1]*64));	// store data in right format
+ 172:	a0 e0       	ldi	r26, 0x00	; 0
+ 174:	b1 e0       	ldi	r27, 0x01	; 1
+ 176:	11 96       	adiw	r26, 0x01	; 1
+ 178:	8c 91       	ld	r24, X
+ 17a:	11 97       	sbiw	r26, 0x01	; 1
+ 17c:	e3 e0       	ldi	r30, 0x03	; 3
+ 17e:	f1 e0       	ldi	r31, 0x01	; 1
+ 180:	9c 91       	ld	r25, X
+ 182:	96 95       	lsr	r25
+ 184:	96 95       	lsr	r25
+ 186:	28 2f       	mov	r18, r24
+ 188:	22 95       	swap	r18
+ 18a:	22 0f       	add	r18, r18
+ 18c:	22 0f       	add	r18, r18
+ 18e:	20 7c       	andi	r18, 0xC0	; 192
+ 190:	92 2b       	or	r25, r18
+ 192:	90 83       	st	Z, r25
+				i2cData[1]=i2cDataTemp[1]/4;
+ 194:	86 95       	lsr	r24
+ 196:	86 95       	lsr	r24
+ 198:	81 83       	std	Z+1, r24	; 0x01
+    return 1;
+}
+
+static __inline__ void __iSeiParam(const uint8_t *__s)
+{
+    sei();
+ 19a:	78 94       	sei
+    __asm__ volatile ("" ::: "memory");
+ 19c:	03 c0       	rjmp	.+6      	; 0x1a4 <__vector_24+0xa6>
+			}
+			
+		}
+		else	// after transmission of 1st data byte
+		{
+			TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWIE); // start TWI module for 2nd byte and NACK data after reception (signals end of reception)
+ 19e:	85 e8       	ldi	r24, 0x85	; 133
+ 1a0:	80 93 bc 00 	sts	0x00BC, r24
+		}
+	}
+ 1a4:	ff 91       	pop	r31
+ 1a6:	ef 91       	pop	r30
+ 1a8:	bf 91       	pop	r27
+ 1aa:	af 91       	pop	r26
+ 1ac:	9f 91       	pop	r25
+ 1ae:	8f 91       	pop	r24
+ 1b0:	2f 91       	pop	r18
+ 1b2:	0f 90       	pop	r0
+ 1b4:	0f be       	out	0x3f, r0	; 63
+ 1b6:	0f 90       	pop	r0
+ 1b8:	1f 90       	pop	r1
+ 1ba:	18 95       	reti
+
+000001bc <_exit>:
+ 1bc:	f8 94       	cli
+
+000001be <__stop_program>:
+ 1be:	ff cf       	rjmp	.-2      	; 0x1be <__stop_program>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.io-link.com/IODD/2010/10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:iodd="http://www.io-link.com/IODD/2010/10" targetNamespace="http://www.io-link.com/IODD/2010/10" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:include schemaLocation="IODD-Primitives1.1.xsd"/>
+	<xsd:complexType name="CommNetworkProfileT" abstract="true"/>
+	<xsd:complexType name="IOLinkCommNetworkProfileT">
+		<xsd:complexContent>
+			<xsd:extension base="CommNetworkProfileT">
+				<xsd:sequence>
+					<xsd:element name="TransportLayers" type="IOLinkTransportLayersT"/>
+					<xsd:element name="Test" type="IOLinkTestT"/>
+				</xsd:sequence>
+				<xsd:attribute name="iolinkRevision" type="VersionT" use="required" fixed="V1.1"/>
+				<xsd:attribute name="compatibleWith">
+					<xsd:simpleType>
+						<xsd:restriction base="VersionT">
+							<xsd:enumeration value="V1.0"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="IOLinkTransportLayersT">
+		<xsd:sequence>
+			<xsd:element name="PhysicalLayer" type="IOLinkPhysicalLayerT"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="IOLinkPhysicalLayerT">
+		<xsd:sequence>
+			<xsd:element name="Connection" type="ConnectionT" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="bitrate" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="COM1"/>
+					<xsd:enumeration value="COM2"/>
+					<xsd:enumeration value="COM3"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="minCycleTime" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:unsignedInt">
+					<xsd:maxInclusive value="132800"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="sioSupported" type="xsd:boolean" use="required"/>
+		<xsd:attribute name="mSequenceCapability" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ConnectionT" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+			<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+			<xsd:element name="Wire1" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire2" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire3" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire4" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire5" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire6" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire7" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire8" type="WireT" minOccurs="0"/>
+			<xsd:element name="Wire9" type="WireT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="connectionSymbol">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="([\p{L}\d_#]+-)+con-pic\.png"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ProductRefT">
+		<xsd:attribute name="productId" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="M5ConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+					<xsd:element name="Wire1" type="Wire1T"/>
+					<xsd:element name="Wire2">
+						<!-- I/Q -->
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="WireT">
+									<xsd:sequence>
+										<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+									</xsd:sequence>
+									<xsd:attribute name="color" type="WireColorT" fixed="WH"/>
+									<xsd:attribute name="function" use="required">
+										<xsd:simpleType>
+											<xsd:restriction base="WireFunctionT">
+												<xsd:enumeration value="NC"/>
+												<xsd:enumeration value="Other"/>
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Wire3" type="Wire3T"/>
+					<xsd:element name="Wire4" type="Wire4T"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M8ConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+					<xsd:element name="Wire1" type="Wire1T"/>
+					<xsd:element name="Wire2">
+						<!-- I/Q -->
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="WireT">
+									<xsd:sequence>
+										<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+									</xsd:sequence>
+									<xsd:attribute name="color" type="WireColorT" fixed="WH"/>
+									<xsd:attribute name="function" use="required">
+										<xsd:simpleType>
+											<xsd:restriction base="WireFunctionT">
+												<xsd:enumeration value="NC"/>
+												<xsd:enumeration value="Other"/>
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Wire3" type="Wire3T"/>
+					<xsd:element name="Wire4" type="Wire4T"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M12-4ConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+					<xsd:element name="Wire1" type="Wire1T"/>
+					<xsd:element name="Wire2">
+						<!-- I/Q -->
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="WireT">
+									<xsd:sequence>
+										<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+									</xsd:sequence>
+									<xsd:attribute name="color" type="WireColorT" fixed="WH"/>
+									<xsd:attribute name="function" use="required">
+										<xsd:simpleType>
+											<xsd:restriction base="WireFunctionT">
+												<xsd:enumeration value="NC"/>
+												<xsd:enumeration value="Other"/>
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Wire3" type="Wire3T"/>
+					<xsd:element name="Wire4" type="Wire4T"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="M12-5ConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+					<xsd:element name="Wire1" type="Wire1T"/>
+					<xsd:element name="Wire2">
+						<!-- I/Q (color=white) or P24 (any color) -->
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="WireT">
+									<xsd:sequence>
+										<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+									</xsd:sequence>
+									<xsd:attribute name="color" type="WireColorT" use="required"/>
+									<xsd:attribute name="function" use="required">
+										<xsd:simpleType>
+											<xsd:restriction base="WireFunctionT">
+												<xsd:enumeration value="NC"/>
+												<xsd:enumeration value="P24"/>
+												<xsd:enumeration value="Other"/>
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="Wire3" type="Wire3T"/>
+					<xsd:element name="Wire4" type="Wire4T"/>
+					<xsd:element name="Wire5">
+						<!-- NC or N24 -->
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:restriction base="WireT">
+									<xsd:sequence>
+										<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+									</xsd:sequence>
+									<xsd:attribute name="color" type="WireColorT" use="required"/>
+									<xsd:attribute name="function" use="required">
+										<xsd:simpleType>
+											<xsd:restriction base="WireFunctionT">
+												<xsd:enumeration value="NC"/>
+												<xsd:enumeration value="N24"/>
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:attribute>
+								</xsd:restriction>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="OtherConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT"/>
+					<xsd:element name="Wire1" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire2" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire3" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire4" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire5" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire6" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire7" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire8" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire9" type="WireAnyT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CableConnectionT">
+		<xsd:complexContent>
+			<xsd:restriction base="ConnectionT">
+				<xsd:sequence>
+					<xsd:element name="ProductRef" type="ProductRefT" maxOccurs="unbounded"/>
+					<xsd:element name="Description" type="TextRefT" minOccurs="0"/>
+					<xsd:element name="Wire1" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire2" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire3" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire4" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire5" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire6" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire7" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire8" type="WireAnyT" minOccurs="0"/>
+					<xsd:element name="Wire9" type="WireAnyT" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WireT">
+		<xsd:sequence>
+			<xsd:element name="Name" type="TextRefT" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="color" type="WireColorT"/>
+		<xsd:attribute name="function" type="WireFunctionT"/>
+	</xsd:complexType>
+	<xsd:complexType name="Wire1T">
+		<xsd:complexContent>
+			<xsd:restriction base="WireT">
+				<xsd:attribute name="color" type="WireColorT" fixed="BN"/>
+				<xsd:attribute name="function" type="WireFunctionT" fixed="L+"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Wire3T">
+		<xsd:complexContent>
+			<xsd:restriction base="WireT">
+				<xsd:attribute name="color" type="WireColorT" fixed="BU"/>
+				<xsd:attribute name="function" type="WireFunctionT" fixed="L-"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Wire4T">
+		<xsd:complexContent>
+			<xsd:restriction base="WireT">
+				<xsd:attribute name="color" type="WireColorT" fixed="BK"/>
+				<xsd:attribute name="function" type="WireFunctionT" fixed="C/Q"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="WireAnyT">
+		<xsd:complexContent>
+			<xsd:restriction base="WireT">
+				<xsd:sequence>
+					<xsd:element name="Name" type="TextRefT"/>
+				</xsd:sequence>
+				<xsd:attribute name="color" type="WireColorT" use="required"/>
+				<xsd:attribute name="function" type="WireFunctionT" use="required"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="WireColorT">
+		<xsd:annotation>
+			<xsd:documentation>Codes according to IEC 60757-1983.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<!-- Black -->
+			<xsd:enumeration value="BK"/>
+			<!-- Brown -->
+			<xsd:enumeration value="BN"/>
+			<!-- Red -->
+			<xsd:enumeration value="RD"/>
+			<!-- Orange -->
+			<xsd:enumeration value="OG"/>
+			<!-- Yellow -->
+			<xsd:enumeration value="YE"/>
+			<!-- Green -->
+			<xsd:enumeration value="GN"/>
+			<!-- Blue (including light blue) -->
+			<xsd:enumeration value="BU"/>
+			<!-- Violet (purple) -->
+			<xsd:enumeration value="VT"/>
+			<!-- Grey (slate) -->
+			<xsd:enumeration value="GY"/>
+			<!-- White -->
+			<xsd:enumeration value="WH"/>
+			<!-- Pink -->
+			<xsd:enumeration value="PK"/>
+			<!-- Gold -->
+			<xsd:enumeration value="GD"/>
+			<!-- Turquoise -->
+			<xsd:enumeration value="TQ"/>
+			<!-- Silver -->
+			<xsd:enumeration value="SR"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="WireFunctionT">
+		<xsd:restriction base="xsd:string">
+			<!-- Not connected -->
+			<xsd:enumeration value="NC"/>
+			<!-- Power supply (+), pin 1, brown -->
+			<xsd:enumeration value="L+"/>
+			<!-- Power supply (-), pin 3, blue -->
+			<xsd:enumeration value="L-"/>
+			<!-- Extra power supply (+) -->
+			<xsd:enumeration value="P24"/>
+			<!-- Extra power supply (-) -->
+			<xsd:enumeration value="N24"/>
+			<!-- e.g. signal (DI, DO, analog) or power supply -->
+			<xsd:enumeration value="Other"/>
+			<!-- Communication signal, pin 4, black -->
+			<xsd:enumeration value="C/Q"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="IOLinkTestT">
+		<xsd:sequence>
+			<xsd:element name="Config1" type="IOLinkTestConfigT" minOccurs="0"/>
+			<xsd:element name="Config2" type="IOLinkTestConfigT" minOccurs="0"/>
+			<xsd:element name="Config3" type="IOLinkTestConfigT" minOccurs="0"/>
+			<xsd:element name="Config7" type="IOLinkTestConfig7T" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="IOLinkTestConfigT">
+		<xsd:attribute name="index" type="xsd:unsignedShort" use="required"/>
+		<xsd:attribute name="testValue" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="(0x[0-9A-Fa-f][0-9A-Fa-f],)*0x[0-9A-Fa-f][0-9A-Fa-f]"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="IOLinkTestConfig7T">
+		<xsd:sequence>
+			<xsd:element name="EventTrigger" type="IOLinkTestEventT" maxOccurs="2"/>
+		</xsd:sequence>
+		<xsd:attribute name="index" type="xsd:unsignedShort" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="IOLinkTestEventT">
+		<xsd:attribute name="appearValue" type="xsd:unsignedByte" use="required"/>
+		<xsd:attribute name="disappearValue" type="xsd:unsignedByte" use="required"/>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,419 @@
+/*!
+  \page I2C0 I2C0 (Init_I2C)
+**          This file implements the I2C (I2C0) module initialization
+**          according to the Peripheral Initialization settings, and
+**          defines interrupt service routines prototypes.
+**
+
+- \subpage I2C0_settings
+- \subpage I2C0_regs_overview  
+- \subpage I2C0_regs_details
+- \ref I2C0_module "Component documentation" 
+\page I2C0_regs_overview Registers Initialization Overview
+This page contains the initialization values for the registers of the peripheral(s) configured
+by the component. 
+<table>
+<tr><td colspan="4" class="ttitle1">I2C0 Initialization</td></tr>
+<tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
+<tr><td>0x40066006</td><td>I2C0_FLT</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_FLT register, peripheral I2C0.</td></tr>
+<tr><td>0x40066000</td><td>I2C0_A1</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_A1 register, peripheral I2C0.</td></tr>
+<tr><td>0x40066005</td><td>I2C0_C2</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_C2 register, peripheral I2C0.</td></tr>
+<tr><td>0x40066007</td><td>I2C0_RA</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_RA register, peripheral I2C0.</td></tr>
+<tr><td>0x40066001</td><td>I2C0_F</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_F register, peripheral I2C0.</td></tr>
+<tr><td>0x40066009</td><td>I2C0_A2</td>
+<td class="regResetVal">0x000000C2</td>
+ <td>I2C0_A2 register, peripheral I2C0.</td></tr>
+<tr><td>0x40066008</td><td>I2C0_SMB</td>
+<td class="regNotResetVal">0x0000000A</td>
+ <td>I2C0_SMB register, peripheral I2C0.</td></tr>
+<tr><td>0x4006600A</td><td>I2C0_SLTH</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_SLTH register, peripheral I2C0.</td></tr>
+<tr><td>0x4006600B</td><td>I2C0_SLTL</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_SLTL register, peripheral I2C0.</td></tr>
+<tr><td>0x40066003</td><td>I2C0_S</td>
+<td class="regNotResetVal">0x00000012</td>
+ <td>I2C0_S register, peripheral I2C0.</td></tr>
+<tr><td>0x40066002</td><td>I2C0_C1</td>
+<td class="regResetVal">0x00000000</td>
+ <td>I2C0_C1 register, peripheral I2C0.</td></tr>
+</table>
+Color Denotes Reset Value
+<br/>
+\page I2C0_regs_details Register Initialization Details
+This page contains detailed description of initialization values for the 
+registers of the peripheral(s) configured by the component. 
+
+<div class="reghdr1">I2C0_FLT</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">SHEN</td><td colspan="1" rowspan="2">STOPF</td>
+<td colspan="1" rowspan="2">STOPIE</td><td colspan="5" rowspan="2">FLT</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066006</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>SHEN</td><td>0x00</td><td>Stop Hold Enable</td>
+<tr><td>6</td><td>STOPF</td><td>0x00</td><td>I2C Bus Stop Detect Flag</td>
+<tr><td>5</td><td>STOPIE</td><td>0x00</td><td>I2C Bus Stop Interrupt Enable</td>
+<tr><td>0 - 4</td><td>FLT</td><td>0x00</td><td>I2C Programmable Filter Factor</td>
+</tr></table>
+<div class="reghdr1">I2C0_A1</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="7" rowspan="2">AD</td><td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>1 - 7</td><td>AD</td><td>0x00</td><td>Address</td>
+</tr></table>
+<div class="reghdr1">I2C0_C2</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">GCAEN</td><td colspan="1" rowspan="2">ADEXT</td>
+<td colspan="1" rowspan="2">HDRS</td><td colspan="1" rowspan="2">SBRC</td><td colspan="1" rowspan="2">RMEN</td>
+<td colspan="3" rowspan="2">AD</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066005</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>GCAEN</td><td>0x00</td><td>General Call Address Enable</td>
+<tr><td>6</td><td>ADEXT</td><td>0x00</td><td>Address Extension</td>
+<tr><td>5</td><td>HDRS</td><td>0x00</td><td>High Drive Select</td>
+<tr><td>4</td><td>SBRC</td><td>0x00</td><td>Slave Baud Rate Control</td>
+<tr><td>3</td><td>RMEN</td><td>0x00</td><td>Range Address Matching Enable</td>
+<tr><td>0 - 2</td><td>AD</td><td>0x00</td><td>Slave Address</td>
+</tr></table>
+<div class="reghdr1">I2C0_RA</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="7" rowspan="2">RAD</td><td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066007</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>1 - 7</td><td>RAD</td><td>0x00</td><td>Range Slave Address</td>
+</tr></table>
+<div class="reghdr1">I2C0_F</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="2" rowspan="2">MULT</td><td colspan="6" rowspan="2">ICR</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>6 - 7</td><td>MULT</td><td>0x00</td><td>The MULT bits define the multiplier factor mul. This factor is used along with the SCL divider to generate the I2C baud rate</td>
+<tr><td>0 - 5</td><td>ICR</td><td>0x00</td><td>ClockRate</td>
+</tr></table>
+<div class="reghdr1">I2C0_A2</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="7" rowspan="2">SAD</td><td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066009</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000000C2</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x000000C2</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>1 - 7</td><td>SAD</td><td>0x40</td><td>SMBus Address</td>
+</tr></table>
+<div class="reghdr1">I2C0_SMB</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">FACK</td><td colspan="1" rowspan="2">ALERTEN</td>
+<td colspan="1" rowspan="2">SIICAEN</td><td colspan="1" rowspan="2">TCKSEL</td><td colspan="1" rowspan="2">SLTF</td>
+<td colspan="1" rowspan="1">SHTF1</td><td colspan="1" rowspan="2">SHTF2</td><td colspan="1" rowspan="2">SHTF2IE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="1"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066008</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000000A</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>FACK</td><td>0x00</td><td>Fast NACK/ACK Enable</td>
+<tr><td>6</td><td>ALERTEN</td><td>0x00</td><td>SMBus Alert Response Address Enable</td>
+<tr><td>5</td><td>SIICAEN</td><td>0x00</td><td>Second I2C Address Enable</td>
+<tr><td>4</td><td>TCKSEL</td><td>0x00</td><td>Timeout Counter Clock Select</td>
+<tr><td>3</td><td>SLTF</td><td>0x01</td><td>SCL Low Timeout Flag</td>
+<tr><td>2</td><td>SHTF1</td><td>0x00</td><td>SCL High Timeout Flag 1</td>
+<tr><td>1</td><td>SHTF2</td><td>0x01</td><td>SCL High Timeout Flag 2</td>
+<tr><td>0</td><td>SHTF2IE</td><td>0x00</td><td>SHTF2 Interrupt Enable</td>
+</tr></table>
+<div class="reghdr1">I2C0_SLTH</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">SSLT</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006600A</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 7</td><td>SSLT</td><td>0x00</td><td>Most significant byte of SCL low timeout value that determines the timeout period of SCL low</td>
+</tr></table>
+<div class="reghdr1">I2C0_SLTL</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="8" rowspan="2">SSLT</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4006600B</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 7</td><td>SSLT</td><td>0x00</td><td>Least significant byte of SCL low timeout value that determines the timeout period of SCL low</td>
+</tr></table>
+<div class="reghdr1">I2C0_S</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="1">TCF</td><td colspan="1" rowspan="2">IAAS</td>
+<td colspan="1" rowspan="1">BUSY</td><td colspan="1" rowspan="2">ARBL</td><td colspan="1" rowspan="2">RAM</td>
+<td colspan="1" rowspan="1">SRW</td><td colspan="1" rowspan="2">IICIF</td><td colspan="1" rowspan="1">RXAK</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="1"></td><td colspan="1"></td><td colspan="1"></td><td colspan="1"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066003</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000012</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000080</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>TCF</td><td>0x00</td><td>Transfer Complete Flag</td>
+<tr><td>6</td><td>IAAS</td><td>0x00</td><td>Addressed As A Slave</td>
+<tr><td>5</td><td>BUSY</td><td>0x00</td><td>Bus Busy</td>
+<tr><td>4</td><td>ARBL</td><td>0x01</td><td>Arbitration Lost</td>
+<tr><td>3</td><td>RAM</td><td>0x00</td><td>Range Address Match</td>
+<tr><td>2</td><td>SRW</td><td>0x00</td><td>Slave Read/Write</td>
+<tr><td>1</td><td>IICIF</td><td>0x01</td><td>Interrupt Flag</td>
+<tr><td>0</td><td>RXAK</td><td>0x00</td><td>Receive Acknowledge</td>
+</tr></table>
+<div class="reghdr1">I2C0_C1</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">IICEN</td><td colspan="1" rowspan="2">IICIE</td>
+<td colspan="1" rowspan="2">MST</td><td colspan="1" rowspan="2">TX</td><td colspan="1" rowspan="2">TXAK</td>
+<td colspan="1"></td><td colspan="1" rowspan="2">WUEN</td><td colspan="1" rowspan="2">DMAEN</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="1">RSTA</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40066002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>IICEN</td><td>0x00</td><td>I2C Enable</td>
+<tr><td>6</td><td>IICIE</td><td>0x00</td><td>I2C Interrupt Enable</td>
+<tr><td>5</td><td>MST</td><td>0x00</td><td>Master Mode Select</td>
+<tr><td>4</td><td>TX</td><td>0x00</td><td>Transmit Mode Select</td>
+<tr><td>3</td><td>TXAK</td><td>0x00</td><td>Transmit Acknowledge Enable</td>
+<tr><td>2</td><td>RSTA</td><td>0x00</td><td>Repeat START</td>
+<tr><td>1</td><td>WUEN</td><td>0x00</td><td>Wakeup Enable</td>
+<tr><td>0</td><td>DMAEN</td><td>0x00</td><td>DMA Enable</td>
+</tr></table>
+*/
+/*!
+\page I2C0_settings Component Settings
+\code
+**          Component name                                 : I2C0
+**          Device                                         : I2C0
+**          Settings                                       : 
+**            Clock gate                                   : Do not initialize
+**            Clock setting                                : 
+**              Multiplier factor                          : divide by 1
+**              Clock rate                                 : 0
+**              SCL frequency                              : 1.049 MHz
+**              SDA hold value                             : 0.334 us
+**              Slave baud rate control                    : Disabled
+**              SCL low timeout counter clock select       : Bus clock/64
+**              SCL low timout counter                     : 0
+**              SCL low timeout                            : STOP
+**            General call address                         : Disabled
+**            Address mode                                 : 7-bit addressing
+**            Slave address                                : 0
+**            Transfer direction                           : Receive
+**            Transmit Acknowledge                         : yes
+**            Fast acknowledge                             : Disabled
+**            Wake-up                                      : Disabled
+**            Noise (glitch) filter factor                 : 0
+**            Alert response address                       : Disabled
+**            Second address                               : Disabled
+**            Second address value                         : 97
+**            Range address matching                       : Disabled
+**            Range address                                : 0
+**            Stop hold                                    : Disabled
+**          Pins                                           : 
+**            SDA pin allocation                           : Enabled
+**              SDA pin                                    : PTE25/TPM0_CH1/I2C0_SDA
+**              SDA pin signal                             : 
+**            SCL pin allocation                           : Enabled
+**              SCL pin                                    : PTE24/TPM0_CH0/I2C0_SCL
+**              SCL pin signal                             : 
+**            High drive select                            : Disabled
+**          Interrupts/DMA                                 : 
+**            I2C interrupt/DMA                            : 
+**              Interrupt                                  : INT_I2C0
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**              I2C interrupt request                      : Disabled
+**              SDA low, SCL high timeout interrupt        : Disabled
+**              Bus stop interrupt                         : Disabled
+**              I2C request type                           : Interrupt
+**          Initialization                                 : 
+**            Module enable                                : no
+**            Master/Slave mode select                     : Slave
+**            Call Init method                             : yes
+<h1>
+\endcode
+*/
