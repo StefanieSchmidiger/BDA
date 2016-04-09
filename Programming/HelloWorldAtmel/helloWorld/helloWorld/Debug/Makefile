@@ -39,7 +39,8 @@ SUBDIRS :=
 C_SRCS +=  \
 ../i2c_master.c \
 ../main.c \
-../spi_master.c
+../spi_master.c \
+../spi_master_bitbanging.c
 
 
 PREPROCESSING_SRCS += 
@@ -51,22 +52,26 @@ ASM_SRCS +=
 OBJS +=  \
 i2c_master.o \
 main.o \
-spi_master.o
+spi_master.o \
+spi_master_bitbanging.o
 
 OBJS_AS_ARGS +=  \
 i2c_master.o \
 main.o \
-spi_master.o
+spi_master.o \
+spi_master_bitbanging.o
 
 C_DEPS +=  \
 i2c_master.d \
 main.d \
-spi_master.d
+spi_master.d \
+spi_master_bitbanging.d
 
 C_DEPS_AS_ARGS +=  \
 i2c_master.d \
 main.d \
-spi_master.d
+spi_master.d \
+spi_master_bitbanging.d
 
 OUTPUT_FILE_PATH +=helloWorld.elf
 
@@ -82,6 +87,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

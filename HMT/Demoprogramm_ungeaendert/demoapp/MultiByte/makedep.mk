@@ -2,11 +2,13 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-i2c_master.c
+..\stack\stackmultibyte.cpp
 
-main.c
+..\stack\stacksinglebyte.cpp
 
-spi_master.c
+..\stack\stacktransparent.cpp
 
-spi_master_bitbanging.c
+demoapp.cpp
+
+main.cpp
 

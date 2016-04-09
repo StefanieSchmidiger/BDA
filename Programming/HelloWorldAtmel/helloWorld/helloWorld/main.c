@@ -4,11 +4,10 @@
 #include <util/delay.h>
 
 #include "i2c_master.h"
-#include "spi_master.h"
+#include "spi_master_bitbanging.h"
 
-#define LED_BIT PC2
-#define GND_BIT PB6
-#define VCC_BIT PC1
+#define GND_BIT PC3
+#define VCC_BIT PC2
 
 //#define LED_HIGH PORTC |= _BV(LED_BIT)
 //#define LED_LOW PORTC &= ~(_BV(LED_BIT))
@@ -22,13 +21,14 @@ void main(void)
 	uint8_t data[2];
 	
 	i2c_init();
-	spi_init();
-	DDRC |= (1 << LED_BIT);
+	spi_init_bitbanging();
+	
 	DDRC |= (1 << VCC_BIT);
-	DDRB |= (1 << GND_BIT);		// set pins to output
+	DDRC |= (1 << GND_BIT);		// set pins to output
+	
 	
 	PORTC |= _BV(VCC_BIT);		// set VCC pin to high
-	PORTB &= ~(_BV(GND_BIT));	// set GND pin to low
+	PORTC &= ~(_BV(GND_BIT));	// set GND pin to low
 	
 	
 	while (1) 
@@ -39,16 +39,12 @@ void main(void)
 		PORTC ^= _BV(LED_BIT);				// toggle LED
 		_delay_ms(1);
 		*/
-		
-		data[0]=0x49;
-		data[1]=0x00;
-		spi_writeSingle(0xFF);
-		spi_writeBytes(data, 2);
-		//data[0]=0x00;
-		//data[1]=0x00;
-		//spi_writeBytes(data, 2);
-		
-		PORTC ^= _BV(LED_BIT);				// toggle LED
+		data[0]=0x04;
+		data[1]= 0x09;
+		spi_sendBytes_bitbanging(data, 2);
+		_delay_us(500);
+		spi_sendBytes_bitbanging(data, 2);
+		data[0] = 0x49;
 		_delay_ms(10);
 	}
 	return 0;

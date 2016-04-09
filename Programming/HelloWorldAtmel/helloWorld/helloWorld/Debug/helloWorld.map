@@ -34,8 +34,29 @@ Discarded input sections
  .text          0x00000000        0x0 spi_master.o
  .data          0x00000000        0x0 spi_master.o
  .bss           0x00000000        0x0 spi_master.o
+ .text.spi_init
+                0x00000000       0x12 spi_master.o
+ .text.spi_writeSingle
+                0x00000000       0x18 spi_master.o
+ .text.spi_writeBytes
+                0x00000000       0x30 spi_master.o
  .text.spi_read
                 0x00000000        0xe spi_master.o
+ .debug_info    0x00000000      0x117 spi_master.o
+ .debug_abbrev  0x00000000       0xd5 spi_master.o
+ .debug_loc     0x00000000       0x43 spi_master.o
+ .debug_aranges
+                0x00000000       0x38 spi_master.o
+ .debug_ranges  0x00000000       0x28 spi_master.o
+ .debug_line    0x00000000       0xfa spi_master.o
+ .debug_str     0x00000000      0x1d7 spi_master.o
+ .comment       0x00000000       0x31 spi_master.o
+ .debug_frame   0x00000000       0x54 spi_master.o
+ .text          0x00000000        0x0 spi_master_bitbanging.o
+ .data          0x00000000        0x0 spi_master_bitbanging.o
+ .bss           0x00000000        0x0 spi_master_bitbanging.o
+ .text.spi_sendSingle_bitbanging
+                0x00000000       0x1c spi_master_bitbanging.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
@@ -72,6 +93,7 @@ LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/d
 LOAD i2c_master.o
 LOAD main.o
 LOAD spi_master.o
+LOAD spi_master_bitbanging.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -172,7 +194,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x138
+.text           0x00000000      0x1ec
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -256,22 +278,28 @@ END GROUP
  .text.i2c_init
                 0x00000080       0x1e i2c_master.o
                 0x00000080                i2c_init
- .text.main     0x0000009e       0x48 main.o
+ .text.main     0x0000009e       0x5c main.o
                 0x0000009e                main
- .text.spi_init
-                0x000000e6       0x16 spi_master.o
-                0x000000e6                spi_init
- .text.spi_writeSingle
-                0x000000fc        0xc spi_master.o
-                0x000000fc                spi_writeSingle
- .text.spi_writeBytes
-                0x00000108       0x2c spi_master.o
-                0x00000108                spi_writeBytes
-                0x00000134                . = ALIGN (0x2)
+ .text.spi_init_bitbanging
+                0x000000fa       0x14 spi_master_bitbanging.o
+                0x000000fa                spi_init_bitbanging
+ .text.spi_sendSingleByte
+                0x0000010e       0x2c spi_master_bitbanging.o
+                0x0000010e                spi_sendSingleByte
+ .text.spi_selectSlave
+                0x0000013a        0x4 spi_master_bitbanging.o
+                0x0000013a                spi_selectSlave
+ .text.spi_unselectSlave
+                0x0000013e        0x4 spi_master_bitbanging.o
+                0x0000013e                spi_unselectSlave
+ .text.spi_sendBytes_bitbanging
+                0x00000142       0xa6 spi_master_bitbanging.o
+                0x00000142                spi_sendBytes_bitbanging
+                0x000001e8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000134        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
-                0x00000134                _exit
-                0x00000134                exit
+ .fini9         0x000001e8        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x000001e8                _exit
+                0x000001e8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -290,11 +318,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000134        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .fini0         0x000001e8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000138                _etext = .
+                0x000001ec                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000138
+.data           0x00800100        0x0 load address 0x000001ec
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -311,8 +339,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 0x00800100                PROVIDE (__bss_end, .)
-                0x00000138                __data_load_start = LOADADDR (.data)
-                0x00000138                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000001ec                __data_load_start = LOADADDR (.data)
+                0x000001ec                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800100        0x0
                 0x00800100                PROVIDE (__noinit_start, .)
@@ -363,7 +391,7 @@ END GROUP
  .comment       0x00000000       0x30 i2c_master.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 main.o
- .comment       0x00000030       0x31 spi_master.o
+ .comment       0x00000030       0x31 spi_master_bitbanging.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -385,56 +413,56 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xc0
+.debug_aranges  0x00000000       0xd0
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x68 i2c_master.o
  .debug_aranges
                 0x00000068       0x20 main.o
  .debug_aranges
-                0x00000088       0x38 spi_master.o
+                0x00000088       0x48 spi_master_bitbanging.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x6d3
+.debug_info     0x00000000      0x9a5
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x3fe i2c_master.o
- .debug_info    0x000003fe      0x1be main.o
- .debug_info    0x000005bc      0x117 spi_master.o
+ .debug_info    0x000003fe      0x230 main.o
+ .debug_info    0x0000062e      0x377 spi_master_bitbanging.o
 
-.debug_abbrev   0x00000000      0x37e
+.debug_abbrev   0x00000000      0x443
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x14c i2c_master.o
- .debug_abbrev  0x0000014c      0x15d main.o
- .debug_abbrev  0x000002a9       0xd5 spi_master.o
+ .debug_abbrev  0x0000014c      0x153 main.o
+ .debug_abbrev  0x0000029f      0x1a4 spi_master_bitbanging.o
 
-.debug_line     0x00000000      0x418
+.debug_line     0x00000000      0x512
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1d4 i2c_master.o
- .debug_line    0x000001d4      0x150 main.o
- .debug_line    0x00000324       0xf4 spi_master.o
+ .debug_line    0x000001d4      0x168 main.o
+ .debug_line    0x0000033c      0x1d6 spi_master_bitbanging.o
 
-.debug_frame    0x00000000      0x1e4
+.debug_frame    0x00000000      0x258
  *(.debug_frame)
  .debug_frame   0x00000000      0x15c i2c_master.o
  .debug_frame   0x0000015c       0x34 main.o
- .debug_frame   0x00000190       0x54 spi_master.o
+ .debug_frame   0x00000190       0xc8 spi_master_bitbanging.o
 
-.debug_str      0x00000000      0x2bf
+.debug_str      0x00000000      0x321
  *(.debug_str)
  .debug_str     0x00000000      0x206 i2c_master.o
                                 0x23a (size before relaxing)
- .debug_str     0x00000206       0x8d main.o
-                                0x21e (size before relaxing)
- .debug_str     0x00000293       0x2c spi_master.o
-                                0x1d7 (size before relaxing)
+ .debug_str     0x00000206       0xa1 main.o
+                                0x232 (size before relaxing)
+ .debug_str     0x000002a7       0x7a spi_master_bitbanging.o
+                                0x285 (size before relaxing)
 
-.debug_loc      0x00000000      0x743
+.debug_loc      0x00000000      0x9fb
  *(.debug_loc)
  .debug_loc     0x00000000      0x6b8 i2c_master.o
  .debug_loc     0x000006b8       0x48 main.o
- .debug_loc     0x00000700       0x43 spi_master.o
+ .debug_loc     0x00000700      0x2fb spi_master_bitbanging.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -454,11 +482,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xc0
+.debug_ranges   0x00000000       0xd0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x88 i2c_master.o
  .debug_ranges  0x00000088       0x10 main.o
- .debug_ranges  0x00000098       0x28 spi_master.o
+ .debug_ranges  0x00000098       0x38 spi_master_bitbanging.o
 
 .debug_macro
  *(.debug_macro)
