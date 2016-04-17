@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Load wallpaper for screen resolution 800 x 600
+;-------------------------------------------------------------------------------
+[HKEY_CURRENT_USER\ControlPanel\Desktop]
+    "wallpaper"="\hard disk\Customer\Background_800x600.bmp"

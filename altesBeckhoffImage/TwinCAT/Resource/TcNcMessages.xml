@@ -1,0 +1,2012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcEventSources>
+	<Source>
+		<Id>500</Id>
+		<Name LcId="1033">NC Messages</Name>
+		<Name LcId="1031">NC Meldungen</Name>
+		<Event>
+			<Id>256</Id>
+			<Message LcId="1033">Cannot use NULL Pointer here !</Message>
+			<Message LcId="1031">NULL-Zeiger hier nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>257</Id>
+			<Message LcId="1033">Cannot use %1 as an index !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Index (z.B. fuer eine Platzangabe o.ae.) nicht benutzbar !</Message>
+		</Event>
+		<Event>
+			<Id>258</Id>
+			<Message LcId="1033">Collision detected! Location %1 already occupied by object with ID %2 !</Message>
+			<Message LcId="1031">Kollision festgestellt! Der Platz %1 ist bereits mit einem Objekt mit ID %2 belegt !</Message>
+		</Event>
+		<Event>
+			<Id>259</Id>
+			<Message LcId="1033">There is no usable interface !</Message>
+			<Message LcId="1031">Es steht keine funktionsfaehige Schnittstelle zur Verfuegung !</Message>
+		</Event>
+		<Event>
+			<Id>260</Id>
+			<Message LcId="1033">The requested structure is illegal !</Message>
+			<Message LcId="1031">Die geforderte Struktur ist nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>261</Id>
+			<Message LcId="1033">Internal error: administration tables are corrupted (%1) !</Message>
+			<Message LcId="1031">Interner Fehler: Verwaltungstabellen (%1) sind unbrauchbar !</Message>
+		</Event>
+		<Event>
+			<Id>262</Id>
+			<Message LcId="1033">The requested objects are incompatible !</Message>
+			<Message LcId="1031">Die benutzten Objekte sind nicht kompatibel !</Message>
+		</Event>
+		<Event>
+			<Id>263</Id>
+			<Message LcId="1033">The operation/comand has been rejected by at least one of the related objects !</Message>
+			<Message LcId="1031">Funktion/Kommando wurde von mindestens einem beteiligten Objekt abgelehnt !</Message>
+		</Event>
+		<Event>
+			<Id>264</Id>
+			<Message LcId="1033">The value %1 is not a valid function select for %2 !</Message>
+			<Message LcId="1031">Der Wert %1 ist keine gueltige Funktionsauswahl fuer %2 !</Message>
+		</Event>
+		<Event>
+			<Id>265</Id>
+			<Message LcId="1033">The value %1 is not a valid type here !</Message>
+			<Message LcId="1031">Der Wert %1 ist keine gueltige Typ-Angabe !</Message>
+		</Event>
+		<Event>
+			<Id>266</Id>
+			<Message LcId="1033">Function failed in R0 NC: cannot reset !</Message>
+			<Message LcId="1031">Funktions-Fehler in R0-NC: Reset nicht ausfuehrbar !</Message>
+		</Event>
+		<Event>
+			<Id>267</Id>
+			<Message LcId="1033">Function failed in R0 NC: cannot stop !</Message>
+			<Message LcId="1031">Funktions-Fehler in R0-NC: Stop nicht ausfuehrbar !</Message>
+		</Event>
+		<Event>
+			<Id>268</Id>
+			<Message LcId="1033">Function failed in R0 NC: cannot start !</Message>
+			<Message LcId="1031">Funktions-Fehler in R0-NC: Start nicht ausfuehrbar !</Message>
+		</Event>
+		<Event>
+			<Id>269</Id>
+			<Message LcId="1033">The data have been supplied in an incorrect format !</Message>
+			<Message LcId="1031">Die Daten wurden in einem nicht zulaessigen Format uebertragen !</Message>
+		</Event>
+		<Event>
+			<Id>304</Id>
+			<Message LcId="1033">ADS format error while reading data in R0 management: Required at least %1 bytes, suplied are %2 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus dem R0-Management: Erforderlich mindestens %1 Bytes, angeboten sind %2 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>305</Id>
+			<Message LcId="1033">ADS format error while writing data in R0 management: Required at least %1 bytes, suplied are %2 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten im R0-Management: Erforderlich mindestens %1 Bytes, angeboten sind %2 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>306</Id>
+			<Message LcId="1033">ADS format error while reading data in NC channel %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Kanal %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>307</Id>
+			<Message LcId="1033">ADS format error while writing data in NC channel %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Kanal %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>308</Id>
+			<Message LcId="1033">ADS format error while reading data in NC group %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Gruppe %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>309</Id>
+			<Message LcId="1033">ADS format error while writing data in NC group %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Gruppe %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>310</Id>
+			<Message LcId="1033">ADS format error while reading data in NC axis %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Achse %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>311</Id>
+			<Message LcId="1033">ADS format error while writing data in NC axis %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Achse %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>312</Id>
+			<Message LcId="1033">ADS format error while reading data in NC encoder %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Encoder %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>313</Id>
+			<Message LcId="1033">ADS format error while writing data in NC encoder %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Encoder %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>314</Id>
+			<Message LcId="1033">ADS format error while reading data in NC controller %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Regler %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>315</Id>
+			<Message LcId="1033">ADS format error while writing data in NC controller %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Regler %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>316</Id>
+			<Message LcId="1033">ADS format error while reading data in NC drive %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten aus NC-Antrieb %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>317</Id>
+			<Message LcId="1033">ADS format error while writing data in NC drive %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Antrieb %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>318</Id>
+			<Message LcId="1033">ADS format error while reading data in NC tabular %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Lesen von Daten in NC-Tabelle %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>319</Id>
+			<Message LcId="1033">ADS format error while writing data in NC tabular %1: Required at least %2 bytes, suplied are %3 bytes !</Message>
+			<Message LcId="1031">ADS-Formatfehler beim Schreiben von Daten in NC-Tabelle %1: Erforderlich mindestens %2 Bytes, angeboten sind %3 Bytes !</Message>
+		</Event>
+		<Event>
+			<Id>336</Id>
+			<Message LcId="1033">ADS index offset error while reading data in R0 management !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus dem R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>337</Id>
+			<Message LcId="1033">ADS index offset error while writing data in R0 management !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten im R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>338</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>339</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>340</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>341</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>342</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC axis %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>343</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC axis %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>344</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC encoder %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>345</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC encoder %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>346</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>347</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>348</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>349</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>350</Id>
+			<Message LcId="1033">ADS index offset error while reading data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Lesen von Daten aus NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>351</Id>
+			<Message LcId="1033">ADS index offset error while writing data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Offset beim Schreiben von Daten in NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>368</Id>
+			<Message LcId="1033">ADS index group error while reading data in R0 management !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus dem R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>369</Id>
+			<Message LcId="1033">ADS index group error while writing data in R0 management !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in das R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>370</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>371</Id>
+			<Message LcId="1033">ADS index group error while writing data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>372</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>373</Id>
+			<Message LcId="1033">ADS index group error while writing data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>374</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC axis %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>375</Id>
+			<Message LcId="1033">ADS index group error while writing data in NC axis %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>376</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC encoder %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>377</Id>
+			<Message LcId="1033">ADS index group error while writing data in NC encoder %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>378</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>379</Id>
+			<Message LcId="1033">ADS index group error while writing data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>380</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>381</Id>
+			<Message LcId="1033">ADS index group while writing data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>382</Id>
+			<Message LcId="1033">ADS index group error while reading data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Lesen von Daten aus NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>383</Id>
+			<Message LcId="1033">ADS index group while writing data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Indexfehler Group beim Schreiben von Daten in NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>400</Id>
+			<Message LcId="1033">ADS access violation while reading data in R0 management !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus dem R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>401</Id>
+			<Message LcId="1033">ADS access violation while writing data in R0 management !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in das R0-Management !</Message>
+		</Event>
+		<Event>
+			<Id>402</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>403</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC channel %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Kanal %1 !</Message>
+		</Event>
+		<Event>
+			<Id>404</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>405</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Gruppe %1 !</Message>
+		</Event>
+		<Event>
+			<Id>406</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC axis %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>407</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Achse %1 !</Message>
+		</Event>
+		<Event>
+			<Id>408</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC encoder %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>409</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC group %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Enkoder %1 !</Message>
+		</Event>
+		<Event>
+			<Id>410</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>411</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC controller %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Regler %1 !</Message>
+		</Event>
+		<Event>
+			<Id>412</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>413</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC drive %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Antrieb %1 !</Message>
+		</Event>
+		<Event>
+			<Id>414</Id>
+			<Message LcId="1033">ADS access violation while reading data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Lesen von Daten aus NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>415</Id>
+			<Message LcId="1033">ADS access violation while writing data in NC tabular %1 !</Message>
+			<Message LcId="1031">ADS-Zugriffsfehler beim Schreiben von Daten in NC-Tabelle %1 !</Message>
+		</Event>
+		<Event>
+			<Id>511</Id>
+			<Message LcId="1033">ADS decoder: IdxGrp: %1, IdxOff: %2, Length: %3  '%4'  (ID: %5)</Message>
+			<Message LcId="1031">ADS-Dekoder: IdxGrp: %1, IdxOff: %2, Daten: %3  '%4'  (ID: %5)</Message>
+			<ParaFormat ParaNo="1">0x%X</ParaFormat>
+			<ParaFormat ParaNo="2">0x%X</ParaFormat>
+		</Event>
+		<Event>
+			<Id>513</Id>
+			<Message LcId="1033">Channel with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Ein Kanal mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>514</Id>
+			<Message LcId="1033">Group with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Eine Gruppe mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>515</Id>
+			<Message LcId="1033">Axis with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Eine Achse mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>516</Id>
+			<Message LcId="1033">Encoder with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Ein Enkoder mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>517</Id>
+			<Message LcId="1033">Controller with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Ein Regler mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>518</Id>
+			<Message LcId="1033">Drive with ID %1 is unknown here !</Message>
+			<Message LcId="1031">Ein Antrieb mit dem ID %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>519</Id>
+			<Message LcId="1033">Task %1 is unknown here !</Message>
+			<Message LcId="1031">Eine Task %1 ist hier nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>520</Id>
+			<Message LcId="1033">Table %1 is unknown here !</Message>
+			<Message LcId="1031">Channel with ID %1 is unknown here !</Message>
+		</Event>
+		<Event>
+			<Id>521</Id>
+			<Message LcId="1033">Encoder with Sub-Index %1 is unknown to the axis !</Message>
+			<Message LcId="1031">Ein Encoder mit dem Sub-Index %1 ist der Achse nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>522</Id>
+			<Message LcId="1033">Controller with Sub-Index %1 is unkown to the axis !</Message>
+			<Message LcId="1031">Ein Controller mit dem Sub-Index %1 ist der Achse nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>523</Id>
+			<Message LcId="1033">Drive with Sub-Index %1 is unknown to the axis !</Message>
+			<Message LcId="1031">Ein Drive mit dem Sub-Index %1 ist der Achse nicht bekannt !</Message>
+		</Event>
+		<Event>
+			<Id>529</Id>
+			<Message LcId="1033">Channel %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Der Kanal %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>530</Id>
+			<Message LcId="1033">Group %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Die Gruppe %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>531</Id>
+			<Message LcId="1033">Axis %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Die Achse %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>532</Id>
+			<Message LcId="1033">Encoder %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Der Enkoder %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>533</Id>
+			<Message LcId="1033">Controller %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Der Regler %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>534</Id>
+			<Message LcId="1033">Drive %1 is not capable to perform the requested function !</Message>
+			<Message LcId="1031">Der Antrieb %1 ist fuer die angeforderte Funktion nicht geeignet !</Message>
+		</Event>
+		<Event>
+			<Id>545</Id>
+			<Message LcId="1033">Channel %1 is not functional !</Message>
+			<Message LcId="1031">Der Kanal %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>546</Id>
+			<Message LcId="1033">Group %1 is not functional !</Message>
+			<Message LcId="1031">Die Gruppe %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>547</Id>
+			<Message LcId="1033">Axis %1 is not functional !</Message>
+			<Message LcId="1031">Die Achse %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>548</Id>
+			<Message LcId="1033">Encoder %1 is not functional !</Message>
+			<Message LcId="1031">Der Enkoder %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>549</Id>
+			<Message LcId="1033">Controller %1 is not functional !</Message>
+			<Message LcId="1031">Der Regler %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>550</Id>
+			<Message LcId="1033">Drive %1 is not functional !</Message>
+			<Message LcId="1031">Der Antrieb %1 ist nicht funktionsfaehig !</Message>
+		</Event>
+		<Event>
+			<Id>551</Id>
+			<Message LcId="1033">Task %1 is not functional (real time, immages) !</Message>
+			<Message LcId="1031">Task %1 ist nicht funktionsfaehig (Echtzeit, Prozessabbilder) !</Message>
+		</Event>
+		<Event>
+			<Id>561</Id>
+			<Message LcId="1033">Out of Memory, cannot create channel %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Kanal %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>562</Id>
+			<Message LcId="1033">Out of memory, cannot create group %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Gruppe %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>563</Id>
+			<Message LcId="1033">Out of memory, cannot create axis %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Achse %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>564</Id>
+			<Message LcId="1033">Out of memory, cannot create encoder %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Enkoder %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>565</Id>
+			<Message LcId="1033">Out of memory, cannot create controller %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Regler %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>566</Id>
+			<Message LcId="1033">Out of memory, cannot create drive %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Antrieb %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>567</Id>
+			<Message LcId="1033">Out of memory, cannot create generator %1 !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Sollwert-Generator %1 verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>568</Id>
+			<Message LcId="1033">Out of memory, cannot create administration data (%1) !</Message>
+			<Message LcId="1031">Kein Speicher fuer die Erzeugung von Verwaltungsdaten (%1) verfuegbar !</Message>
+		</Event>
+		<Event>
+			<Id>577</Id>
+			<Message LcId="1033">Channel %1 is already busy !</Message>
+			<Message LcId="1031">Kanal %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>578</Id>
+			<Message LcId="1033">Group %1 is already busy !</Message>
+			<Message LcId="1031">Gruppe %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>579</Id>
+			<Message LcId="1033">Task %1 is already busy !</Message>
+			<Message LcId="1031">Task %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>580</Id>
+			<Message LcId="1033">Axis %1 is already busy !</Message>
+			<Message LcId="1031">Achse %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>581</Id>
+			<Message LcId="1033">Encoder %1 is already busy !</Message>
+			<Message LcId="1031">Enkoder %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>582</Id>
+			<Message LcId="1033">Controller %1 is already busy !</Message>
+			<Message LcId="1031">Regler %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>583</Id>
+			<Message LcId="1033">Drive %1 is already busy !</Message>
+			<Message LcId="1031">Antrieb %1 ist bereits aktiv !</Message>
+		</Event>
+		<Event>
+			<Id>593</Id>
+			<Message LcId="1033">The value %1 is not a legal channel Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Kanal-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>594</Id>
+			<Message LcId="1033">The value %1 is not a legal group Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Gruppen-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>595</Id>
+			<Message LcId="1033">The value %1 is not a legal axis Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Achs-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>596</Id>
+			<Message LcId="1033">The value %1 is not a legal encoder Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Enkoder-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>597</Id>
+			<Message LcId="1033">The value %1 is not a legal controller Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Regler-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>598</Id>
+			<Message LcId="1033">The value %1 is not a legal drive Id !</Message>
+			<Message LcId="1031">Der Wert %1 ist als Antriebs-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>1024</Id>
+			<Message LcId="1033">R0 Management: Channel %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Kanal %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1025</Id>
+			<Message LcId="1033">R0 Management: Group %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1026</Id>
+			<Message LcId="1033">R0 Management: Axis %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1027</Id>
+			<Message LcId="1033">R0 Management: Encoder %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Enkoder %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1028</Id>
+			<Message LcId="1033">R0 Management: Controller %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Regler %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1029</Id>
+			<Message LcId="1033">R0 Management: Drive %1 = %2 created.</Message>
+			<Message LcId="1031">R0 Verwaltung: Antrieb %1 = %2 erzeugt.</Message>
+		</Event>
+		<Event>
+			<Id>1040</Id>
+			<Message LcId="1033">R0 Management: Cannot create channel %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Kanal %1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>1041</Id>
+			<Message LcId="1033">R0 Management: Cannot create group %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>1042</Id>
+			<Message LcId="1033">R0 Management: Cannot create axis %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse%1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>1043</Id>
+			<Message LcId="1033">R0 Management: Cannot create encoder %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Enkoder %1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>1044</Id>
+			<Message LcId="1033">R0 Management: Cannot create controller %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Regler %1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>1045</Id>
+			<Message LcId="1033">R0 Management: Cannot create drive %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Drive %1 konnte nicht erzeugt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2048</Id>
+			<Message LcId="1033">R0 Management: Cannot connect group %1 to channel %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht mit Kanal %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2049</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect group %1 from channel %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht von Kanal %2 getrennt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2050</Id>
+			<Message LcId="1033">R0 Management: Cannot connect group %1 to task %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht mit Task %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2051</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect from %1 to task %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht von Task %2 getrennt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2052</Id>
+			<Message LcId="1033">R0 Management: Cannot connect generator to group %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Der Sollwertgenerator kann nicht mit Gruppe %1 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2053</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect generator from group %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Der Sollwertgenerator kann nicht von Gruppe %1 getrennt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2054</Id>
+			<Message LcId="1033">R0 Management: Cannot connect axis %1 to group %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 kann nicht mit Gruppe %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2055</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect axis %1 from group %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 kann nicht von Gruppe %2 getrennt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2056</Id>
+			<Message LcId="1033">R0 Management: Cannot connect channel %1 to task %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Kanal %1 kann nicht mit Task %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2057</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect channel %1 from task %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Kanal %1 kann nicht von Task %2 getrennt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2058</Id>
+			<Message LcId="1033">R0 Management: Cannot connect encoder %1 to axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Enkoder %1 kann nicht mit Achse %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2059</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect encoder %1 from axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Enkoder %1 kann nicht von Achse %2 getrennt werden!</Message>
+		</Event>
+		<Event>
+			<Id>2060</Id>
+			<Message LcId="1033">R0 Management: Cannot connect controller %1 to axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Regler %1 kann nicht mit Achse %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2061</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect controller %1 from axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Regler %1 kann nicht von Achse %2 getrennt werden!</Message>
+		</Event>
+		<Event>
+			<Id>2062</Id>
+			<Message LcId="1033">R0 Management: Cannot connect drive %1 to axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Antrieb %1 kann nicht mit Achse %2 verbunden werden !</Message>
+		</Event>
+		<Event>
+			<Id>2063</Id>
+			<Message LcId="1033">R0 Management: Cannot disconnect drive %1 from axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Antrieb %1 kann nicht von Achse %2 getrennt werden!</Message>
+		</Event>
+		<Event>
+			<Id>2080</Id>
+			<Message LcId="1033">R0 Management: Cannot couple axis %1 to axis %2 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 kann nicht mit Achse %2 gekoppelt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2081</Id>
+			<Message LcId="1033">R0 Management: Axis %1 is coupled with axis %2, using table %3.</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 ist mit Achse %2 gekoppelt, Tabelle %3.</Message>
+		</Event>
+		<Event>
+			<Id>2082</Id>
+			<Message LcId="1033">R0 Management: Cannot decouple axis %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 kann nicht entkoppelt werden !</Message>
+		</Event>
+		<Event>
+			<Id>2083</Id>
+			<Message LcId="1033">R0 Management: Axis %1 is uncoupled.</Message>
+			<Message LcId="1031">R0 Verwaltung: Achse %1 ist entkoppelt.</Message>
+		</Event>
+		<Event>
+			<Id>2084</Id>
+			<Message LcId="1033">R0 Management: Cannot change couple parameters for axis %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Koppel-Parameter fuer Achse %1 nicht koennen nicht veraendert werden !</Message>
+		</Event>
+		<Event>
+			<Id>2085</Id>
+			<Message LcId="1033">R0 Management: Cannot disable group %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht gesperrt (disabled) werden !</Message>
+		</Event>
+		<Event>
+			<Id>2086</Id>
+			<Message LcId="1033">R0 Management: group %1 disabled !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 ist gesperrt (disabled) !</Message>
+		</Event>
+		<Event>
+			<Id>2087</Id>
+			<Message LcId="1033">R0 Management: Cannot enable group %1 !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 kann nicht aktiviert (enabled) werden !</Message>
+		</Event>
+		<Event>
+			<Id>2088</Id>
+			<Message LcId="1033">R0 Management: group %1 enabled !</Message>
+			<Message LcId="1031">R0 Verwaltung: Gruppe %1 ist aktiviert (enabled) !</Message>
+		</Event>
+		<Event>
+			<Id>2089</Id>
+			<Message LcId="1033">Master/Slave-coupling could not be performed because axis %1 is in error condition %2 !</Message>
+			<Message LcId="1031">Master/Slavekopplung kann nicht hergestellt werden, da sich die Achse %1 bereits im Fehlerzustand (%2) befindet !</Message>
+			<ParaFormat ParaNo="2">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>4064</Id>
+			<Message LcId="1033">Cannot exchange data for axis %1 %2 Plc interface !</Message>
+			<Message LcId="1031">Es ist kein Datenaustausch Achse %1 %2 SPS-Interface moeglich !</Message>
+		</Event>
+		<Event>
+			<Id>4065</Id>
+			<Message LcId="1033">At least one of the parameters was an illegal value !</Message>
+			<Message LcId="1031">Es wurde mindestens ein unzulaessiger Wert als Parameter uebergeben !</Message>
+		</Event>
+		<Event>
+			<Id>4066</Id>
+			<Message LcId="1033">Cannot exchange data for encoder %1 %2 IO !</Message>
+			<Message LcId="1031">Es ist kein Datenaustausch Enkoder %1 %2 IO moeglich !</Message>
+		</Event>
+		<Event>
+			<Id>4067</Id>
+			<Message LcId="1033">Cannot exchange data for drive %1 %2 IO !</Message>
+			<Message LcId="1031">Es ist kein Datenaustausch Antrieb %1 %2 IO moeglich !</Message>
+		</Event>
+		<Event>
+			<Id>4096</Id>
+			<Message LcId="1033">R0 Channel %1: Function call &lt;Read axis position&gt; failed !</Message>
+			<Message LcId="1031">R0 Kanal %1: Funktions-Aufruf &lt;Lese Achsen-Istposition&gt; nicht ausfuehrbar !</Message>
+		</Event>
+		<Event>
+			<Id>4097</Id>
+			<Message LcId="1033">R0 Channel %1: Function call has unknown type %2 !</Message>
+			<Message LcId="1031">R0 Kanal %1: Funktions-Aufruf hat unbekannten Typ %2 !</Message>
+		</Event>
+		<Event>
+			<Id>4098</Id>
+			<Message LcId="1033">R0 Channel %1: Cannot exchange data with PLC !</Message>
+			<Message LcId="1031">R0 Kanal %1: Es ist keine Datenaustausch mit der SPS moeglich !</Message>
+		</Event>
+		<Event>
+			<Id>4099</Id>
+			<Message LcId="1033">R0 Channel %1: Cannot exchange synchronizing signal between groups %2 --&gt; %3 !</Message>
+			<Message LcId="1031">R0 Kanal %1: Synchronsignal-Austausch zwischen den Gruppen %2 --&gt; %3 nicht moeglich !</Message>
+		</Event>
+		<Event>
+			<Id>4100</Id>
+			<Message LcId="1033">'%1' (Channel-ID: %2): The channel has no interpolation axes, i.e. the number of axes and also the dimension is zero ( error code: %3) !</Message>
+			<Message LcId="1031">'%1' (Kanal-ID: %2): Der Kanal besitzt keine Interpolationsachsen, d.h. die Anzahl der Achsen sowie die Dimension ist Null  (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>16384</Id>
+			<Message LcId="1033">Internal Error!</Message>
+			<Message LcId="1031">Interner Fehler!</Message>
+		</Event>
+		<Event>
+			<Id>16385</Id>
+			<Message LcId="1033">Memory error  %1 %2  %3  !</Message>
+			<Message LcId="1031">Speicherfehler %1 %2  %3  !</Message>
+		</Event>
+		<Event>
+			<Id>16896</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as group ID is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Gruppen-Id nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16897</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>16899</Id>
+			<Message LcId="1033">R0 Group %1: The group already supports %2 slave axes and is not able to couple further slave axes!</Message>
+			<Message LcId="1031">R0 Gruppe %1: Die Gruppe versorgt bereits %2 Slave-Achsen und kann keine weitere Slave-Achse koppeln !</Message>
+		</Event>
+		<Event>
+			<Id>16901</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as SAF cycle time (generation of setpoint values, closed loop position control) is invalid!</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als SAF-Zykluszeit (Sollwertgenerierung, Lageregelung) nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16903</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as SVB cycle time (block preparation) is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als SVB-Zykluszeit (Satzvorbereitung) nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16904</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as group single step mode is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Gruppen-Singlestep-Modus nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16905</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as 'group disable' is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Gruppen-Disable nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16906</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as group ExecState is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Gruppen-ExecState nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16908</Id>
+			<Message LcId="1033">R0 Group %1: There is no connection to any master axis made!</Message>
+			<Message LcId="1031">R0 Gruppe %1: Es ist keine Verbindung zu einer Master-Achse hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>16912</Id>
+			<Message LcId="1033">R0 Group %1: The master axis of the group has no connection to any encoder made !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Die Master-Achse der Gruppe hat keine Verbindung zu einem Enkoder hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>16914</Id>
+			<Message LcId="1033">R0 Group %1: The master axis of the group has no connection to any drive made !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Die Master-Achse der Gruppe hat keine Verbindung zu einem Antrieb hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>16916</Id>
+			<Message LcId="1033">R0 Group %1: The master axis of the group has no connection to an PLC-Interface made !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Die Master-Achse der Gruppe hat keine Verbindung zu einem PLC-Interface hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>16917</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as velocity/standstill window is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Geschwindigkeits/Stillstandsfenster  nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16918</Id>
+			<Message LcId="1033">R0 Group %1: Value %2 as filter time for the velocity/standstill window is invalid !</Message>
+			<Message LcId="1031">R0 Gruppe %1: Der Wert %2 ist als Filterzeit fuer das Geschwindigkeits/Stillstandsfenster  nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>16930</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>16931</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis start has been rejected with error-code %4 !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achsstart mit Fehlercode %4 abgelehnt !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>16995</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis is in &lt;SingleStepMode&gt; (single block mode) and does not take further instructions, therefore (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse befindet sich im &lt;SingleStepModus&gt; (Einzelsatzbetrieb) und nimmt deshalb keinen weiteren Auftrag an (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>16996</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Group function is rejected with error-code %4 or the function is not supported !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Gruppenfunktion mit Fehlercode %4 abgelehnt bzw. Funktion wird nicht unterstuetzt !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>16997</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): The compensation generator cannot compensate the full distance but only a smaller one (error code: %4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Die Streckenkompensation kann nicht um die volle Distanz, sondern nur um eine kleinere Strecke durchgefuehrt werden (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>16998</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>16999</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17000</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group is in error status and therefore does not take further instructions, (old error-code: %4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe befindet sich im Fehlerzustand und nimmt deshalb keinen weiteren neuen Auftrag an (alter Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17001</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group is a slave axis and is not allowed to take an own instruction (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe ist eine Slave-Achse und darf somit keinen eigenen Auftrag annehmen (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17002</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group has none enabled controller and, therefore, does not take an instruction (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe besitzt keine Reglerfreigabe und nimmt somit keinen Auftrag an (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17003</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group has none free position in the SVB table and therefore is not able to take further instructions(error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe hat keinen freien Platz in der SVB-Tabelle und kann deshalb keinen Auftrag mehr annehmen (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17004</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group has an invalid value for the velocity override and therefore is not able to execute the axis start (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe hat einen ungueltigen Wert fuer den Geschwindigkeits-Override und kann deshalb keinen Achsstart ausfuehren (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17005</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group has got an INTERNAL ERROR by attaching an instruction into the SVB table (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe hat einen INTERNEN FEHLER beim Einfuegen eines Auftrags in die SVB-Tabelle (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17006</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Grp-ID: %3): Axis/Group received an unknown instruction type (INTERNAL ERROR) (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Grp-ID: %3): Achse/Gruppe hat einen unbekannten Auftragstyp bekommen (INTERNEN FEHLER) (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17007</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): Group/Axis(n) has a velocity override of 0.0 percent at the start !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Gruppe/Achse(n) hat beim Start den Geschwindigkeits-Override von 0.0 Prozent !</Message>
+		</Event>
+		<Event>
+			<Id>17008</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): 3D-group Reset has been declined with error code %3 !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Beim 3D-Gruppenreset ist ein Fehler aufgetreten (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17009</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): Insertion of a 3D-group job line (job table entry) has been declined with error code %3 !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Das Einfuegen eines 3D-Gruppeneintrages (Tabelleneintrag) ist mit einem Fehler abgelehnt worden (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17010</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): The execution of a 3D-group function (Reset, Stop, SetActPos) has been declined with error code %3 !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Das Ausfuehren einer 3D-Gruppenfunktion (Reset, Stop, SetActPos) ist mit einem Fehler abgelehnt worden (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17011</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): An error has occured in the cyclic SVB-task of the 3D-group (error code: %3) !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): In der zyklischen SVB-Task der 3D-Gruppe ist ein Fehler aufgetreten (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17012</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): A runtime error has occured in the cyclic SAF-task of the 3D-group (error code: %3) !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): In der zyklischen SAF-Task der 3D-Gruppe ist ein Laufzeitfehler aufgetreten (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17013</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): Da weder eine Messfahrt noch ein Restwegloeschen aktiviert worden ist, kann diese Funktion nicht ausgefuehrt werden (Fehlercode: %3) !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Da weder eine Messfahrt noch ein Restwegloeschen aktiviert worden ist, kann diese Funktion nicht ausgefuehrt werden (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17014</Id>
+			<Message LcId="1033">'%1' (Grp-ID: %2): This function cannot be executed since no active motion takes place (error-code: %3) !</Message>
+			<Message LcId="1031">'%1' (Grp-ID: %2): Diese Funktion kann nicht ausgefuehrt werden, da keine aktive Verfahrbewegung stattfindet (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17152</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17153</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17154</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17155</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17156</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17157</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17158</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as velocity for slow manual drive is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Geschwindigkeit fuer die langsame Handfahrt nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17159</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as velocity for fast manual drive is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Geschwindigkeit fuer die schnelle Handfahrt nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17160</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as velocity for rapid traverse motion is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Geschwindigkeit fuer die Eilgang-Fahrt nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17161</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as acceleration is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Beschleunigung nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17162</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as deceleration is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Verzoegerung nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17163</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as jerk limiting is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Ruckbegrenzung nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17164</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as delay time in seconds is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Verzoegerungszeit in Sekunden nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17165</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): Value %3 as velocity override mode is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Geschwindigkeits Override Typ nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17166</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17167</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17168</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as limit for the velocity monitoring of the following error is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Grenze fuer die Geschwindigkeits-Schleppabstandsueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17169</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as filter time for the velocity monitoring of the following error is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Filterzeit fuer die Geschwindigkeits-Schleppabstandsueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17170</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as velocity for the motion for searching calibration cam is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Geschwindigkeit bei der Kalibriernocken-Suchfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17171</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as velocity for the motion for synchronous pulse search is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Geschwindigkeit bei der Synchronpuls-Suchfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17172</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as step size in plus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schrittweite in Plus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17173</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as step size in minus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schrittweite in Minlus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17174</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as pulse length in plus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Pulslaenge in Plus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17175</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as pulse length in minus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Pulslaenge in Minus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17176</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as creep line in plus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schleichstrecke in Plus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17177</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as creep line in minus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schleichstrecke in Minus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17178</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as deceleration distance in plus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Bremsweg in Plus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17179</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as deceleration distance in minus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Bremsweg in Minus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17180</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as deceleration rate in plus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Bremsverzoegerung in Plus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17181</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as deceleration rate in minus direction is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Bremsverzoegerung in Minus-Richtung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17182</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as delay time on reversing from rapid to creep traverse motion is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Umschaltverzoegerung von Eil- auf Schleichfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17183</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as creep line by the stop from rapid traverse motion is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schleichstrecke beim Stop aus Eilgangsfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17184</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the activation/deactivation of the motion monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Aktivierung/Deaktivierung der Bewegungsueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17185</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the activation/deactivation of the position monitoring is invalid  !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Aktivierung/Deaktivierung der Positions-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17186</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the activation/deactivation of the target window monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Aktivierung/Deaktivierung der Zielfenster-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17187</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the activation/deactivation of the loop motion is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Aktivierung/Deaktivierung der Schleifenfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17188</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as filter time for the motion monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Filterzeit fuer die Bewegungsueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17189</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the window width of the position monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Fensterbreite der Positions-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17190</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the window width of the target window monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Fensterbreite der Zielfenster-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17191</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the filter time of the target window monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Filterzeit der Zielfenster-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17192</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as distance for the loop motion is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Weglaenge fuer die Schleifenfahrt nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17193</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as cycle time in seconds is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Zykluszeit nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17194</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as stepping motor mode is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schrittmotor-Modus nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17195</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as distance per increment of the stepping motor is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Wegstrecke pro Schrittmotor-Step nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17196</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as minimal velocity of the stepping motor is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Minimalgeschwindigkeit des Schrittmotors nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17197</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as number of steps per level is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schrittanzahl pro Level nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17198</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as indentifier of units is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Einheiten-Kennung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17199</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as limiting of velocity is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Geschwindigkeits-Begrenzung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17200</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as line for the motion monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Strecke fuer die Bewegungsueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17201</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as parameter for the activation/deactivation of the 'In Target'- monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Parameter fuer die Aktivierung/Deaktivierung der PEH-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17202</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as filter time for the 'In Target' monitoring is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Filterzeit fuer die PEH-Ueberwachung nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17203</Id>
+			<Message LcId="1033">R0 Axis %1: Value %2 as delay time to release the break is invalid !</Message>
+			<Message LcId="1031">R0 Achse %1: Der Wert %2 ist als Schaltverzoegerung um die Bremse zu loesen nicht zulaessig !</Message>
+		</Event>
+		<Event>
+			<Id>17204</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The value %3 is an invalid activation/deactivation-parameter for the persistent axis datas (error code: %4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der Wert %3 ist als Parameter fuer die Aktivierung/Deaktivierung der persistenten Achsdaten unzulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17218</Id>
+			<Message LcId="1033">R0 Axis %1: There is no connection to any encoder !</Message>
+			<Message LcId="1031">R0 Achse %1: Es ist keine Verbindung zu einem Enkoder hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>17219</Id>
+			<Message LcId="1033">R0 Axis %1: There is no connection to any controller !</Message>
+			<Message LcId="1031">R0 Achse %1: Es ist keine Verbindung zu einem Regler hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>17220</Id>
+			<Message LcId="1033">R0 Axis %1: There is no connection to any drive !</Message>
+			<Message LcId="1031">R0 Achse %1: Es ist keine Verbindung zu einem Antrieb hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>17221</Id>
+			<Message LcId="1033">R0 Axis %1: There is no connection to a PLC (PLC--&gt;NC) !</Message>
+			<Message LcId="1031">R0 Achse %1: Es ist keine Verbindung zur PLC (PLC--&gt;NC) hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>17222</Id>
+			<Message LcId="1033">R0 Axis %1: There is no connection to a PLC (NC--&gt;PLC)  !</Message>
+			<Message LcId="1031">R0 Achse %1: Es ist keine Verbindung zur PLC (NC--&gt;PLC) hergestellt !</Message>
+		</Event>
+		<Event>
+			<Id>17223</Id>
+			<Message LcId="1033">R0 Axis %1: The size of the axes struct from the PLC to the NC is invalid (PLC--&gt;NC) (INTERNAL ERROR) !</Message>
+			<Message LcId="1031">R0 Achse %1: Die Groesse der Achsstruktur von der PLC zur NC ist unzulaessig (PLC--&gt;NC) (INTERNER FEHLER) !</Message>
+		</Event>
+		<Event>
+			<Id>17224</Id>
+			<Message LcId="1033">R0 Axis %1: The size of the axes struct from the NC to the PLC is invalid (NC--&gt;PLC) (INTERNAL ERROR) !</Message>
+			<Message LcId="1031">R0 Achse %1: Die Groesse der Achsstruktur von der NC zur PLC ist unzulaessig (NC--&gt;PLC) (INTERNER FEHLER) !</Message>
+		</Event>
+		<Event>
+			<Id>17232</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17233</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17234</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17235</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17236</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17237</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The ratio between jerk and acceleration is unfavourable. This can result to a velocity other than the requested velocity setpoint !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Es ist ein unguenstiges Verhaeltnis von Ruck zu Beschleunigung eingestellt worden, so dass Abweichung von der geforderten Sollgeschwindigkeit auftreten koennen !</Message>
+		</Event>
+		<Event>
+			<Id>17238</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The axis needs the "Position Control Permissive" for positioning (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Die Achse hat keine Reglerfreigabe fuer eine Positionierung (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17239</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The axis needs the "Feed Backward Permissive" for backward positioning (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Die Achse hat keine Vorschubfreigabe fuer eine Positionierung in negativer Fahrtrichtung (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17240</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The axis needs the "Feed Forward Permissive" for forward positioning (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Die Achse hat keine Vorschubfreigabe fuer eine Positionierung in positiver Fahrtrichtung (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17241</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The velocity setpoint of  %3 is outside the permissible velocity range [0.0 ... %4] (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Die geforderte Sollgeschwindigkeit von %3 liegt ausserhalb des zulaessigen Geschwindigkeitsbereiches [0.0 ... %4] (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17242</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2) &lt;NOTE&gt;: The requested traverse distance %3 is smaller than one increment (scaling factor) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2) &lt;HINWEIS&gt;: Der Verfahrweg %3 ist kuerzer als ein Inkrement (Skalierungsfaktor) !</Message>
+		</Event>
+		<Event>
+			<Id>17244</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The axis has failed to remain in the target window within the filter time of %3 seconds ('In Target'-Alarm) (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Die Achse ist innerhalb der Filterzeit von %3 Sekunden physikalisch nicht stabil im Zielfenster zum Stillstand gekommen (PEH-Alarm) (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17245</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2): The absolute value of the looping distance for axis %3 is less or equal than the pos. or  neg. braking distance (%4) (error code: %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2): Der angewaehle Schleifenweg der Achse von %3 ist unerlaubterweise betragsmaessig kleiner gleich dem pos. bzw. neg. Bremsweg (%4) (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17246</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2) &lt;NOTE&gt;: The looping distance %3 for the axis should be at least larger than the sum of the positive or negative break distance and the half of the creeping distance (%4 + %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2) &lt;HINWEIS&gt;: Der Schleifenweg der Achse von %3 sollte mindestens groesser als die Summe aus pos. bzw. neg.  Brems- und des halben Schleichweges (%4 + %5) sein !</Message>
+		</Event>
+		<Event>
+			<Id>17247</Id>
+			<Message LcId="1033">'%1' (Axis ID: %2) &lt;NOTE&gt;: The axis is stopped, since the "Feed Backward Permissive" is missing during active backward positioning ! </Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2) &lt;HINWEIS&gt;: Die Achse ist gestoppt worden, da bei aktivier Positionierung die Vorschubfreigabe in negativer Fahrtrichtung fehlt !</Message>
+		</Event>
+		<Event>
+			<Id>17248</Id>
+			<Message LcId="1033">'%1' (Axis ID: %2) &lt;NOTE&gt;: The axis is stopped, since the "Feed Forward Permissive" is missing during active forward positioning !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2) &lt;HINWEIS&gt;: Die Achse ist gestoppt worden, da bei aktivier Positionierung die Vorschubfreigabe in positiver Fahrtrichtung fehlt !</Message>
+		</Event>
+		<Event>
+			<Id>17410</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new value for the encoder mode (&gt;0) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Wert fuer den Encoder-Modus (&gt;0) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17411</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new value for the reversal of counter direction of the encoder (polarity) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Wert fuer die Encoder Zaehlrichtungsumkehr (Polaritaet) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17412</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new status of calibration for the encoder is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Kalibrier-Status fuer den Encoder nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17413</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new value for the upper limit of the encoder in increments is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Wert fuer die Obergrenze des Encoders in Inkrementen nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17414</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as scaling factor for the weightning of the encoder increments is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Skalierungsfaktor fuer die Gewichtung der Encoder-Inkremente nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17415</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new value for the zero shift (position offset) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Wert fuer die Nullpunktverschiebung (Positionsoffset) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17416</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new value for the modulo factor (e.g. 360°) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neuer Wert fuer den Modulofaktor nicht zulaessig (z.B. 360°) (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17417</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as position filter time in seconds is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Positionsfilterzeit in Sekunden nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17418</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as filter time of velocity in seconds is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Geschwindigkeitsfilterzeit in Sekunden nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17419</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as filter time of acceleration in seconds is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Beschleunigungsfilterzeit in Sekunden nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17420</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as cycle-time in seconds is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Zykluszeit in Sekunden nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17421</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as identifier of units is invalid (error-code: #%5) (INTERNAL ERROR) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Einheiten-Kennung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17422</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The value %4 is an invalid activation/deactivation-parameter for the correction of the actual position value  ("Position encoder feedback correction")  (error code: %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer die Aktivierung/Deaktivierung der Messsystemfehlerkorrektur nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17423</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The value %4 is an invalid filter time for the correction of the actual position value  ("Position encoder feedback correction")  (error code: %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Filterzeit in Sekunden fuer die Messsystemfehlerkorrektur nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17424</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as value for the motion reversal for searching cam of reference is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Wert fuer die Richtungsumkehr bei der Referenziernocken-Suchfahrt unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17425</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as value for the motion reversal for searching of synchron pulse is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Wert fuer die Richtungsumkehr bei der Synchronimpuls-Suchfahrt unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17426</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as value for the reference position is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Wert fuer die Referenzposition unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17427</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as value for the synchron pulse monitoring is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Wert fuer die Synchronimpuls-Ueberwachung unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17428</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the distance between calibration cam edge and synchron pulse is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer den Abstand zwischen Kalibriernocken-Flanke und Synchronimpuls unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17429</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the activation/deactivation of an extern synchron pulse is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer die Aktivierung/Deaktivierung eines externen Synchron-Impulses unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17430</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as value for scaling (weighting) the noise factor is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Wert fuer die Skalierung (Gewichtung) des Rauschanteils unzulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17431</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The value %4 is an invalid activation/deactivation-parameter for the correction of the actual position value  ("Position encoder feedback correction")  (error code: %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer die Aktivierung/Deaktivierung der Istpositionskorrektur ("Messsystemfehlerkorrektur") nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17432</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The value %4 is an invalid filter time for the correction of the actual position value  ("Position encoder feedback correction") (error code: %5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Filterzeit in Sekunden fuer die Istpositionskorrektur ("Messsystemfehlerkorrektur") nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17440</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the software limiting switch MIN is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer den Software-Endschalter MIN nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17441</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the software limiting switch MAX is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer den Software-Endschalter MAX nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17442</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as new actual position is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als neue Istposition nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17443</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the activation/deactivation of the software limiting switch MIN is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer die Aktivierung/Deaktivierung des Software-Endschalters MIN nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17444</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): Value %4 as parameter for the activation/deactivation of the software limiting switch MAX is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Der Wert %4 ist als Parameter fuer die Aktivierung/Deaktivierung des Software-Endschalters MAX nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17445</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The target position %4 is smaller than the active software limit switch MIN (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die Zielposition %4 unterschreitet den aktiven Software-Endschalter MIN (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17446</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The target position %4 exceeds the active software limit switch MAX (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die Zielposition %4 ueberschreitet den aktiven Software-Endschalter MAX (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17447</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The actual position %4 is smaller than the active software limit switch MIN (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die Istposition %4 unterschreitet den aktiven Software-Endschalter MIN (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17448</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The actual position %4 exceeds the active software limit switch MAX (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die Istposition %4 ueberschreitet den aktiven Software-Endschalter MAX (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17449</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): It is not permitted to change the scaling factor or the position offset, while the controller is enabled 'Online' (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Das Aendern des Skalierungsfaktors bzw. des Positionsoffsets ist bei aktiver Reglerfreigabe 'Online' nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17456</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The latch of the encoder can not be activated, because it is not in a regular operating state (e.g. motion for referencing is active) (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Das Latch des Encoders kann nicht aktiviert werden, da er sich nicht im regulaeren Betriebszustand befindet (z.B. Referenzierfahrt aktiv) (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17457</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The extern latch of the encoder can not be activated, because it is not in a regular operating state (e.g. motion for referencing is active) (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Das externe Latch des Encoders kann nicht aktiviert werden, da er sich nicht im regulaeren Betriebszustand befindet (z.B. Referenzierfahrt aktiv) (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17458</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The extern latch of the encoder can not be activated, because the detection terminal of the actual value remains in state 'LV' (Latch Valid) (error-code: #%4). Maybe the terminal is defective !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Das externe Latch des Encoders kann nicht aktiviert werden, da die Istwert-Erfassungsklemme im Zustand LV (Latch Valid) bleibt (Fehlercode: %4). Moeglicherweise ist die Klemme defekt !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17459</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The extern latch of the encoder can not be activated, because the detection terminal of the actual value remains in state 'ELV' (Extern Latch Valid) (error-code: #%4). Maybe the terminal is defective !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Das externe Latch des Encoders kann nicht aktiviert werden, da die Istwert-Erfassungsklemme im Zustand ELV (Extern Latch Valid) bleibt (Fehlercode: %4). Moeglicherweise ist die Klemme defekt !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17473</Id>
+			<Message LcId="1033">'%1' (Enc-ID: %2): There is no connection to any axis (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Enc-ID: %2): Es ist keine Verbindung zu einer Achse hergestellt (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17474</Id>
+			<Message LcId="1033">'%1' (Enc-ID: %2): There is no connection to an encoder I/O process input image (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Enc-ID: %2): Es besteht keine Verbindung zum Encoder IO-Eingangs-Prozessabbild (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17475</Id>
+			<Message LcId="1033">'%1' (Enc-ID: %2): There is no connection to an encoder I/O process output image (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Enc-ID: %2): Es besteht keine Verbindung zum Encoder IO-Ausgangs-Prozessabbild (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17488</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The encoder value has decreased below the lower range limit of the encoder during the motion of the axis (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die untere Zaehlbereichsgrenze des Encoders wurde innerhalb des Achs-Fahrbereiches unterschritten (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17489</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The upper counting range limit of the encoder was exceeded within the motion range of the axis (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die obere Zaehlbereichsgrenze des Encoders wurde innerhalb des Achs-Fahrbereiches ueberschritten (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17500</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Enc-ID: %3): The SSI transformation of the FOX 50 module was faulty for %4 NC-cycles or did not finshed respectivly. (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Enc-ID: %3): Die SSI-Wandlung des FOX 50 Moduls ist fuer %4 NC-Zyklen fehlerhaft gewesen bzw. nicht fertig geworden (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17666</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as new value for the controller mode (&gt;0) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als neuer Wert fuer den Regler-Modus (&gt;0) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17667</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as precontrol component is invalid [0.0 ... 1.0] (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Vorsteuerungsanteil nicht zulaessig [0.0 ... 1.0] (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17668</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the deactivation/activation [0, 1] of the local monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Deaktivierung/Aktivierung [0, 1] der Orts-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17669</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the deactivation/activation [0, 1] of the velocity monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Deaktivierung/Aktivierung [0, 1] der Geschwindigkeits-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17670</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as limit for the local monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Grenze fuer die Orts-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17671</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as filter time for the local monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Filterzeit fuer die Orts-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17672</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as limit for the velocity monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Grenze fuer die Geschwindigkeits-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17673</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as filter time for the velocity monitoring of the following error is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Filterzeit fuer die Geschwindigkeits-Schleppabstandsueberwachung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17674</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value to switch off the I-component during active positioning is invalid (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert fuer das Abschalten des I-Anteils waehrend aktiver Positionierung ist nicht zulaessig (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17680</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as Kv-factor or. Kp-factor (P component) respectively, is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Kv-Faktor bzw. Kp-Faktor (P-Anteil) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17681</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as integral-action time Tn in seconds (I component) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Nachstellzeit Tn in Sekunden (I-Anteil) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17682</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as derivative actiontime Tv in seconds (D component) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Vorhaltzeit Tv in Sekunden (D-Anteil) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17683</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as PID damping time is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als PID-Daempfungszeit nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17684</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): A controller of this type does not support the 'Automatic offset compensation'. Therefore he could not activate/deactivate it (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Ein Regler dieses Typs unterstuetzt den 'Automatischen Offsetabgleich' nicht. Also kann er ihn nicht aktivieren/deaktivieren (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17686</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as velocity limit is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Geschwindigkeitsgrenze nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17687</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the acceleration rate precontroller Ka is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Beschleunigungsvorsteuerung Ka nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17729</Id>
+			<Message LcId="1033">'%1' (Ctrl-ID: %2): There is no connection to any axis (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Ctrl-ID: %2): Es ist keine Verbindung zu einer Achse hergestellt (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17730</Id>
+			<Message LcId="1033">'%1' (Ctrl-ID: %2): There is no connection to any drive (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Ctrl-ID: %2): Es ist keine Verbindung zu einem Antrieb hergestellt (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17744</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the maximally permitted I-component is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer den maximal erlaubten I-Anteil nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17745</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the maximally permitted D-component is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer den maximal erlaubten D-Anteil nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17746</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the cylinder area of side A is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Zylinderflaeche der A-Seite nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17747</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the cylinder area of side B is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Zylinderflaeche der B-Seite nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17748</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the nominal volumetric flow is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer den Nennvolumenstrom nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17749</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the nominal pressure is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer den Nenndruck nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17750</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): Value %4 as parameter for the axis ID of the system pressure P0 is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Wert %4 ist als Parameter fuer die Achs-ID des Sytemdrucks P0 nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17760</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): The following error %4 exceeds the permitted limit (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Schleppabstand %4 ueberschreitet den zulaessigen Grenzwert (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17761</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Ctrl-ID: %3): The following error of velocity %4 exceeds the permitted limit (%5) (error-code: #%6) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Ctrl-ID: %3): Der Geschwindigkeits-Schleppabstand %4 ueberschreitet den zulaessigen Grenzwert (%5) (Fehlercode: %6) !</Message>
+			<ParaFormat ParaNo="6">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17920</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17921</Id>
+			<Message LcId="1033">RESERVE</Message>
+			<Message LcId="1031">RESERVE</Message>
+		</Event>
+		<Event>
+			<Id>17922</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as new value for the drive mode (&gt;0) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als neuer Wert fuer den Drive-Modus (&gt;0) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17923</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as new value for the drive-polarity (potential-polarity) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als neuer Wert fuer die Drive-Polaritaet (Spannungs-Polaritaet) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17924</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as velocity offset is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Geschwindigkeits-Offset nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17925</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as reference velocity is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Bezugsgeschwindigkeit nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17926</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as reference output value [0.0 ... 5.0] is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Bezugsausgabewert [0.0 ... 5.0] nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17927</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as quadrant compensation is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Quadrantenausgleich nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17928</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as velocity supporting structure is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Geschwindigkeitsstuetzpunkt nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17929</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as output supporting structure is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Ausgabestuetzpunkt nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17930</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as output limit is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Ausgabebegrenzung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17931</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as new value for the upper limit of the drive in increments (output mask) is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als neuer Wert fuer die Obergrenze des Drives in Inkrementen (Ausgabemaske) nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17932</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): The drive lifecounter difference exceedes the maximum!</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Lifecounter des Antriebs hat die maximale Abweichung ueberschritten</Message>
+		</Event>
+		<Event>
+			<Id>17933</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): The drive lifecounter is set to zero!</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Lifecounter des Antriebs ist auf 0 gesetzt worden</Message>
+		</Event>
+		<Event>
+			<Id>17940</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as velocity scaling is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Geschwindigkeitsskalierung nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17952</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as output mask is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Ausgabemaske nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17953</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): Value %4 as closed-circuit current mask is invalid (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Wert %4 ist als Ruhestrommaske nicht zulaessig (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17986</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): There is no connection to the drive I/O process input image made (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Es besteht keine Verbindung zum Drive IO-Eingangs-Prozessabbild (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17987</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): There is no connection to the drive I/O process output image made (error-code: #%4) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Es besteht keine Verbindung zum Drive IO-Ausgangs-Prozessabbild (Fehlercode: %4) !</Message>
+			<ParaFormat ParaNo="4">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17988</Id>
+			<Message LcId="1033">'%1' (Ctrl-ID: %2): There is no connection to any axis (error-code: #%3) !</Message>
+			<Message LcId="1031">'%1' (Ctrl-ID: %2): Es ist keine Verbindung zu einer Achse hergestellt (Fehlercode: %3) !</Message>
+			<ParaFormat ParaNo="3">0x%x</ParaFormat>
+		</Event>
+		<Event>
+			<Id>17989</Id>
+			<Message LcId="1033">'%1' (Axis-ID: %2, Drive-ID: %3): The drive or the power section  has an hardware error 'E%4' (error-code: #%5) !</Message>
+			<Message LcId="1031">'%1' (Achs-ID: %2, Drive-ID: %3): Der Antrieb bzw. das Leistungsteil hat einen Hardwarefehler 'F%4' (Fehlercode: %5) !</Message>
+			<ParaFormat ParaNo="5">0x%x</ParaFormat>
+		</Event>
+	</Source>
+</TcEventSources>

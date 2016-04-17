@@ -1,0 +1,6 @@
+;-------------------------------------------------------------------------------
+; Specifies the number of pages to allocate for the store 
+; (example for 102400KB Storage Memory: 25600 * 4KB pages) 
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\CxDevice]
+    "ObjectStorePages"=dword:00006400

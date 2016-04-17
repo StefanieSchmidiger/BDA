@@ -1,0 +1,202 @@
+/*********************************/
+/*  BECKHOFF CxConfig Stylesheet */
+/*********************************/
+	
+html
+{
+  height:100%;
+  width:100%;
+}	
+
+body
+{
+	margin:0;
+  padding:0;
+  height:100%;
+	width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image:url(Images/navbg.jpg);
+	background-repeat:repeat-y;
+	font-size:12px;
+}
+
+
+p, h1, h2, h3
+{
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 5px;
+}
+
+input
+{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        font-size: 9pt;
+        border : 1px solid #CCCCCC;
+}
+
+a
+{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        font-size: 9pt;
+}
+
+#load_text{
+    font-size:10px;
+}
+
+.toptable
+{
+        font-family: Arial, Helvetica, sans-serif;
+      	background: black;
+      	color: white;
+      	font-weight: bold;
+      	text-align: center;
+        font-size: 10pt;
+        height:18px;
+        border:none;
+}
+
+.titletable
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    background: #BEBEBE;
+    height:20px; 
+		border:none;
+		padding: 2px; 
+}
+
+.lockedtable
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    background: #CCCCCC;
+    height:20px; 
+    border:none;
+    padding: 2px; 
+}
+
+.normaltable
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    background: #EBE8E8;
+    height:20px; 
+    border:none;
+    padding: 3px; 
+}
+
+
+.normalfont
+{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+}
+
+.smallfont
+{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+}
+
+.datatable
+{
+    background: #999999;
+    margin-top: .6em;
+    margin-bottom: .3em;
+    padding: 0px; border:none;
+}
+
+.RUN
+{	
+    font-size:12px;
+    background: green;
+    color: black;
+}
+
+.STOP
+{		
+    font-size:12px;
+    background: red;
+    color: black;
+}
+
+.CONFIG
+{		
+    font-size:12px;
+    background: blue;
+    color: white;
+}
+
+.ERROR
+{
+    font-size:12px;
+    background: red;
+    color: black;
+}
+
+.button
+{
+	background: #FFFFFF;
+	padding: 1px;
+	font-family: Arial,Verdana,serif;
+	border : 1px solid #CCCCCC;
+}
+
+.button_disabled
+{
+	background: #FFFFFF;
+	padding: 1px;
+	font-family: Arial,Verdana,serif;
+	border : 1px solid #CCCCCC;
+	color: #CCCCCC;
+}
+
+.bordernone 
+{
+        border:none;
+        background: #ffffff;
+        overflow: hidden;
+}
+
+.menu
+{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        font-size:12px;
+        padding:0; border:none;
+        margin:0;
+}
+
+.error
+{
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+        font-size:12px;
+}
+
+.menutd
+{
+        padding: 0px;
+}
+
+.menutable
+{
+        border: 0px; 
+}
+
+.menuSelected
+{
+    background: #BEBEBE;
+		border:none;
+}
+
+.show_info
+{
+	margin-left:5px;
+}
+
+/* Ende                      */
+/*---------------------------*/

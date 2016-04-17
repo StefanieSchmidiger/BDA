@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Set the path for fonts
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\FontPath]
+    "FontPath"="\hard disk\system\Fonts"

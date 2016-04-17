@@ -1,0 +1,11 @@
+;-------------------------------------------------------------------------------
+; - Activate FTP
+; - Set FTP folder to CF-root \hard disk\
+; - No Anonymous access
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Comm\FTPD]
+    "DefaultDir"="\Hard Disk\"
+    "UseAuthentication"=dword:00000001
+    "IsEnabled"=dword:00000001
+    "AllowAnonymous"=dword:00000000
+    "AllowAnonymousUpload"=dword:00000000

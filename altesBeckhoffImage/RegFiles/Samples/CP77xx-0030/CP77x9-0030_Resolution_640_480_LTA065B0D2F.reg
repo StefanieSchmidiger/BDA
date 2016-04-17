@@ -1,0 +1,28 @@
+;-------------------------------------------------------------------------------
+; CP77x9-0030 (Atom): Add custom timing (dtd) for LTA065B0D2F
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\Port\2\Dtd\1]
+   "PixelClock"=dword:6252
+   "HorzActive"=dword:280
+   "HorzSync"=dword:10
+   "HorzSyncPulse"=dword:60
+   "HorzBlank"=dword:a0
+   "VertActive"=dword:1e0
+   "VertSync"=dword:a
+   "VertSyncPulse"=dword:2
+   "VertBlank"=dword:2d
+   "Flags"=dword:20000
+
+;-------------------------------------------------------------------------------
+; CP77x9-0030 (Atom): Set "use custom dtd above"
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\Port\2\General]
+   "Edid"=dword:0
+   "EdidAvail"=dword:0
+   "EdidNotAvail"=dword:4
+
+;-------------------------------------------------------------------------------
+; CP77x9-0030 (Atom): Set "display has fixed timing"
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\Port\2\Attr]
+   "60"=dword:1

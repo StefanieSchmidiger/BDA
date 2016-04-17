@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Enable serial mouse driver for touchpad on COM2:
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\SerMouse]
+    "Flags"=dword:0

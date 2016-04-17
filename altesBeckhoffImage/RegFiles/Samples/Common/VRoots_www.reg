@@ -1,0 +1,8 @@
+;-------------------------------------------------------------------------------
+; This sample will add a virtuell www root
+; External availbale : http://url/TcWebVisu
+; Internal mapped to: \Hard Disk\TwinCAT\Boot\WebVisu
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\COMM\HTTPD\VROOTS\/TcWebVisu]
+    "Default"="\Hard Disk\TwinCAT\Boot\WebVisu"
+    "a"=dword:0x0

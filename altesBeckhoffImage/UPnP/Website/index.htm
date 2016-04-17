@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>CxConfig</title>
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link type="text/css" rel="stylesheet" class="text/css" href="cxcfg.css">
+<script type="text/javascript" src="upnp.js"></script>
+<script type="text/javascript" src="cxcfg_changeloops.js"></script>
+<script type="text/javascript" src="cxcfg_classes.js"></script>
+<script type="text/javascript" src="cxcfg_conversions.js"></script>
+<script type="text/javascript" src="cxcfg_functions.js"></script>
+<script type="text/javascript" src="cxcfg_gui.js"></script>
+<script type="text/javascript" src="cxcfg_history.js"></script>
+<script type="text/javascript" src="cxcfg_query.js"></script>
+<script type="text/javascript" src="cxcfg_defines.js"></script>
+<script type="text/javascript">
+
+function init()
+{
+    load_start();
+    preloadImages(imgSrcArr);
+
+    if (debug) document.getElementById("debug").style.display = "block";
+
+    try
+    {
+        if (winxp)
+        {
+            device_url = "/UPnPDevice/Forward.asp?uuid="+deviceid; //XP
+        }
+        else device_url = "/upnpisapi?uuid:"+deviceid+"+urn:beckhoff.com:serviceId:cxconfig";
+    }
+    catch (e)
+    {
+        show_info("Error: Unable to Init Device","red", true);
+    }
+    req = createXMLHttpObject();
+    lreq = createXMLHttpObject();
+
+    var idx = [0x1008,0x1009,0x100A];
+    var sidx = [0,0,0];
+    var flag = [0,0,0];
+    var len = [80,80,80];
+    var type = ["string","string","string"];
+	  
+    new Mutex(query_read,new QueryData(0xf020, 0, 1, 0x400, "int", "", "", false),0,"nameLoaded");
+    new Mutex(query_readmultiple,new QueryData(idx,sidx,flag,len,type,[],"init",false),0,"",0,"nameLoaded");
+    
+    new Mutex(draw_menu,null,-1,"initDone");
+    new Mutex(show_type,new ShowData(-1),-1,"menuLoaded");
+    new Mutex(fixUrls,null,-1,"menuLoaded");
+    new Mutex(load_end,null,-1,"menuLoaded");
+
+    rebootcount = 0;
+    reboottrials = 0;
+    is_rebooting = false;
+}
+</script>
+</head>
+<body onload="init();">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="top" style="background-image:url(images/logo.gif); background-repeat: no-repeat; width:232px; height:58px;"></td>
+<td valign="top" style="background-image:url(images/bg_frame_top.gif); background-repeat: no-repeat; padding-top:1px;"><table width="405" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="1"><img alt="" src="images/t.gif" width="1" height="1"></td>
+<td width="100" height="18"><a href="index.htm" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','bu_index','images/bu_index_over.gif');" target="_top"><img alt="" name="bu_index" src="images/bu_index.gif" width="100" height="18" border="0"></a></td>
+<td width="100" height="18" valign="top"></td>
+<td width="100" height="18"><a href="http://www.beckhoff.de" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','beckhoff_de','images/beckhoff_de_over.gif');" target="_blank"><img alt="" name="beckhoff_de" src="images/beckhoff_de.gif" width="100" height="18" border="0"></a></td>
+<td width="100" height="18"><a href="http://www.beckhoff.com" target="_blank" onMouseOut="MM_nbGroup('out');" onMouseOver="MM_nbGroup('over','beckhoff_com','images/beckhoff_com_over.gif');"><img alt="" name="beckhoff_com" src="images/beckhoff_com.gif" width="100" height="18" border="0"></a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td width="232" valign="top"><img alt="" border="0" src="images/logo.jpg" width="232" height="84"><br>
+<table class="menu" width="100%" cellspacing="0">
+<tr>
+<td valign="top"><table class="menu" width="100%" cellspacing="0">
+<tr>
+<td><table width="100%" class="menu" cellspacing="0">
+<tr>
+<td id="m-1i" width="40" class="titletable"><a href="javascript:collapse('main')"><img id="micon_main" border="0" src="images/MU.gif" alt=""><img border="0" src="images/OZ.gif" alt=""></a></td>
+<td id="m-1" class="titletable"><a href="index.htm#-1" id="mhostname">loading...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><div id="mdiv_main"></div></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+<td valign="top" style="padding-left:1px;"><table width="570" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" width="100%"><div id="current"></div>
+<div id="infotext" class="show_info" style="display:none;"></div></td>
+</tr>
+</table></td>
+</tr>
+</table>
+<p id="debug" style="display:none;background-color:#ffffff;"></p>
+
+<!-- [START] Absolute Position Container -->
+<div id="box" style="position:absolute;z-index:2;display:none;">
+<table border="0" width="250" bgcolor="#CCCCCC" cellspacing="0" cellpadding="1">
+<tr>
+<td width="100%"><table border="0" width="100%" cellspacing="0" cellpadding="0" style="34px">
+<tr>
+<td id="dragbar" style="cursor:hand;" width="100%" onMouseOver="overbox=true;" onMouseOut="overbox=false;"><span id="box_title"></span></td>
+<td style="cursor:hand;"><a href="#" onClick="box_close(); return false"><img src="images\close_icon.jpg" border=0 alt=""></a></td>
+</tr>
+<tr>
+<td width="100%" bgcolor="#FFFFFF" style="padding:4px" colspan="2"><span id="box_text"></span></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+<div id="overlay" style="position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:rgb(0, 0, 0);opacity:0.85;filter:alpha(opacity=85);display:none;z-index:20;"></div>
+<div id="load_box" style="position:absolute;width:250px;height:14px;padding:8px;background-color:#ffffff;border:1px solid #cccccc;font-size:12px;display:none;z-index:21;"> Loading... </div>
+<!-- [END] Absolute Position Container -->
+
+<script type="text/javascript">
+if (document.is_ie) printPositionASPIframeForIE();
+</script>
+</body>
+</html>

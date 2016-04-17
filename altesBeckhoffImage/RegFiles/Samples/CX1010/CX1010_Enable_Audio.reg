@@ -1,0 +1,8 @@
+;-------------------------------------------------------------------------------
+; Enable the audio device on CX1010 (Geode LX800)
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PCI\Template\gxuamaud]
+   "Flags"=dword:0
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PCI\Instance\gxuamaud1]
+   "Flags"=dword:0

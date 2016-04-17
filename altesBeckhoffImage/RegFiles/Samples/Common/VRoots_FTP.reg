@@ -1,0 +1,9 @@
+;-------------------------------------------------------------------------------
+; This sample will add a virtuell FTP root
+; External availbale : ftp://url/root-www
+; Internal mapped to: \Hard Disk\www
+;-------------------------------------------------------------------------------
+;
+[HKEY_LOCAL_MACHINE\COMM\FTPD\VROOTS\/root-www]
+    "Default"="\Hard Disk\www"
+    "a"=dword:0x0

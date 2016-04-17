@@ -1,0 +1,614 @@
+<MDPStringTable>
+    <Entry ID="61456">
+        <String LCID="1033">Module type reference table</String>
+    </Entry>
+    <Entry ID="61472">
+        <String LCID="1033">Module adress reference table</String>
+    </Entry>
+    <Entry ID="61488">
+        <String LCID="1033">Module ID reference table</String>
+    </Entry>
+    <Entry ID="61520">
+        <String LCID="1033">Module ID reference table</String>
+    </Entry>
+    <Entry ID="61536">
+        <String LCID="1033">Module Name reference table</String>
+    </Entry>
+    <Entry ID="61440">
+        <String LCID="1033">Table 0xF000</String>
+    </Entry>
+    <Entry ID="100">
+        <String LCID="1033">Module address</String>
+    </Entry>
+    <Entry ID="101">
+        <String LCID="1033">Module type</String>
+    </Entry>
+    <Entry ID="102">
+        <String LCID="1033">Module Name</String>
+    </Entry>
+    <Entry ID="103">
+        <String LCID="1033">Device Type</String>
+    </Entry>
+    <Entry ID="104">
+        <String LCID="1033">Length of array or record </String>
+    </Entry>
+    <Entry ID="160">
+        <String LCID="1033">Service transfer parameters</String>
+    </Entry>
+    <Entry ID="161">
+        <String LCID="1033">Service transfer state</String>
+    </Entry>
+    <Entry ID="162">
+        <String LCID="1033">Service transfer result</String>
+    </Entry>
+    <Entry ID="170">
+        <String LCID="1033">Object interval</String>
+    </Entry>
+    <Entry ID="171">
+        <String LCID="1033">Max module count</String>
+    </Entry>
+    <Entry ID="500">
+        <String LCID="1033">Device type</String>
+    </Entry>
+    <Entry ID="501">
+        <String LCID="1033">Device name</String>
+    </Entry>
+    <Entry ID="502">
+        <String LCID="1033">Hardware version</String>
+    </Entry>
+    <Entry ID="503">
+        <String LCID="1033">Image version</String>
+    </Entry>
+    <Entry ID="1000">
+        <String LCID="1033">CPU module header</String>
+    </Entry>
+    <Entry ID="1001">
+        <String LCID="1033">CPU info</String>
+    </Entry>
+    <Entry ID="1010">
+        <String LCID="1033">Datastore module header</String>
+    </Entry>
+    <Entry ID="1011">
+        <String LCID="1033">Browse</String>
+    </Entry>
+    <Entry ID="1012">
+        <String LCID="1033">Add item</String>
+    </Entry>
+    <Entry ID="1013">
+        <String LCID="1033">Delete item</String>
+    </Entry>
+    <Entry ID="1020">
+        <String LCID="1033">Display device module header</String>
+    </Entry>
+    <Entry ID="1021">
+        <String LCID="1033">Currenty active display mode</String>
+    </Entry>
+    <Entry ID="1022">
+        <String LCID="1033">Available display modes</String>
+    </Entry>
+    <Entry ID="1030">
+        <String LCID="1033">FSO device module header</String>
+    </Entry>
+    <Entry ID="1031">
+        <String LCID="1033">Browse directory</String>
+    </Entry>
+    <Entry ID="1032">
+        <String LCID="1033">Get file</String>
+    </Entry>
+    <Entry ID="1033">
+        <String LCID="1033">Write file</String>
+    </Entry>
+    <Entry ID="1040">
+        <String LCID="1033">FTP server module header</String>
+    </Entry>
+    <Entry ID="1041">
+        <String LCID="1033">FTP configuration</String>
+    </Entry>
+    <Entry ID="1042">
+        <String LCID="1033">FTP userlist</String>
+    </Entry>
+    <Entry ID="1043">
+        <String LCID="1033">Add user</String>
+    </Entry>
+    <Entry ID="1044">
+        <String LCID="1033">Delete user</String>
+    </Entry>
+    <Entry ID="1050">
+        <String LCID="1033">Memory module header</String>
+    </Entry>
+    <Entry ID="1051">
+        <String LCID="1033">Memory status</String>
+    </Entry>
+    <Entry ID="1060">
+        <String LCID="1033">Misc module header</String>
+    </Entry>
+    <Entry ID="1061">
+        <String LCID="1033">Misc settings</String>
+    </Entry>
+    <Entry ID="1062">
+        <String LCID="1033">Factory settings</String>
+    </Entry>
+    <Entry ID="1063">
+        <String LCID="1033">Reboot</String>
+    </Entry>
+    <Entry ID="1070">
+        <String LCID="1033">NIC module header</String>
+    </Entry>
+    <Entry ID="1071">
+        <String LCID="1033">NIC settings</String>
+    </Entry>
+    <Entry ID="1072">
+        <String LCID="1033">Release/ renew IP address</String>
+    </Entry>
+    <Entry ID="1080">
+        <String LCID="1033">User Mgmt module header</String>
+    </Entry>
+    <Entry ID="1081">
+        <String LCID="1033">User names</String>
+    </Entry>
+    <Entry ID="1082">
+        <String LCID="1033">Domains</String>
+    </Entry>
+    <Entry ID="1083">
+        <String LCID="1033">Add user</String>
+    </Entry>
+    <Entry ID="1084">
+        <String LCID="1033">Del user</String>
+    </Entry>
+    <Entry ID="1085">
+        <String LCID="1033">Set password</String>
+    </Entry>
+    <Entry ID="1086">
+      <String LCID="1033">Group list</String>
+    </Entry>
+    <Entry ID="1087">
+        <String LCID="1033">Set group membership</String>
+    </Entry>
+    <Entry ID="1088">
+      <String LCID="1033">Create group</String>
+    </Entry>
+    <Entry ID="1089">
+      <String LCID="1033">Delete group</String>
+    </Entry>
+    <Entry ID="1090">
+        <String LCID="1033">Registry module header</String>
+    </Entry>
+    <Entry ID="1091">
+        <String LCID="1033">Browse registry</String>
+    </Entry>
+    <Entry ID="1092">
+        <String LCID="1033">Set value</String>
+    </Entry>
+    <Entry ID="1100">
+        <String LCID="1033">SMB module header</String>
+    </Entry>
+    <Entry ID="1101">
+        <String LCID="1033">Share names</String>
+    </Entry>
+    <Entry ID="1102">
+        <String LCID="1033">Local path names</String>
+    </Entry>
+    <Entry ID="1103">
+        <String LCID="1033">Userlists</String>
+    </Entry>
+    <Entry ID="1104">
+        <String LCID="1033">Access list</String>
+    </Entry>
+    <Entry ID="1105">
+        <String LCID="1033">Create share</String>
+    </Entry>
+    <Entry ID="1106">
+        <String LCID="1033">Delete share</String>
+    </Entry>
+    <Entry ID="1107">
+        <String LCID="1033">Set access rights</String>
+    </Entry>
+    <Entry ID="1110">
+        <String LCID="1033">Software module header</String>
+    </Entry>
+    <Entry ID="1111">
+        <String LCID="1033">Filenname</String>
+    </Entry>
+    <Entry ID="1112">
+        <String LCID="1033">Company</String>
+    </Entry>
+    <Entry ID="1113">
+        <String LCID="1033">Date</String>
+    </Entry>
+    <Entry ID="1114">
+        <String LCID="1033">Version</String>
+    </Entry>
+    <Entry ID="1120">
+        <String LCID="1033">Time module header</String>
+    </Entry>
+    <Entry ID="1121">
+        <String LCID="1033">Time settings</String>
+    </Entry>
+    <Entry ID="1122">
+        <String LCID="1033">Timezones</String>
+    </Entry>
+    <Entry ID="1130">
+        <String LCID="1033">TwinCAT module header</String>
+    </Entry>
+    <Entry ID="1131">
+        <String LCID="1033">TwinCAT settings</String>
+    </Entry>
+    <Entry ID="1132">
+        <String LCID="1033">TwinCAT Route Name</String>
+    </Entry>
+    <Entry ID="1133">
+        <String LCID="1033">TwinCAT Route Address</String>
+    </Entry>
+    <Entry ID="1134">
+        <String LCID="1033">TwinCAT Route AMS Address</String>
+    </Entry>
+    <Entry ID="1135">
+        <String LCID="1033">TwinCAT Route Flags</String>
+    </Entry>
+    <Entry ID="1136">
+        <String LCID="1033">TwinCAT Route Timeout</String>
+    </Entry>
+    <Entry ID="1137">
+        <String LCID="1033">TwinCAT Route Transport</String>
+    </Entry>
+    <Entry ID="1138">
+        <String LCID="1033">TwinCAT Logfile </String>
+    </Entry>
+    <Entry ID="1139">
+        <String LCID="1033">TwinCAT add route</String>
+    </Entry>
+    <Entry ID="1140">
+        <String LCID="1033">TwinCAT delete route</String>
+    </Entry>
+    <Entry ID="1150">
+        <String LCID="1033">EWF module header</String>
+    </Entry>
+    <Entry ID="1151">
+        <String LCID="1033">Volume Name</String>
+    </Entry>
+    <Entry ID="1152">
+        <String LCID="1033">Volume ID</String>
+    </Entry>
+    <Entry ID="1153">
+        <String LCID="1033">EWF State</String>
+    </Entry>
+    <Entry ID="1154">
+        <String LCID="1033">EWF Type</String>
+    </Entry>
+    <Entry ID="1155">
+        <String LCID="1033">EWF Bootcommand</String>
+    </Entry>
+    <Entry ID="1156">
+        <String LCID="1033">EWF Commit and Disable Live</String>
+    </Entry>
+    <Entry ID="1160">
+        <String LCID="1033">FBWF module header</String>
+    </Entry>
+    <Entry ID="1161">
+        <String LCID="1033">FBWF Current State</String>
+    </Entry>
+    <Entry ID="1162">
+        <String LCID="1033">FBWF Next State</String>
+    </Entry>
+    <Entry ID="1163">
+        <String LCID="1033">FBWF Volumes</String>
+    </Entry>
+    <Entry ID="1164">
+        <String LCID="1033">FBWF Exclusion List</String>
+    </Entry>
+    <Entry ID="1165">
+        <String LCID="1033">FBWF Add Volume</String>
+    </Entry>
+    <Entry ID="1166">
+        <String LCID="1033">FBWF Remove Volume</String>
+    </Entry>
+    <Entry ID="1167">
+        <String LCID="1033">FBWF Add Exclusion</String>
+    </Entry>
+    <Entry ID="1168">
+        <String LCID="1033">FBWF Enum Exclusions</String>
+    </Entry>
+    <Entry ID="1169">
+        <String LCID="1033">FBWF Remove Exclusions</String>
+    </Entry>
+    <Entry ID="1170">
+        <String LCID="1033">FBWF Commit File</String>
+    </Entry>
+    <Entry ID="1171">
+        <String LCID="1033">FBWF Commit All</String>
+    </Entry>
+    <Entry ID="1172">
+        <String LCID="1033">FBWF Restore File</String>
+    </Entry>
+    <Entry ID="1180">
+        <String LCID="1033">Regfilter module header</String>
+    </Entry>
+    <Entry ID="1181">
+        <String LCID="1033">Regfilter State</String>
+    </Entry>
+    <Entry ID="1190">
+        <String LCID="1033">RAS module header</String>
+    </Entry>
+    <Entry ID="1191">
+        <String LCID="1033">RAS server settings</String>
+    </Entry>
+    <Entry ID="1192">
+        <String LCID="1033">RAS lines</String>
+    </Entry>
+    <Entry ID="1193">
+        <String LCID="1033">RAS line enabled</String>
+    </Entry>
+    <Entry ID="1194">
+        <String LCID="1033">RAS users</String>
+    </Entry>
+    <Entry ID="1195">
+        <String LCID="1033">Add user</String>
+    </Entry>
+    <Entry ID="1196">
+        <String LCID="1033">Delete user</String>
+    </Entry>
+    <Entry ID="1200">
+        <String LCID="1033">PLC module header</String>
+    </Entry>
+    <Entry ID="1201">
+        <String LCID="1033">PLC Browse</String>
+    </Entry>
+    <Entry ID="1202">
+        <String LCID="1033">PLC Get Variable Info</String>
+    </Entry>
+    <Entry ID="1203">
+        <String LCID="1033">PLC Get Variable Value</String>
+    </Entry>
+    <Entry ID="1204">
+        <String LCID="1033">PLC Set Variable Value</String>
+    </Entry>
+    <Entry ID="1205">
+        <String LCID="1033">PLC Get Variable Value Sum</String>
+    </Entry>
+    <Entry ID="1210">
+        <String LCID="1033">OS module header</String>
+    </Entry>
+    <Entry ID="1211">
+        <String LCID="1033">OS Information</String>
+    </Entry>
+    <Entry ID="1220">
+		<String LCID="1033">RAID module header</String>
+	</Entry>
+	<Entry ID="1221">
+		<String LCID="1033">Controller Info</String>
+	</Entry>
+	<Entry ID="1222">
+		<String LCID="1033">RAID Sets Type</String>
+	</Entry>
+	<Entry ID="1223">
+		<String LCID="1033">RAID Sets State_Info</String>
+	</Entry>
+	<Entry ID="1224">
+		<String LCID="1033">RAID Sets Drive</String>
+	</Entry>
+	<Entry ID="1225">
+		<String LCID="1033">Reserved</String>
+	</Entry>
+	<Entry ID="1226">
+		<String LCID="1033">Reserved</String>
+	</Entry>    
+	<Entry ID="1227">
+		<String LCID="1033">Reserved</String>
+	</Entry>
+	<Entry ID="1228">
+		<String LCID="1033">Reserved</String>
+	</Entry>
+	<Entry ID="1229">
+		<String LCID="1033">Drives Serial Number</String>
+	</Entry>
+	<Entry ID="1230">
+		<String LCID="1033">Drives State</String>
+	</Entry>
+    <Entry ID="10000">
+        <String LCID="1033">CPU Frequency (MHz)</String>
+    </Entry>
+    <Entry ID="10001">
+        <String LCID="1033">CPU Usage (%)</String>
+    </Entry>
+    <Entry ID="10002">
+        <String LCID="1033">Current display mode</String>
+    </Entry>
+    <Entry ID="10003">
+        <String LCID="1033">Display mode</String>
+    </Entry>
+    <Entry ID="10004">
+        <String LCID="1033">Total physical memory</String>
+    </Entry>
+    <Entry ID="10005">
+        <String LCID="1033">Available physical memory</String>
+    </Entry>
+    <Entry ID="10006">
+        <String LCID="1033">Total storage memory</String>
+    </Entry>
+    <Entry ID="10007">
+        <String LCID="1033">Available storage memory</String>
+    </Entry>
+    <Entry ID="10008">
+        <String LCID="1033">MAC Id</String>
+    </Entry>
+    <Entry ID="10009">
+        <String LCID="1033">IP address</String>
+    </Entry>
+    <Entry ID="10010">
+        <String LCID="1033">IP mask</String>
+    </Entry>
+    <Entry ID="10011">
+        <String LCID="1033">DHCP status</String>
+    </Entry>
+    <Entry ID="10012">
+        <String LCID="1033">User name</String>
+    </Entry>
+    <Entry ID="10013">
+        <String LCID="1033">Domain</String>
+    </Entry>
+    <Entry ID="10014">
+        <String LCID="1033">Share name</String>
+    </Entry>
+    <Entry ID="10015">
+        <String LCID="1033">Folder name</String>
+    </Entry>
+    <Entry ID="10016">
+        <String LCID="1033">Filename</String>
+    </Entry>
+    <Entry ID="10017">
+        <String LCID="1033">Company</String>
+    </Entry>
+    <Entry ID="10018">
+        <String LCID="1033">Date modified</String>
+    </Entry>
+    <Entry ID="10019">
+        <String LCID="1033">Version</String>
+    </Entry>
+    <Entry ID="10020">
+        <String LCID="1033">SNTP server</String>
+    </Entry>
+    <Entry ID="10021">
+        <String LCID="1033">SNTP refresh</String>
+    </Entry>
+    <Entry ID="10022">
+        <String LCID="1033">Seconds since midnight January 1, 1970 (UTC)</String>
+    </Entry>
+    <Entry ID="10023">
+        <String LCID="1033">Textual DateTime presentation (YYYY-MM-DDThh:mm:ss.sTZD)</String>
+    </Entry>
+    <Entry ID="10024">
+        <String LCID="1033">Active timezone</String>
+    </Entry>
+    <Entry ID="10026">
+        <String LCID="1033">Timezone</String>
+    </Entry>
+    <Entry ID="10030">
+        <String LCID="1033">TwinCAT major Version</String>
+    </Entry>
+    <Entry ID="10031">
+        <String LCID="1033">TwinCAT minor Version</String>
+    </Entry>
+    <Entry ID="10032">
+        <String LCID="1033">TwinCAT build</String>
+    </Entry>
+    <Entry ID="10033">
+        <String LCID="1033">AmsNetId</String>
+    </Entry>
+    <Entry ID="10034">
+        <String LCID="1033">Registration level</String>
+    </Entry>
+    <Entry ID="10035">
+        <String LCID="1033">TwinCAT system state</String>
+    </Entry>
+    <Entry ID="10036">
+        <String LCID="1033">RunAsDevice option (WinCE only)</String>
+    </Entry>
+    <Entry ID="10037">
+        <String LCID="1033">TargetVisu option (WinCE only)</String>
+    </Entry>
+    <Entry ID="10038">
+        <String LCID="1033">LogFile size (WinCE only)</String>
+    </Entry>
+    <Entry ID="10039">
+        <String LCID="1033">LogFile path (WinCE only)</String>
+    </Entry>
+    <Entry ID="10040">
+        <String LCID="1033">Userlist</String>
+    </Entry>
+    <Entry ID="10041">
+        <String LCID="1033">Accesslist</String>
+    </Entry>
+    <Entry ID="10050">
+        <String LCID="1033">Route name</String>
+    </Entry>
+    <Entry ID="10051">
+        <String LCID="1033">address</String>
+    </Entry>
+    <Entry ID="10052">
+        <String LCID="1033">Ams address</String>
+    </Entry>
+    <Entry ID="10053">
+        <String LCID="1033">Flags</String>
+    </Entry>
+    <Entry ID="10054">
+        <String LCID="1033">Timeout</String>
+    </Entry>
+    <Entry ID="10055">
+        <String LCID="1033">Transport</String>
+    </Entry>
+    <Entry ID="10060">
+        <String LCID="1033">Activate FTP Server</String>
+    </Entry>
+    <Entry ID="10061">
+        <String LCID="1033">Allow anonymouos access</String>
+    </Entry>
+    <Entry ID="10062">
+        <String LCID="1033">Allow anonymouos upload</String>
+    </Entry>
+    <Entry ID="10063">
+        <String LCID="1033">Allow anonymouos vroots</String>
+    </Entry>
+    <Entry ID="10064">
+        <String LCID="1033">Use authentication</String>
+    </Entry>
+    <Entry ID="10065">
+        <String LCID="1033">Default directory</String>
+    </Entry>
+    <Entry ID="10066">
+        <String LCID="1033">FTP Username</String>
+    </Entry>
+    <Entry ID="10070">
+        <String LCID="1033">Memory division</String>
+    </Entry>
+    <Entry ID="10080">
+        <String LCID="1033">Enable server</String>
+    </Entry>
+    <Entry ID="10081">
+        <String LCID="1033">Slow connection</String>
+    </Entry>
+    <Entry ID="10082">
+        <String LCID="1033">Use DHCP IP addresses</String>
+    </Entry>
+    <Entry ID="10083">
+        <String LCID="1033">Use auto IP addresses</String>
+    </Entry>
+    <Entry ID="10084">
+        <String LCID="1033">static IP address count</String>
+    </Entry>
+    <Entry ID="10085">
+        <String LCID="1033">Static IP start</String>
+    </Entry>
+    <Entry ID="10086">
+        <String LCID="1033">Username</String>
+    </Entry>
+    <Entry ID="10087">
+        <String LCID="1033">RAS line</String>
+    </Entry>
+    <Entry ID="10088">
+        <String LCID="1033">Enable line</String>
+    </Entry>
+    <Entry ID="10100">
+        <String LCID="1033">OS Major Version</String>
+    </Entry>
+    <Entry ID="10101">
+        <String LCID="1033">OS Minor Version</String>
+    </Entry>
+    <Entry ID="10102">
+        <String LCID="1033">OS Build</String>
+    </Entry>
+    <Entry ID="10103">
+        <String LCID="1033">CSD Version</String>
+    </Entry>
+  <Entry ID="20014">
+    <String LCID="1033">Group membership</String>
+  </Entry>
+  <Entry ID="20015">
+    <String LCID="1033">Local groups</String>
+  </Entry>
+  <Entry ID="20016">
+    <String LCID="1033">Group</String>
+  </Entry>
+  <Entry ID="20020">
+    <String LCID="1033">CPU Temperature (°C)</String>
+  </Entry>
+</MDPStringTable>

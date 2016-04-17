@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpcServerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<UaServerConfig>
+  <!--Maximum age of a request the server allows. Default value 0 is unlimited-->
+  <MaxRequestAge>0</MaxRequestAge>
+  <!--Maximum number of sessions the server allows to create. Default value 0 is unlimited-->
+  <MaxSessionCount>0</MaxSessionCount>
+  <!--Maximum timeout in ms for a sessions the server allows to set. Default value 0 is unlimited-->
+  <MaxSessionTimeout>0</MaxSessionTimeout>
+  <!--Resolution of sesseion timeout in ms the server allows to set. Default value 0 is unlimited-->
+  <SessionTimeoutResolution>0</SessionTimeoutResolution>
+  <!--Timeout in ms for a continuation point the server uses. Default value 0 is no timeout-->
+  <ContinuationPointTimeout>0</ContinuationPointTimeout>
+  <!--Minimum publishing interval in milliseconds the server allows-->
+  <MinPublishingInterval>50</MinPublishingInterval>
+  <!--Minimum KeepAlive interval  in milliseconds the server allows-->
+  <MinKeepAliveInterval>5000</MinKeepAliveInterval>
+  <!--Server instance info-->
+  <ServerInstanceUri>[NodeName]/Beckhoff/IPCDiag/1</ServerInstanceUri>
+  <!--Default subscription mode-->
+  <DefaultSubscriptionMode>2</DefaultSubscriptionMode>  
+
+  
+  <!--Configure user authentication for Session establishment true/false-->
+  <RequireUserAuthenticationForSession>false</RequireUserAuthenticationForSession>
+  <!--Discovery configuration
+      Configuration for registration with discovery server(s)-->
+  <DiscoveryRegistration>
+    <!--Interval in milliseconds for registration with discovery server(s) -->
+    <RegistrationInterval>30000</RegistrationInterval>
+    <!--List of discovery servers to register with.
+        If the list is empty, no registration is executed. 
+        Default ist opc.tcp://localhost:4840 for the local discovery server.
+        Additional remot discovery servers can be added-->
+    <Url>opc.tcp://localhost:4852</Url>
+  </DiscoveryRegistration>
+  <!--Discovery configuration end-->
+
+
+
+  <ThreadPoolSettings>
+    <MinSizeTransactionManager>4</MinSizeTransactionManager>
+    <MaxSizeTransactionManager>4</MaxSizeTransactionManager>
+    <MinSizeSubscriptionManager>4</MinSizeSubscriptionManager>
+    <MaxSizeSubscriptionManager>4</MaxSizeSubscriptionManager>
+  </ThreadPoolSettings>
+  <UaEndpoint>
+    <SerializerType>Binary</SerializerType>
+    <Url>opc.tcp://[NodeName]:4852</Url>
+    <SecuritySetting>
+      <SecurityPolicy>http://opcfoundation.org/UA/SecurityPolicy#None</SecurityPolicy>
+      <MessageSecurityMode>None</MessageSecurityMode>
+    </SecuritySetting>
+    <SecuritySetting>
+      <SecurityPolicy>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</SecurityPolicy>
+      <MessageSecurityMode>None</MessageSecurityMode>
+      <MessageSecurityMode>Sign</MessageSecurityMode>
+      <MessageSecurityMode>SignAndEncrypt</MessageSecurityMode>
+    </SecuritySetting>    
+  </UaEndpoint>
+</UaServerConfig>
+<General>
+  <DefaultDelimiter>.</DefaultDelimiter>
+</General>
+</OpcServerConfig>

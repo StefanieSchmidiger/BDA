@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBootProject>
+	<Drivers>
+		<Driver>
+			<Type>1</Type>
+			<ServiceName>TCIO</ServiceName>
+		</Driver>
+		<Driver>
+			<Type>1</Type>
+			<ServiceName>TCPLC</ServiceName>
+		</Driver>
+		<Driver>
+			<Type>1</Type>
+			<ServiceName>TCRTIME</ServiceName>
+		</Driver>
+	</Drivers>
+	<InitCmds/>
+</TcBootProject>

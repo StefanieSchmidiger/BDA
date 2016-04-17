@@ -1,0 +1,9 @@
+;-------------------------------------------------------------------------------
+; Batch file will be started delayed (value in ms)
+;-------------------------------------------------------------------------------
+; 20Sek = 4e20
+; 10Sek = 2710
+;  5Sek = 1388
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\CxConfig]
+    "WaitTimeTcServer"=dword:1388

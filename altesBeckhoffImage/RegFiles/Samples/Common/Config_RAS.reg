@@ -1,0 +1,17 @@
+;-------------------------------------------------------------------------------
+; - Activate RAS
+; - Activate RAS-device "Hayes Compatible" 
+; - Add user "Administrator"
+; - Set "AutoIp Pool
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Comm\ppp\Server\Line\Hayes Compatible on COM1:]
+    "DisconnectIdleSeconds"=dword:00000000
+    "Flags"=dword:00000000
+    "Enable"=dword:00000001
+    "DeviceType"="modem"
+
+[HKEY_LOCAL_MACHINE\Comm\ppp\Server\Parms]
+    "Enable"=dword:00000001
+    "UseAutoIPAddresses"=dword:00000001
+    "StaticIpAddrCount"=dword:000000fe
+    "StaticIpAddrStart"=dword:c0a8fe01

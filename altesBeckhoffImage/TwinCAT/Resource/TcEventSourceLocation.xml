@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcEventSourceLocation>
+	<Location>
+		<SourceId>300</SourceId>
+		<Path>TcIoMessages.xml</Path>
+	</Location>
+	<Location>
+		<SourceId>500</SourceId>
+		<Path>TcNcMessages.xml</Path>
+	</Location>
+</TcEventSourceLocation>

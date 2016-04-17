@@ -1,0 +1,6 @@
+;-------------------------------------------------------------------------------
+; Set the CX1020 screen resolution to 800 x 600
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\General]
+   "Width"=dword:320
+   "Height"=dword:258

@@ -1,0 +1,26 @@
+;-------------------------------------------------------------------------------
+; Device specific settings
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Ident]
+    "Desc"="Beckhoff CP62xx"
+    "DeviceType"="CX_CP62xx"
+
+;-------------------------------------------------------------------------------
+; Enable DVI and LVDS with resolution 1280 * 1024
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\General]
+   "PortOrder"="24000"
+   "Width"=dword:500
+   "Height"=dword:400
+
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\Port\4\Attr]
+   "27"=dword:1
+
+;-------------------------------------------------------------------------------
+; Enable serial ELO Touch Driver on COM4
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\TOUCH]	
+   "ComPort"="COM4:"
+
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\EloTouch]
+   "Flags"=dword:0

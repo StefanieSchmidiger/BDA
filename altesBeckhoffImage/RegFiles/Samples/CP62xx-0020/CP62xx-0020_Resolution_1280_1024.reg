@@ -1,0 +1,9 @@
+;-------------------------------------------------------------------------------
+; Set resolution 1280 * 1024 and Spread Spectrum Clocking (Attr 43) to 4 for 19"
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\General]
+   "Width"=dword:500
+   "Height"=dword:400
+
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\Port\4\Attr]
+   "43"=dword:4

@@ -12,41 +12,41 @@
 #include <util/twi.h>
 // ----- custom includes --------
 #include "i2c_master.h"
+#include "spi_master_bitbanging.h"
 // ----- custom defines ---------
-#define GND_BIT PB6
-#define VCC_BIT PC1
-#define LED_BIT PC2
+#define GND_BIT PC3
+#define VCC_BIT PC2
 
 // ----- prototypes -------
 void pinSetup(void);
 // ----- global variables ---------
 uint8_t i2cData[2];
+uint8_t spiData[2];
 
 int main(void)
 {
 	pinSetup();	// setup VCC, GND and LED pins
 	i2c_init();	// setup TWI
+	spi_init_bitbanging();
 	sei();			// enable global interrupts
 	_delay_ms(1000);
-	i2c_start();	// request 2 bytes of I2C data
     while (1) 
     {
-		_delay_us(150);
-		//i2c_init();
-		PORTC ^= _BV(LED_BIT);				// toggle LED
 		i2c_start();
-		PORTC ^= _BV(LED_BIT);				// toggle LED
+		spiData[0]=0x49;
+		spiData[1]=0x10;
+		spi_sendBytes_bitbanging(spiData, 2);
+		_delay_us(150);
     }
 }
 
 void pinSetup(void)
 {
-	DDRC |= (1 << VCC_BIT);
-	DDRB |= (1 << GND_BIT);		// set pins to output
-	DDRC |= (1 << LED_BIT);
-
-	PORTC |= _BV(VCC_BIT);		// set VCC pin to high
-	PORTB &= ~(_BV(GND_BIT));	// set GND pin to low
+		DDRC |= (1 << VCC_BIT);
+		DDRC |= (1 << GND_BIT);		// set pins to output
+		
+		PORTC |= _BV(VCC_BIT);		// set VCC pin to high
+		PORTC &= ~(_BV(GND_BIT));	// set GND pin to low
 }
 
 

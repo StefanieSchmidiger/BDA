@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Batch file will be started delayed (value in ms)
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\CxConfig]
+    "WaitTimeAutoexec"=dword:4e20

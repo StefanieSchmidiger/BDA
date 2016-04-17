@@ -1,0 +1,9 @@
+;-------------------------------------------------------------------------------
+; Disable MDPUA-Server
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Services\MdpUa-ServerCE]
+   "Prefix"="MUS"
+   "Dll"="\Hard Disk\BkIpcDiag\UA\MDPUa-ServerCE.dll"
+   "Index"=dword:00000001
+   "Order"=dword:00000016
+   "Flags"=dword:00000004

@@ -1,0 +1,6 @@
+;-------------------------------------------------------------------------------
+; Set the screen resolution to 640 * 480
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel\ALL\1\General]
+   "Width"=dword:280
+   "Height"=dword:1E0

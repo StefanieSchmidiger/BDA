@@ -1,0 +1,7 @@
+;-------------------------------------------------------------------------------
+; Taskbar "Allways on top (yes), Autohide (no), ShowClock (yes)
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shell\AutoHide]
+    "Default"=dword:00000000
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shell\OnTop]
+    "Default"=dword:00000000
