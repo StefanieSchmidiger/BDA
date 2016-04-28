@@ -11,8 +11,8 @@
  * Stack implementation using multi-byte mode
  */
 class StackMultiByte : public StackBase<StackMultiByte, 
-        1, // PD_IN_SIZE
-        1  // PD_OUT_SIZE
+        4, // PD_IN_SIZE
+        0  // PD_OUT_SIZE
 >
 {
 public:
@@ -29,11 +29,11 @@ public:
     static const uint32_t BAUD_RATE =       230400;
 
     //! MinCycleTime in 0.1ms units
-    static const uint8_t MIN_CYC_TIME =     30;  // 30x0.1ms
+    static const uint8_t MIN_CYC_TIME =     5;  // 30x0.1ms
 
     //! M-sequence Capability (Direct Parameter 0x03)
     static const uint8_t MSEQ_CAPABILITY =  IoLink::MSEQCAP_ISDU_NOT_SUPPORTED | 
-                                            IoLink::MSEQCAP_OP_CODE_0 | 
+                                            IoLink::MSEQCAP_OP_CODE_0 |			// toDo: ändern für 4Byte in, 0 bytes out!!!!!!
                                             IoLink::MSEQCAP_PREOP_CODE_0;
 
     //! PHY configuration
