@@ -49,7 +49,7 @@ Discarded input sections
  .bss           0x00000000        0x0 demoapp.o
  .text._ZN7DemoApp22isDigitalButtonPressedEv
                 0x00000000        0xc demoapp.o
- .bss._ZZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+ .bss._ZZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
                 0x00000000        0x1 demoapp.o
  .text          0x00000000        0x0 i2c_master.o
  .data          0x00000000        0x0 i2c_master.o
@@ -286,7 +286,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xaf4
+.text           0x00000000      0xb04
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -301,7 +301,7 @@ END GROUP
                 0x00000068                __trampolines_end = .
  *(.progmem*)
  .progmem.data  0x00000068       0x20 main.o
-                0x00000068                _ZZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18configureStackBaseEvE19directDefaultConfig
+                0x00000068                _ZZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE18configureStackBaseEvE19directDefaultConfig
                 0x00000088                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
@@ -372,7 +372,7 @@ END GROUP
                 0x000000be                __vector_20
                 0x000000c0                . = ALIGN (0x2)
  *(.text.*)
- .text._ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1
+ .text._ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE6odReadEhh.isra.1
                 0x000000c0       0x2a stackmultibyte.o
  .text.__vector_15
                 0x000000ea       0xfc stackmultibyte.o
@@ -380,57 +380,57 @@ END GROUP
  .text._ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv
                 0x000001e6        0xe stackmultibyte.o
                 0x000001e6                _ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv
- .text._ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv
+ .text._ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE12configurePhyEv
                 0x000001f4       0x62 stackmultibyte.o
-                0x000001f4                _ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv
- .text._ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh
+                0x000001f4                _ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE12configurePhyEv
+ .text._ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE18startCallbackTimerEh
                 0x00000256       0x86 stackmultibyte.o
-                0x00000256                _ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh
- .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
-                0x000002dc      0x12a stackmultibyte.o
-                0x000002dc                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
- .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
-                0x00000406       0xca stackmultibyte.o
-                0x00000406                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
- .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
-                0x000004d0       0xf0 stackmultibyte.o
-                0x000004d0                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh
+                0x00000256                _ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE18startCallbackTimerEh
+ .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
+                0x000002dc      0x13a stackmultibyte.o
+                0x000002dc                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
+ .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
+                0x00000416       0xca stackmultibyte.o
+                0x00000416                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
+ .text._ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
+                0x000004e0       0xf0 stackmultibyte.o
+                0x000004e0                _ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEh
  .text.__vector_4
-                0x000005c0      0x132 stackmultibyte.o
-                0x000005c0                __vector_4
+                0x000005d0      0x132 stackmultibyte.o
+                0x000005d0                __vector_4
  .text.startup._GLOBAL__sub_I_directParameter
-                0x000006f2       0x32 stackmultibyte.o
+                0x00000702       0x32 stackmultibyte.o
  .text._ZN7DemoApp9configureEv
-                0x00000724       0x16 demoapp.o
-                0x00000724                _ZN7DemoApp9configureEv
- .text._ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE
-                0x0000073a      0x100 demoapp.o
-                0x0000073a                _ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE
+                0x00000734       0x16 demoapp.o
+                0x00000734                _ZN7DemoApp9configureEv
+ .text._ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+                0x0000074a      0x100 demoapp.o
+                0x0000074a                _ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9ParameterE
  .text._ZN7DemoApp11elapsed10msEv
-                0x0000083a       0x10 demoapp.o
-                0x0000083a                _ZN7DemoApp11elapsed10msEv
+                0x0000084a       0x10 demoapp.o
+                0x0000084a                _ZN7DemoApp11elapsed10msEv
  .text._ZN7DemoApp22updateProcessInputDataEv
-                0x0000084a       0xdc demoapp.o
-                0x0000084a                _ZN7DemoApp22updateProcessInputDataEv
- .text._ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE
-                0x00000926       0x66 demoapp.o
-                0x00000926                _ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE
- .text._ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv
-                0x0000098c       0xce main.o
-                0x0000098c                _ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv
+                0x0000085a       0xdc demoapp.o
+                0x0000085a                _ZN7DemoApp22updateProcessInputDataEv
+ .text._ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+                0x00000936       0x66 demoapp.o
+                0x00000936                _ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+ .text._ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9configureEv
+                0x0000099c       0xce main.o
+                0x0000099c                _ZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE9configureEv
  .text.startup.main
-                0x00000a5a       0x78 main.o
-                0x00000a5a                main
- .text.libgcc   0x00000ad2        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
-                0x00000ad2                __tablejump2__
+                0x00000a6a       0x78 main.o
+                0x00000a6a                main
+ .text.libgcc   0x00000ae2        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                0x00000ae2                __tablejump2__
  .text.avr-libc
-                0x00000ade       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x00000ade                memcpy_P
-                0x00000af0                . = ALIGN (0x2)
+                0x00000aee       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x00000aee                memcpy_P
+                0x00000b00                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000af0        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
-                0x00000af0                _exit
-                0x00000af0                exit
+ .fini9         0x00000b00        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x00000b00                _exit
+                0x00000b00                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -449,11 +449,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000af0        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000b00        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000af4                _etext = .
+                0x00000b04                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000af4
+.data           0x00800100        0x0 load address 0x00000b04
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -464,36 +464,36 @@ END GROUP
                 0x00800100                _edata = .
                 0x00800100                PROVIDE (__data_end, .)
 
-.bss            0x00800100       0x3f
+.bss            0x00800100       0x41
                 0x00800100                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss._ZZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+ .bss._ZZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
                 0x00800100        0x1 stackmultibyte.o
-                0x00800100                _ZZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+                0x00800100                _ZZN9StackBaseI14StackMultiByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
  .bss._ZN14StackMultiByte8instanceE
-                0x00800101       0x12 stackmultibyte.o
+                0x00800101       0x14 stackmultibyte.o
                 0x00800101                _ZN14StackMultiByte8instanceE
  .bss.eventPage
-                0x00800113        0x8 stackmultibyte.o
-                0x00800113                eventPage
+                0x00800115        0x8 stackmultibyte.o
+                0x00800115                eventPage
  .bss.directParameter
-                0x0080011b       0x20 stackmultibyte.o
-                0x0080011b                directParameter
+                0x0080011d       0x20 stackmultibyte.o
+                0x0080011d                directParameter
  .bss._ZN7DemoApp8instanceE
-                0x0080013b        0x4 demoapp.o
-                0x0080013b                _ZN7DemoApp8instanceE
+                0x0080013d        0x4 demoapp.o
+                0x0080013d                _ZN7DemoApp8instanceE
  *(COMMON)
-                0x0080013f                PROVIDE (__bss_end, .)
-                0x00000af4                __data_load_start = LOADADDR (.data)
-                0x00000af4                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800141                PROVIDE (__bss_end, .)
+                0x00000b04                __data_load_start = LOADADDR (.data)
+                0x00000b04                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080013f        0x0
-                0x0080013f                PROVIDE (__noinit_start, .)
+.noinit         0x00800141        0x0
+                0x00800141                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080013f                PROVIDE (__noinit_end, .)
-                0x0080013f                _end = .
-                0x0080013f                PROVIDE (__heap_start, .)
+                0x00800141                PROVIDE (__noinit_end, .)
+                0x00800141                _end = .
+                0x00800141                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -574,23 +574,23 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6654
+.debug_info     0x00000000     0x662f
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x3b4e stackmultibyte.o
- .debug_info    0x00003b4e     0x16dd demoapp.o
- .debug_info    0x0000522b     0x1429 main.o
+ .debug_info    0x00000000     0x3aa1 stackmultibyte.o
+ .debug_info    0x00003aa1     0x1721 demoapp.o
+ .debug_info    0x000051c2     0x146d main.o
 
-.debug_abbrev   0x00000000     0x12eb
+.debug_abbrev   0x00000000     0x12dd
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x6ba stackmultibyte.o
- .debug_abbrev  0x000006ba      0x5fc demoapp.o
- .debug_abbrev  0x00000cb6      0x635 main.o
+ .debug_abbrev  0x00000000      0x69a stackmultibyte.o
+ .debug_abbrev  0x0000069a      0x605 demoapp.o
+ .debug_abbrev  0x00000c9f      0x63e main.o
 
-.debug_line     0x00000000      0xaa3
+.debug_line     0x00000000      0xa81
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x5b2 stackmultibyte.o
- .debug_line    0x000005b2      0x205 demoapp.o
- .debug_line    0x000007b7      0x2ec main.o
+ .debug_line    0x00000000      0x590 stackmultibyte.o
+ .debug_line    0x00000590      0x205 demoapp.o
+ .debug_line    0x00000795      0x2ec main.o
 
 .debug_frame    0x00000000      0x21c
  *(.debug_frame)
@@ -598,20 +598,20 @@ END GROUP
  .debug_frame   0x00000150       0x8c demoapp.o
  .debug_frame   0x000001dc       0x40 main.o
 
-.debug_str      0x00000000     0x2930
+.debug_str      0x00000000     0x293a
  *(.debug_str)
- .debug_str     0x00000000     0x2430 stackmultibyte.o
-                               0x24de (size before relaxing)
- .debug_str     0x00002430      0x34a demoapp.o
-                               0x1fe3 (size before relaxing)
- .debug_str     0x0000277a      0x1b6 main.o
-                               0x1ecd (size before relaxing)
+ .debug_str     0x00000000     0x243a stackmultibyte.o
+                               0x24e8 (size before relaxing)
+ .debug_str     0x0000243a      0x34a demoapp.o
+                               0x1ff2 (size before relaxing)
+ .debug_str     0x00002784      0x1b6 main.o
+                               0x1edc (size before relaxing)
 
-.debug_loc      0x00000000     0x1a39
+.debug_loc      0x00000000     0x1a13
  *(.debug_loc)
- .debug_loc     0x00000000     0x1523 stackmultibyte.o
- .debug_loc     0x00001523      0x3a2 demoapp.o
- .debug_loc     0x000018c5      0x174 main.o
+ .debug_loc     0x00000000     0x14fd stackmultibyte.o
+ .debug_loc     0x000014fd      0x3a2 demoapp.o
+ .debug_loc     0x0000189f      0x174 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -631,11 +631,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x110
+.debug_ranges   0x00000000       0xe0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0xc0 stackmultibyte.o
- .debug_ranges  0x000000c0       0x38 demoapp.o
- .debug_ranges  0x000000f8       0x18 main.o
+ .debug_ranges  0x00000000       0x90 stackmultibyte.o
+ .debug_ranges  0x00000090       0x38 demoapp.o
+ .debug_ranges  0x000000c8       0x18 main.o
 
 .debug_macro
  *(.debug_macro)

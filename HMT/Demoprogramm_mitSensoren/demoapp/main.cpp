@@ -9,6 +9,14 @@
 #include <avr/signature.h>
 #include <avr/sleep.h>
 
+// define stack mode used
+#define STACK_MODE_SINGLE_BYTE
+#include "stacksinglebyte.h"
+
+
+// define physical hardware used
+//#define USE_HMT7742
+
 // declare main as function without exit (saves a few bytes)
 int main(void) __attribute__ ((OS_main));
 

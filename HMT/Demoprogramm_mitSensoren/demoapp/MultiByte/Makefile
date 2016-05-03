@@ -37,12 +37,12 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../../stack/stackmultibyte.cpp \
 ../../stack/stacksinglebyte.cpp \
 ../../stack/stacktransparent.cpp \
 ../demoapp.cpp \
 ../i2c_master.c \
-../main.cpp
+../main.cpp \
+../stackmultibyte.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -52,36 +52,36 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-stackmultibyte.o \
 stacksinglebyte.o \
 stacktransparent.o \
 demoapp.o \
 i2c_master.o \
-main.o
+main.o \
+stackmultibyte.o
 
 OBJS_AS_ARGS +=  \
-stackmultibyte.o \
 stacksinglebyte.o \
 stacktransparent.o \
 demoapp.o \
 i2c_master.o \
-main.o
+main.o \
+stackmultibyte.o
 
 C_DEPS +=  \
-stackmultibyte.d \
 stacksinglebyte.d \
 stacktransparent.d \
 demoapp.d \
 i2c_master.d \
-main.d
+main.d \
+stackmultibyte.d
 
 C_DEPS_AS_ARGS +=  \
-stackmultibyte.d \
 stacksinglebyte.d \
 stacktransparent.d \
 demoapp.d \
 i2c_master.d \
-main.d
+main.d \
+stackmultibyte.d
 
 OUTPUT_FILE_PATH +=ministack.elf
 

@@ -3,6 +3,7 @@
 //! Minimal application to provide a simple sensor emulator and a response to a 
 //! button press on the TM96.
 //------------------------------------------------------------------------------
+//#include "stacksinglebyte.h"
 #include "demoapp.h"
 #include <util/delay.h>
 #include <avr/io.h>

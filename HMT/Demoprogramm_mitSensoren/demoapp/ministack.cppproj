@@ -217,10 +217,6 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\stack\stackmultibyte.cpp">
-      <SubType>compile</SubType>
-      <Link>stackmultibyte.cpp</Link>
-    </Compile>
     <Compile Include="..\stack\stacksinglebyte.cpp">
       <SubType>compile</SubType>
       <Link>stacksinglebyte.cpp</Link>
@@ -242,6 +238,9 @@
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
       <Link>main.cpp</Link>
+    </Compile>
+    <Compile Include="stackmultibyte.cpp">
+      <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
