@@ -1,0 +1,4 @@
+Single Byte Mode aktiviert
+COM3 aktiviert
+M-Seq Capability: 0 (1 Oktett)
+1 PDI, 1 PDO

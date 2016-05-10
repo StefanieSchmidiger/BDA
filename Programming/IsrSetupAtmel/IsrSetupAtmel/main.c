@@ -4,7 +4,9 @@
  * Created: 31.03.2016 15:28:27
  * Author : Stefanie
  */ 
-#define F_CPU 16000000
+#ifndef F_CPU
+	#define F_CPU 8000000UL
+#endif
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/atomic.h>
@@ -23,19 +25,34 @@ void pinSetup(void);
 uint8_t i2cData[2];
 uint8_t spiData[2];
 
+// embed fuse configuration ELF file:
+// - external clock, low startup time
+// - enable SPI programming
+FUSES =
+{
+	#ifdef USE_EXT_OSC
+	(FUSE_CKSEL0 & FUSE_CKSEL1 & FUSE_CKSEL2 & FUSE_CKSEL3 & FUSE_SUT0), // .low
+	#else
+	(FUSE_CKSEL0 & FUSE_CKSEL2 & FUSE_CKSEL3 & FUSE_SUT0),               // .low
+	#endif
+	(FUSE_SPIEN & FUSE_BOOTSZ0 & FUSE_BOOTSZ1),                          // .high
+	( FUSE_BODLEVEL0 )                                                   // .ext
+};
+
+
 int main(void)
 {
 	pinSetup();	// setup VCC, GND and LED pins
-	i2c_init();	// setup TWI
+	//i2c_init();	// setup TWI
 	spi_init_bitbanging();
 	sei();			// enable global interrupts
 	_delay_ms(1000);
     while (1) 
     {
-		i2c_start();
-		spiData[0]=0x49;
-		spiData[1]=0x10;
-		spi_sendBytes_bitbanging(spiData, 2);
+		//i2c_start();
+		spiData[0]=0x31;
+		spiData[1]=0x00;
+		spi_send16Bits_bitbanging(spiData);
 		_delay_us(150);
     }
 }

@@ -5,6 +5,7 @@
 
 #include "i2c_master.h"
 #include "spi_master_bitbanging.h"
+#include "spi_master.h"
 
 #define GND_BIT PC3
 #define VCC_BIT PC2
@@ -22,25 +23,26 @@ void main(void)
 	ioInit();
 	i2c_init();
 	spi_init_bitbanging();
+	spi_init();
 	
 
 	
 	
 	while (1) 
 	{
-		i2c_receive(0b10011010,data, 2);	// get 2 bytes of sensor data
+		//i2c_receive(0b10011010,data, 2);	// get 2 bytes of sensor data
 		//i2c_stop();						// single conversion
-		//PORTC ^= _BV(LED_BIT);				// toggle LED
-		
-		data[0]=0x49;
-		data[1]= 0x19;
-		spi_sendBytes_bitbanging(data, 2);
-		_delay_us(500);
-		spi_sendBytes_bitbanging(data, 2);
-		data[0] = 0x49;
+		spi_selectSlave();
+		data[0]=0x31;
+		data[1]= 0x00;
+		spi_writeBytes(data, 2);
+		spi_unselectSlave();
+		//spi_sendBytes_bitbanging(data, 2);
+		//_delay_us(500);
+		//spi_sendBytes_bitbanging(data, 2);
+		//data[0] = 0x49;
 		_delay_ms(10);
 	}
-	return 0;
 }
 
 /*

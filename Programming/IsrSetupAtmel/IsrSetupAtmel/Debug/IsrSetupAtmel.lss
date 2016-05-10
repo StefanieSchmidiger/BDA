@@ -3,31 +3,33 @@ IsrSetupAtmel.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000328  2**0
+  0 .data         00000000  00800100  00800100  0000031f  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000002b4  00000000  00000000  00000074  2**1
+  1 .text         00000288  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          00000007  00800100  00800100  00000328  2**0
+  2 .bss          00000007  00800100  00800100  0000031c  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  00000328  2**0
+  3 .fuse         00000003  00820000  00820000  0000031c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  0000031f  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000358  2**2
+  5 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000350  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000000a0  00000000  00000000  00000398  2**0
+  6 .debug_aranges 00000088  00000000  00000000  00000390  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00000731  00000000  00000000  00000438  2**0
+  7 .debug_info   000007b1  00000000  00000000  00000418  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000003db  00000000  00000000  00000b69  2**0
+  8 .debug_abbrev 000003e2  00000000  00000000  00000bc9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000043b  00000000  00000000  00000f44  2**0
+  9 .debug_line   00000428  00000000  00000000  00000fab  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000170  00000000  00000000  00001380  2**2
+ 10 .debug_frame  00000188  00000000  00000000  000013d4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000002ec  00000000  00000000  000014f0  2**0
+ 11 .debug_str    0000030e  00000000  00000000  0000155c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000003d1  00000000  00000000  000017dc  2**0
+ 12 .debug_loc    000004d6  00000000  00000000  0000186a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000070  00000000  00000000  00001bad  2**0
+ 13 .debug_ranges 00000068  00000000  00000000  00001d40  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -57,7 +59,7 @@ Disassembly of section .text:
   54:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
   58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
   5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
-  60:	0c 94 82 00 	jmp	0x104	; 0x104 <__vector_24>
+  60:	0c 94 6a 00 	jmp	0xd4	; 0xd4 <__vector_24>
   64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
 
 00000068 <__ctors_end>:
@@ -81,490 +83,446 @@ Disassembly of section .text:
   7e:	a7 30       	cpi	r26, 0x07	; 7
   80:	b2 07       	cpc	r27, r18
   82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
-  84:	0e 94 5e 00 	call	0xbc	; 0xbc <main>
-  88:	0c 94 58 01 	jmp	0x2b0	; 0x2b0 <_exit>
+  84:	0e 94 4d 00 	call	0x9a	; 0x9a <main>
+  88:	0c 94 42 01 	jmp	0x284	; 0x284 <_exit>
 
 0000008c <__bad_interrupt>:
   8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000090 <i2c_init>:
-#include <util/twi.h>
-#include <avr/interrupt.h>
-
-void i2c_init(void)
-{
-	OSCCAL = 0xFF;				// select  highest possible frequency with RC generator
-  90:	8f ef       	ldi	r24, 0xFF	; 255
-  92:	80 93 66 00 	sts	0x0066, r24
-	CLKPR = 0b10000000;
-  96:	e1 e6       	ldi	r30, 0x61	; 97
-  98:	f0 e0       	ldi	r31, 0x00	; 0
-  9a:	80 e8       	ldi	r24, 0x80	; 128
-  9c:	80 83       	st	Z, r24
-	CLKPR = 0b10000000;
-  9e:	80 83       	st	Z, r24
-	TWBR = 10;		// SCL frequency 400kHz
-  a0:	8a e0       	ldi	r24, 0x0A	; 10
-  a2:	80 93 b8 00 	sts	0x00B8, r24
-	sei();			// global interrupt enable
-  a6:	78 94       	sei
-  a8:	08 95       	ret
-
-000000aa <i2c_start>:
-}
-
-void i2c_start(void)
-{
-	// transmit START condition
-	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN) | (1<<TWIE);
-  aa:	85 ea       	ldi	r24, 0xA5	; 165
-  ac:	80 93 bc 00 	sts	0x00BC, r24
-  b0:	08 95       	ret
-
-000000b2 <pinSetup>:
+00000090 <pinSetup>:
     }
 }
 
 void pinSetup(void)
 {
 		DDRC |= (1 << VCC_BIT);
-  b2:	3a 9a       	sbi	0x07, 2	; 7
+  90:	3a 9a       	sbi	0x07, 2	; 7
 		DDRC |= (1 << GND_BIT);		// set pins to output
-  b4:	3b 9a       	sbi	0x07, 3	; 7
+  92:	3b 9a       	sbi	0x07, 3	; 7
 		
 		PORTC |= _BV(VCC_BIT);		// set VCC pin to high
-  b6:	42 9a       	sbi	0x08, 2	; 8
+  94:	42 9a       	sbi	0x08, 2	; 8
 		PORTC &= ~(_BV(GND_BIT));	// set GND pin to low
-  b8:	43 98       	cbi	0x08, 3	; 8
-  ba:	08 95       	ret
+  96:	43 98       	cbi	0x08, 3	; 8
+  98:	08 95       	ret
 
-000000bc <main>:
-uint8_t i2cData[2];
-uint8_t spiData[2];
+0000009a <main>:
+};
+
 
 int main(void)
 {
 	pinSetup();	// setup VCC, GND and LED pins
-  bc:	0e 94 59 00 	call	0xb2	; 0xb2 <pinSetup>
-	i2c_init();	// setup TWI
-  c0:	0e 94 48 00 	call	0x90	; 0x90 <i2c_init>
+  9a:	0e 94 48 00 	call	0x90	; 0x90 <pinSetup>
+	//i2c_init();	// setup TWI
 	spi_init_bitbanging();
-  c4:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <spi_init_bitbanging>
+  9e:	0e 94 c9 00 	call	0x192	; 0x192 <spi_init_bitbanging>
 	sei();			// enable global interrupts
-  c8:	78 94       	sei
+  a2:	78 94       	sei
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  ca:	2f ef       	ldi	r18, 0xFF	; 255
-  cc:	83 ed       	ldi	r24, 0xD3	; 211
-  ce:	90 e3       	ldi	r25, 0x30	; 48
-  d0:	21 50       	subi	r18, 0x01	; 1
-  d2:	80 40       	sbci	r24, 0x00	; 0
-  d4:	90 40       	sbci	r25, 0x00	; 0
-  d6:	e1 f7       	brne	.-8      	; 0xd0 <main+0x14>
-  d8:	00 c0       	rjmp	.+0      	; 0xda <main+0x1e>
-  da:	00 00       	nop
+  a4:	2f ef       	ldi	r18, 0xFF	; 255
+  a6:	89 e6       	ldi	r24, 0x69	; 105
+  a8:	98 e1       	ldi	r25, 0x18	; 24
+  aa:	21 50       	subi	r18, 0x01	; 1
+  ac:	80 40       	sbci	r24, 0x00	; 0
+  ae:	90 40       	sbci	r25, 0x00	; 0
+  b0:	e1 f7       	brne	.-8      	; 0xaa <main+0x10>
+  b2:	00 c0       	rjmp	.+0      	; 0xb4 <main+0x1a>
+  b4:	00 00       	nop
 	_delay_ms(1000);
     while (1) 
     {
-		i2c_start();
-		spiData[0]=0x49;
-  dc:	c3 e0       	ldi	r28, 0x03	; 3
-  de:	d1 e0       	ldi	r29, 0x01	; 1
-  e0:	09 e4       	ldi	r16, 0x49	; 73
-		spiData[1]=0x10;
-  e2:	10 e1       	ldi	r17, 0x10	; 16
-	spi_init_bitbanging();
-	sei();			// enable global interrupts
-	_delay_ms(1000);
-    while (1) 
-    {
-		i2c_start();
-  e4:	0e 94 55 00 	call	0xaa	; 0xaa <i2c_start>
-		spiData[0]=0x49;
-  e8:	08 83       	st	Y, r16
-		spiData[1]=0x10;
-  ea:	19 83       	std	Y+1, r17	; 0x01
-		spi_sendBytes_bitbanging(spiData, 2);
-  ec:	62 e0       	ldi	r22, 0x02	; 2
-  ee:	70 e0       	ldi	r23, 0x00	; 0
-  f0:	ce 01       	movw	r24, r28
-  f2:	0e 94 05 01 	call	0x20a	; 0x20a <spi_sendBytes_bitbanging>
+		//i2c_start();
+		spiData[0]=0x31;
+  b6:	c3 e0       	ldi	r28, 0x03	; 3
+  b8:	d1 e0       	ldi	r29, 0x01	; 1
+  ba:	11 e3       	ldi	r17, 0x31	; 49
+  bc:	18 83       	st	Y, r17
+		spiData[1]=0x00;
+  be:	19 82       	std	Y+1, r1	; 0x01
+		spi_send16Bits_bitbanging(spiData);
+  c0:	ce 01       	movw	r24, r28
+  c2:	0e 94 2d 01 	call	0x25a	; 0x25a <spi_send16Bits_bitbanging>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  f6:	87 e5       	ldi	r24, 0x57	; 87
-  f8:	92 e0       	ldi	r25, 0x02	; 2
-  fa:	01 97       	sbiw	r24, 0x01	; 1
-  fc:	f1 f7       	brne	.-4      	; 0xfa <main+0x3e>
-  fe:	00 c0       	rjmp	.+0      	; 0x100 <main+0x44>
- 100:	00 00       	nop
- 102:	f0 cf       	rjmp	.-32     	; 0xe4 <main+0x28>
+  c6:	8b e2       	ldi	r24, 0x2B	; 43
+  c8:	91 e0       	ldi	r25, 0x01	; 1
+  ca:	01 97       	sbiw	r24, 0x01	; 1
+  cc:	f1 f7       	brne	.-4      	; 0xca <main+0x30>
+  ce:	00 c0       	rjmp	.+0      	; 0xd0 <main+0x36>
+  d0:	00 00       	nop
+  d2:	f4 cf       	rjmp	.-24     	; 0xbc <main+0x22>
 
-00000104 <__vector_24>:
+000000d4 <__vector_24>:
 		PORTC &= ~(_BV(GND_BIT));	// set GND pin to low
 }
 
 
 ISR(TWI_vect)
 {
- 104:	1f 92       	push	r1
- 106:	0f 92       	push	r0
- 108:	0f b6       	in	r0, 0x3f	; 63
- 10a:	0f 92       	push	r0
- 10c:	11 24       	eor	r1, r1
- 10e:	2f 93       	push	r18
- 110:	8f 93       	push	r24
- 112:	9f 93       	push	r25
- 114:	af 93       	push	r26
- 116:	bf 93       	push	r27
- 118:	ef 93       	push	r30
- 11a:	ff 93       	push	r31
+  d4:	1f 92       	push	r1
+  d6:	0f 92       	push	r0
+  d8:	0f b6       	in	r0, 0x3f	; 63
+  da:	0f 92       	push	r0
+  dc:	11 24       	eor	r1, r1
+  de:	2f 93       	push	r18
+  e0:	8f 93       	push	r24
+  e2:	9f 93       	push	r25
+  e4:	af 93       	push	r26
+  e6:	bf 93       	push	r27
+  e8:	ef 93       	push	r30
+  ea:	ff 93       	push	r31
 	static uint8_t i2cDataTemp[2];
 	if((TWSR & 0xF8) == TW_START)					// start condition successfully transmitted
- 11c:	80 91 b9 00 	lds	r24, 0x00B9
- 120:	88 7f       	andi	r24, 0xF8	; 248
- 122:	88 30       	cpi	r24, 0x08	; 8
- 124:	39 f4       	brne	.+14     	; 0x134 <__vector_24+0x30>
+  ec:	80 91 b9 00 	lds	r24, 0x00B9
+  f0:	88 7f       	andi	r24, 0xF8	; 248
+  f2:	88 30       	cpi	r24, 0x08	; 8
+  f4:	39 f4       	brne	.+14     	; 0x104 <__vector_24+0x30>
 	{
 		TWDR = 0b10011011;							// load address(1001101x) and read(1) into data register
- 126:	8b e9       	ldi	r24, 0x9B	; 155
- 128:	80 93 bb 00 	sts	0x00BB, r24
+  f6:	8b e9       	ldi	r24, 0x9B	; 155
+  f8:	80 93 bb 00 	sts	0x00BB, r24
 		TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWIE);				// start transmission of address
- 12c:	85 e8       	ldi	r24, 0x85	; 133
- 12e:	80 93 bc 00 	sts	0x00BC, r24
- 132:	3b c0       	rjmp	.+118    	; 0x1aa <__vector_24+0xa6>
+  fc:	85 e8       	ldi	r24, 0x85	; 133
+  fe:	80 93 bc 00 	sts	0x00BC, r24
+ 102:	3b c0       	rjmp	.+118    	; 0x17a <__vector_24+0xa6>
 	}
 	else if ( ((TW_STATUS & 0xF8) == TW_MT_SLA_ACK) || ((TW_STATUS & 0xF8) == TW_MR_SLA_ACK) ) // address+read/write acknowledged
- 134:	80 91 b9 00 	lds	r24, 0x00B9
- 138:	88 7f       	andi	r24, 0xF8	; 248
- 13a:	88 31       	cpi	r24, 0x18	; 24
- 13c:	29 f0       	breq	.+10     	; 0x148 <__vector_24+0x44>
- 13e:	80 91 b9 00 	lds	r24, 0x00B9
- 142:	88 7f       	andi	r24, 0xF8	; 248
- 144:	80 34       	cpi	r24, 0x40	; 64
- 146:	21 f4       	brne	.+8      	; 0x150 <__vector_24+0x4c>
+ 104:	80 91 b9 00 	lds	r24, 0x00B9
+ 108:	88 7f       	andi	r24, 0xF8	; 248
+ 10a:	88 31       	cpi	r24, 0x18	; 24
+ 10c:	29 f0       	breq	.+10     	; 0x118 <__vector_24+0x44>
+ 10e:	80 91 b9 00 	lds	r24, 0x00B9
+ 112:	88 7f       	andi	r24, 0xF8	; 248
+ 114:	80 34       	cpi	r24, 0x40	; 64
+ 116:	21 f4       	brne	.+8      	; 0x120 <__vector_24+0x4c>
 	{
 		TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA) | (1<<TWIE); // start TWI module and acknowledge data after reception
- 148:	85 ec       	ldi	r24, 0xC5	; 197
- 14a:	80 93 bc 00 	sts	0x00BC, r24
- 14e:	2d c0       	rjmp	.+90     	; 0x1aa <__vector_24+0xa6>
+ 118:	85 ec       	ldi	r24, 0xC5	; 197
+ 11a:	80 93 bc 00 	sts	0x00BC, r24
+ 11e:	2d c0       	rjmp	.+90     	; 0x17a <__vector_24+0xa6>
 	}
 	else /*if((TW_STATUS & 0xF8) == TW_MR_DATA_ACK)*/			// data received and acknowledge sent
 	{
 		static uint8_t byteNumber=0;
 		i2cDataTemp[byteNumber] = TWDR;	// data structure from sensor, B1: 0 0 0 0  b10 b9 b8 b7       B2: b6 b5 b4 b3  b2 b1 x x
- 150:	80 91 02 01 	lds	r24, 0x0102
- 154:	90 91 bb 00 	lds	r25, 0x00BB
- 158:	e8 2f       	mov	r30, r24
- 15a:	f0 e0       	ldi	r31, 0x00	; 0
- 15c:	e0 50       	subi	r30, 0x00	; 0
- 15e:	ff 4f       	sbci	r31, 0xFF	; 255
- 160:	90 83       	st	Z, r25
+ 120:	80 91 02 01 	lds	r24, 0x0102
+ 124:	90 91 bb 00 	lds	r25, 0x00BB
+ 128:	e8 2f       	mov	r30, r24
+ 12a:	f0 e0       	ldi	r31, 0x00	; 0
+ 12c:	e0 50       	subi	r30, 0x00	; 0
+ 12e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 130:	90 83       	st	Z, r25
 		byteNumber++;
- 162:	8f 5f       	subi	r24, 0xFF	; 255
- 164:	80 93 02 01 	sts	0x0102, r24
+ 132:	8f 5f       	subi	r24, 0xFF	; 255
+ 134:	80 93 02 01 	sts	0x0102, r24
 		if(byteNumber == 2)							// 2nd byte was sent -> send STOP
- 168:	82 30       	cpi	r24, 0x02	; 2
- 16a:	e1 f4       	brne	.+56     	; 0x1a4 <__vector_24+0xa0>
+ 138:	82 30       	cpi	r24, 0x02	; 2
+ 13a:	e1 f4       	brne	.+56     	; 0x174 <__vector_24+0xa0>
 		{
 			TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);	// transmit STOP condition. disable with endless data acquiry
- 16c:	84 e9       	ldi	r24, 0x94	; 148
- 16e:	80 93 bc 00 	sts	0x00BC, r24
+ 13c:	84 e9       	ldi	r24, 0x94	; 148
+ 13e:	80 93 bc 00 	sts	0x00BC, r24
 			//TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWEA) | (1<<TWIE); // endless data acquiry enable, request 1st byte again
 			byteNumber = 0;							// overwrite data the next time
- 172:	10 92 02 01 	sts	0x0102, r1
+ 142:	10 92 02 01 	sts	0x0102, r1
     return 1;
 }
 
 static __inline__ uint8_t __iCliRetVal(void)
 {
     cli();
- 176:	f8 94       	cli
+ 146:	f8 94       	cli
 			ATOMIC_BLOCK(ATOMIC_FORCEON)			// write i2cData into global array
 			{
 				i2cData[0]=(0x3F & (i2cDataTemp[0]/4))|((uint8_t)(i2cDataTemp[1]*64));	// store data in right format
- 178:	a0 e0       	ldi	r26, 0x00	; 0
- 17a:	b1 e0       	ldi	r27, 0x01	; 1
- 17c:	11 96       	adiw	r26, 0x01	; 1
- 17e:	8c 91       	ld	r24, X
- 180:	11 97       	sbiw	r26, 0x01	; 1
- 182:	e5 e0       	ldi	r30, 0x05	; 5
- 184:	f1 e0       	ldi	r31, 0x01	; 1
- 186:	9c 91       	ld	r25, X
- 188:	96 95       	lsr	r25
- 18a:	96 95       	lsr	r25
- 18c:	28 2f       	mov	r18, r24
- 18e:	22 95       	swap	r18
- 190:	22 0f       	add	r18, r18
- 192:	22 0f       	add	r18, r18
- 194:	20 7c       	andi	r18, 0xC0	; 192
- 196:	92 2b       	or	r25, r18
- 198:	90 83       	st	Z, r25
+ 148:	a0 e0       	ldi	r26, 0x00	; 0
+ 14a:	b1 e0       	ldi	r27, 0x01	; 1
+ 14c:	11 96       	adiw	r26, 0x01	; 1
+ 14e:	8c 91       	ld	r24, X
+ 150:	11 97       	sbiw	r26, 0x01	; 1
+ 152:	e5 e0       	ldi	r30, 0x05	; 5
+ 154:	f1 e0       	ldi	r31, 0x01	; 1
+ 156:	9c 91       	ld	r25, X
+ 158:	96 95       	lsr	r25
+ 15a:	96 95       	lsr	r25
+ 15c:	28 2f       	mov	r18, r24
+ 15e:	22 95       	swap	r18
+ 160:	22 0f       	add	r18, r18
+ 162:	22 0f       	add	r18, r18
+ 164:	20 7c       	andi	r18, 0xC0	; 192
+ 166:	92 2b       	or	r25, r18
+ 168:	90 83       	st	Z, r25
 				i2cData[1]=i2cDataTemp[1]/4;
- 19a:	86 95       	lsr	r24
- 19c:	86 95       	lsr	r24
- 19e:	81 83       	std	Z+1, r24	; 0x01
+ 16a:	86 95       	lsr	r24
+ 16c:	86 95       	lsr	r24
+ 16e:	81 83       	std	Z+1, r24	; 0x01
     return 1;
 }
 
 static __inline__ void __iSeiParam(const uint8_t *__s)
 {
     sei();
- 1a0:	78 94       	sei
+ 170:	78 94       	sei
     __asm__ volatile ("" ::: "memory");
- 1a2:	03 c0       	rjmp	.+6      	; 0x1aa <__vector_24+0xa6>
+ 172:	03 c0       	rjmp	.+6      	; 0x17a <__vector_24+0xa6>
 			}
 			
 		}
 		else	// after transmission of 1st data byte
 		{
 			TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWIE); // start TWI module for 2nd byte and NACK data after reception (signals end of reception)
- 1a4:	85 e8       	ldi	r24, 0x85	; 133
- 1a6:	80 93 bc 00 	sts	0x00BC, r24
+ 174:	85 e8       	ldi	r24, 0x85	; 133
+ 176:	80 93 bc 00 	sts	0x00BC, r24
 		}
 	}
- 1aa:	ff 91       	pop	r31
- 1ac:	ef 91       	pop	r30
- 1ae:	bf 91       	pop	r27
- 1b0:	af 91       	pop	r26
- 1b2:	9f 91       	pop	r25
- 1b4:	8f 91       	pop	r24
- 1b6:	2f 91       	pop	r18
- 1b8:	0f 90       	pop	r0
- 1ba:	0f be       	out	0x3f, r0	; 63
- 1bc:	0f 90       	pop	r0
- 1be:	1f 90       	pop	r1
- 1c0:	18 95       	reti
+ 17a:	ff 91       	pop	r31
+ 17c:	ef 91       	pop	r30
+ 17e:	bf 91       	pop	r27
+ 180:	af 91       	pop	r26
+ 182:	9f 91       	pop	r25
+ 184:	8f 91       	pop	r24
+ 186:	2f 91       	pop	r18
+ 188:	0f 90       	pop	r0
+ 18a:	0f be       	out	0x3f, r0	; 63
+ 18c:	0f 90       	pop	r0
+ 18e:	1f 90       	pop	r1
+ 190:	18 95       	reti
 
-000001c2 <spi_init_bitbanging>:
-unsigned char spi_sendSingleByte(unsigned char cData);
-
+00000192 <spi_init_bitbanging>:
+void spi_selectSlave(void);
+void spi_unselectSlave(void);
 
 void spi_init_bitbanging(void)
 {
 	DDRD |=  ((1 << MOSI) | (1<<CLK)) ;	// set MOSI, CLK as output
- 1c2:	8a b1       	in	r24, 0x0a	; 10
- 1c4:	83 60       	ori	r24, 0x03	; 3
- 1c6:	8a b9       	out	0x0a, r24	; 10
+ 192:	8a b1       	in	r24, 0x0a	; 10
+ 194:	83 60       	ori	r24, 0x03	; 3
+ 196:	8a b9       	out	0x0a, r24	; 10
 	DDRB |=  (1 << nSS); // set nSS as output
- 1c8:	26 9a       	sbi	0x04, 6	; 4
+ 198:	26 9a       	sbi	0x04, 6	; 4
 	DDRD &= (~(1 << MISO)); // set MISO as input
- 1ca:	53 98       	cbi	0x0a, 3	; 10
+ 19a:	53 98       	cbi	0x0a, 3	; 10
 	PORTD &= ~((1 << MOSI) | (1 << CLK));	// set MOSI and CLK as idle low
- 1cc:	8b b1       	in	r24, 0x0b	; 11
- 1ce:	8c 7f       	andi	r24, 0xFC	; 252
- 1d0:	8b b9       	out	0x0b, r24	; 11
+ 19c:	8b b1       	in	r24, 0x0b	; 11
+ 19e:	8c 7f       	andi	r24, 0xFC	; 252
+ 1a0:	8b b9       	out	0x0b, r24	; 11
 	DDRB |= (1 << nSS);	// set nSS to high (slave not selected)
- 1d2:	26 9a       	sbi	0x04, 6	; 4
- 1d4:	08 95       	ret
+ 1a2:	26 9a       	sbi	0x04, 6	; 4
+ 1a4:	08 95       	ret
 
-000001d6 <spi_sendSingleByte>:
-	spi_unselectSlave();
+000001a6 <spi_send16Bits>:
+	PORTD &= (~(1 << MOSI));	// set MOSI idle low
 	return retData;
 }
 
-unsigned char spi_sendSingleByte(unsigned char cData)
+void spi_send16Bits(unsigned char* cData)
 {
- 1d6:	28 e0       	ldi	r18, 0x08	; 8
- 1d8:	30 e0       	ldi	r19, 0x00	; 0
-	unsigned char retData = 0x00;
- 1da:	90 e0       	ldi	r25, 0x00	; 0
-	for(int i = 0; i<8; i++)
-	{
-		PORTD |= (1 << CLK);	// clock high (leading edge)
- 1dc:	58 9a       	sbi	0x0b, 0	; 11
- 1de:	00 00       	nop
-		_delay_us(1);
-		// set data bit
-		if(cData & 0b10000000)
- 1e0:	88 23       	and	r24, r24
- 1e2:	14 f4       	brge	.+4      	; 0x1e8 <spi_sendSingleByte+0x12>
-		PORTD |= (1 << MOSI);
- 1e4:	59 9a       	sbi	0x0b, 1	; 11
- 1e6:	01 c0       	rjmp	.+2      	; 0x1ea <spi_sendSingleByte+0x14>
-		else
-		PORTD &= (~(1 << MOSI));
- 1e8:	59 98       	cbi	0x0b, 1	; 11
-		cData = (unsigned char) (cData * 2);	// set pointer to next data bit
- 1ea:	88 0f       	add	r24, r24
-		PORTD &= (~(1 << CLK));	// clock low (sampling edge)
- 1ec:	58 98       	cbi	0x0b, 0	; 11
-		retData = retData * 2;
- 1ee:	99 0f       	add	r25, r25
-		if((PIND & (1 << MISO)))	// set retData bit according to MISO state
- 1f0:	4b 99       	sbic	0x09, 3	; 9
-		retData ++;
- 1f2:	9f 5f       	subi	r25, 0xFF	; 255
- 1f4:	00 00       	nop
- 1f6:	21 50       	subi	r18, 0x01	; 1
- 1f8:	31 09       	sbc	r19, r1
+ 1a6:	8f 92       	push	r8
+ 1a8:	9f 92       	push	r9
+ 1aa:	af 92       	push	r10
+ 1ac:	bf 92       	push	r11
+ 1ae:	cf 92       	push	r12
+ 1b0:	df 92       	push	r13
+ 1b2:	ef 92       	push	r14
+ 1b4:	ff 92       	push	r15
+ 1b6:	0f 93       	push	r16
+ 1b8:	1f 93       	push	r17
+ 1ba:	cf 93       	push	r28
+ 1bc:	df 93       	push	r29
+ 1be:	00 d0       	rcall	.+0      	; 0x1c0 <spi_send16Bits+0x1a>
+ 1c0:	cd b7       	in	r28, 0x3d	; 61
+ 1c2:	de b7       	in	r29, 0x3e	; 62
+	unsigned char retData[2];
+	retData[0]=0;
+ 1c4:	19 82       	std	Y+1, r1	; 0x01
+	retData[1]=0;
+ 1c6:	1a 82       	std	Y+2, r1	; 0x02
+ 1c8:	de 01       	movw	r26, r28
+ 1ca:	11 96       	adiw	r26, 0x01	; 1
+ 1cc:	bc 01       	movw	r22, r24
+ 1ce:	6e 01       	movw	r12, r28
+ 1d0:	83 e0       	ldi	r24, 0x03	; 3
+ 1d2:	c8 0e       	add	r12, r24
+ 1d4:	d1 1c       	adc	r13, r1
+	PORTD &= (~(1 << MOSI));	// set MOSI idle low
+	return retData;
 }
 
-unsigned char spi_sendSingleByte(unsigned char cData)
+void spi_send16Bits(unsigned char* cData)
 {
-	unsigned char retData = 0x00;
-	for(int i = 0; i<8; i++)
- 1fa:	81 f7       	brne	.-32     	; 0x1dc <spi_sendSingleByte+0x6>
-		retData = retData * 2;
-		if((PIND & (1 << MISO)))	// set retData bit according to MISO state
-		retData ++;
-		_delay_us(1);
+ 1d6:	68 94       	set
+ 1d8:	aa 24       	eor	r10, r10
+ 1da:	a3 f8       	bld	r10, 3
+ 1dc:	b1 2c       	mov	r11, r1
+ 1de:	24 c0       	rjmp	.+72     	; 0x228 <spi_send16Bits+0x82>
+	retData[1]=0;
+	for(int j=0 ; j<2 ; j++)
+	{
+		for(int i = 0; i<8; i++)
+		{
+			PORTD |= (1 << CLK);	// clock high (leading edge)
+ 1e0:	58 9a       	sbi	0x0b, 0	; 11
+ 1e2:	84 01       	movw	r16, r8
+			// set data bit
+			if(cData[j] & 0b10000000)
+ 1e4:	fb 01       	movw	r30, r22
+ 1e6:	80 81       	ld	r24, Z
+ 1e8:	88 23       	and	r24, r24
+ 1ea:	14 f4       	brge	.+4      	; 0x1f0 <spi_send16Bits+0x4a>
+				PORTD |= (1 << MOSI);
+ 1ec:	59 9a       	sbi	0x0b, 1	; 11
+ 1ee:	01 c0       	rjmp	.+2      	; 0x1f2 <spi_send16Bits+0x4c>
+			else
+				PORTD &= (~(1 << MOSI));
+ 1f0:	59 98       	cbi	0x0b, 1	; 11
+			cData[j] = (unsigned char) (cData[j] * 2);	// set pointer to next data bit
+ 1f2:	f4 01       	movw	r30, r8
+ 1f4:	80 81       	ld	r24, Z
+ 1f6:	88 0f       	add	r24, r24
+ 1f8:	80 83       	st	Z, r24
+			PORTD &= (~(1 << CLK));	// clock low (sampling edge)
+ 1fa:	58 98       	cbi	0x0b, 0	; 11
+ 1fc:	7a 01       	movw	r14, r20
+			retData[j] = retData[j] * 2;
+ 1fe:	9c 91       	ld	r25, X
+ 200:	99 0f       	add	r25, r25
+ 202:	9c 93       	st	X, r25
+			if((PIND & (1 << MISO)))	// set retData bit according to MISO state
+ 204:	4b 9b       	sbis	0x09, 3	; 9
+ 206:	03 c0       	rjmp	.+6      	; 0x20e <spi_send16Bits+0x68>
+				retData[j] ++;
+ 208:	9f 5f       	subi	r25, 0xFF	; 255
+ 20a:	fa 01       	movw	r30, r20
+ 20c:	90 83       	st	Z, r25
+ 20e:	21 50       	subi	r18, 0x01	; 1
+ 210:	31 09       	sbc	r19, r1
+	unsigned char retData[2];
+	retData[0]=0;
+	retData[1]=0;
+	for(int j=0 ; j<2 ; j++)
+	{
+		for(int i = 0; i<8; i++)
+ 212:	31 f7       	brne	.-52     	; 0x1e0 <spi_send16Bits+0x3a>
+ 214:	11 96       	adiw	r26, 0x01	; 1
+			PORTD &= (~(1 << CLK));	// clock low (sampling edge)
+			retData[j] = retData[j] * 2;
+			if((PIND & (1 << MISO)))	// set retData bit according to MISO state
+				retData[j] ++;
+		}
+		cData[j]=retData[j];
+ 216:	f7 01       	movw	r30, r14
+ 218:	80 81       	ld	r24, Z
+ 21a:	f8 01       	movw	r30, r16
+ 21c:	80 83       	st	Z, r24
+ 21e:	6f 5f       	subi	r22, 0xFF	; 255
+ 220:	7f 4f       	sbci	r23, 0xFF	; 255
+void spi_send16Bits(unsigned char* cData)
+{
+	unsigned char retData[2];
+	retData[0]=0;
+	retData[1]=0;
+	for(int j=0 ; j<2 ; j++)
+ 222:	ac 15       	cp	r26, r12
+ 224:	bd 05       	cpc	r27, r13
+ 226:	29 f0       	breq	.+10     	; 0x232 <spi_send16Bits+0x8c>
+	PORTD &= (~(1 << MOSI));	// set MOSI idle low
+	return retData;
+}
+
+void spi_send16Bits(unsigned char* cData)
+{
+ 228:	2a 2d       	mov	r18, r10
+ 22a:	3b 2d       	mov	r19, r11
+ 22c:	4b 01       	movw	r8, r22
+ 22e:	ad 01       	movw	r20, r26
+ 230:	d7 cf       	rjmp	.-82     	; 0x1e0 <spi_send16Bits+0x3a>
+			if((PIND & (1 << MISO)))	// set retData bit according to MISO state
+				retData[j] ++;
+		}
+		cData[j]=retData[j];
 	}
 	PORTD &= (~(1 << MOSI));	// set MOSI idle low
- 1fc:	59 98       	cbi	0x0b, 1	; 11
-	return retData;
+ 232:	59 98       	cbi	0x0b, 1	; 11
 }
- 1fe:	89 2f       	mov	r24, r25
- 200:	08 95       	ret
+ 234:	0f 90       	pop	r0
+ 236:	0f 90       	pop	r0
+ 238:	df 91       	pop	r29
+ 23a:	cf 91       	pop	r28
+ 23c:	1f 91       	pop	r17
+ 23e:	0f 91       	pop	r16
+ 240:	ff 90       	pop	r15
+ 242:	ef 90       	pop	r14
+ 244:	df 90       	pop	r13
+ 246:	cf 90       	pop	r12
+ 248:	bf 90       	pop	r11
+ 24a:	af 90       	pop	r10
+ 24c:	9f 90       	pop	r9
+ 24e:	8f 90       	pop	r8
+ 250:	08 95       	ret
 
-00000202 <spi_selectSlave>:
+00000252 <spi_selectSlave>:
 
 
 
 void spi_selectSlave(void)
 {
 	PORTB &= (~(1 << nSS));	// select slave
- 202:	2e 98       	cbi	0x05, 6	; 5
- 204:	08 95       	ret
+ 252:	2e 98       	cbi	0x05, 6	; 5
+ 254:	08 95       	ret
 
-00000206 <spi_unselectSlave>:
+00000256 <spi_unselectSlave>:
 }
 
 void spi_unselectSlave(void)
 {
 	PORTB |= (1 << nSS);	// unselect slave
- 206:	2e 9a       	sbi	0x05, 6	; 5
- 208:	08 95       	ret
+ 256:	2e 9a       	sbi	0x05, 6	; 5
+ 258:	08 95       	ret
 
-0000020a <spi_sendBytes_bitbanging>:
-	spi_unselectSlave();
-	return retData;
-}
-
-unsigned char* spi_sendBytes_bitbanging(unsigned char* cData, int length) // MSB first, clk idle low and MOSI idle low
-{
- 20a:	6f 92       	push	r6
- 20c:	7f 92       	push	r7
- 20e:	8f 92       	push	r8
- 210:	9f 92       	push	r9
- 212:	af 92       	push	r10
- 214:	bf 92       	push	r11
- 216:	cf 92       	push	r12
- 218:	df 92       	push	r13
- 21a:	ef 92       	push	r14
- 21c:	ff 92       	push	r15
- 21e:	0f 93       	push	r16
- 220:	1f 93       	push	r17
- 222:	cf 93       	push	r28
- 224:	df 93       	push	r29
- 226:	cd b7       	in	r28, 0x3d	; 61
- 228:	de b7       	in	r29, 0x3e	; 62
- 22a:	3c 01       	movw	r6, r24
- 22c:	5b 01       	movw	r10, r22
-		retData[i] = cData[i];
-		_delay_us(10);
+0000025a <spi_send16Bits_bitbanging>:
 	}
 	spi_unselectSlave();
-	return retData;
-}
- 22e:	8d b6       	in	r8, 0x3d	; 61
- 230:	9e b6       	in	r9, 0x3e	; 62
-	return retData;
 }
 
-unsigned char* spi_sendBytes_bitbanging(unsigned char* cData, int length) // MSB first, clk idle low and MOSI idle low
+void spi_send16Bits_bitbanging(unsigned char* cData) // MSB first, clk idle low and MOSI idle low
 {
-	unsigned char retData[length];
- 232:	8d b7       	in	r24, 0x3d	; 61
- 234:	9e b7       	in	r25, 0x3e	; 62
- 236:	86 1b       	sub	r24, r22
- 238:	97 0b       	sbc	r25, r23
- 23a:	0f b6       	in	r0, 0x3f	; 63
- 23c:	f8 94       	cli
- 23e:	9e bf       	out	0x3e, r25	; 62
- 240:	0f be       	out	0x3f, r0	; 63
- 242:	8d bf       	out	0x3d, r24	; 61
- 244:	ed b7       	in	r30, 0x3d	; 61
- 246:	fe b7       	in	r31, 0x3e	; 62
- 248:	31 96       	adiw	r30, 0x01	; 1
- 24a:	6f 01       	movw	r12, r30
+ 25a:	cf 93       	push	r28
+ 25c:	df 93       	push	r29
+ 25e:	ec 01       	movw	r28, r24
 	spi_selectSlave();
- 24c:	0e 94 01 01 	call	0x202	; 0x202 <spi_selectSlave>
- 250:	00 00       	nop
+ 260:	0e 94 29 01 	call	0x252	; 0x252 <spi_selectSlave>
+ 264:	82 e0       	ldi	r24, 0x02	; 2
+ 266:	8a 95       	dec	r24
+ 268:	f1 f7       	brne	.-4      	; 0x266 <spi_send16Bits_bitbanging+0xc>
+ 26a:	00 c0       	rjmp	.+0      	; 0x26c <spi_send16Bits_bitbanging+0x12>
 	_delay_us(1);
-	for(int i=0; i<length; i++)
- 252:	1a 14       	cp	r1, r10
- 254:	1b 04       	cpc	r1, r11
- 256:	ac f4       	brge	.+42     	; 0x282 <spi_sendBytes_bitbanging+0x78>
- 258:	83 01       	movw	r16, r6
- 25a:	76 01       	movw	r14, r12
- 25c:	a6 0c       	add	r10, r6
- 25e:	b7 1c       	adc	r11, r7
-	{
-		cData[i] = spi_sendSingleByte(cData[i]);
- 260:	f8 01       	movw	r30, r16
- 262:	80 81       	ld	r24, Z
- 264:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <spi_sendSingleByte>
- 268:	f8 01       	movw	r30, r16
- 26a:	81 93       	st	Z+, r24
- 26c:	8f 01       	movw	r16, r30
-		retData[i] = cData[i];
- 26e:	f7 01       	movw	r30, r14
- 270:	81 93       	st	Z+, r24
- 272:	7f 01       	movw	r14, r30
- 274:	f3 e0       	ldi	r31, 0x03	; 3
- 276:	fa 95       	dec	r31
- 278:	f1 f7       	brne	.-4      	; 0x276 <spi_sendBytes_bitbanging+0x6c>
- 27a:	00 00       	nop
-unsigned char* spi_sendBytes_bitbanging(unsigned char* cData, int length) // MSB first, clk idle low and MOSI idle low
-{
-	unsigned char retData[length];
-	spi_selectSlave();
+	spi_send16Bits(cData);
+ 26c:	ce 01       	movw	r24, r28
+ 26e:	0e 94 d3 00 	call	0x1a6	; 0x1a6 <spi_send16Bits>
+ 272:	82 e0       	ldi	r24, 0x02	; 2
+ 274:	8a 95       	dec	r24
+ 276:	f1 f7       	brne	.-4      	; 0x274 <spi_send16Bits_bitbanging+0x1a>
+ 278:	00 c0       	rjmp	.+0      	; 0x27a <spi_send16Bits_bitbanging+0x20>
 	_delay_us(1);
-	for(int i=0; i<length; i++)
- 27c:	0a 15       	cp	r16, r10
- 27e:	1b 05       	cpc	r17, r11
- 280:	79 f7       	brne	.-34     	; 0x260 <spi_sendBytes_bitbanging+0x56>
-	{
-		cData[i] = spi_sendSingleByte(cData[i]);
-		retData[i] = cData[i];
-		_delay_us(10);
-	}
 	spi_unselectSlave();
- 282:	0e 94 03 01 	call	0x206	; 0x206 <spi_unselectSlave>
-	return retData;
+ 27a:	0e 94 2b 01 	call	0x256	; 0x256 <spi_unselectSlave>
 }
- 286:	c6 01       	movw	r24, r12
- 288:	0f b6       	in	r0, 0x3f	; 63
- 28a:	f8 94       	cli
- 28c:	9e be       	out	0x3e, r9	; 62
- 28e:	0f be       	out	0x3f, r0	; 63
- 290:	8d be       	out	0x3d, r8	; 61
- 292:	df 91       	pop	r29
- 294:	cf 91       	pop	r28
- 296:	1f 91       	pop	r17
- 298:	0f 91       	pop	r16
- 29a:	ff 90       	pop	r15
- 29c:	ef 90       	pop	r14
- 29e:	df 90       	pop	r13
- 2a0:	cf 90       	pop	r12
- 2a2:	bf 90       	pop	r11
- 2a4:	af 90       	pop	r10
- 2a6:	9f 90       	pop	r9
- 2a8:	8f 90       	pop	r8
- 2aa:	7f 90       	pop	r7
- 2ac:	6f 90       	pop	r6
- 2ae:	08 95       	ret
+ 27e:	df 91       	pop	r29
+ 280:	cf 91       	pop	r28
+ 282:	08 95       	ret
 
-000002b0 <_exit>:
- 2b0:	f8 94       	cli
+00000284 <_exit>:
+ 284:	f8 94       	cli
 
-000002b2 <__stop_program>:
- 2b2:	ff cf       	rjmp	.-2      	; 0x2b2 <__stop_program>
+00000286 <__stop_program>:
+ 286:	ff cf       	rjmp	.-2      	; 0x286 <__stop_program>

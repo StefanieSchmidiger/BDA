@@ -1,0 +1,83 @@
+[OPTIONS]
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=HMT Mini-Stack software
+
+[WINDOWS]
+main="HMT Mini-Stack software","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+index.html
+pages.html
+debugpin_8h.html
+demoapp_8h.html
+iolink_8h.html
+phydriver_8h.html
+spi_8h.html
+stackbase_8h.html
+stackmultibyte_8h.html
+stacksinglebyte_8h.html
+stacktransparent_8h.html
+page_change_history.html
+annotated.html
+classes.html
+hierarchy.html
+functions.html
+functions_func.html
+functions_vars.html
+functions_type.html
+functions_enum.html
+functions_eval.html
+class_debug_pin.html
+class_debug_pin-members.html
+struct_default_ss_handler.html
+struct_default_ss_handler-members.html
+class_demo_app.html
+class_demo_app-members.html
+class_io_link.html
+class_io_link-members.html
+class_phy_driver.html
+class_phy_driver-members.html
+struct_spi.html
+struct_spi-members.html
+class_stack_base.html
+class_stack_base-members.html
+struct_stack_base_1_1_parameter.html
+struct_stack_base_1_1_parameter-members.html
+struct_stack_base_1_1_process_data.html
+struct_stack_base_1_1_process_data-members.html
+class_stack_multi_byte.html
+class_stack_multi_byte-members.html
+class_stack_single_byte.html
+class_stack_single_byte-members.html
+class_stack_transparent.html
+class_stack_transparent-members.html
+class_transparent_mode_ss_handler.html
+class_transparent_mode_ss_handler-members.html
+files.html
+globals.html
+globals_vars.html
+globals_type.html
+globals_defs.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+struct_default_ss_handler.png
+class_phy_driver.png
+class_stack_base.png
+class_stack_multi_byte.png
+class_stack_single_byte.png
+class_stack_transparent.png
+class_transparent_mode_ss_handler.png

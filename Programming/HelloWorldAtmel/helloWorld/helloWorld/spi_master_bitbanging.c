@@ -15,8 +15,6 @@
 #define CLK PD0	
 
 // ------- prototypes only needed in this file -----------
-void spi_selectSlave(void);
-void spi_unselectSlave(void);
 unsigned char spi_sendSingleByte(unsigned char cData);
 
 
