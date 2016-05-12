@@ -52,6 +52,7 @@
  * may be interrupted if the device drives the CQ line, and a retry is
  * required.
  */
+
 class StackSingleByte : public StackBase<StackSingleByte, 
         1, // PD_IN_SIZE
         1  // PD_OUT_SIZE

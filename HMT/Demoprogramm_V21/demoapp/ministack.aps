@@ -1,0 +1,35 @@
+<AVRStudio>
+	<MANAGEMENT>
+		<ProjectName>Ministack</ProjectName>
+		<Created>25-Jan-2012 16:31:42</Created>
+		<LastEdit>27-Jul-2012 16:41:38</LastEdit>
+		<ICON>241</ICON>
+		<ProjectType>0</ProjectType>
+		<Created>25-Jan-2012 16:31:42</Created>
+		<Version>4</Version>
+		<Build>4, 18, 0, 670</Build>
+		<ProjectTypeName>AVR GCC</ProjectTypeName>
+	</MANAGEMENT>
+	<CODE_CREATION>
+		<ObjectFile>out-multibyte\Stack-MultiByte.elf</ObjectFile>
+		<EntryFile/>
+		<SaveFolder>.</SaveFolder></CODE_CREATION>
+	<DEBUG_TARGET>
+		<CURRENT_TARGET>JTAGICE mkII</CURRENT_TARGET>
+		<CURRENT_PART>ATmega328P</CURRENT_PART>
+		<BREAKPOINTS/>
+		<IO_EXPAND>
+			<HIDE>false</HIDE></IO_EXPAND>
+		<REGISTERNAMES>
+			<Register>R00</Register><Register>R01</Register><Register>R02</Register><Register>R03</Register><Register>R04</Register><Register>R05</Register><Register>R06</Register><Register>R07</Register><Register>R08</Register><Register>R09</Register><Register>R10</Register><Register>R11</Register><Register>R12</Register><Register>R13</Register><Register>R14</Register><Register>R15</Register><Register>R16</Register><Register>R17</Register><Register>R18</Register><Register>R19</Register><Register>R20</Register><Register>R21</Register><Register>R22</Register><Register>R23</Register><Register>R24</Register><Register>R25</Register><Register>R26</Register><Register>R27</Register><Register>R28</Register><Register>R29</Register><Register>R30</Register><Register>R31</Register></REGISTERNAMES>
+		<COM>Auto</COM><COMType>0</COMType><WATCHNUM>0</WATCHNUM><WATCHNAMES><Pane0></Pane0><Pane1></Pane1><Pane2></Pane2><Pane3></Pane3></WATCHNAMES><BreakOnTrcaeFull>0</BreakOnTrcaeFull></DEBUG_TARGET>
+	<Debugger>
+		<modules><module></module></modules><Triggers><trigger clsid="{113824F1-C410-4699-A25E-867CC860C28E}" enabled="0" boundTo="0" hitCount="1" updateAndContinue="0" line="47" file="main.cpp" token="    Timer::configure();    " offset="0"/></Triggers></Debugger>
+	<AVRGCCPLUGIN>
+		<FILES>
+			<SOURCEFILE>main.cpp</SOURCEFILE><SOURCEFILE>demoapp.cpp</SOURCEFILE><SOURCEFILE>..\stack\stackmultibyte.cpp</SOURCEFILE><SOURCEFILE>..\stack\stacksinglebyte.cpp</SOURCEFILE><SOURCEFILE>..\stack\stacktransparent.cpp</SOURCEFILE><HEADERFILE>demoapp.h</HEADERFILE><OTHERFILE>default\Ministack.lss</OTHERFILE><OTHERFILE>default\Ministack.map</OTHERFILE></FILES>
+		<CONFIGS>
+			<CONFIG><NAME>STACK_MODE_MULTI_BYTE</NAME><USESEXTERNALMAKEFILE>NO</USESEXTERNALMAKEFILE><EXTERNALMAKEFILE></EXTERNALMAKEFILE><PART>atmega328p</PART><HEX>1</HEX><LIST>1</LIST><MAP>1</MAP><OUTPUTFILENAME>Stack-MultiByte.elf</OUTPUTFILENAME><OUTPUTDIR>out-multibyte\</OUTPUTDIR><ISDIRTY>0</ISDIRTY><OPTIONS><OPTION><FILE>..\stack\stackmultibyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacksinglebyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacktransparent.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>demoapp.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>main.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION></OPTIONS><INCDIRS><INCLUDE>..\stack\</INCLUDE></INCDIRS><LIBDIRS/><LIBS/><LINKOBJECTS/><OPTIONSFORALL>-Wall -gdwarf-2 -fno-exceptions -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -fno-threadsafe-statics -ffunction-sections -fdata-sections -Wl,--relax -fno-move-loop-invariants -DSTACK_MODE_MULTI_BYTE -std=c++0x -DF_CPU=8000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums  -DUSE_HMT7742</OPTIONSFORALL><LINKEROPTIONS></LINKEROPTIONS><SEGMENTS/></CONFIG><CONFIG><NAME>STACK_MODE_SINGLE_BYTE</NAME><USESEXTERNALMAKEFILE>NO</USESEXTERNALMAKEFILE><EXTERNALMAKEFILE></EXTERNALMAKEFILE><PART>atmega328p</PART><HEX>1</HEX><LIST>1</LIST><MAP>1</MAP><OUTPUTFILENAME>Stack-SingleByte.elf</OUTPUTFILENAME><OUTPUTDIR>out-singlebyte\</OUTPUTDIR><ISDIRTY>0</ISDIRTY><OPTIONS><OPTION><FILE>..\stack\stackmultibyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacksinglebyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacktransparent.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>demoapp.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>main.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION></OPTIONS><INCDIRS><INCLUDE>..\stack\</INCLUDE></INCDIRS><LIBDIRS/><LIBS/><LINKOBJECTS/><OPTIONSFORALL>-Wall -gdwarf-2 -fno-exceptions -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -fno-threadsafe-statics -ffunction-sections -fdata-sections -Wl,--relax -fno-move-loop-invariants   -DSTACK_MODE_SINGLE_BYTE                                                           -std=c++0x       -DUSE_HMT7742        -DF_CPU=8000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums</OPTIONSFORALL><LINKEROPTIONS></LINKEROPTIONS><SEGMENTS/></CONFIG><CONFIG><NAME>STACK_MODE_TRANSPARENT</NAME><USESEXTERNALMAKEFILE>NO</USESEXTERNALMAKEFILE><EXTERNALMAKEFILE></EXTERNALMAKEFILE><PART>atmega328p</PART><HEX>1</HEX><LIST>1</LIST><MAP>1</MAP><OUTPUTFILENAME>Stack-Transparent.elf</OUTPUTFILENAME><OUTPUTDIR>out-transparent\</OUTPUTDIR><ISDIRTY>0</ISDIRTY><OPTIONS><OPTION><FILE>..\stack\stackmultibyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacksinglebyte.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>..\stack\stacktransparent.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>demoapp.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION><OPTION><FILE>main.cpp</FILE><OPTIONLIST></OPTIONLIST></OPTION></OPTIONS><INCDIRS><INCLUDE>..\stack\</INCLUDE></INCDIRS><LIBDIRS/><LIBS/><LINKOBJECTS/><OPTIONSFORALL>-Wall -gdwarf-2 -fno-exceptions -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -fno-threadsafe-statics -ffunction-sections -fdata-sections -Wl,--relax -fno-move-loop-invariants   -DSTACK_MODE_TRANSPARENT                                            -std=c++0x         -DUSE_HMT7742    -DUSE_EXT_OSC   -DF_CPU=18432000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums</OPTIONSFORALL><LINKEROPTIONS></LINKEROPTIONS><SEGMENTS/></CONFIG></CONFIGS>
+		<LASTCONFIG>STACK_MODE_MULTI_BYTE</LASTCONFIG>
+		<USES_WINAVR>1</USES_WINAVR><GCC_LOC>d:\Atmel\WinAVR-20090313\bin\avr-gcc.exe</GCC_LOC><MAKE_LOC>d:\Atmel\WinAVR-20090313\utils\bin\make.exe</MAKE_LOC></AVRGCCPLUGIN>
+	<IOView><usergroups/><sort sorted="0" column="0" ordername="0" orderaddress="0" ordergroup="0"/></IOView><Files></Files><Events><Bookmarks></Bookmarks></Events><Trace><Filters></Filters></Trace></AVRStudio>

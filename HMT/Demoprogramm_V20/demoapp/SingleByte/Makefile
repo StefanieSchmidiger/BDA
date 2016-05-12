@@ -41,6 +41,7 @@ C_SRCS +=  \
 ../../stack/stacksinglebyte.cpp \
 ../../stack/stacktransparent.cpp \
 ../demoapp.cpp \
+../i2c_master.c \
 ../main.cpp
 
 
@@ -55,6 +56,7 @@ stackmultibyte.o \
 stacksinglebyte.o \
 stacktransparent.o \
 demoapp.o \
+i2c_master.o \
 main.o
 
 OBJS_AS_ARGS +=  \
@@ -62,6 +64,7 @@ stackmultibyte.o \
 stacksinglebyte.o \
 stacktransparent.o \
 demoapp.o \
+i2c_master.o \
 main.o
 
 C_DEPS +=  \
@@ -69,6 +72,7 @@ stackmultibyte.d \
 stacksinglebyte.d \
 stacktransparent.d \
 demoapp.d \
+i2c_master.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
@@ -76,6 +80,7 @@ stackmultibyte.d \
 stacksinglebyte.d \
 stacktransparent.d \
 demoapp.d \
+i2c_master.d \
 main.d
 
 OUTPUT_FILE_PATH +=ministack.elf
@@ -103,10 +108,26 @@ LINKER_SCRIPT_DEP+=
 
 
 
+
+
+./%.o: ../../stack/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 4.9.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\include"  -O0 -ffunction-sections -fdata-sections -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./%.o: ../../stack/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 4.9.2
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS -DF_CPU=8000000UL -DUSE_HMT7742 -DSTACK_MODE_SINGLE_BYTE  -I"..\..\stack" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\include"  -Os -fdata-sections -fno-move-loop-invariants -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\gcc\dev\atmega328p" -c -gdwarf-2 -fno-exceptions -fno-threadsafe-statics -std=c++0x -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./%.o: .././%.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 4.9.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\include"  -O0 -ffunction-sections -fdata-sections -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.98\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

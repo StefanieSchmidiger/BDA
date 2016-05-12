@@ -1,0 +1,3702 @@
+
+ministack.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000b96  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000adc  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000003f  00800100  00800100  00000b90  2**0
+                  ALLOC
+  3 .fuse         00000003  00820000  00820000  00000b90  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .signature    00000003  00840000  00840000  00000b93  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .comment      00000030  00000000  00000000  00000b96  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000bc8  2**2
+                  CONTENTS, READONLY
+  7 .debug_aranges 000000e0  00000000  00000000  00000c08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   00006648  00000000  00000000  00000ce8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 000012eb  00000000  00000000  00007330  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   00000aa2  00000000  00000000  0000861b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  0000021c  00000000  00000000  000090c0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    00002916  00000000  00000000  000092dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_loc    00001a39  00000000  00000000  0000bbf2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000110  00000000  00000000  0000d62b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	44 c0       	rjmp	.+136    	; 0x8a <__ctors_end>
+   2:	00 00       	nop
+   4:	5c c0       	rjmp	.+184    	; 0xbe <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5a c0       	rjmp	.+180    	; 0xbe <__bad_interrupt>
+   a:	00 00       	nop
+   c:	58 c0       	rjmp	.+176    	; 0xbe <__bad_interrupt>
+   e:	00 00       	nop
+  10:	d7 c2       	rjmp	.+1454   	; 0x5c0 <__vector_4>
+  12:	00 00       	nop
+  14:	54 c0       	rjmp	.+168    	; 0xbe <__bad_interrupt>
+  16:	00 00       	nop
+  18:	52 c0       	rjmp	.+164    	; 0xbe <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	50 c0       	rjmp	.+160    	; 0xbe <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4e c0       	rjmp	.+156    	; 0xbe <__bad_interrupt>
+  22:	00 00       	nop
+  24:	4c c0       	rjmp	.+152    	; 0xbe <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4a c0       	rjmp	.+148    	; 0xbe <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	48 c0       	rjmp	.+144    	; 0xbe <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	46 c0       	rjmp	.+140    	; 0xbe <__bad_interrupt>
+  32:	00 00       	nop
+  34:	44 c0       	rjmp	.+136    	; 0xbe <__bad_interrupt>
+  36:	00 00       	nop
+  38:	42 c0       	rjmp	.+132    	; 0xbe <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	56 c0       	rjmp	.+172    	; 0xea <__vector_15>
+  3e:	00 00       	nop
+  40:	3e c0       	rjmp	.+124    	; 0xbe <__bad_interrupt>
+  42:	00 00       	nop
+  44:	3c c0       	rjmp	.+120    	; 0xbe <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3a c0       	rjmp	.+116    	; 0xbe <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	38 c0       	rjmp	.+112    	; 0xbe <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	36 c0       	rjmp	.+108    	; 0xbe <__bad_interrupt>
+  52:	00 00       	nop
+  54:	34 c0       	rjmp	.+104    	; 0xbe <__bad_interrupt>
+  56:	00 00       	nop
+  58:	32 c0       	rjmp	.+100    	; 0xbe <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	30 c0       	rjmp	.+96     	; 0xbe <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2e c0       	rjmp	.+92     	; 0xbe <__bad_interrupt>
+  62:	00 00       	nop
+  64:	2c c0       	rjmp	.+88     	; 0xbe <__bad_interrupt>
+	...
+
+00000068 <__trampolines_end>:
+  68:	00 00       	nop
+  6a:	1e 00       	.word	0x001e	; ????
+  6c:	11 48       	sbci	r17, 0x81	; 129
+  6e:	08 01       	movw	r0, r16
+  70:	a6 12       	cpse	r10, r22
+  72:	34 56       	subi	r19, 0x64	; 100
+	...
+
+00000088 <__ctors_start>:
+  88:	79 03       	fmul	r23, r17
+
+0000008a <__ctors_end>:
+  8a:	11 24       	eor	r1, r1
+  8c:	1f be       	out	0x3f, r1	; 63
+  8e:	cf ef       	ldi	r28, 0xFF	; 255
+  90:	d8 e0       	ldi	r29, 0x08	; 8
+  92:	de bf       	out	0x3e, r29	; 62
+  94:	cd bf       	out	0x3d, r28	; 61
+
+00000096 <__do_clear_bss>:
+  96:	21 e0       	ldi	r18, 0x01	; 1
+  98:	a0 e0       	ldi	r26, 0x00	; 0
+  9a:	b1 e0       	ldi	r27, 0x01	; 1
+  9c:	01 c0       	rjmp	.+2      	; 0xa0 <.do_clear_bss_start>
+
+0000009e <.do_clear_bss_loop>:
+  9e:	1d 92       	st	X+, r1
+
+000000a0 <.do_clear_bss_start>:
+  a0:	af 33       	cpi	r26, 0x3F	; 63
+  a2:	b2 07       	cpc	r27, r18
+  a4:	e1 f7       	brne	.-8      	; 0x9e <.do_clear_bss_loop>
+
+000000a6 <__do_global_ctors>:
+  a6:	10 e0       	ldi	r17, 0x00	; 0
+  a8:	c5 e4       	ldi	r28, 0x45	; 69
+  aa:	d0 e0       	ldi	r29, 0x00	; 0
+  ac:	03 c0       	rjmp	.+6      	; 0xb4 <__do_global_ctors+0xe>
+  ae:	21 97       	sbiw	r28, 0x01	; 1
+  b0:	fe 01       	movw	r30, r28
+  b2:	03 d5       	rcall	.+2566   	; 0xaba <__tablejump2__>
+  b4:	c4 34       	cpi	r28, 0x44	; 68
+  b6:	d1 07       	cpc	r29, r17
+  b8:	d1 f7       	brne	.-12     	; 0xae <__do_global_ctors+0x8>
+  ba:	c3 d4       	rcall	.+2438   	; 0xa42 <main>
+  bc:	0d c5       	rjmp	.+2586   	; 0xad8 <_exit>
+
+000000be <__bad_interrupt>:
+  be:	a0 cf       	rjmp	.-192    	; 0x0 <__vectors>
+
+000000c0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1>:
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+uint8_t StackBase<T, PDI, PDO, SpiSsHndlr>::odRead(uint8_t channel, uint8_t address)
+{
+    uint8_t data;
+
+    switch (channel)
+  c0:	80 32       	cpi	r24, 0x20	; 32
+  c2:	19 f0       	breq	.+6      	; 0xca <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0xa>
+  c4:	80 34       	cpi	r24, 0x40	; 64
+  c6:	31 f0       	breq	.+12     	; 0xd4 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0x14>
+  c8:	0d c0       	rjmp	.+26     	; 0xe4 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0x24>
+    {
+    case IoLink::MC_CHNL_PAGE:  // Direct parameter page channel
+        data = directParameter[address];
+  ca:	e6 2f       	mov	r30, r22
+  cc:	f0 e0       	ldi	r31, 0x00	; 0
+  ce:	e5 5e       	subi	r30, 0xE5	; 229
+  d0:	fe 4f       	sbci	r31, 0xFE	; 254
+  d2:	06 c0       	rjmp	.+12     	; 0xe0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0x20>
+        break;
+
+    case IoLink::MC_CHNL_DIAG:  // Diagnosis channel
+        if (address > 6)
+  d4:	67 30       	cpi	r22, 0x07	; 7
+  d6:	38 f4       	brcc	.+14     	; 0xe6 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0x26>
+            break;
+
+        data = eventPage[address];
+  d8:	e6 2f       	mov	r30, r22
+  da:	f0 e0       	ldi	r31, 0x00	; 0
+  dc:	ed 5e       	subi	r30, 0xED	; 237
+  de:	fe 4f       	sbci	r31, 0xFE	; 254
+  e0:	90 81       	ld	r25, Z
+  e2:	01 c0       	rjmp	.+2      	; 0xe6 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1+0x26>
+        break;
+
+    default:            // SPDU and process data not handled
+//        ASSERT(address == IoLink::MC_ADDR_ISDU_IDLE1 || address == IoLink::MC_ADDR_ISDU_IDLE2);
+        data = 0;
+  e4:	90 e0       	ldi	r25, 0x00	; 0
+    }
+
+    return data;
+}
+  e6:	89 2f       	mov	r24, r25
+  e8:	08 95       	ret
+
+000000ea <__vector_15>:
+    }
+}
+
+// Interrupt on Timer0 compare match B
+ISR(TIMER0_COMPB_vect)
+{
+  ea:	1f 92       	push	r1
+  ec:	0f 92       	push	r0
+  ee:	0f b6       	in	r0, 0x3f	; 63
+  f0:	0f 92       	push	r0
+  f2:	11 24       	eor	r1, r1
+  f4:	2f 93       	push	r18
+  f6:	3f 93       	push	r19
+  f8:	8f 93       	push	r24
+  fa:	9f 93       	push	r25
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::onTimer0CompBInterrupt()
+{
+    // decrement hiZ timer
+    if (_hiZCounter >= 0 && --_hiZCounter < 0)
+  fc:	80 91 07 01 	lds	r24, 0x0107
+ 100:	87 fd       	sbrc	r24, 7
+ 102:	1d c0       	rjmp	.+58     	; 0x13e <__vector_15+0x54>
+ 104:	81 50       	subi	r24, 0x01	; 1
+ 106:	80 93 07 01 	sts	0x0107, r24
+ 10a:	8f 3f       	cpi	r24, 0xFF	; 255
+ 10c:	c1 f4       	brne	.+48     	; 0x13e <__vector_15+0x54>
+uint8_t StackBase<T, PDI, PDO, SpiSsHndlr>::driveModeBits() const
+{
+    switch (StackT::SIO_DRIVE_MODE)
+    {
+    case DRIVE_MODE_PUSH_PULL:
+        return _sioLevel ? Phy::CTL_HS : Phy::CTL_LS;
+ 10e:	80 91 08 01 	lds	r24, 0x0108
+ 112:	80 fd       	sbrc	r24, 0
+ 114:	26 c0       	rjmp	.+76     	; 0x162 <__vector_15+0x78>
+ 116:	81 e0       	ldi	r24, 0x01	; 1
+    bool driven = (hslsBits != 0);
+
+    // we need to switch to IO-Link mode after 1ms to detect a wake-up
+    if (driven)
+    {
+        _hiZCounter = -1;
+ 118:	9f ef       	ldi	r25, 0xFF	; 255
+ 11a:	90 93 07 01 	sts	0x0107, r25
+    else if (wasDriven)  
+    {
+        _hiZCounter = 10;
+    }
+
+    wasDriven = driven;
+ 11e:	91 e0       	ldi	r25, 0x01	; 1
+ 120:	90 93 00 01 	sts	0x0100, r25
+    uint8_t sioBit = (!driven && (_hiZCounter < 0)) 
+        ? Phy::CTL_IOLINK_MODE 
+        : Phy::CTL_SIO_MODE;
+
+    return StackBase::registerWrite(Phy::REG_CTL, 
+        StackT::PHY_CTL_SCT | StackT::PHY_CTL_MODE | sioBit | hslsBits);
+ 124:	84 60       	ori	r24, 0x04	; 4
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 126:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 128:	92 e8       	ldi	r25, 0x82	; 130
+ 12a:	9e bd       	out	0x2e, r25	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 12c:	0d b4       	in	r0, 0x2d	; 45
+ 12e:	07 fe       	sbrs	r0, 7
+ 130:	fd cf       	rjmp	.-6      	; 0x12c <__vector_15+0x42>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 132:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 134:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 136:	0d b4       	in	r0, 0x2d	; 45
+ 138:	07 fe       	sbrs	r0, 7
+ 13a:	fd cf       	rjmp	.-6      	; 0x136 <__vector_15+0x4c>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 13c:	2a 9a       	sbi	0x05, 2	; 5
+    {
+        stack().setSioActive();
+    }
+
+    // check if cycle timer elapsed
+    if (_cycleTimer > 0 && --_cycleTimer == 0)
+ 13e:	20 91 0d 01 	lds	r18, 0x010D
+ 142:	30 91 0e 01 	lds	r19, 0x010E
+ 146:	80 91 12 01 	lds	r24, 0x0112
+ 14a:	21 15       	cp	r18, r1
+ 14c:	31 05       	cpc	r19, r1
+ 14e:	59 f0       	breq	.+22     	; 0x166 <__vector_15+0x7c>
+ 150:	21 50       	subi	r18, 0x01	; 1
+ 152:	31 09       	sbc	r19, r1
+ 154:	30 93 0e 01 	sts	0x010E, r19
+ 158:	20 93 0d 01 	sts	0x010D, r18
+ 15c:	23 2b       	or	r18, r19
+ 15e:	39 f0       	breq	.+14     	; 0x16e <__vector_15+0x84>
+ 160:	02 c0       	rjmp	.+4      	; 0x166 <__vector_15+0x7c>
+uint8_t StackBase<T, PDI, PDO, SpiSsHndlr>::driveModeBits() const
+{
+    switch (StackT::SIO_DRIVE_MODE)
+    {
+    case DRIVE_MODE_PUSH_PULL:
+        return _sioLevel ? Phy::CTL_HS : Phy::CTL_LS;
+ 162:	82 e0       	ldi	r24, 0x02	; 2
+ 164:	d9 cf       	rjmp	.-78     	; 0x118 <__vector_15+0x2e>
+        }
+    }
+    else
+    {
+        // too late for user code
+        _runUserCode = false;
+ 166:	8e 7f       	andi	r24, 0xFE	; 254
+ 168:	80 93 12 01 	sts	0x0112, r24
+ 16c:	33 c0       	rjmp	.+102    	; 0x1d4 <__vector_15+0xea>
+
+    // check if cycle timer elapsed
+    if (_cycleTimer > 0 && --_cycleTimer == 0)
+    {
+        // user code may run
+        _runUserCode = true;
+ 16e:	81 60       	ori	r24, 0x01	; 1
+ 170:	80 93 12 01 	sts	0x0112, r24
+
+        // restart cycle timer
+        _cycleTimer = _cyclePeriod;
+ 174:	80 91 0b 01 	lds	r24, 0x010B
+ 178:	90 91 0c 01 	lds	r25, 0x010C
+ 17c:	90 93 0e 01 	sts	0x010E, r25
+ 180:	80 93 0d 01 	sts	0x010D, r24
+
+        // advance the count of dead cycles
+        if (_deadCycleCtr != 0xff)
+ 184:	80 91 06 01 	lds	r24, 0x0106
+ 188:	8f 3f       	cpi	r24, 0xFF	; 255
+ 18a:	19 f0       	breq	.+6      	; 0x192 <__vector_15+0xa8>
+        {
+            ++_deadCycleCtr;
+ 18c:	8f 5f       	subi	r24, 0xFF	; 255
+ 18e:	80 93 06 01 	sts	0x0106, r24
+        }
+
+        // check if we need to switch to SIO mode
+        if (_fallbackCounter > 0 && --_fallbackCounter == 0)
+ 192:	80 91 11 01 	lds	r24, 0x0111
+ 196:	88 23       	and	r24, r24
+ 198:	29 f0       	breq	.+10     	; 0x1a4 <__vector_15+0xba>
+ 19a:	81 50       	subi	r24, 0x01	; 1
+ 19c:	80 93 11 01 	sts	0x0111, r24
+ 1a0:	88 23       	and	r24, r24
+ 1a2:	a9 f0       	breq	.+42     	; 0x1ce <__vector_15+0xe4>
+        {
+            _ddlMode = IoLink::DDL_MODE_IDLE;
+        }
+
+        // update LED register if necessary
+        if (_savedLedRegister != _ledRegister)
+ 1a4:	80 91 10 01 	lds	r24, 0x0110
+ 1a8:	90 91 0f 01 	lds	r25, 0x010F
+ 1ac:	98 17       	cp	r25, r24
+ 1ae:	91 f0       	breq	.+36     	; 0x1d4 <__vector_15+0xea>
+        {
+            _savedLedRegister = _ledRegister;
+ 1b0:	80 93 0f 01 	sts	0x010F, r24
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 1b4:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 1b6:	96 e8       	ldi	r25, 0x86	; 134
+ 1b8:	9e bd       	out	0x2e, r25	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 1ba:	0d b4       	in	r0, 0x2d	; 45
+ 1bc:	07 fe       	sbrs	r0, 7
+ 1be:	fd cf       	rjmp	.-6      	; 0x1ba <__vector_15+0xd0>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 1c0:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 1c2:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 1c4:	0d b4       	in	r0, 0x2d	; 45
+ 1c6:	07 fe       	sbrs	r0, 7
+ 1c8:	fd cf       	rjmp	.-6      	; 0x1c4 <__vector_15+0xda>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 1ca:	2a 9a       	sbi	0x05, 2	; 5
+ 1cc:	03 c0       	rjmp	.+6      	; 0x1d4 <__vector_15+0xea>
+        }
+
+        // check if we need to switch to SIO mode
+        if (_fallbackCounter > 0 && --_fallbackCounter == 0)
+        {
+            _ddlMode = IoLink::DDL_MODE_IDLE;
+ 1ce:	10 92 01 01 	sts	0x0101, r1
+ 1d2:	e8 cf       	rjmp	.-48     	; 0x1a4 <__vector_15+0xba>
+    StackMultiByte::instance.onTimer0CompBInterrupt();
+}
+ 1d4:	9f 91       	pop	r25
+ 1d6:	8f 91       	pop	r24
+ 1d8:	3f 91       	pop	r19
+ 1da:	2f 91       	pop	r18
+ 1dc:	0f 90       	pop	r0
+ 1de:	0f be       	out	0x3f, r0	; 63
+ 1e0:	0f 90       	pop	r0
+ 1e2:	1f 90       	pop	r1
+ 1e4:	18 95       	reti
+
+000001e6 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv>:
+
+//------------------------------------------------------------------------------
+template <class SpiSsHndlr> 
+void PhyDriver<SpiSsHndlr>::registerAbortAccess()
+{
+    if (_ssHndlr.asserted())
+ 1e6:	2a 99       	sbic	0x05, 2	; 5
+ 1e8:	04 c0       	rjmp	.+8      	; 0x1f2 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv+0xc>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 1ea:	0d b4       	in	r0, 0x2d	; 45
+ 1ec:	07 fe       	sbrs	r0, 7
+ 1ee:	fd cf       	rjmp	.-6      	; 0x1ea <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv+0x4>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 1f0:	2a 9a       	sbi	0x05, 2	; 5
+ 1f2:	08 95       	ret
+
+000001f4 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv>:
+    startCallbackTimer();
+};
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::configurePhy()
+ 1f4:	fc 01       	movw	r30, r24
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 1f6:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 1f8:	80 e8       	ldi	r24, 0x80	; 128
+ 1fa:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 1fc:	0d b4       	in	r0, 0x2d	; 45
+ 1fe:	07 fe       	sbrs	r0, 7
+ 200:	fd cf       	rjmp	.-6      	; 0x1fc <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x8>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 202:	8c e0       	ldi	r24, 0x0C	; 12
+ 204:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 206:	0d b4       	in	r0, 0x2d	; 45
+ 208:	07 fe       	sbrs	r0, 7
+ 20a:	fd cf       	rjmp	.-6      	; 0x206 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x12>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 20c:	82 e3       	ldi	r24, 0x32	; 50
+ 20e:	8e bd       	out	0x2e, r24	; 46
+uint8_t StackBase<T, PDI, PDO, SpiSsHndlr>::driveModeBits() const
+{
+    switch (StackT::SIO_DRIVE_MODE)
+    {
+    case DRIVE_MODE_PUSH_PULL:
+        return _sioLevel ? Phy::CTL_HS : Phy::CTL_LS;
+ 210:	87 81       	ldd	r24, Z+7	; 0x07
+ 212:	80 fd       	sbrc	r24, 0
+ 214:	02 c0       	rjmp	.+4      	; 0x21a <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x26>
+ 216:	91 e0       	ldi	r25, 0x01	; 1
+ 218:	01 c0       	rjmp	.+2      	; 0x21c <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x28>
+ 21a:	92 e0       	ldi	r25, 0x02	; 2
+    
+    // REG_CTL
+    StackBase::registerWriteNext(StackT::PHY_CTL_SCT | 
+                                 StackT::PHY_CTL_MODE | 
+                                 Phy::CTL_SIO_MODE | 
+                                 driveModeBits());
+ 21c:	94 60       	ori	r25, 0x04	; 4
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 21e:	0d b4       	in	r0, 0x2d	; 45
+ 220:	07 fe       	sbrs	r0, 7
+ 222:	fd cf       	rjmp	.-6      	; 0x21e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x2a>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 224:	9e bd       	out	0x2e, r25	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 226:	0d b4       	in	r0, 0x2d	; 45
+ 228:	07 fe       	sbrs	r0, 7
+ 22a:	fd cf       	rjmp	.-6      	; 0x226 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x32>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 22c:	1e bc       	out	0x2e, r1	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 22e:	0d b4       	in	r0, 0x2d	; 45
+ 230:	07 fe       	sbrs	r0, 7
+ 232:	fd cf       	rjmp	.-6      	; 0x22e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x3a>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 234:	83 e0       	ldi	r24, 0x03	; 3
+ 236:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 238:	0d b4       	in	r0, 0x2d	; 45
+ 23a:	07 fe       	sbrs	r0, 7
+ 23c:	fd cf       	rjmp	.-6      	; 0x238 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x44>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 23e:	1e bc       	out	0x2e, r1	; 46
+    
+    // REG_STATUS (HMT7742) / REG_TEMP (HMT7748) - (dummy write)
+    Phy::registerWriteNext(0);        
+    
+    // LEDs
+    StackBase::registerWriteNext(this->_ledRegister);        
+ 240:	87 85       	ldd	r24, Z+15	; 0x0f
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 242:	0d b4       	in	r0, 0x2d	; 45
+ 244:	07 fe       	sbrs	r0, 7
+ 246:	fd cf       	rjmp	.-6      	; 0x242 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x4e>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 248:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 24a:	0d b4       	in	r0, 0x2d	; 45
+ 24c:	07 fe       	sbrs	r0, 7
+ 24e:	fd cf       	rjmp	.-6      	; 0x24a <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv+0x56>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 250:	2a 9a       	sbi	0x05, 2	; 5
+#endif
+
+    registerWriteDone();
+
+    // set the stack to SIO mode to be in sync with the PHY.
+    _ddlMode = IoLink::DDL_MODE_IDLE;
+ 252:	10 82       	st	Z, r1
+ 254:	08 95       	ret
+
+00000256 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh>:
+}
+
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::startCallbackTimer(uint8_t delay)
+ 256:	fc 01       	movw	r30, r24
+{
+    // reset dead cycle timer
+    _deadCycleCtr = 0;
+ 258:	15 82       	std	Z+5, r1	; 0x05
+
+    // disable timer
+    TCCR0B = 0;
+ 25a:	15 bc       	out	0x25, r1	; 37
+    TCNT0 = 0;
+ 25c:	16 bc       	out	0x26, r1	; 38
+
+    // clear any outstanding interrupt requests
+    TIFR0 |= _BV(OCF0B) | _BV(OCF0A) | _BV(TOV0);
+ 25e:	85 b3       	in	r24, 0x15	; 21
+ 260:	87 60       	ori	r24, 0x07	; 7
+ 262:	85 bb       	out	0x15, r24	; 21
+    
+    // check if we need to force recalculation of cycle period
+    if (_cyclePeriod == 0)
+ 264:	82 85       	ldd	r24, Z+10	; 0x0a
+ 266:	93 85       	ldd	r25, Z+11	; 0x0b
+ 268:	00 97       	sbiw	r24, 0x00	; 0
+ 26a:	49 f5       	brne	.+82     	; 0x2be <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x68>
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::updateCyclePeriod()
+{
+    // get period
+    uint8_t cycleParam = 0;
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+ 26c:	20 81       	ld	r18, Z
+ 26e:	24 30       	cpi	r18, 0x04	; 4
+ 270:	21 f4       	brne	.+8      	; 0x27a <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x24>
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 272:	20 91 1c 01 	lds	r18, 0x011C
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+    {
+        cycleParam = parameterRead(IoLink::PAGE_MASTER_CYCLE_TIME);
+    }
+
+    if (cycleParam == 0)
+ 276:	21 11       	cpse	r18, r1
+ 278:	02 c0       	rjmp	.+4      	; 0x27e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x28>
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 27a:	20 91 1d 01 	lds	r18, 0x011D
+        // MasterCycleTime hasn't been set yet => use MinCycleTime
+        cycleParam = parameterRead(IoLink::PAGE_MIN_CYCLE_TIME);
+    }
+
+    // decode parameter into 1/10ms
+    _cyclePeriod = DECODE_CYCLE_TIME(cycleParam);
+ 27e:	24 30       	cpi	r18, 0x04	; 4
+ 280:	e0 f0       	brcs	.+56     	; 0x2ba <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x64>
+ 282:	20 34       	cpi	r18, 0x40	; 64
+ 284:	18 f4       	brcc	.+6      	; 0x28c <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x36>
+ 286:	82 2f       	mov	r24, r18
+ 288:	90 e0       	ldi	r25, 0x00	; 0
+ 28a:	17 c0       	rjmp	.+46     	; 0x2ba <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x64>
+ 28c:	32 2f       	mov	r19, r18
+ 28e:	30 7c       	andi	r19, 0xC0	; 192
+ 290:	30 34       	cpi	r19, 0x40	; 64
+ 292:	49 f4       	brne	.+18     	; 0x2a6 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x50>
+ 294:	84 e0       	ldi	r24, 0x04	; 4
+ 296:	28 9f       	mul	r18, r24
+ 298:	90 01       	movw	r18, r0
+ 29a:	11 24       	eor	r1, r1
+ 29c:	33 27       	eor	r19, r19
+ 29e:	c9 01       	movw	r24, r18
+ 2a0:	80 5c       	subi	r24, 0xC0	; 192
+ 2a2:	9f 4f       	sbci	r25, 0xFF	; 255
+ 2a4:	0a c0       	rjmp	.+20     	; 0x2ba <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x64>
+ 2a6:	30 38       	cpi	r19, 0x80	; 128
+ 2a8:	41 f4       	brne	.+16     	; 0x2ba <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh+0x64>
+ 2aa:	2f 73       	andi	r18, 0x3F	; 63
+ 2ac:	80 e1       	ldi	r24, 0x10	; 16
+ 2ae:	28 9f       	mul	r18, r24
+ 2b0:	90 01       	movw	r18, r0
+ 2b2:	11 24       	eor	r1, r1
+ 2b4:	c9 01       	movw	r24, r18
+ 2b6:	80 5c       	subi	r24, 0xC0	; 192
+ 2b8:	9e 4f       	sbci	r25, 0xFE	; 254
+ 2ba:	93 87       	std	Z+11, r25	; 0x0b
+ 2bc:	82 87       	std	Z+10, r24	; 0x0a
+    {
+        updateCyclePeriod();
+    }
+
+    // initialize cycle timer
+    _cycleTimer = delay + 1;
+ 2be:	70 e0       	ldi	r23, 0x00	; 0
+ 2c0:	6f 5f       	subi	r22, 0xFF	; 255
+ 2c2:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2c4:	75 87       	std	Z+13, r23	; 0x0d
+ 2c6:	64 87       	std	Z+12, r22	; 0x0c
+
+    if (_cycleTimer > 0)
+    {      
+        // Timer/Counter0 Output Compare Match B Interrupt Enable
+        TIMSK0 = _BV(OCIE0B);
+ 2c8:	84 e0       	ldi	r24, 0x04	; 4
+ 2ca:	80 93 6e 00 	sts	0x006E, r24
+
+        // clear Timer on Compare Match A
+        TCCR0A = _BV(WGM01);
+ 2ce:	82 e0       	ldi	r24, 0x02	; 2
+ 2d0:	84 bd       	out	0x24, r24	; 36
+
+        // generate 0.1ms cycles
+#if F_CPU < 20000000
+        OCR0B = OCR0A = F_CPU / 80000;
+ 2d2:	94 e6       	ldi	r25, 0x64	; 100
+ 2d4:	97 bd       	out	0x27, r25	; 39
+ 2d6:	98 bd       	out	0x28, r25	; 40
+        TCCR0B = _BV(CS01);             // pre-scaler clkIO/8
+ 2d8:	85 bd       	out	0x25, r24	; 37
+ 2da:	08 95       	ret
+
+000002dc <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>:
+
+StackMultiByte StackMultiByte::instance;
+
+//------------------------------------------------------------------------------
+template <IoLink::DeviceDLMode DDL_MODE>
+StackMultiByte::HandlerResult StackMultiByte::handleOperatingMode(uint8_t mc)
+ 2dc:	cf 93       	push	r28
+ 2de:	df 93       	push	r29
+ 2e0:	ec 01       	movw	r28, r24
+ 2e2:	96 2f       	mov	r25, r22
+{
+    // get access mode, channel and address from MC octet
+    const uint8_t access  = mc & IoLink::MC_RW_MASK;
+    const uint8_t channel = mc & IoLink::MC_CHANNEL_MASK;
+ 2e4:	86 2f       	mov	r24, r22
+ 2e6:	80 76       	andi	r24, 0x60	; 96
+    const uint8_t address = mc & IoLink::MC_ADDRESS_MASK;
+ 2e8:	6f 71       	andi	r22, 0x1F	; 31
+    const int8_t odCount = getOdOctetCount<DDL_MODE>();
+    const uint8_t pdInSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_IN_SIZE : 0;
+    const uint8_t pdOutSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_OUT_SIZE : 0;
+
+    if (access == IoLink::MC_WRITE)
+ 2ea:	97 fd       	sbrc	r25, 7
+ 2ec:	49 c0       	rjmp	.+146    	; 0x380 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xa4>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 2ee:	0d b4       	in	r0, 0x2d	; 45
+ 2f0:	07 fe       	sbrs	r0, 7
+ 2f2:	fd cf       	rjmp	.-6      	; 0x2ee <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x12>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 2f4:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 2f6:	9e bd       	out	0x2e, r25	; 46
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+template <IoLink::DeviceDLMode DDL_MODE>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::validateFrameType(uint8_t ckt)
+{
+    uint8_t frameType = (ckt & IoLink::CKT_TYPE_MASK);
+ 2f8:	90 7c       	andi	r25, 0xC0	; 192
+                if (frameType == IoLink::CKT_TYPE_2)
+                    return true;                                   // TYPE_2_1-2_5
+            }
+            else if ((StackT::REVISION_ID == IoLink::REVISION_ID_1_1) && (PD_OUT_SIZE + PD_IN_SIZE <= 4))
+            {
+                if (frameType == IoLink::CKT_TYPE_2)
+ 2fa:	90 38       	cpi	r25, 0x80	; 128
+ 2fc:	11 f0       	breq	.+4      	; 0x302 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x26>
+    {
+        // get checksum/type octet
+        uint8_t ckt = registerReadNext();
+        if (!validateFrameType<DDL_MODE>(ckt))
+            return ResultIllegalMessageType;
+ 2fe:	83 e0       	ldi	r24, 0x03	; 3
+ 300:	7f c0       	rjmp	.+254    	; 0x400 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x124>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 302:	0d b4       	in	r0, 0x2d	; 45
+ 304:	07 fe       	sbrs	r0, 7
+ 306:	fd cf       	rjmp	.-6      	; 0x302 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x26>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 308:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 30a:	9e bd       	out	0x2e, r25	; 46
+
+        // read process output data
+        for (uint8_t i = 0; i < pdOutSize; ++i)
+        {
+            _processDataOut.buffer[i] = registerReadNext();
+ 30c:	9b 83       	std	Y+3, r25	; 0x03
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 30e:	0d b4       	in	r0, 0x2d	; 45
+ 310:	07 fe       	sbrs	r0, 7
+ 312:	fd cf       	rjmp	.-6      	; 0x30e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x32>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 314:	2e b5       	in	r18, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 316:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 318:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 31a:	90 e9       	ldi	r25, 0x90	; 144
+ 31c:	9e bd       	out	0x2e, r25	; 46
+ 31e:	99 89       	ldd	r25, Y+17	; 0x11
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::odWrite(uint8_t channel, uint8_t address, uint8_t data)
+{
+    if (channel == IoLink::MC_CHNL_PAGE)
+ 320:	80 32       	cpi	r24, 0x20	; 32
+ 322:	51 f4       	brne	.+20     	; 0x338 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x5c>
+    {
+        // store data for use in application
+        _parameterWrite.address = address;
+ 324:	68 87       	std	Y+8, r22	; 0x08
+        _parameterWrite.value = data;
+ 326:	29 87       	std	Y+9, r18	; 0x09
+        _prmWriteAvailable = true;
+ 328:	89 2f       	mov	r24, r25
+ 32a:	82 60       	ori	r24, 0x02	; 2
+ 32c:	89 8b       	std	Y+17, r24	; 0x11
+        odWrite(channel, address, od);
+
+        // send PDin data
+        for (uint8_t i = 0; i < pdInSize; ++i)
+        {
+            registerWriteNext(_processDataIn.isValid ? _processDataIn.buffer[i] : 0);
+ 32e:	8a 81       	ldd	r24, Y+2	; 0x02
+ 330:	88 23       	and	r24, r24
+ 332:	29 f0       	breq	.+10     	; 0x33e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x62>
+ 334:	89 81       	ldd	r24, Y+1	; 0x01
+ 336:	03 c0       	rjmp	.+6      	; 0x33e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x62>
+    }
+    else
+    {
+        _prmWriteAvailable = false;
+ 338:	89 2f       	mov	r24, r25
+ 33a:	8d 7f       	andi	r24, 0xFD	; 253
+ 33c:	f7 cf       	rjmp	.-18     	; 0x32c <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x50>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 33e:	0d b4       	in	r0, 0x2d	; 45
+ 340:	07 fe       	sbrs	r0, 7
+ 342:	fd cf       	rjmp	.-6      	; 0x33e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x62>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 344:	8e bd       	out	0x2e, r24	; 46
+        }
+
+        // send the CKS octet, note the checksum field is set to 0
+        registerWriteNext((pdInSize > 0 && _processDataIn.isValid) ? 
+            IoLink::CKS_PD_VALID : IoLink::CKS_PD_INVALID);
+ 346:	8a 81       	ldd	r24, Y+2	; 0x02
+ 348:	81 11       	cpse	r24, r1
+ 34a:	02 c0       	rjmp	.+4      	; 0x350 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x74>
+ 34c:	80 e4       	ldi	r24, 0x40	; 64
+ 34e:	01 c0       	rjmp	.+2      	; 0x352 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x76>
+ 350:	80 e0       	ldi	r24, 0x00	; 0
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 352:	0d b4       	in	r0, 0x2d	; 45
+ 354:	07 fe       	sbrs	r0, 7
+ 356:	fd cf       	rjmp	.-6      	; 0x352 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x76>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 358:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 35a:	0d b4       	in	r0, 0x2d	; 45
+ 35c:	07 fe       	sbrs	r0, 7
+ 35e:	fd cf       	rjmp	.-6      	; 0x35a <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x7e>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 360:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 362:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 364:	83 e8       	ldi	r24, 0x83	; 131
+ 366:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 368:	0d b4       	in	r0, 0x2d	; 45
+ 36a:	07 fe       	sbrs	r0, 7
+ 36c:	fd cf       	rjmp	.-6      	; 0x368 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x8c>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 36e:	8e b5       	in	r24, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 370:	89 e0       	ldi	r24, 0x09	; 9
+ 372:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 374:	0d b4       	in	r0, 0x2d	; 45
+ 376:	07 fe       	sbrs	r0, 7
+ 378:	fd cf       	rjmp	.-6      	; 0x374 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x98>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 37a:	2a 9a       	sbi	0x05, 2	; 5
+{
+    // start user call-back timer after sending last byte (each byte spaced
+    // by 14 x T1)
+    if (BAUD_RATE == 230400)
+    {
+        startCallbackTimer((octetCnt + 1) * 14 / 23 /* approx 230.4 / 10 */);
+ 37c:	61 e0       	ldi	r22, 0x01	; 1
+ 37e:	3d c0       	rjmp	.+122    	; 0x3fa <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x11e>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 380:	0d b4       	in	r0, 0x2d	; 45
+ 382:	07 fe       	sbrs	r0, 7
+ 384:	fd cf       	rjmp	.-6      	; 0x380 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xa4>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 386:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 388:	9e bd       	out	0x2e, r25	; 46
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+template <IoLink::DeviceDLMode DDL_MODE>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::validateFrameType(uint8_t ckt)
+{
+    uint8_t frameType = (ckt & IoLink::CKT_TYPE_MASK);
+ 38a:	90 7c       	andi	r25, 0xC0	; 192
+    else // IoLink::MC_READ
+    {
+        // get checksum/type octet
+        uint8_t ckt = (pdOutSize > 0) ? registerReadNext() : registerReadLast();
+
+        if (!validateFrameType<DDL_MODE>(ckt))
+ 38c:	90 38       	cpi	r25, 0x80	; 128
+ 38e:	09 f0       	breq	.+2      	; 0x392 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xb6>
+ 390:	b6 cf       	rjmp	.-148    	; 0x2fe <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x22>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 392:	0d b4       	in	r0, 0x2d	; 45
+ 394:	07 fe       	sbrs	r0, 7
+ 396:	fd cf       	rjmp	.-6      	; 0x392 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xb6>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 398:	9e b5       	in	r25, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 39a:	2a 9a       	sbi	0x05, 2	; 5
+        {
+            for (uint8_t i = 0; i < pdOutSize-1; ++i)
+            {
+                _processDataOut.buffer[i] = registerReadNext();
+            }
+            _processDataOut.buffer[pdOutSize-1] = registerReadLast();
+ 39c:	9b 83       	std	Y+3, r25	; 0x03
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 39e:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3a0:	90 e9       	ldi	r25, 0x90	; 144
+ 3a2:	9e bd       	out	0x2e, r25	; 46
+
+        // start sending the return data
+        registerWriteBegin(REG_FR0);
+
+        // send OD data
+        registerWriteNext(odRead(channel, address));
+ 3a4:	8d de       	rcall	.-742    	; 0xc0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1>
+ 3a6:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3a8:	07 fe       	sbrs	r0, 7
+ 3aa:	fd cf       	rjmp	.-6      	; 0x3a6 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xca>
+ 3ac:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3ae:	8a 81       	ldd	r24, Y+2	; 0x02
+        }
+
+        // send PDin data
+        for (uint8_t i = 0; i < pdInSize; ++i)
+        {
+            registerWriteNext(_processDataIn.isValid ? _processDataIn.buffer[i] : 0);
+ 3b0:	88 23       	and	r24, r24
+ 3b2:	11 f0       	breq	.+4      	; 0x3b8 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xdc>
+ 3b4:	89 81       	ldd	r24, Y+1	; 0x01
+ 3b6:	01 c0       	rjmp	.+2      	; 0x3ba <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xde>
+ 3b8:	80 e0       	ldi	r24, 0x00	; 0
+ 3ba:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3bc:	07 fe       	sbrs	r0, 7
+ 3be:	fd cf       	rjmp	.-6      	; 0x3ba <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xde>
+ 3c0:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3c2:	8a 81       	ldd	r24, Y+2	; 0x02
+        }
+
+        // send the CKS octet, note the checksum field is set to 0
+        registerWriteNext((pdInSize > 0 && _processDataIn.isValid) ? 
+            IoLink::CKS_PD_VALID : IoLink::CKS_PD_INVALID);
+ 3c4:	81 11       	cpse	r24, r1
+ 3c6:	02 c0       	rjmp	.+4      	; 0x3cc <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xf0>
+ 3c8:	80 e4       	ldi	r24, 0x40	; 64
+ 3ca:	01 c0       	rjmp	.+2      	; 0x3ce <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xf2>
+ 3cc:	80 e0       	ldi	r24, 0x00	; 0
+ 3ce:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3d0:	07 fe       	sbrs	r0, 7
+ 3d2:	fd cf       	rjmp	.-6      	; 0x3ce <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xf2>
+ 3d4:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3d6:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3d8:	07 fe       	sbrs	r0, 7
+ 3da:	fd cf       	rjmp	.-6      	; 0x3d6 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xfa>
+ 3dc:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 3de:	2a 98       	cbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 3e0:	83 e8       	ldi	r24, 0x83	; 131
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3e2:	8e bd       	out	0x2e, r24	; 46
+ 3e4:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3e6:	07 fe       	sbrs	r0, 7
+ 3e8:	fd cf       	rjmp	.-6      	; 0x3e4 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x108>
+ 3ea:	8e b5       	in	r24, 0x2e	; 46
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 3ec:	8d e0       	ldi	r24, 0x0D	; 13
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 3ee:	8e bd       	out	0x2e, r24	; 46
+ 3f0:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 3f2:	07 fe       	sbrs	r0, 7
+ 3f4:	fd cf       	rjmp	.-6      	; 0x3f0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x114>
+ 3f6:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 3f8:	62 e0       	ldi	r22, 0x02	; 2
+{
+    // start user call-back timer after sending last byte (each byte spaced
+    // by 14 x T1)
+    if (BAUD_RATE == 230400)
+    {
+        startCallbackTimer((octetCnt + 1) * 14 / 23 /* approx 230.4 / 10 */);
+ 3fa:	ce 01       	movw	r24, r28
+ 3fc:	2c df       	rcall	.-424    	; 0x256 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh>
+ 3fe:	80 e0       	ldi	r24, 0x00	; 0
+ 400:	df 91       	pop	r29
+        // if IDLE, enter STARTUP state
+        _ddlMode = IoLink::DDL_MODE_STARTUP;
+        setIoLinkListen();
+    }
+
+    return ResultSuccess;
+ 402:	cf 91       	pop	r28
+}
+ 404:	08 95       	ret
+
+00000406 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>:
+ 406:	cf 93       	push	r28
+ 408:	df 93       	push	r29
+
+StackMultiByte StackMultiByte::instance;
+
+//------------------------------------------------------------------------------
+template <IoLink::DeviceDLMode DDL_MODE>
+StackMultiByte::HandlerResult StackMultiByte::handleOperatingMode(uint8_t mc)
+ 40a:	ec 01       	movw	r28, r24
+ 40c:	96 2f       	mov	r25, r22
+{
+    // get access mode, channel and address from MC octet
+    const uint8_t access  = mc & IoLink::MC_RW_MASK;
+    const uint8_t channel = mc & IoLink::MC_CHANNEL_MASK;
+ 40e:	86 2f       	mov	r24, r22
+ 410:	80 76       	andi	r24, 0x60	; 96
+    const uint8_t address = mc & IoLink::MC_ADDRESS_MASK;
+ 412:	6f 71       	andi	r22, 0x1F	; 31
+    const int8_t odCount = getOdOctetCount<DDL_MODE>();
+    const uint8_t pdInSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_IN_SIZE : 0;
+    const uint8_t pdOutSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_OUT_SIZE : 0;
+
+    if (access == IoLink::MC_WRITE)
+ 414:	97 fd       	sbrc	r25, 7
+ 416:	30 c0       	rjmp	.+96     	; 0x478 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x72>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 418:	0d b4       	in	r0, 0x2d	; 45
+ 41a:	07 fe       	sbrs	r0, 7
+ 41c:	fd cf       	rjmp	.-6      	; 0x418 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x12>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 41e:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 420:	9e bd       	out	0x2e, r25	; 46
+ 422:	90 7c       	andi	r25, 0xC0	; 192
+    {
+        // get checksum/type octet
+        uint8_t ckt = registerReadNext();
+        if (!validateFrameType<DDL_MODE>(ckt))
+ 424:	11 f0       	breq	.+4      	; 0x42a <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x24>
+            return ResultIllegalMessageType;
+ 426:	83 e0       	ldi	r24, 0x03	; 3
+ 428:	50 c0       	rjmp	.+160    	; 0x4ca <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xc4>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 42a:	0d b4       	in	r0, 0x2d	; 45
+ 42c:	07 fe       	sbrs	r0, 7
+ 42e:	fd cf       	rjmp	.-6      	; 0x42a <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x24>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 430:	2e b5       	in	r18, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 432:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 434:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 436:	90 e9       	ldi	r25, 0x90	; 144
+ 438:	9e bd       	out	0x2e, r25	; 46
+ 43a:	99 89       	ldd	r25, Y+17	; 0x11
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::odWrite(uint8_t channel, uint8_t address, uint8_t data)
+{
+    if (channel == IoLink::MC_CHNL_PAGE)
+ 43c:	80 32       	cpi	r24, 0x20	; 32
+ 43e:	21 f4       	brne	.+8      	; 0x448 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x42>
+    {
+        // store data for use in application
+        _parameterWrite.address = address;
+ 440:	68 87       	std	Y+8, r22	; 0x08
+        _parameterWrite.value = data;
+ 442:	29 87       	std	Y+9, r18	; 0x09
+        _prmWriteAvailable = true;
+ 444:	92 60       	ori	r25, 0x02	; 2
+ 446:	01 c0       	rjmp	.+2      	; 0x44a <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x44>
+    }
+    else
+    {
+        _prmWriteAvailable = false;
+ 448:	9d 7f       	andi	r25, 0xFD	; 253
+ 44a:	99 8b       	std	Y+17, r25	; 0x11
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 44c:	0d b4       	in	r0, 0x2d	; 45
+ 44e:	07 fe       	sbrs	r0, 7
+ 450:	fd cf       	rjmp	.-6      	; 0x44c <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x46>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 452:	80 e4       	ldi	r24, 0x40	; 64
+ 454:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 456:	0d b4       	in	r0, 0x2d	; 45
+ 458:	07 fe       	sbrs	r0, 7
+ 45a:	fd cf       	rjmp	.-6      	; 0x456 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x50>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 45c:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 45e:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 460:	83 e8       	ldi	r24, 0x83	; 131
+ 462:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 464:	0d b4       	in	r0, 0x2d	; 45
+ 466:	07 fe       	sbrs	r0, 7
+ 468:	fd cf       	rjmp	.-6      	; 0x464 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x5e>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 46a:	8e b5       	in	r24, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 46c:	85 e0       	ldi	r24, 0x05	; 5
+ 46e:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 470:	0d b4       	in	r0, 0x2d	; 45
+ 472:	07 fe       	sbrs	r0, 7
+ 474:	fd cf       	rjmp	.-6      	; 0x470 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x6a>
+ 476:	24 c0       	rjmp	.+72     	; 0x4c0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xba>
+ 478:	0d b4       	in	r0, 0x2d	; 45
+ 47a:	07 fe       	sbrs	r0, 7
+ 47c:	fd cf       	rjmp	.-6      	; 0x478 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x72>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 47e:	9e b5       	in	r25, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 480:	2a 9a       	sbi	0x05, 2	; 5
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+template <IoLink::DeviceDLMode DDL_MODE>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::validateFrameType(uint8_t ckt)
+{
+    uint8_t frameType = (ckt & IoLink::CKT_TYPE_MASK);
+ 482:	90 7c       	andi	r25, 0xC0	; 192
+        // see table A.8
+    case IoLink::DDL_MODE_PREOPERATE:
+        switch (StackT::MSEQ_CAPABILITY & IoLink::MSEQCAP_PREOP_MASK)
+        {
+        case IoLink::MSEQCAP_PREOP_CODE_0: 
+            if (frameType == IoLink::CKT_TYPE_0) 
+ 484:	81 f6       	brne	.-96     	; 0x426 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x20>
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 486:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 488:	90 e9       	ldi	r25, 0x90	; 144
+ 48a:	9e bd       	out	0x2e, r25	; 46
+
+        // start sending the return data
+        registerWriteBegin(REG_FR0);
+
+        // send OD data
+        registerWriteNext(odRead(channel, address));
+ 48c:	19 de       	rcall	.-974    	; 0xc0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1>
+ 48e:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 490:	07 fe       	sbrs	r0, 7
+ 492:	fd cf       	rjmp	.-6      	; 0x48e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x88>
+ 494:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 496:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 498:	07 fe       	sbrs	r0, 7
+ 49a:	fd cf       	rjmp	.-6      	; 0x496 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x90>
+ 49c:	80 e4       	ldi	r24, 0x40	; 64
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 49e:	8e bd       	out	0x2e, r24	; 46
+ 4a0:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 4a2:	07 fe       	sbrs	r0, 7
+ 4a4:	fd cf       	rjmp	.-6      	; 0x4a0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x9a>
+ 4a6:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 4a8:	2a 98       	cbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 4aa:	83 e8       	ldi	r24, 0x83	; 131
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 4ac:	8e bd       	out	0x2e, r24	; 46
+ 4ae:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 4b0:	07 fe       	sbrs	r0, 7
+ 4b2:	fd cf       	rjmp	.-6      	; 0x4ae <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xa8>
+ 4b4:	8e b5       	in	r24, 0x2e	; 46
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 4b6:	89 e0       	ldi	r24, 0x09	; 9
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 4b8:	8e bd       	out	0x2e, r24	; 46
+ 4ba:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 4bc:	07 fe       	sbrs	r0, 7
+ 4be:	fd cf       	rjmp	.-6      	; 0x4ba <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xb4>
+ 4c0:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 4c2:	61 e0       	ldi	r22, 0x01	; 1
+{
+    // start user call-back timer after sending last byte (each byte spaced
+    // by 14 x T1)
+    if (BAUD_RATE == 230400)
+    {
+        startCallbackTimer((octetCnt + 1) * 14 / 23 /* approx 230.4 / 10 */);
+ 4c4:	ce 01       	movw	r24, r28
+ 4c6:	c7 de       	rcall	.-626    	; 0x256 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh>
+ 4c8:	80 e0       	ldi	r24, 0x00	; 0
+ 4ca:	df 91       	pop	r29
+        // if IDLE, enter STARTUP state
+        _ddlMode = IoLink::DDL_MODE_STARTUP;
+        setIoLinkListen();
+    }
+
+    return ResultSuccess;
+ 4cc:	cf 91       	pop	r28
+}
+ 4ce:	08 95       	ret
+
+000004d0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>:
+ 4d0:	cf 93       	push	r28
+ 4d2:	df 93       	push	r29
+
+StackMultiByte StackMultiByte::instance;
+
+//------------------------------------------------------------------------------
+template <IoLink::DeviceDLMode DDL_MODE>
+StackMultiByte::HandlerResult StackMultiByte::handleOperatingMode(uint8_t mc)
+ 4d4:	ec 01       	movw	r28, r24
+ 4d6:	96 2f       	mov	r25, r22
+{
+    // get access mode, channel and address from MC octet
+    const uint8_t access  = mc & IoLink::MC_RW_MASK;
+    const uint8_t channel = mc & IoLink::MC_CHANNEL_MASK;
+ 4d8:	86 2f       	mov	r24, r22
+ 4da:	80 76       	andi	r24, 0x60	; 96
+    const uint8_t address = mc & IoLink::MC_ADDRESS_MASK;
+ 4dc:	6f 71       	andi	r22, 0x1F	; 31
+    const int8_t odCount = getOdOctetCount<DDL_MODE>();
+    const uint8_t pdInSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_IN_SIZE : 0;
+    const uint8_t pdOutSize = DDL_MODE == IoLink::DDL_MODE_OPERATE ? PD_OUT_SIZE : 0;
+
+    if (access == IoLink::MC_WRITE)
+ 4de:	97 fd       	sbrc	r25, 7
+ 4e0:	32 c0       	rjmp	.+100    	; 0x546 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x76>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 4e2:	0d b4       	in	r0, 0x2d	; 45
+ 4e4:	07 fe       	sbrs	r0, 7
+ 4e6:	fd cf       	rjmp	.-6      	; 0x4e2 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x12>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 4e8:	9e b5       	in	r25, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 4ea:	9e bd       	out	0x2e, r25	; 46
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+template <IoLink::DeviceDLMode DDL_MODE>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::validateFrameType(uint8_t ckt)
+{
+    uint8_t frameType = (ckt & IoLink::CKT_TYPE_MASK);
+ 4ec:	90 7c       	andi	r25, 0xC0	; 192
+    {
+        // get checksum/type octet
+        uint8_t ckt = registerReadNext();
+        if (!validateFrameType<DDL_MODE>(ckt))
+ 4ee:	11 f0       	breq	.+4      	; 0x4f4 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x24>
+            return ResultIllegalMessageType;
+ 4f0:	83 e0       	ldi	r24, 0x03	; 3
+ 4f2:	63 c0       	rjmp	.+198    	; 0x5ba <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xea>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 4f4:	0d b4       	in	r0, 0x2d	; 45
+ 4f6:	07 fe       	sbrs	r0, 7
+ 4f8:	fd cf       	rjmp	.-6      	; 0x4f4 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x24>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 4fa:	2e b5       	in	r18, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 4fc:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 4fe:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 500:	90 e9       	ldi	r25, 0x90	; 144
+ 502:	9e bd       	out	0x2e, r25	; 46
+ 504:	99 89       	ldd	r25, Y+17	; 0x11
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::odWrite(uint8_t channel, uint8_t address, uint8_t data)
+{
+    if (channel == IoLink::MC_CHNL_PAGE)
+ 506:	80 32       	cpi	r24, 0x20	; 32
+ 508:	29 f4       	brne	.+10     	; 0x514 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x44>
+    {
+        // store data for use in application
+        _parameterWrite.address = address;
+ 50a:	68 87       	std	Y+8, r22	; 0x08
+        _parameterWrite.value = data;
+ 50c:	29 87       	std	Y+9, r18	; 0x09
+        _prmWriteAvailable = true;
+ 50e:	89 2f       	mov	r24, r25
+ 510:	82 60       	ori	r24, 0x02	; 2
+ 512:	02 c0       	rjmp	.+4      	; 0x518 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x48>
+    }
+    else
+    {
+        _prmWriteAvailable = false;
+ 514:	89 2f       	mov	r24, r25
+ 516:	8d 7f       	andi	r24, 0xFD	; 253
+ 518:	89 8b       	std	Y+17, r24	; 0x11
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 51a:	0d b4       	in	r0, 0x2d	; 45
+ 51c:	07 fe       	sbrs	r0, 7
+ 51e:	fd cf       	rjmp	.-6      	; 0x51a <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x4a>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 520:	80 e4       	ldi	r24, 0x40	; 64
+ 522:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 524:	0d b4       	in	r0, 0x2d	; 45
+ 526:	07 fe       	sbrs	r0, 7
+ 528:	fd cf       	rjmp	.-6      	; 0x524 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x54>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 52a:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 52c:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 52e:	83 e8       	ldi	r24, 0x83	; 131
+ 530:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 532:	0d b4       	in	r0, 0x2d	; 45
+ 534:	07 fe       	sbrs	r0, 7
+ 536:	fd cf       	rjmp	.-6      	; 0x532 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x62>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 538:	8e b5       	in	r24, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 53a:	85 e0       	ldi	r24, 0x05	; 5
+ 53c:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 53e:	0d b4       	in	r0, 0x2d	; 45
+ 540:	07 fe       	sbrs	r0, 7
+ 542:	fd cf       	rjmp	.-6      	; 0x53e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x6e>
+ 544:	24 c0       	rjmp	.+72     	; 0x58e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xbe>
+ 546:	0d b4       	in	r0, 0x2d	; 45
+ 548:	07 fe       	sbrs	r0, 7
+ 54a:	fd cf       	rjmp	.-6      	; 0x546 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x76>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 54c:	9e b5       	in	r25, 0x2e	; 46
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 54e:	2a 9a       	sbi	0x05, 2	; 5
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+template <IoLink::DeviceDLMode DDL_MODE>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::validateFrameType(uint8_t ckt)
+{
+    uint8_t frameType = (ckt & IoLink::CKT_TYPE_MASK);
+ 550:	90 7c       	andi	r25, 0xC0	; 192
+    switch (DDL_MODE)
+    {
+        // see table A.7
+    case IoLink::DDL_MODE_IDLE:
+    case IoLink::DDL_MODE_STARTUP:
+        if (frameType == IoLink::CKT_TYPE_0) 
+ 552:	71 f6       	brne	.-100    	; 0x4f0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x20>
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 554:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 556:	90 e9       	ldi	r25, 0x90	; 144
+ 558:	9e bd       	out	0x2e, r25	; 46
+
+        // start sending the return data
+        registerWriteBegin(REG_FR0);
+
+        // send OD data
+        registerWriteNext(odRead(channel, address));
+ 55a:	b2 dd       	rcall	.-1180   	; 0xc0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.1>
+ 55c:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 55e:	07 fe       	sbrs	r0, 7
+ 560:	fd cf       	rjmp	.-6      	; 0x55c <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x8c>
+ 562:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 564:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 566:	07 fe       	sbrs	r0, 7
+ 568:	fd cf       	rjmp	.-6      	; 0x564 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x94>
+ 56a:	80 e4       	ldi	r24, 0x40	; 64
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 56c:	8e bd       	out	0x2e, r24	; 46
+ 56e:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 570:	07 fe       	sbrs	r0, 7
+ 572:	fd cf       	rjmp	.-6      	; 0x56e <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0x9e>
+ 574:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 576:	2a 98       	cbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 578:	83 e8       	ldi	r24, 0x83	; 131
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 57a:	8e bd       	out	0x2e, r24	; 46
+ 57c:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 57e:	07 fe       	sbrs	r0, 7
+ 580:	fd cf       	rjmp	.-6      	; 0x57c <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xac>
+ 582:	8e b5       	in	r24, 0x2e	; 46
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 584:	89 e0       	ldi	r24, 0x09	; 9
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 586:	8e bd       	out	0x2e, r24	; 46
+ 588:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 58a:	07 fe       	sbrs	r0, 7
+ 58c:	fd cf       	rjmp	.-6      	; 0x588 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xb8>
+ 58e:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 590:	61 e0       	ldi	r22, 0x01	; 1
+{
+    // start user call-back timer after sending last byte (each byte spaced
+    // by 14 x T1)
+    if (BAUD_RATE == 230400)
+    {
+        startCallbackTimer((octetCnt + 1) * 14 / 23 /* approx 230.4 / 10 */);
+ 592:	ce 01       	movw	r24, r28
+ 594:	60 de       	rcall	.-832    	; 0x256 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh>
+ 596:	88 81       	ld	r24, Y
+ 598:	82 30       	cpi	r24, 0x02	; 2
+
+        // start user call-back timer after sending last byte 
+        startCallbackTimerAfterReply(octetCount);
+    }
+
+    if ((DDL_MODE == IoLink::DDL_MODE_STARTUP || DDL_MODE == IoLink::DDL_MODE_IDLE) 
+ 59a:	71 f0       	breq	.+28     	; 0x5b8 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xe8>
+ 59c:	82 e0       	ldi	r24, 0x02	; 2
+ 59e:	88 83       	st	Y, r24
+        && _ddlMode != IoLink::DDL_MODE_STARTUP)
+    {
+        // if IDLE, enter STARTUP state
+        _ddlMode = IoLink::DDL_MODE_STARTUP;
+ 5a0:	2a 98       	cbi	0x05, 2	; 5
+ 5a2:	82 e8       	ldi	r24, 0x82	; 130
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 5a4:	8e bd       	out	0x2e, r24	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 5a6:	0d b4       	in	r0, 0x2d	; 45
+ 5a8:	07 fe       	sbrs	r0, 7
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 5aa:	fd cf       	rjmp	.-6      	; 0x5a6 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xd6>
+ 5ac:	8e b5       	in	r24, 0x2e	; 46
+ 5ae:	1e bc       	out	0x2e, r1	; 46
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 5b0:	0d b4       	in	r0, 0x2d	; 45
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 5b2:	07 fe       	sbrs	r0, 7
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 5b4:	fd cf       	rjmp	.-6      	; 0x5b0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh+0xe0>
+ 5b6:	2a 9a       	sbi	0x05, 2	; 5
+ 5b8:	80 e0       	ldi	r24, 0x00	; 0
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 5ba:	df 91       	pop	r29
+        setIoLinkListen();
+    }
+
+    return ResultSuccess;
+ 5bc:	cf 91       	pop	r28
+}
+ 5be:	08 95       	ret
+
+000005c0 <__vector_4>:
+ 5c0:	1f 92       	push	r1
+ 5c2:	0f 92       	push	r0
+ * Interrupt service routine for the PHY interrupt.
+ *
+ * We immediately forward the call to onPhyInterrupt().
+ */
+ISR(PCINT1_vect)
+{
+ 5c4:	0f b6       	in	r0, 0x3f	; 63
+ 5c6:	0f 92       	push	r0
+ 5c8:	11 24       	eor	r1, r1
+ 5ca:	2f 93       	push	r18
+ 5cc:	3f 93       	push	r19
+ 5ce:	4f 93       	push	r20
+ 5d0:	5f 93       	push	r21
+ 5d2:	6f 93       	push	r22
+ 5d4:	7f 93       	push	r23
+ 5d6:	8f 93       	push	r24
+ 5d8:	9f 93       	push	r25
+ 5da:	af 93       	push	r26
+ 5dc:	bf 93       	push	r27
+ 5de:	ef 93       	push	r30
+ 5e0:	ff 93       	push	r31
+    // 
+    // (If INT isn't cleared after the handler, then the PHY state is probably
+    //  out of sync with the one expected by the firmware. In that case, this
+    //  ISR will never be called again. Looping the handler ensures we eventually
+    //  resync before exiting the ISR)
+    while (bit_is_set(PINC, PINC0))
+ 5e2:	30 9b       	sbis	0x06, 0	; 6
+ 5e4:	75 c0       	rjmp	.+234    	; 0x6d0 <__vector_4+0x110>
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 5e6:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 5e8:	80 e1       	ldi	r24, 0x10	; 16
+ 5ea:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 5ec:	0d b4       	in	r0, 0x2d	; 45
+ 5ee:	07 fe       	sbrs	r0, 7
+ 5f0:	fd cf       	rjmp	.-6      	; 0x5ec <__vector_4+0x2c>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 5f2:	8e b5       	in	r24, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 5f4:	8e bd       	out	0x2e, r24	; 46
+    // read the device status and start reading the frame register
+    uint8_t status = registerReadBegin(REG_FR0);
+
+    // test flags
+    HandlerResult result;
+    if (!(status & STATUS_RST))
+ 5f6:	87 ff       	sbrs	r24, 7
+ 5f8:	4a c0       	rjmp	.+148    	; 0x68e <__vector_4+0xce>
+    {
+        result = ResultPhyReset;
+    }
+    else if (!(status & STATUS_DAT))
+ 5fa:	82 ff       	sbrs	r24, 2
+ 5fc:	25 c0       	rjmp	.+74     	; 0x648 <__vector_4+0x88>
+    {
+        result = ResultNoData;
+    }
+    else if (status & STATUS_CHK)
+ 5fe:	83 fd       	sbrc	r24, 3
+ 600:	25 c0       	rjmp	.+74     	; 0x64c <__vector_4+0x8c>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 602:	0d b4       	in	r0, 0x2d	; 45
+ 604:	07 fe       	sbrs	r0, 7
+ 606:	fd cf       	rjmp	.-6      	; 0x602 <__vector_4+0x42>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 608:	6e b5       	in	r22, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 60a:	6e bd       	out	0x2e, r22	; 46
+    {
+        // get master sequence control octet
+        const uint8_t mc = registerReadNext();
+
+        // call appropriate state handler
+        switch (_ddlMode)
+ 60c:	80 91 01 01 	lds	r24, 0x0101
+ 610:	83 30       	cpi	r24, 0x03	; 3
+ 612:	31 f0       	breq	.+12     	; 0x620 <__vector_4+0x60>
+ 614:	84 30       	cpi	r24, 0x04	; 4
+ 616:	41 f4       	brne	.+16     	; 0x628 <__vector_4+0x68>
+        {
+        case IoLink::DDL_MODE_OPERATE:    
+            result = handleOperatingMode<IoLink::DDL_MODE_OPERATE>(mc); 
+ 618:	81 e0       	ldi	r24, 0x01	; 1
+ 61a:	91 e0       	ldi	r25, 0x01	; 1
+ 61c:	5f de       	rcall	.-834    	; 0x2dc <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>
+ 61e:	07 c0       	rjmp	.+14     	; 0x62e <__vector_4+0x6e>
+ 620:	81 e0       	ldi	r24, 0x01	; 1
+            break;
+        case IoLink::DDL_MODE_PREOPERATE:
+            result = handleOperatingMode<IoLink::DDL_MODE_PREOPERATE>(mc);
+ 622:	91 e0       	ldi	r25, 0x01	; 1
+ 624:	f0 de       	rcall	.-544    	; 0x406 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>
+ 626:	03 c0       	rjmp	.+6      	; 0x62e <__vector_4+0x6e>
+ 628:	81 e0       	ldi	r24, 0x01	; 1
+ 62a:	91 e0       	ldi	r25, 0x01	; 1
+            break;
+        default:                  
+            result = handleOperatingMode<IoLink::DDL_MODE_STARTUP>(mc); 
+ 62c:	51 df       	rcall	.-350    	; 0x4d0 <_ZN14StackMultiByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEh>
+ 62e:	82 30       	cpi	r24, 0x02	; 2
+ 630:	69 f0       	breq	.+26     	; 0x64c <__vector_4+0x8c>
+ 632:	20 f4       	brcc	.+8      	; 0x63c <__vector_4+0x7c>
+            break;
+        }
+    }
+
+    // handle result codes
+    switch (result)
+ 634:	81 30       	cpi	r24, 0x01	; 1
+ 636:	09 f0       	breq	.+2      	; 0x63a <__vector_4+0x7a>
+ 638:	48 c0       	rjmp	.+144    	; 0x6ca <__vector_4+0x10a>
+ 63a:	06 c0       	rjmp	.+12     	; 0x648 <__vector_4+0x88>
+ 63c:	83 30       	cpi	r24, 0x03	; 3
+ 63e:	a9 f0       	breq	.+42     	; 0x66a <__vector_4+0xaa>
+ 640:	84 30       	cpi	r24, 0x04	; 4
+ 642:	09 f0       	breq	.+2      	; 0x646 <__vector_4+0x86>
+ 644:	42 c0       	rjmp	.+132    	; 0x6ca <__vector_4+0x10a>
+ 646:	23 c0       	rjmp	.+70     	; 0x68e <__vector_4+0xce>
+ 648:	ce dd       	rcall	.-1124   	; 0x1e6 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv>
+ 64a:	3f c0       	rjmp	.+126    	; 0x6ca <__vector_4+0x10a>
+ 64c:	cc dd       	rcall	.-1128   	; 0x1e6 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv>
+    case ResultSuccess:
+        break;
+
+    case ResultNoData:
+        // terminate SPI access
+        registerAbortAccess();
+ 64e:	2a 98       	cbi	0x05, 2	; 5
+ 650:	83 e8       	ldi	r24, 0x83	; 131
+ 652:	8e bd       	out	0x2e, r24	; 46
+        break;
+
+    case ResultChecksumError:
+        // terminate SPI access
+        registerAbortAccess();
+ 654:	0d b4       	in	r0, 0x2d	; 45
+ 656:	07 fe       	sbrs	r0, 7
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 658:	fd cf       	rjmp	.-6      	; 0x654 <__vector_4+0x94>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 65a:	8e b5       	in	r24, 0x2e	; 46
+ 65c:	82 e0       	ldi	r24, 0x02	; 2
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 65e:	8e bd       	out	0x2e, r24	; 46
+ 660:	0d b4       	in	r0, 0x2d	; 45
+ 662:	07 fe       	sbrs	r0, 7
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 664:	fd cf       	rjmp	.-6      	; 0x660 <__vector_4+0xa0>
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 666:	2a 9a       	sbi	0x05, 2	; 5
+ 668:	30 c0       	rjmp	.+96     	; 0x6ca <__vector_4+0x10a>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 66a:	bd dd       	rcall	.-1158   	; 0x1e6 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv>
+ 66c:	2a 98       	cbi	0x05, 2	; 5
+ 66e:	83 e8       	ldi	r24, 0x83	; 131
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 670:	8e bd       	out	0x2e, r24	; 46
+ 672:	0d b4       	in	r0, 0x2d	; 45
+        registerWrite(REG_LINK, LINK_END);
+        break;
+
+    case ResultIllegalMessageType:
+        // terminate SPI access
+        registerAbortAccess();
+ 674:	07 fe       	sbrs	r0, 7
+ 676:	fd cf       	rjmp	.-6      	; 0x672 <__vector_4+0xb2>
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 678:	8e b5       	in	r24, 0x2e	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 67a:	82 e0       	ldi	r24, 0x02	; 2
+ 67c:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 67e:	0d b4       	in	r0, 0x2d	; 45
+ 680:	07 fe       	sbrs	r0, 7
+ 682:	fd cf       	rjmp	.-6      	; 0x67e <__vector_4+0xbe>
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 684:	2a 9a       	sbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 686:	82 e0       	ldi	r24, 0x02	; 2
+ 688:	80 93 01 01 	sts	0x0101, r24
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 68c:	1e c0       	rjmp	.+60     	; 0x6ca <__vector_4+0x10a>
+ 68e:	ab dd       	rcall	.-1194   	; 0x1e6 <_ZN9PhyDriverI16DefaultSsHandlerE19registerAbortAccessEv>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 690:	2a 98       	cbi	0x05, 2	; 5
+
+        // bad data has been received, so decline to respond
+        registerWrite(REG_LINK, LINK_END);
+
+        // revert to startup mode
+        _ddlMode = IoLink::DDL_MODE_STARTUP;
+ 692:	83 e8       	ldi	r24, 0x83	; 131
+ 694:	8e bd       	out	0x2e, r24	; 46
+ 696:	0d b4       	in	r0, 0x2d	; 45
+ 698:	07 fe       	sbrs	r0, 7
+        break;
+
+    case ResultPhyReset:
+        // terminate SPI access
+        registerAbortAccess();
+ 69a:	fd cf       	rjmp	.-6      	; 0x696 <__vector_4+0xd6>
+ 69c:	8e b5       	in	r24, 0x2e	; 46
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 69e:	82 e0       	ldi	r24, 0x02	; 2
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 6a0:	8e bd       	out	0x2e, r24	; 46
+ 6a2:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 6a4:	07 fe       	sbrs	r0, 7
+ 6a6:	fd cf       	rjmp	.-6      	; 0x6a2 <__vector_4+0xe2>
+ 6a8:	2a 9a       	sbi	0x05, 2	; 5
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 6aa:	2a 98       	cbi	0x05, 2	; 5
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 6ac:	85 e8       	ldi	r24, 0x85	; 133
+ 6ae:	8e bd       	out	0x2e, r24	; 46
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 6b0:	0d b4       	in	r0, 0x2d	; 45
+ 6b2:	07 fe       	sbrs	r0, 7
+ 6b4:	fd cf       	rjmp	.-6      	; 0x6b0 <__vector_4+0xf0>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 6b6:	8e b5       	in	r24, 0x2e	; 46
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 6b8:	80 e8       	ldi	r24, 0x80	; 128
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 6ba:	8e bd       	out	0x2e, r24	; 46
+ 6bc:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 6be:	07 fe       	sbrs	r0, 7
+ 6c0:	fd cf       	rjmp	.-6      	; 0x6bc <__vector_4+0xfc>
+ 6c2:	2a 9a       	sbi	0x05, 2	; 5
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 6c4:	81 e0       	ldi	r24, 0x01	; 1
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 6c6:	91 e0       	ldi	r25, 0x01	; 1
+ 6c8:	95 dd       	rcall	.-1238   	; 0x1f4 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv>
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 6ca:	82 e0       	ldi	r24, 0x02	; 2
+ 6cc:	8b bb       	out	0x1b, r24	; 27
+ 6ce:	89 cf       	rjmp	.-238    	; 0x5e2 <__vector_4+0x22>
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 6d0:	ff 91       	pop	r31
+        // decline to respond
+        registerWrite(REG_LINK, LINK_END);
+
+        // reset the reset bit
+        registerWrite(REG_STATUS, STATUS_RST);
+        configurePhy(); // implicitly reverts to DDL_MODE_STARTUP
+ 6d2:	ef 91       	pop	r30
+ 6d4:	bf 91       	pop	r27
+ 6d6:	af 91       	pop	r26
+ 6d8:	9f 91       	pop	r25
+    while (bit_is_set(PINC, PINC0))
+    {
+        StackMultiByte::instance.onPhyInterrupt();
+
+        // clear interrupt
+        PCIFR = _BV(PCIF1);
+ 6da:	8f 91       	pop	r24
+ 6dc:	7f 91       	pop	r23
+ 6de:	6f 91       	pop	r22
+    }
+}
+ 6e0:	5f 91       	pop	r21
+ 6e2:	4f 91       	pop	r20
+ 6e4:	3f 91       	pop	r19
+ 6e6:	2f 91       	pop	r18
+ 6e8:	0f 90       	pop	r0
+ 6ea:	0f be       	out	0x3f, r0	; 63
+ 6ec:	0f 90       	pop	r0
+ 6ee:	1f 90       	pop	r1
+ 6f0:	18 95       	reti
+
+000006f2 <_GLOBAL__sub_I_directParameter>:
+ 6f2:	e1 e0       	ldi	r30, 0x01	; 1
+ 6f4:	f1 e0       	ldi	r31, 0x01	; 1
+ 6f6:	10 82       	st	Z, r1
+ 6f8:	9f ef       	ldi	r25, 0xFF	; 255
+ 6fa:	95 83       	std	Z+5, r25	; 0x05
+ 6fc:	a8 e0       	ldi	r26, 0x08	; 8
+ 6fe:	b1 e0       	ldi	r27, 0x01	; 1
+ 700:	8c 91       	ld	r24, X
+    , _ledRegister(0)
+    , _fallbackCounter(0)
+    , _runUserCode(false)
+    , _sioLevel(true)
+    , _prmWriteAvailable(false)
+    , _flag(false)
+ 702:	81 60       	ori	r24, 0x01	; 1
+ 704:	8c 93       	st	X, r24
+ 706:	13 86       	std	Z+11, r1	; 0x0b
+ 708:	12 86       	std	Z+10, r1	; 0x0a
+ 70a:	15 86       	std	Z+13, r1	; 0x0d
+ 70c:	14 86       	std	Z+12, r1	; 0x0c
+ 70e:	96 87       	std	Z+14, r25	; 0x0e
+ 710:	17 86       	std	Z+15, r1	; 0x0f
+ 712:	10 8a       	std	Z+16, r1	; 0x10
+ 714:	a2 e1       	ldi	r26, 0x12	; 18
+ 716:	b1 e0       	ldi	r27, 0x01	; 1
+ 718:	8c 91       	ld	r24, X
+ 71a:	8c 7f       	andi	r24, 0xFC	; 252
+ 71c:	8b 7f       	andi	r24, 0xFB	; 251
+ 71e:	8c 93       	st	X, r24
+{
+    _parameterWrite.address = IoLink::PAGE_NO_PARAMETER;
+ 720:	90 87       	std	Z+8, r25	; 0x08
+ 722:	08 95       	ret
+
+00000724 <_ZN7DemoApp9configureEv>:
+
+//------------------------------------------------------------------------------
+void DemoApp::configure()
+{
+    // Configure a timer with 10ms cycle
+    OCR2A   = F_CPU / 1024 / 100;
+ 724:	8e e4       	ldi	r24, 0x4E	; 78
+ 726:	80 93 b3 00 	sts	0x00B3, r24
+
+    /* Start the timer
+       WGM    = 3'b010  - clear timer on match
+       COMxx  = 2'b0    - pins not used
+       CS     = 3'b111   - divide by 1024 */
+    TCCR2A = _BV(WGM21);
+ 72a:	82 e0       	ldi	r24, 0x02	; 2
+ 72c:	80 93 b0 00 	sts	0x00B0, r24
+    TCCR2B = _BV(CS22) | _BV(CS21) | _BV(CS20);
+ 730:	87 e0       	ldi	r24, 0x07	; 7
+ 732:	80 93 b1 00 	sts	0x00B1, r24
+
+    // configure digital input
+    DDRB &= ~_BV(DDB7);
+ 736:	27 98       	cbi	0x04, 7	; 4
+ 738:	08 95       	ret
+
+0000073a <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE>:
+    updateProcessInputData();
+}
+
+//------------------------------------------------------------------------------
+void DemoApp::handleParameterWrite(const Stack::Parameter* param)
+{
+ 73a:	fb 01       	movw	r30, r22
+    // (this is the location to intercept the write access if desired)
+    bool commit = true;
+
+    switch (param->address)
+ 73c:	80 81       	ld	r24, Z
+ 73e:	81 31       	cpi	r24, 0x11	; 17
+ 740:	09 f4       	brne	.+2      	; 0x744 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xa>
+ 742:	7a c0       	rjmp	.+244    	; 0x838 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xfe>
+ 744:	91 81       	ldd	r25, Z+1	; 0x01
+ 746:	82 31       	cpi	r24, 0x12	; 18
+ 748:	29 f0       	breq	.+10     	; 0x754 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x1a>
+ 74a:	80 31       	cpi	r24, 0x10	; 16
+ 74c:	59 f4       	brne	.+22     	; 0x764 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x2a>
+    case IoLink::PAGE_DEVICE_SPECIFIC_1B:
+    case IoLink::PAGE_DEVICE_SPECIFIC_1C:
+    case IoLink::PAGE_DEVICE_SPECIFIC_1D:
+    case IoLink::PAGE_DEVICE_SPECIFIC_1E:
+    case IoLink::PAGE_DEVICE_SPECIFIC_1F:
+        directParameter[address] = value;
+ 74e:	90 93 2c 01 	sts	0x012C, r25
+ 752:	08 c0       	rjmp	.+16     	; 0x764 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x2a>
+        // read-only access => ignore
+        commit = false;
+        break;
+
+    case VendorParamPidMode:  // process input data selection
+        switch (param->value)
+ 754:	91 30       	cpi	r25, 0x01	; 1
+ 756:	31 f4       	brne	.+12     	; 0x764 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x2a>
+        {
+        case PidAnalogInput:
+            // configure ADC
+            ADMUX = _BV(REFS0) | 7; 
+ 758:	87 e4       	ldi	r24, 0x47	; 71
+ 75a:	80 93 7c 00 	sts	0x007C, r24
+            ADCSRA = _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2) | _BV(ADEN) | _BV(ADSC);
+ 75e:	87 ec       	ldi	r24, 0xC7	; 199
+ 760:	80 93 7a 00 	sts	0x007A, r24
+    }
+
+    if (commit)
+    {
+        // commit to stack
+        Stack::instance.parameterWrite(param->address, param->value);
+ 764:	21 81       	ldd	r18, Z+1	; 0x01
+ 766:	e0 81       	ld	r30, Z
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::parameterWrite(uint8_t address, uint8_t value)
+{
+    // write to direct parameter page channel
+    switch (address)
+ 768:	ec 30       	cpi	r30, 0x0C	; 12
+ 76a:	08 f0       	brcs	.+2      	; 0x76e <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x34>
+ 76c:	60 c0       	rjmp	.+192    	; 0x82e <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xf4>
+ 76e:	e9 30       	cpi	r30, 0x09	; 9
+ 770:	50 f0       	brcs	.+20     	; 0x786 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x4c>
+
+    case IoLink::PAGE_REVISION_ID:
+    case IoLink::PAGE_DEVICE_ID_1:
+    case IoLink::PAGE_DEVICE_ID_2:
+    case IoLink::PAGE_DEVICE_ID_3:
+        if (_ddlMode == IoLink::DDL_MODE_STARTUP)
+ 772:	80 91 01 01 	lds	r24, 0x0101
+ 776:	82 30       	cpi	r24, 0x02	; 2
+ 778:	09 f0       	breq	.+2      	; 0x77c <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x42>
+ 77a:	5e c0       	rjmp	.+188    	; 0x838 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xfe>
+        {
+            directParameter[address] = value;
+ 77c:	f0 e0       	ldi	r31, 0x00	; 0
+ 77e:	e5 5e       	subi	r30, 0xE5	; 229
+ 780:	fe 4f       	sbci	r31, 0xFE	; 254
+ 782:	20 83       	st	Z, r18
+ 784:	08 95       	ret
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::parameterWrite(uint8_t address, uint8_t value)
+{
+    // write to direct parameter page channel
+    switch (address)
+ 786:	e1 30       	cpi	r30, 0x01	; 1
+ 788:	69 f5       	brne	.+90     	; 0x7e4 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xaa>
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::updateCyclePeriod()
+{
+    // get period
+    uint8_t cycleParam = 0;
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+ 78a:	80 91 01 01 	lds	r24, 0x0101
+ 78e:	84 30       	cpi	r24, 0x04	; 4
+ 790:	21 f4       	brne	.+8      	; 0x79a <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x60>
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 792:	80 91 1c 01 	lds	r24, 0x011C
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+    {
+        cycleParam = parameterRead(IoLink::PAGE_MASTER_CYCLE_TIME);
+    }
+
+    if (cycleParam == 0)
+ 796:	81 11       	cpse	r24, r1
+ 798:	02 c0       	rjmp	.+4      	; 0x79e <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x64>
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 79a:	80 91 1d 01 	lds	r24, 0x011D
+        // MasterCycleTime hasn't been set yet => use MinCycleTime
+        cycleParam = parameterRead(IoLink::PAGE_MIN_CYCLE_TIME);
+    }
+
+    // decode parameter into 1/10ms
+    _cyclePeriod = DECODE_CYCLE_TIME(cycleParam);
+ 79e:	84 30       	cpi	r24, 0x04	; 4
+ 7a0:	d0 f0       	brcs	.+52     	; 0x7d6 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x9c>
+ 7a2:	80 34       	cpi	r24, 0x40	; 64
+ 7a4:	10 f4       	brcc	.+4      	; 0x7aa <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x70>
+ 7a6:	90 e0       	ldi	r25, 0x00	; 0
+ 7a8:	18 c0       	rjmp	.+48     	; 0x7da <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xa0>
+ 7aa:	98 2f       	mov	r25, r24
+ 7ac:	90 7c       	andi	r25, 0xC0	; 192
+ 7ae:	90 34       	cpi	r25, 0x40	; 64
+ 7b0:	41 f4       	brne	.+16     	; 0x7c2 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x88>
+ 7b2:	34 e0       	ldi	r19, 0x04	; 4
+ 7b4:	83 9f       	mul	r24, r19
+ 7b6:	c0 01       	movw	r24, r0
+ 7b8:	11 24       	eor	r1, r1
+ 7ba:	99 27       	eor	r25, r25
+ 7bc:	80 5c       	subi	r24, 0xC0	; 192
+ 7be:	9f 4f       	sbci	r25, 0xFF	; 255
+ 7c0:	0c c0       	rjmp	.+24     	; 0x7da <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xa0>
+ 7c2:	90 38       	cpi	r25, 0x80	; 128
+ 7c4:	41 f4       	brne	.+16     	; 0x7d6 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x9c>
+ 7c6:	8f 73       	andi	r24, 0x3F	; 63
+ 7c8:	30 e1       	ldi	r19, 0x10	; 16
+ 7ca:	83 9f       	mul	r24, r19
+ 7cc:	c0 01       	movw	r24, r0
+ 7ce:	11 24       	eor	r1, r1
+ 7d0:	80 5c       	subi	r24, 0xC0	; 192
+ 7d2:	9e 4f       	sbci	r25, 0xFE	; 254
+ 7d4:	02 c0       	rjmp	.+4      	; 0x7da <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xa0>
+ 7d6:	80 e0       	ldi	r24, 0x00	; 0
+ 7d8:	90 e0       	ldi	r25, 0x00	; 0
+ 7da:	90 93 0c 01 	sts	0x010C, r25
+ 7de:	80 93 0b 01 	sts	0x010B, r24
+ 7e2:	cc cf       	rjmp	.-104    	; 0x77c <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x42>
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::parameterWrite(uint8_t address, uint8_t value)
+{
+    // write to direct parameter page channel
+    switch (address)
+ 7e4:	e1 30       	cpi	r30, 0x01	; 1
+ 7e6:	f8 f4       	brcc	.+62     	; 0x826 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xec>
+    {
+    case IoLink::PAGE_MASTER_CMD:
+        switch (value)
+ 7e8:	28 39       	cpi	r18, 0x98	; 152
+ 7ea:	a1 f0       	breq	.+40     	; 0x814 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xda>
+ 7ec:	28 f4       	brcc	.+10     	; 0x7f8 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xbe>
+ 7ee:	2a 35       	cpi	r18, 0x5A	; 90
+ 7f0:	b1 f0       	breq	.+44     	; 0x81e <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xe4>
+ 7f2:	27 39       	cpi	r18, 0x97	; 151
+ 7f4:	31 f0       	breq	.+12     	; 0x802 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xc8>
+ 7f6:	08 95       	ret
+ 7f8:	29 39       	cpi	r18, 0x99	; 153
+ 7fa:	49 f0       	breq	.+18     	; 0x80e <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xd4>
+ 7fc:	2a 39       	cpi	r18, 0x9A	; 154
+ 7fe:	19 f0       	breq	.+6      	; 0x806 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xcc>
+ 800:	08 95       	ret
+        {
+        case IoLink::MCMD_DEVICE_STARTUP:   
+            _ddlMode = IoLink::DDL_MODE_STARTUP;  
+ 802:	82 e0       	ldi	r24, 0x02	; 2
+ 804:	01 c0       	rjmp	.+2      	; 0x808 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xce>
+            break;
+        case IoLink::MCMD_DEVICE_PREOPERATE:
+            _ddlMode = IoLink::DDL_MODE_PREOPERATE; 
+ 806:	83 e0       	ldi	r24, 0x03	; 3
+ 808:	80 93 01 01 	sts	0x0101, r24
+ 80c:	08 95       	ret
+            break;
+        case IoLink::MCMD_DEVICE_OPERATE:   
+            _processDataOut.isValid = false;
+ 80e:	10 92 05 01 	sts	0x0105, r1
+ 812:	03 c0       	rjmp	.+6      	; 0x81a <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xe0>
+            _ddlMode = IoLink::DDL_MODE_OPERATE; 
+            break;
+        case IoLink::MCMD_PD_OUT_OPERATE:   // Process output data valid
+            _processDataOut.isValid = true;
+ 814:	81 e0       	ldi	r24, 0x01	; 1
+ 816:	80 93 05 01 	sts	0x0105, r24
+            _ddlMode = IoLink::DDL_MODE_OPERATE; 
+ 81a:	84 e0       	ldi	r24, 0x04	; 4
+ 81c:	f5 cf       	rjmp	.-22     	; 0x808 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xce>
+            break;
+        case IoLink::MCMD_FALLBACK:
+            // switch to SIO mode after 3 cycles
+            _fallbackCounter = 3;
+ 81e:	83 e0       	ldi	r24, 0x03	; 3
+ 820:	80 93 11 01 	sts	0x0111, r24
+ 824:	08 95       	ret
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::parameterWrite(uint8_t address, uint8_t value)
+{
+    // write to direct parameter page channel
+    switch (address)
+ 826:	e4 30       	cpi	r30, 0x04	; 4
+ 828:	09 f4       	brne	.+2      	; 0x82c <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xf2>
+ 82a:	a3 cf       	rjmp	.-186    	; 0x772 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x38>
+ 82c:	08 95       	ret
+ 82e:	81 ef       	ldi	r24, 0xF1	; 241
+ 830:	8e 0f       	add	r24, r30
+ 832:	81 31       	cpi	r24, 0x11	; 17
+ 834:	08 f4       	brcc	.+2      	; 0x838 <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0xfe>
+ 836:	a2 cf       	rjmp	.-188    	; 0x77c <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x42>
+ 838:	08 95       	ret
+
+0000083a <_ZN7DemoApp11elapsed10msEv>:
+}
+
+//------------------------------------------------------------------------------
+bool DemoApp::elapsed10ms()
+{
+    if (!(TIFR2 & _BV(OCF2A)))
+ 83a:	b9 9b       	sbis	0x17, 1	; 23
+ 83c:	04 c0       	rjmp	.+8      	; 0x846 <_ZN7DemoApp11elapsed10msEv+0xc>
+        return false;
+
+    TIFR2 = _BV(OCF2A);
+ 83e:	82 e0       	ldi	r24, 0x02	; 2
+ 840:	87 bb       	out	0x17, r24	; 23
+    return true;
+ 842:	81 e0       	ldi	r24, 0x01	; 1
+ 844:	08 95       	ret
+
+//------------------------------------------------------------------------------
+bool DemoApp::elapsed10ms()
+{
+    if (!(TIFR2 & _BV(OCF2A)))
+        return false;
+ 846:	80 e0       	ldi	r24, 0x00	; 0
+
+    TIFR2 = _BV(OCF2A);
+    return true;
+}
+ 848:	08 95       	ret
+
+0000084a <_ZN7DemoApp22updateProcessInputDataEv>:
+    }
+}
+
+//------------------------------------------------------------------------------
+void DemoApp::updateProcessInputData()
+{
+ 84a:	cf 93       	push	r28
+ 84c:	df 93       	push	r29
+ 84e:	ec 01       	movw	r28, r24
+    if (elapsed10ms())
+ 850:	f4 df       	rcall	.-24     	; 0x83a <_ZN7DemoApp11elapsed10msEv>
+ 852:	88 23       	and	r24, r24
+ 854:	61 f1       	breq	.+88     	; 0x8ae <_ZN7DemoApp22updateProcessInputDataEv+0x64>
+ 856:	88 81       	ld	r24, Y
+    {
+        // the green LED cycles if IO-Link comms are up, red if not
+        ++_ctr;
+ 858:	8f 5f       	subi	r24, 0xFF	; 255
+ 85a:	88 83       	st	Y, r24
+ 85c:	90 e0       	ldi	r25, 0x00	; 0
+        uint8_t level = ((_ctr >> 3) & 0x0f);
+ 85e:	23 e0       	ldi	r18, 0x03	; 3
+ 860:	95 95       	asr	r25
+ 862:	87 95       	ror	r24
+ 864:	2a 95       	dec	r18
+ 866:	e1 f7       	brne	.-8      	; 0x860 <_ZN7DemoApp22updateProcessInputDataEv+0x16>
+ 868:	98 2f       	mov	r25, r24
+ 86a:	9f 70       	andi	r25, 0x0F	; 15
+ 86c:	83 ff       	sbrs	r24, 3
+        if (level & 0x8) level = ((~level) & 0x7);
+ 86e:	02 c0       	rjmp	.+4      	; 0x874 <_ZN7DemoApp22updateProcessInputDataEv+0x2a>
+ 870:	90 95       	com	r25
+ 872:	97 70       	andi	r25, 0x07	; 7
+ 874:	80 91 06 01 	lds	r24, 0x0106
+
+        if (Stack::instance.masterLost())
+ 878:	85 30       	cpi	r24, 0x05	; 5
+ 87a:	18 f0       	brcs	.+6      	; 0x882 <_ZN7DemoApp22updateProcessInputDataEv+0x38>
+ 87c:	19 82       	std	Y+1, r1	; 0x01
+            {
+                // flash the red LED
+                _ledLevel1 = Stack::LED_LEVEL_OFF;
+ 87e:	9a 83       	std	Y+2, r25	; 0x02
+                _ledLevel2 = (Stack::LedLevel)(level);
+ 880:	02 c0       	rjmp	.+4      	; 0x886 <_ZN7DemoApp22updateProcessInputDataEv+0x3c>
+ 882:	99 83       	std	Y+1, r25	; 0x01
+            }
+            else
+            {
+                // flash the green LED
+                _ledLevel1 = (Stack::LedLevel)(level);
+ 884:	1a 82       	std	Y+2, r1	; 0x02
+                _ledLevel2 = Stack::LED_LEVEL_OFF;
+ 886:	1f 99       	sbic	0x03, 7	; 3
+            };
+
+        // the red LED is over-ridden if the push-button is pressed
+        if (isDigitalButtonPressed())
+ 888:	02 c0       	rjmp	.+4      	; 0x88e <_ZN7DemoApp22updateProcessInputDataEv+0x44>
+ 88a:	8f e0       	ldi	r24, 0x0F	; 15
+        {
+            _ledLevel2 = (Stack::LedLevel)(0xf);
+ 88c:	8a 83       	std	Y+2, r24	; 0x02
+ 88e:	89 81       	ldd	r24, Y+1	; 0x01
+{
+    switch (led)
+    {
+    case LED_1:
+        _ledRegister &= 0x0f;
+        _ledRegister |= (level << 4);
+ 890:	20 e1       	ldi	r18, 0x10	; 16
+ 892:	82 9f       	mul	r24, r18
+ 894:	c0 01       	movw	r24, r0
+ 896:	11 24       	eor	r1, r1
+ 898:	90 91 10 01 	lds	r25, 0x0110
+void StackBase<T, PDI, PDO, SpiSsHndlr>::setLedLevel(Led led, typename Phy::LedLevel level)
+{
+    switch (led)
+    {
+    case LED_1:
+        _ledRegister &= 0x0f;
+ 89c:	9f 70       	andi	r25, 0x0F	; 15
+ 89e:	89 2b       	or	r24, r25
+        _ledRegister |= (level << 4);
+ 8a0:	80 93 10 01 	sts	0x0110, r24
+ 8a4:	80 7f       	andi	r24, 0xF0	; 240
+        break;
+
+    case LED_2:
+        _ledRegister &= 0xf0;
+ 8a6:	9a 81       	ldd	r25, Y+2	; 0x02
+        _ledRegister |= level;
+ 8a8:	89 2b       	or	r24, r25
+ 8aa:	80 93 10 01 	sts	0x0110, r24
+ 8ae:	80 91 2d 01 	lds	r24, 0x012D
+
+        Stack::instance.setLedLevel(Stack::LED_1, _ledLevel1);
+        Stack::instance.setLedLevel(Stack::LED_2, _ledLevel2);
+    }
+
+    switch (Stack::instance.parameterRead(VendorParamPidMode))
+ 8b2:	81 30       	cpi	r24, 0x01	; 1
+ 8b4:	59 f0       	breq	.+22     	; 0x8cc <_ZN7DemoApp22updateProcessInputDataEv+0x82>
+ 8b6:	20 f0       	brcs	.+8      	; 0x8c0 <_ZN7DemoApp22updateProcessInputDataEv+0x76>
+ 8b8:	82 30       	cpi	r24, 0x02	; 2
+ 8ba:	21 f5       	brne	.+72     	; 0x904 <__stack+0x5>
+ 8bc:	88 81       	ld	r24, Y
+        }
+        break;
+
+    case PidSawtooth:
+        // copy counter to process input data
+        Stack::instance.processInputData().buffer[0] = _ctr;
+ 8be:	1c c0       	rjmp	.+56     	; 0x8f8 <_ZN7DemoApp22updateProcessInputDataEv+0xae>
+ 8c0:	83 b1       	in	r24, 0x03	; 3
+}
+
+//------------------------------------------------------------------------------
+bool DemoApp::isDigitalButtonPressed()
+{
+    return !(PINB & _BV(PINB7));
+ 8c2:	80 95       	com	r24
+
+    switch (Stack::instance.parameterRead(VendorParamPidMode))
+    {
+    case PidDigitalInput:
+        // check digital sensor 
+        Stack::instance.processInputData().buffer[0] = isDigitalButtonPressed() ? 0x01 : 0x00;
+ 8c4:	88 1f       	adc	r24, r24
+ 8c6:	88 27       	eor	r24, r24
+ 8c8:	88 1f       	adc	r24, r24
+ 8ca:	16 c0       	rjmp	.+44     	; 0x8f8 <_ZN7DemoApp22updateProcessInputDataEv+0xae>
+ 8cc:	90 91 7a 00 	lds	r25, 0x007A
+        Stack::instance.processInputData().isValid = true;
+        break;
+
+    case PidAnalogInput:
+        // check analog sensor
+        if (!(ADCSRA & _BV(ADSC)))
+ 8d0:	96 fd       	sbrc	r25, 6
+ 8d2:	1a c0       	rjmp	.+52     	; 0x908 <__stack+0x9>
+ 8d4:	20 91 78 00 	lds	r18, 0x0078
+        {
+            uint16_t sensorValue = ADC;
+ 8d8:	30 91 79 00 	lds	r19, 0x0079
+ 8dc:	36 95       	lsr	r19
+
+            Stack::instance.processInputData().buffer[0] = sensorValue >> 2;
+ 8de:	27 95       	ror	r18
+ 8e0:	36 95       	lsr	r19
+ 8e2:	27 95       	ror	r18
+ 8e4:	20 93 02 01 	sts	0x0102, r18
+ 8e8:	80 93 03 01 	sts	0x0103, r24
+            Stack::instance.processInputData().isValid = true;
+ 8ec:	80 91 7a 00 	lds	r24, 0x007A
+
+            // restart sampling
+            ADCSRA |= _BV(ADSC);
+ 8f0:	80 64       	ori	r24, 0x40	; 64
+ 8f2:	80 93 7a 00 	sts	0x007A, r24
+ 8f6:	08 c0       	rjmp	.+16     	; 0x908 <__stack+0x9>
+ 8f8:	80 93 02 01 	sts	0x0102, r24
+        }
+        break;
+
+    case PidSawtooth:
+        // copy counter to process input data
+        Stack::instance.processInputData().buffer[0] = _ctr;
+ 8fc:	81 e0       	ldi	r24, 0x01	; 1
+        Stack::instance.processInputData().isValid = true;
+ 8fe:	80 93 03 01 	sts	0x0103, r24
+ 902:	02 c0       	rjmp	.+4      	; 0x908 <__stack+0x9>
+        break;
+ 904:	10 92 03 01 	sts	0x0103, r1
+
+    default:
+        Stack::instance.processInputData().isValid = false;
+ 908:	df 91       	pop	r29
+        break;
+    }
+}
+ 90a:	cf 91       	pop	r28
+ 90c:	08 95       	ret
+
+0000090e <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE>:
+ 90e:	cf 93       	push	r28
+    DDRB &= ~_BV(DDB7);
+}
+
+//------------------------------------------------------------------------------
+void DemoApp::run(const Stack::Parameter* param)
+{
+ 910:	df 93       	push	r29
+ 912:	ec 01       	movw	r28, r24
+    // check for write access to direct parameter page
+    if (param)
+ 914:	61 15       	cp	r22, r1
+ 916:	71 05       	cpc	r23, r1
+ 918:	11 f0       	breq	.+4      	; 0x91e <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x10>
+    {
+        handleParameterWrite(param);
+ 91a:	0f df       	rcall	.-482    	; 0x73a <_ZN7DemoApp20handleParameterWriteEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE>
+ 91c:	27 c0       	rjmp	.+78     	; 0x96c <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x5e>
+ 91e:	80 91 01 01 	lds	r24, 0x0101
+    }
+    else if (Stack::instance.stackMode() == Stack::STACK_MODE_SIO)
+ 922:	81 11       	cpse	r24, r1
+ 924:	23 c0       	rjmp	.+70     	; 0x96c <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x5e>
+ 926:	93 b1       	in	r25, 0x03	; 3
+}
+
+//------------------------------------------------------------------------------
+bool DemoApp::isDigitalButtonPressed()
+{
+    return !(PINB & _BV(PINB7));
+ 928:	90 95       	com	r25
+ 92a:	99 1f       	adc	r25, r25
+ 92c:	99 27       	eor	r25, r25
+ 92e:	99 1f       	adc	r25, r25
+ 930:	80 91 08 01 	lds	r24, 0x0108
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::setSioLevel(bool active)
+{
+    _sioLevel = active;
+ 934:	90 fb       	bst	r25, 0
+ 936:	80 f9       	bld	r24, 0
+ 938:	80 93 08 01 	sts	0x0108, r24
+ 93c:	91 11       	cpse	r25, r1
+uint8_t StackBase<T, PDI, PDO, SpiSsHndlr>::driveModeBits() const
+{
+    switch (StackT::SIO_DRIVE_MODE)
+    {
+    case DRIVE_MODE_PUSH_PULL:
+        return _sioLevel ? Phy::CTL_HS : Phy::CTL_LS;
+ 93e:	02 c0       	rjmp	.+4      	; 0x944 <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x36>
+ 940:	91 e0       	ldi	r25, 0x01	; 1
+ 942:	01 c0       	rjmp	.+2      	; 0x946 <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x38>
+ 944:	92 e0       	ldi	r25, 0x02	; 2
+ 946:	8f ef       	ldi	r24, 0xFF	; 255
+    bool driven = (hslsBits != 0);
+
+    // we need to switch to IO-Link mode after 1ms to detect a wake-up
+    if (driven)
+    {
+        _hiZCounter = -1;
+ 948:	80 93 07 01 	sts	0x0107, r24
+ 94c:	81 e0       	ldi	r24, 0x01	; 1
+    else if (wasDriven)  
+    {
+        _hiZCounter = 10;
+    }
+
+    wasDriven = driven;
+ 94e:	80 93 00 01 	sts	0x0100, r24
+ 952:	94 60       	ori	r25, 0x04	; 4
+    uint8_t sioBit = (!driven && (_hiZCounter < 0)) 
+        ? Phy::CTL_IOLINK_MODE 
+        : Phy::CTL_SIO_MODE;
+
+    return StackBase::registerWrite(Phy::REG_CTL, 
+        StackT::PHY_CTL_SCT | StackT::PHY_CTL_MODE | sioBit | hslsBits);
+ 954:	2a 98       	cbi	0x05, 2	; 5
+    /**
+     * Assert SS/ to begin SPI communication
+     */
+    static void         assert() __attribute__((always_inline))
+    {
+        PORTB &= ~ _BV(PORTB2);
+ 956:	82 e8       	ldi	r24, 0x82	; 130
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 958:	8e bd       	out	0x2e, r24	; 46
+ 95a:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 95c:	07 fe       	sbrs	r0, 7
+ 95e:	fd cf       	rjmp	.-6      	; 0x95a <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x4c>
+ 960:	8e b5       	in	r24, 0x2e	; 46
+    static uint8_t      rx() __attribute__((always_inline))
+    {
+        wait();
+
+        // get received data from buffer
+        return SPDR;
+ 962:	9e bd       	out	0x2e, r25	; 46
+     * \param data  Byte to send
+     */
+    static void         tx(uint8_t data)  __attribute__((always_inline))
+    {
+        // put data into buffer, sends the data
+        SPDR = data;
+ 964:	0d b4       	in	r0, 0x2d	; 45
+    /**
+     * Waits until SPI transmission / reception complete
+     */
+    static void         wait()  __attribute__((always_inline))
+    {        
+        loop_until_bit_is_set(SPSR, SPIF);
+ 966:	07 fe       	sbrs	r0, 7
+ 968:	fd cf       	rjmp	.-6      	; 0x964 <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE+0x56>
+ 96a:	2a 9a       	sbi	0x05, 2	; 5
+    /**
+     * Deassert SS/ to terminate SPI communication
+     */
+    static void         deassert() __attribute__((always_inline))
+    {
+        PORTB |= _BV(PORTB2);
+ 96c:	ce 01       	movw	r24, r28
+        // when in SIOActive mode, use digital input to control CQ line
+    	Stack::instance.setSioLevel(isDigitalButtonPressed());
+    }
+
+    // update process data
+    updateProcessInputData();
+ 96e:	df 91       	pop	r29
+}
+ 970:	cf 91       	pop	r28
+ 972:	6b cf       	rjmp	.-298    	; 0x84a <_ZN7DemoApp22updateProcessInputDataEv>
+
+00000974 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv>:
+        // when in SIOActive mode, use digital input to control CQ line
+    	Stack::instance.setSioLevel(isDigitalButtonPressed());
+    }
+
+    // update process data
+    updateProcessInputData();
+ 974:	cf 93       	push	r28
+ 976:	df 93       	push	r29
+    return StackBase::registerRead(Phy::REG_TEMP);
+}
+
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::configure()
+ 978:	ec 01       	movw	r28, r24
+    DORD   = 1'b0   - MSB first
+    MSTR   = 1'b1   - Master
+    CPOL   = 1'b1   - clock idles high
+    CPHA   = 1'b1   - sample on trailing edge
+    SPR    = 2'b00  - fosc/2 */
+    SPCR = _BV(SPE) | _BV(MSTR) | _BV(CPOL) | _BV(CPHA);
+ 97a:	8c e5       	ldi	r24, 0x5C	; 92
+ 97c:	8c bd       	out	0x2c, r24	; 44
+
+    /* and the SPI2X bit to speed it up */
+    SPSR = _BV(SPI2X);
+ 97e:	81 e0       	ldi	r24, 0x01	; 1
+ 980:	8d bd       	out	0x2d, r24	; 45
+
+    /* Data direction in the SPI bits, PB2/SS, PB5/SCK
+    and PB3/MOSI are outputs.  Drive SS high in advance */
+    PORTB |= _BV(PORTB2) | _BV(PORTB5);
+ 982:	85 b1       	in	r24, 0x05	; 5
+ 984:	84 62       	ori	r24, 0x24	; 36
+ 986:	85 b9       	out	0x05, r24	; 5
+    PORTB &= ~(_BV(PORTB3)); 
+ 988:	2b 98       	cbi	0x05, 3	; 5
+    DDRB  |= _BV(DDB5) | _BV(DDB3) | _BV(DDB2);
+ 98a:	84 b1       	in	r24, 0x04	; 4
+ 98c:	8c 62       	ori	r24, 0x2C	; 44
+ 98e:	84 b9       	out	0x04, r24	; 4
+    DDRB  &= ~(_BV(DDB4));
+ 990:	24 98       	cbi	0x04, 4	; 4
+        HIBYTE(StackT::DEVICE_ID),                      // PAGE_DEVICE_ID_2
+        LOBYTE(StackT::DEVICE_ID)                       // PAGE_DEVICE_ID_3
+    };
+
+    // copy the default parameters from flash to RAM
+    (void)memcpy_P(directParameter, directDefaultConfig, sizeof(directDefaultConfig));
+ 992:	40 e2       	ldi	r20, 0x20	; 32
+ 994:	50 e0       	ldi	r21, 0x00	; 0
+ 996:	68 e6       	ldi	r22, 0x68	; 104
+ 998:	70 e0       	ldi	r23, 0x00	; 0
+ 99a:	8b e1       	ldi	r24, 0x1B	; 27
+ 99c:	91 e0       	ldi	r25, 0x01	; 1
+ 99e:	93 d0       	rcall	.+294    	; 0xac6 <memcpy_P>
+ 9a0:	18 82       	st	Y, r1
+
+    // stack initial state is STACK_MODE_SIO operation
+    _ddlMode = IoLink::DDL_MODE_IDLE;
+ 9a2:	1a 82       	std	Y+2, r1	; 0x02
+
+    // set up the process data buffers and default process data
+    _processDataIn.isValid = false;
+ 9a4:	1c 82       	std	Y+4, r1	; 0x04
+    _processDataOut.isValid = false;
+ 9a6:	80 91 68 00 	lds	r24, 0x0068
+{
+    // Configure and enable interrupt
+    // 
+    // Only pin change interrupts are available, so the routine must check
+    // the level before returning
+    PCICR  |= _BV(PCIE1);
+ 9aa:	82 60       	ori	r24, 0x02	; 2
+ 9ac:	80 93 68 00 	sts	0x0068, r24
+ 9b0:	80 91 6c 00 	lds	r24, 0x006C
+    PCMSK1 |= _BV(PCINT8);
+ 9b4:	81 60       	ori	r24, 0x01	; 1
+ 9b6:	80 93 6c 00 	sts	0x006C, r24
+ 9ba:	02 de       	rcall	.-1020   	; 0x5c0 <__vector_4>
+
+    // call ISR handler
+    PCINT1_vect();
+ 9bc:	1d 82       	std	Y+5, r1	; 0x05
+ 9be:	15 bc       	out	0x25, r1	; 37
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::startCallbackTimer(uint8_t delay)
+{
+    // reset dead cycle timer
+    _deadCycleCtr = 0;
+ 9c0:	16 bc       	out	0x26, r1	; 38
+
+    // disable timer
+    TCCR0B = 0;
+ 9c2:	85 b3       	in	r24, 0x15	; 21
+    TCNT0 = 0;
+ 9c4:	87 60       	ori	r24, 0x07	; 7
+
+    // clear any outstanding interrupt requests
+    TIFR0 |= _BV(OCF0B) | _BV(OCF0A) | _BV(TOV0);
+ 9c6:	85 bb       	out	0x15, r24	; 21
+ 9c8:	8a 85       	ldd	r24, Y+10	; 0x0a
+ 9ca:	9b 85       	ldd	r25, Y+11	; 0x0b
+    
+    // check if we need to force recalculation of cycle period
+    if (_cyclePeriod == 0)
+ 9cc:	00 97       	sbiw	r24, 0x00	; 0
+ 9ce:	49 f5       	brne	.+82     	; 0xa22 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0xae>
+ 9d0:	28 81       	ld	r18, Y
+ 9d2:	24 30       	cpi	r18, 0x04	; 4
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+void StackBase<T, PDI, PDO, SpiSsHndlr>::updateCyclePeriod()
+{
+    // get period
+    uint8_t cycleParam = 0;
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+ 9d4:	21 f4       	brne	.+8      	; 0x9de <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0x6a>
+ 9d6:	20 91 1c 01 	lds	r18, 0x011C
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 9da:	21 11       	cpse	r18, r1
+ 9dc:	02 c0       	rjmp	.+4      	; 0x9e2 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0x6e>
+    if (_ddlMode == IoLink::DDL_MODE_OPERATE)
+    {
+        cycleParam = parameterRead(IoLink::PAGE_MASTER_CYCLE_TIME);
+    }
+
+    if (cycleParam == 0)
+ 9de:	20 91 1d 01 	lds	r18, 0x011D
+     * 
+     * \param address   Parameter index
+     * \return          Read value
+     * 
+     */
+    uint8_t             parameterRead(uint8_t address) const { return directParameter[address]; }
+ 9e2:	24 30       	cpi	r18, 0x04	; 4
+ 9e4:	e0 f0       	brcs	.+56     	; 0xa1e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0xaa>
+        // MasterCycleTime hasn't been set yet => use MinCycleTime
+        cycleParam = parameterRead(IoLink::PAGE_MIN_CYCLE_TIME);
+    }
+
+    // decode parameter into 1/10ms
+    _cyclePeriod = DECODE_CYCLE_TIME(cycleParam);
+ 9e6:	20 34       	cpi	r18, 0x40	; 64
+ 9e8:	18 f4       	brcc	.+6      	; 0x9f0 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0x7c>
+ 9ea:	82 2f       	mov	r24, r18
+ 9ec:	90 e0       	ldi	r25, 0x00	; 0
+ 9ee:	17 c0       	rjmp	.+46     	; 0xa1e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0xaa>
+ 9f0:	32 2f       	mov	r19, r18
+ 9f2:	30 7c       	andi	r19, 0xC0	; 192
+ 9f4:	30 34       	cpi	r19, 0x40	; 64
+ 9f6:	49 f4       	brne	.+18     	; 0xa0a <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0x96>
+ 9f8:	84 e0       	ldi	r24, 0x04	; 4
+ 9fa:	28 9f       	mul	r18, r24
+ 9fc:	90 01       	movw	r18, r0
+ 9fe:	11 24       	eor	r1, r1
+ a00:	33 27       	eor	r19, r19
+ a02:	c9 01       	movw	r24, r18
+ a04:	80 5c       	subi	r24, 0xC0	; 192
+ a06:	9f 4f       	sbci	r25, 0xFF	; 255
+ a08:	0a c0       	rjmp	.+20     	; 0xa1e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0xaa>
+ a0a:	30 38       	cpi	r19, 0x80	; 128
+ a0c:	41 f4       	brne	.+16     	; 0xa1e <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv+0xaa>
+ a0e:	2f 73       	andi	r18, 0x3F	; 63
+ a10:	80 e1       	ldi	r24, 0x10	; 16
+ a12:	28 9f       	mul	r18, r24
+ a14:	90 01       	movw	r18, r0
+ a16:	11 24       	eor	r1, r1
+ a18:	c9 01       	movw	r24, r18
+ a1a:	80 5c       	subi	r24, 0xC0	; 192
+ a1c:	9e 4f       	sbci	r25, 0xFE	; 254
+ a1e:	9b 87       	std	Y+11, r25	; 0x0b
+ a20:	8a 87       	std	Y+10, r24	; 0x0a
+ a22:	81 e0       	ldi	r24, 0x01	; 1
+ a24:	90 e0       	ldi	r25, 0x00	; 0
+    {
+        updateCyclePeriod();
+    }
+
+    // initialize cycle timer
+    _cycleTimer = delay + 1;
+ a26:	9d 87       	std	Y+13, r25	; 0x0d
+ a28:	8c 87       	std	Y+12, r24	; 0x0c
+ a2a:	84 e0       	ldi	r24, 0x04	; 4
+ a2c:	80 93 6e 00 	sts	0x006E, r24
+
+    if (_cycleTimer > 0)
+    {      
+        // Timer/Counter0 Output Compare Match B Interrupt Enable
+        TIMSK0 = _BV(OCIE0B);
+ a30:	82 e0       	ldi	r24, 0x02	; 2
+ a32:	84 bd       	out	0x24, r24	; 36
+
+        // clear Timer on Compare Match A
+        TCCR0A = _BV(WGM01);
+ a34:	94 e6       	ldi	r25, 0x64	; 100
+ a36:	97 bd       	out	0x27, r25	; 39
+
+        // generate 0.1ms cycles
+#if F_CPU < 20000000
+        OCR0B = OCR0A = F_CPU / 80000;
+ a38:	98 bd       	out	0x28, r25	; 40
+ a3a:	85 bd       	out	0x25, r24	; 37
+ a3c:	df 91       	pop	r29
+        TCCR0B = _BV(CS01);             // pre-scaler clkIO/8
+ a3e:	cf 91       	pop	r28
+    configureStackBase();
+    Phy::configure();
+
+    // start timer responsible for calling the application "main loop"
+    startCallbackTimer();
+};
+ a40:	08 95       	ret
+
+00000a42 <main>:
+ a42:	2f ef       	ldi	r18, 0xFF	; 255
+ a44:	81 ee       	ldi	r24, 0xE1	; 225
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ a46:	94 e0       	ldi	r25, 0x04	; 4
+ a48:	21 50       	subi	r18, 0x01	; 1
+ a4a:	80 40       	sbci	r24, 0x00	; 0
+ a4c:	90 40       	sbci	r25, 0x00	; 0
+ a4e:	e1 f7       	brne	.-8      	; 0xa48 <main+0x6>
+ a50:	00 c0       	rjmp	.+0      	; 0xa52 <main+0x10>
+ a52:	00 00       	nop
+public:
+    //! setup the HW configuration
+    static void configure()
+    {
+        // Port PD4 and PD5 as output
+        DDRD  |= _BV(DDD4) | _BV(DDD5);
+ a54:	8a b1       	in	r24, 0x0a	; 10
+ a56:	80 63       	ori	r24, 0x30	; 48
+ a58:	8a b9       	out	0x0a, r24	; 10
+        {
+            PORTD |= _BV(PORTD4);
+        }
+        else
+        {
+            PORTD &= ~(_BV(PORTD4));
+ a5a:	5c 98       	cbi	0x0b, 4	; 11
+    // instantiate DemoApp
+    DemoApp& theApp = DemoApp::instance;
+
+    // configure all software modules
+    DebugPin::configure();
+    DemoApp::configure();   
+ a5c:	63 de       	rcall	.-826    	; 0x724 <_ZN7DemoApp9configureEv>
+ a5e:	81 e0       	ldi	r24, 0x01	; 1
+    Stack::instance.configure();
+ a60:	91 e0       	ldi	r25, 0x01	; 1
+ a62:	88 df       	rcall	.-240    	; 0x974 <_ZN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9configureEv>
+ a64:	78 94       	sei
+ a66:	83 b7       	in	r24, 0x33	; 51
+
+    // enable interrupts
+    sei();
+ a68:	81 7f       	andi	r24, 0xF1	; 241
+
+    // select sleep mode
+    set_sleep_mode(SLEEP_MODE_IDLE);
+ a6a:	83 bf       	out	0x33, r24	; 51
+ a6c:	83 b7       	in	r24, 0x33	; 51
+ a6e:	81 60       	ori	r24, 0x01	; 1
+
+    // enter infinite loop: processing is interrupt controlled from now on
+    for (;;)
+    {
+        // enter sleep until interrupt wakes us up
+        sleep_mode();
+ a70:	83 bf       	out	0x33, r24	; 51
+ a72:	88 95       	sleep
+ a74:	83 b7       	in	r24, 0x33	; 51
+ a76:	8e 7f       	andi	r24, 0xFE	; 254
+ a78:	83 bf       	out	0x33, r24	; 51
+ a7a:	80 91 12 01 	lds	r24, 0x0112
+//------------------------------------------------------------------------------
+template <class T, int PDI, int PDO, class SpiSsHndlr>
+bool StackBase<T, PDI, PDO, SpiSsHndlr>::canRunUserCode(const Parameter*& lastWrittenParameter)
+{
+    // allow execution of user code?
+    if (!_runUserCode)
+ a7e:	80 ff       	sbrs	r24, 0
+ a80:	f5 cf       	rjmp	.-22     	; 0xa6c <main+0x2a>
+ a82:	8e 7f       	andi	r24, 0xFE	; 254
+ a84:	80 93 12 01 	sts	0x0112, r24
+        return false;
+
+    // reset flag
+    _runUserCode = false;
+ a88:	81 ff       	sbrs	r24, 1
+ a8a:	06 c0       	rjmp	.+12     	; 0xa98 <main+0x56>
+
+    // test for parameter write access
+    if (_prmWriteAvailable)
+ a8c:	8d 7f       	andi	r24, 0xFD	; 253
+ a8e:	80 93 12 01 	sts	0x0112, r24
+    {
+        lastWrittenParameter = &_parameterWrite;
+
+        // reset write access
+        _prmWriteAvailable = false;
+ a92:	69 e0       	ldi	r22, 0x09	; 9
+ a94:	71 e0       	ldi	r23, 0x01	; 1
+    _runUserCode = false;
+
+    // test for parameter write access
+    if (_prmWriteAvailable)
+    {
+        lastWrittenParameter = &_parameterWrite;
+ a96:	02 c0       	rjmp	.+4      	; 0xa9c <main+0x5a>
+ a98:	60 e0       	ldi	r22, 0x00	; 0
+ a9a:	70 e0       	ldi	r23, 0x00	; 0
+        // reset write access
+        _prmWriteAvailable = false;
+    }
+    else
+    {
+        lastWrittenParameter = NULL;
+ a9c:	80 91 6c 00 	lds	r24, 0x006C
+
+//------------------------------------------------------------------------------
+template <class SpiSsHndlr>
+void PhyDriver<SpiSsHndlr>::stopInterrupt()
+{
+    PCMSK1 &= ~(_BV(PCINT8));
+ aa0:	8e 7f       	andi	r24, 0xFE	; 254
+ aa2:	80 93 6c 00 	sts	0x006C, r24
+ aa6:	8b e3       	ldi	r24, 0x3B	; 59
+ aa8:	91 e0       	ldi	r25, 0x01	; 1
+        // check if it's time to run user code
+        const Stack::Parameter* paramWrite;
+        if (Stack::instance.canRunUserCode(paramWrite))
+        {
+            Stack::instance.stopInterrupt();
+            theApp.run(paramWrite);
+ aaa:	31 df       	rcall	.-414    	; 0x90e <_ZN7DemoApp3runEPKN9StackBaseI14StackMultiByteLi1ELi1E16DefaultSsHandlerE9ParameterE>
+ aac:	80 91 6c 00 	lds	r24, 0x006C
+ ab0:	81 60       	ori	r24, 0x01	; 1
+
+//------------------------------------------------------------------------------
+template <class SpiSsHndlr>
+void PhyDriver<SpiSsHndlr>::restartInterrupt()
+{
+    PCMSK1 |= _BV(PCINT8);
+ ab2:	80 93 6c 00 	sts	0x006C, r24
+ ab6:	84 dd       	rcall	.-1272   	; 0x5c0 <__vector_4>
+ ab8:	d9 cf       	rjmp	.-78     	; 0xa6c <main+0x2a>
+
+00000aba <__tablejump2__>:
+ aba:	ee 0f       	add	r30, r30
+
+    // call ISR handler
+    PCINT1_vect();
+ abc:	ff 1f       	adc	r31, r31
+ abe:	05 90       	lpm	r0, Z+
+ ac0:	f4 91       	lpm	r31, Z
+ ac2:	e0 2d       	mov	r30, r0
+ ac4:	09 94       	ijmp
+
+00000ac6 <memcpy_P>:
+ ac6:	fb 01       	movw	r30, r22
+ ac8:	dc 01       	movw	r26, r24
+ aca:	02 c0       	rjmp	.+4      	; 0xad0 <memcpy_P+0xa>
+ acc:	05 90       	lpm	r0, Z+
+ ace:	0d 92       	st	X+, r0
+ ad0:	41 50       	subi	r20, 0x01	; 1
+ ad2:	50 40       	sbci	r21, 0x00	; 0
+ ad4:	d8 f7       	brcc	.-10     	; 0xacc <memcpy_P+0x6>
+ ad6:	08 95       	ret
+
+00000ad8 <_exit>:
+ ad8:	f8 94       	cli
+
+00000ada <__stop_program>:
+ ada:	ff cf       	rjmp	.-2      	; 0xada <__stop_program>

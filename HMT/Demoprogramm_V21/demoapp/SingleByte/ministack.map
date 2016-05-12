@@ -46,13 +46,41 @@ Discarded input sections
  .bss           0x00000000        0x0 demoapp.o
  .text._ZN7DemoApp22isDigitalButtonPressedEv
                 0x00000000        0xc demoapp.o
- .bss._ZZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+ .bss._ZZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
                 0x00000000        0x1 demoapp.o
+ .text          0x00000000        0x0 i2c_master.o
+ .data          0x00000000        0x0 i2c_master.o
+ .bss           0x00000000        0x0 i2c_master.o
+ .text.i2c_write
+                0x00000000       0x50 i2c_master.o
+ .text.i2c_transmit
+                0x00000000       0x7e i2c_master.o
+ .text.i2c_writeReg
+                0x00000000       0x86 i2c_master.o
+ .text.i2c_readReg
+                0x00000000       0xb6 i2c_master.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 spi_master_bitbanging.o
+ .data          0x00000000        0x0 spi_master_bitbanging.o
+ .bss           0x00000000        0x0 spi_master_bitbanging.o
+ .text.spi_sendSingle_bitbanging
+                0x00000000       0x28 spi_master_bitbanging.o
+ .text.spi_sendBytes_bitbanging
+                0x00000000       0x7c spi_master_bitbanging.o
+ .text.spi_send16Bits_bitbanging
+                0x00000000       0x28 spi_master_bitbanging.o
+ .text.spi_sendSingleByte
+                0x00000000       0xc2 spi_master_bitbanging.o
+ .text.spi_send16Bits
+                0x00000000      0x17a spi_master_bitbanging.o
+ .text.spi_selectSlave
+                0x00000000       0x20 spi_master_bitbanging.o
+ .text.spi_unselectSlave
+                0x00000000       0x20 spi_master_bitbanging.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
@@ -140,7 +168,9 @@ LOAD stackmultibyte.o
 LOAD stacksinglebyte.o
 LOAD stacktransparent.o
 LOAD demoapp.o
+LOAD i2c_master.o
 LOAD main.o
+LOAD spi_master_bitbanging.o
 START GROUP
 END GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a
@@ -242,18 +272,18 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x11ee
+.text           0x00000000     0x1480
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
- .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
                 0x00000068       0x18 stacksinglebyte.o
- .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
                 0x00000080       0x18 stacksinglebyte.o
- .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
                 0x00000098       0x18 stacksinglebyte.o
                 0x000000b0                . = ALIGN (0x2)
                 0x000000b0                __trampolines_start = .
@@ -265,7 +295,7 @@ END GROUP
  .progmem.data  0x000000b0      0x100 stacksinglebyte.o
                 0x000000b0                _ZZN6IoLink17calculateChecksumEhhE9checksum6
  .progmem.data  0x000001b0       0x20 main.o
-                0x000001b0                _ZZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE18configureStackBaseEvE19directDefaultConfig
+                0x000001b0                _ZZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE18configureStackBaseEvE19directDefaultConfig
                 0x000001d0                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
@@ -298,7 +328,7 @@ END GROUP
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x000001ee       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .init6         0x000001ee       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
                 0x000001ee                __do_global_ctors
  *(.init6)
  *(.init7)
@@ -306,100 +336,121 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000202        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x00000204        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x00000206        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x00000206                __vector_22
-                0x00000206                __vector_1
-                0x00000206                __vector_24
-                0x00000206                __vector_12
-                0x00000206                __bad_interrupt
-                0x00000206                __vector_6
-                0x00000206                __vector_3
-                0x00000206                __vector_23
-                0x00000206                __vector_25
-                0x00000206                __vector_11
-                0x00000206                __vector_13
-                0x00000206                __vector_17
-                0x00000206                __vector_19
-                0x00000206                __vector_7
-                0x00000206                __vector_5
-                0x00000206                __vector_9
-                0x00000206                __vector_2
-                0x00000206                __vector_21
-                0x00000206                __vector_8
-                0x00000206                __vector_14
-                0x00000206                __vector_10
-                0x00000206                __vector_16
-                0x00000206                __vector_18
-                0x00000206                __vector_20
-                0x00000208                . = ALIGN (0x2)
+ .text          0x0000020c        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x0000020c                __vector_22
+                0x0000020c                __vector_1
+                0x0000020c                __vector_24
+                0x0000020c                __vector_12
+                0x0000020c                __bad_interrupt
+                0x0000020c                __vector_6
+                0x0000020c                __vector_3
+                0x0000020c                __vector_23
+                0x0000020c                __vector_25
+                0x0000020c                __vector_11
+                0x0000020c                __vector_13
+                0x0000020c                __vector_17
+                0x0000020c                __vector_19
+                0x0000020c                __vector_7
+                0x0000020c                __vector_5
+                0x0000020c                __vector_9
+                0x0000020c                __vector_2
+                0x0000020c                __vector_21
+                0x0000020c                __vector_8
+                0x0000020c                __vector_14
+                0x0000020c                __vector_10
+                0x0000020c                __vector_16
+                0x0000020c                __vector_18
+                0x0000020c                __vector_20
+                0x0000020e                . = ALIGN (0x2)
  *(.text.*)
- .text._ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE6odReadEhh.isra.2
-                0x00000208       0x2a stacksinglebyte.o
+ .text._ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE6odReadEhh.isra.2
+                0x0000020e       0x2a stacksinglebyte.o
  .text._ZN15StackSingleByte12restartTimerEv.isra.0.constprop.7
-                0x00000232        0xe stacksinglebyte.o
+                0x00000238        0xe stacksinglebyte.o
  .text._ZN6IoLink17calculateChecksumEhh
-                0x00000240       0x16 stacksinglebyte.o
-                0x00000240                _ZN6IoLink17calculateChecksumEhh
+                0x00000246       0x16 stacksinglebyte.o
+                0x00000246                _ZN6IoLink17calculateChecksumEhh
  .text._ZN15StackSingleByte25handleFirstOperatingModesEv
-                0x00000256      0x128 stacksinglebyte.o
-                0x00000256                _ZN15StackSingleByte25handleFirstOperatingModesEv
+                0x0000025c      0x128 stacksinglebyte.o
+                0x0000025c                _ZN15StackSingleByte25handleFirstOperatingModesEv
  .text.__vector_15
-                0x0000037e       0xfc stacksinglebyte.o
-                0x0000037e                __vector_15
- .text._ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE18startCallbackTimerEh
-                0x0000047a       0x86 stacksinglebyte.o
-                0x0000047a                _ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE18startCallbackTimerEh
- .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
-                0x00000500      0x2b2 stacksinglebyte.o
-                0x00000500                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
- .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
-                0x000007b2      0x250 stacksinglebyte.o
-                0x000007b2                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
- .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
-                0x00000a02      0x254 stacksinglebyte.o
-                0x00000a02                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li3ELi1E16DefaultSsHandlerE13HandlerResultEv
- .text._ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE12configurePhyEv
-                0x00000c56       0x62 stacksinglebyte.o
-                0x00000c56                _ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE12configurePhyEv
+                0x00000384       0xfc stacksinglebyte.o
+                0x00000384                __vector_15
+ .text._ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh
+                0x00000480       0x86 stacksinglebyte.o
+                0x00000480                _ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE18startCallbackTimerEh
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+                0x00000506      0x2b2 stacksinglebyte.o
+                0x00000506                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+                0x000007b8      0x250 stacksinglebyte.o
+                0x000007b8                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+                0x00000a08      0x254 stacksinglebyte.o
+                0x00000a08                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li1ELi1E16DefaultSsHandlerE13HandlerResultEv
+ .text._ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv
+                0x00000c5c       0x62 stacksinglebyte.o
+                0x00000c5c                _ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE12configurePhyEv
  .text.__vector_4
-                0x00000cb8      0x13a stacksinglebyte.o
-                0x00000cb8                __vector_4
+                0x00000cbe      0x13a stacksinglebyte.o
+                0x00000cbe                __vector_4
  .text.startup._GLOBAL__sub_I_directParameter
-                0x00000df2       0x38 stacksinglebyte.o
+                0x00000df8       0x38 stacksinglebyte.o
  .text._ZN7DemoApp9configureEv
-                0x00000e2a       0x16 demoapp.o
-                0x00000e2a                _ZN7DemoApp9configureEv
- .text._ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9ParameterE
-                0x00000e40      0x100 demoapp.o
-                0x00000e40                _ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9ParameterE
+                0x00000e30       0x16 demoapp.o
+                0x00000e30                _ZN7DemoApp9configureEv
+ .text._ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9ParameterE
+                0x00000e46      0x100 demoapp.o
+                0x00000e46                _ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9ParameterE
  .text._ZN7DemoApp11elapsed10msEv
-                0x00000f40       0x10 demoapp.o
-                0x00000f40                _ZN7DemoApp11elapsed10msEv
+                0x00000f46       0x10 demoapp.o
+                0x00000f46                _ZN7DemoApp11elapsed10msEv
  .text._ZN7DemoApp22updateProcessInputDataEv
-                0x00000f50       0xd0 demoapp.o
-                0x00000f50                _ZN7DemoApp22updateProcessInputDataEv
- .text._ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9ParameterE
-                0x00001020       0x66 demoapp.o
-                0x00001020                _ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9ParameterE
- .text._ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9configureEv
-                0x00001086       0xce main.o
-                0x00001086                _ZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE9configureEv
+                0x00000f56       0xcc demoapp.o
+                0x00000f56                _ZN7DemoApp22updateProcessInputDataEv
+ .text._ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9ParameterE
+                0x00001022       0x66 demoapp.o
+                0x00001022                _ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9ParameterE
+ .text.i2c_init
+                0x00001088       0x40 i2c_master.o
+                0x00001088                i2c_init
+ .text.i2c_start
+                0x000010c8       0x8e i2c_master.o
+                0x000010c8                i2c_start
+ .text.i2c_read_ack
+                0x00001156       0x2e i2c_master.o
+                0x00001156                i2c_read_ack
+ .text.i2c_read_nack
+                0x00001184       0x2e i2c_master.o
+                0x00001184                i2c_read_nack
+ .text.i2c_receive
+                0x000011b2       0x98 i2c_master.o
+                0x000011b2                i2c_receive
+ .text.i2c_stop
+                0x0000124a       0x18 i2c_master.o
+                0x0000124a                i2c_stop
+ .text._ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9configureEv
+                0x00001262       0xce main.o
+                0x00001262                _ZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE9configureEv
  .text.startup.main
-                0x00001154       0x78 main.o
-                0x00001154                main
- .text.libgcc   0x000011cc        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
-                0x000011cc                __tablejump2__
+                0x00001330       0xc6 main.o
+                0x00001330                main
+ .text.spi_init_bitbanging
+                0x000013f6       0x68 spi_master_bitbanging.o
+                0x000013f6                spi_init_bitbanging
+ .text.libgcc   0x0000145e        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                0x0000145e                __tablejump2__
  .text.avr-libc
-                0x000011d8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
-                0x000011d8                memcpy_P
-                0x000011ea                . = ALIGN (0x2)
+                0x0000146a       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x0000146a                memcpy_P
+                0x0000147c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000011ea        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
-                0x000011ea                _exit
-                0x000011ea                exit
+ .fini9         0x0000147c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x0000147c                _exit
+                0x0000147c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -418,11 +469,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000011ea        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000147c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000011ee                _etext = .
+                0x00001480                _etext = .
 
-.data           0x00800100        0x0 load address 0x000011ee
+.data           0x00800100        0x0 load address 0x00001480
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -433,36 +484,40 @@ END GROUP
                 0x00800100                _edata = .
                 0x00800100                PROVIDE (__data_end, .)
 
-.bss            0x00800100       0x4c
+.bss            0x00800100       0x50
                 0x00800100                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss._ZZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+ .bss._ZZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
                 0x00800100        0x1 stacksinglebyte.o
-                0x00800100                _ZZN9StackBaseI15StackSingleByteLi3ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+                0x00800100                _ZZN9StackBaseI15StackSingleByteLi1ELi1E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
  .bss._ZN15StackSingleByte8instanceE
-                0x00800101       0x1f stacksinglebyte.o
+                0x00800101       0x1d stacksinglebyte.o
                 0x00800101                _ZN15StackSingleByte8instanceE
  .bss.eventPage
-                0x00800120        0x8 stacksinglebyte.o
-                0x00800120                eventPage
+                0x0080011e        0x8 stacksinglebyte.o
+                0x0080011e                eventPage
  .bss.directParameter
-                0x00800128       0x20 stacksinglebyte.o
-                0x00800128                directParameter
+                0x00800126       0x20 stacksinglebyte.o
+                0x00800126                directParameter
  .bss._ZN7DemoApp8instanceE
-                0x00800148        0x4 demoapp.o
-                0x00800148                _ZN7DemoApp8instanceE
+                0x00800146        0x4 demoapp.o
+                0x00800146                _ZN7DemoApp8instanceE
+ .bss.spiData   0x0080014a        0x4 main.o
+                0x0080014a                spiData
+ .bss.i2cData   0x0080014e        0x2 main.o
+                0x0080014e                i2cData
  *(COMMON)
-                0x0080014c                PROVIDE (__bss_end, .)
-                0x000011ee                __data_load_start = LOADADDR (.data)
-                0x000011ee                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800150                PROVIDE (__bss_end, .)
+                0x00001480                __data_load_start = LOADADDR (.data)
+                0x00001480                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080014c        0x0
-                0x0080014c                PROVIDE (__noinit_start, .)
+.noinit         0x00800150        0x0
+                0x00800150                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080014c                PROVIDE (__noinit_end, .)
-                0x0080014c                _end = .
-                0x0080014c                PROVIDE (__heap_start, .)
+                0x00800150                PROVIDE (__noinit_end, .)
+                0x00800150                _end = .
+                0x00800150                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -509,7 +564,9 @@ END GROUP
  .comment       0x00000000       0x30 stacksinglebyte.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 demoapp.o
+ .comment       0x00000030       0x31 i2c_master.o
  .comment       0x00000030       0x31 main.o
+ .comment       0x00000030       0x31 spi_master_bitbanging.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -543,23 +600,23 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x7fc0
+.debug_info     0x00000000     0x800a
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x5190 stacksinglebyte.o
- .debug_info    0x00005190     0x1874 demoapp.o
- .debug_info    0x00006a04     0x15bc main.o
+ .debug_info    0x00000000     0x514d stacksinglebyte.o
+ .debug_info    0x0000514d     0x1854 demoapp.o
+ .debug_info    0x000069a1     0x1669 main.o
 
-.debug_abbrev   0x00000000     0x1387
+.debug_abbrev   0x00000000     0x13a7
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x712 stacksinglebyte.o
  .debug_abbrev  0x00000712      0x61e demoapp.o
- .debug_abbrev  0x00000d30      0x657 main.o
+ .debug_abbrev  0x00000d30      0x677 main.o
 
-.debug_line     0x00000000      0xe78
+.debug_line     0x00000000      0xeb3
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x984 stacksinglebyte.o
- .debug_line    0x00000984      0x207 demoapp.o
- .debug_line    0x00000b8b      0x2ed main.o
+ .debug_line    0x00000000      0x983 stacksinglebyte.o
+ .debug_line    0x00000983      0x206 demoapp.o
+ .debug_line    0x00000b89      0x32a main.o
 
 .debug_frame    0x00000000      0x258
  *(.debug_frame)
@@ -567,20 +624,20 @@ END GROUP
  .debug_frame   0x0000018c       0x8c demoapp.o
  .debug_frame   0x00000218       0x40 main.o
 
-.debug_str      0x00000000     0x2b16
+.debug_str      0x00000000     0x2bb2
  *(.debug_str)
- .debug_str     0x00000000     0x2626 stacksinglebyte.o
-                               0x26ef (size before relaxing)
- .debug_str     0x00002626      0x33a demoapp.o
-                               0x21ed (size before relaxing)
- .debug_str     0x00002960      0x1b6 main.o
-                               0x20e9 (size before relaxing)
+ .debug_str     0x00000000     0x2617 stacksinglebyte.o
+                               0x26e0 (size before relaxing)
+ .debug_str     0x00002617      0x3a8 demoapp.o
+                               0x21f1 (size before relaxing)
+ .debug_str     0x000029bf      0x1f3 main.o
+                               0x211f (size before relaxing)
 
-.debug_loc      0x00000000     0x1ec2
+.debug_loc      0x00000000     0x1f04
  *(.debug_loc)
  .debug_loc     0x00000000     0x19ac stacksinglebyte.o
  .debug_loc     0x000019ac      0x3a2 demoapp.o
- .debug_loc     0x00001d4e      0x174 main.o
+ .debug_loc     0x00001d4e      0x1b6 main.o
 
 .debug_macinfo
  *(.debug_macinfo)

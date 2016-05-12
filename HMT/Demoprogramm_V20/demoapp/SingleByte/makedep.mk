@@ -10,5 +10,7 @@
 
 demoapp.cpp
 
+i2c_master.c
+
 main.cpp
 

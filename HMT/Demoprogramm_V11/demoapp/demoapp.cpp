@@ -117,9 +117,11 @@ void DemoApp::updateProcessInputData()
         Stack::instance.setLedLevel(Stack::LED_1, _ledLevel1);
         Stack::instance.setLedLevel(Stack::LED_2, _ledLevel2);
     }
-	//Stack::instance.processInputData().buffer[1]=0x12;
-	//Stack::instance.processInputData().buffer[2]=0x34;
-	//Stack::instance.processInputData().buffer[3]=0x56;
+		
+	Stack::instance.processInputData().buffer[1]=0x12;
+	Stack::instance.processInputData().buffer[2]=0x34;
+	Stack::instance.processInputData().buffer[3]=0x56;
+	//Stack::instance.processInputData().buffer[4]=0x78;
 	
     switch (Stack::instance.parameterRead(VendorParamPidMode))
     {
@@ -134,7 +136,6 @@ void DemoApp::updateProcessInputData()
         if (!(ADCSRA & _BV(ADSC)))
         {
             uint16_t sensorValue = ADC;
-
             Stack::instance.processInputData().buffer[0] = sensorValue >> 2;
             Stack::instance.processInputData().isValid = true;
 

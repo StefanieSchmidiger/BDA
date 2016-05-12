@@ -1,0 +1,3 @@
+PD-In = 1
+PD-Out = 5
+funktioniert, aber keine andere Kombination wo PD-In>1 ist
