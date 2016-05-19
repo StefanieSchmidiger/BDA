@@ -1,0 +1,2 @@
+Das verwendete Demoboard von der Firma HMT:
+TM96.1 Genie Explorer I Var. B

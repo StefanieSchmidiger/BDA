@@ -6,6 +6,9 @@
 #define nSS	PB2
 #define SCL	PB5
 
+void spi_selectSlaveISR(void);
+void spi_unselectSlaveISR(void);
+
 
 void  spi_init( ) 
 {
@@ -19,20 +22,20 @@ void  spi_init( )
 
 uint8_t spi_writeSingle(uint8_t cData) 
 {
-	PORTB = (PORTB&0b11111011);		// set SS to low -> slave selected
+	spi_selectSlaveISR();
 	//PORTB &= ~(_BV(MISO));
 	DDRB &=  (~(1<<MISO));	// set MISO as input
 	SPCR |= (1<<MSTR);
 	
 	SPDR = cData;
 	while ( !(SPSR & (1<<SPIF)));		// wait for transmission to complete
-	PORTB |= _BV(nSS);		// set SS to high -> slave not selected
+	spi_unselectSlaveISR();
 	return SPDR;						// read data -> clear SPIF
 }
 
 void spi_writeBytes(uint8_t* cData, uint8_t numOfBytes)
 {
-	PORTB &= ~(_BV(nSS));		// set SS to low -> slave selected
+	spi_selectSlaveISR();
 	SPCR |= (1<<MSTR);
 	int i;
 	for(i=0;i<numOfBytes;i++)
@@ -41,7 +44,7 @@ void spi_writeBytes(uint8_t* cData, uint8_t numOfBytes)
 		while ( !(SPSR & (1<<SPIF)));		// wait for transmission to complete
 		cData[i] = SPDR;					// read data -> clear SPIF
 	}
-	PORTB |= _BV(nSS);		// set SS to high -> slave not selected
+	spi_unselectSlaveISR();
 }
 
 uint8_t spi_read(void) 
@@ -49,4 +52,14 @@ uint8_t spi_read(void)
 	SPDR = 0xff;
 	while ( !(SPSR & (1<<SPIF)));		// wait for transmission to complete
 	return SPDR;						// read data -> clear SPIF
+}
+
+void spi_selectSlaveISR(void)
+{
+	PORTB &= ~(_BV(nSS));		// set SS to low -> slave selected
+}
+
+void spi_unselectSlaveISR(void)
+{
+	PORTB |= _BV(nSS);		// set SS to high -> slave not selected
 }
