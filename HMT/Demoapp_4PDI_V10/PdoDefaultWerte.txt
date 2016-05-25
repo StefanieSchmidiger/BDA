@@ -1,0 +1,3 @@
+PDO funktioniert, nur defaultwerte (0x00..0x56) übermittelt
+4 Byte PDI, 
+0 Byte PDO

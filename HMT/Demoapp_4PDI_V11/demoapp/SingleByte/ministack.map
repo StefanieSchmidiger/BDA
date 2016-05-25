@@ -1,0 +1,680 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                              stacksinglebyte.o (__tablejump2__)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+                              stacksinglebyte.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+                              stacksinglebyte.o (__do_global_ctors)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                              main.o (memcpy_P)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .text          0x00000000        0x0 stackmultibyte.o
+ .data          0x00000000        0x0 stackmultibyte.o
+ .bss           0x00000000        0x0 stackmultibyte.o
+ .debug_line    0x00000000        0x0 stackmultibyte.o
+ .debug_str     0x00000000      0x1a3 stackmultibyte.o
+ .comment       0x00000000       0x31 stackmultibyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .group         0x00000000        0xc stacksinglebyte.o
+ .group         0x00000000        0xc stacksinglebyte.o
+ .group         0x00000000        0xc stacksinglebyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .group         0x00000000        0x8 stacksinglebyte.o
+ .text          0x00000000        0x0 stacksinglebyte.o
+ .data          0x00000000        0x0 stacksinglebyte.o
+ .bss           0x00000000        0x0 stacksinglebyte.o
+ .text._ZN15StackSingleByte28startCallbackTimerAfterReplyEv
+                0x00000000        0x6 stacksinglebyte.o
+ .text          0x00000000        0x0 stacktransparent.o
+ .data          0x00000000        0x0 stacktransparent.o
+ .bss           0x00000000        0x0 stacktransparent.o
+ .debug_line    0x00000000        0x0 stacktransparent.o
+ .debug_str     0x00000000      0x1a5 stacktransparent.o
+ .comment       0x00000000       0x31 stacktransparent.o
+ .group         0x00000000        0x8 demoapp.o
+ .text          0x00000000        0x0 demoapp.o
+ .data          0x00000000        0x0 demoapp.o
+ .bss           0x00000000        0x0 demoapp.o
+ .text._ZN7DemoApp22isDigitalButtonPressedEv
+                0x00000000        0xc demoapp.o
+ .bss._ZZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+                0x00000000        0x1 demoapp.o
+ .text          0x00000000        0x0 i2c_master.o
+ .data          0x00000000        0x0 i2c_master.o
+ .bss           0x00000000        0x0 i2c_master.o
+ .text.i2c_write
+                0x00000000       0x50 i2c_master.o
+ .text.i2c_transmit
+                0x00000000       0x7e i2c_master.o
+ .text.i2c_writeReg
+                0x00000000       0x86 i2c_master.o
+ .text.i2c_readReg
+                0x00000000       0xb6 i2c_master.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .bss._ZZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+                0x00000000        0x1 main.o
+ .text          0x00000000        0x0 spi_master_bitbanging.o
+ .data          0x00000000        0x0 spi_master_bitbanging.o
+ .bss           0x00000000        0x0 spi_master_bitbanging.o
+ .text.spi_sendSingle_bitbanging
+                0x00000000       0x28 spi_master_bitbanging.o
+ .text.spi_send16Bits_bitbanging
+                0x00000000       0x28 spi_master_bitbanging.o
+ .text.spi_send16Bits
+                0x00000000      0x17a spi_master_bitbanging.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+LOAD stackmultibyte.o
+LOAD stacksinglebyte.o
+LOAD stacktransparent.o
+LOAD demoapp.o
+LOAD i2c_master.o
+LOAD main.o
+LOAD spi_master_bitbanging.o
+START GROUP
+END GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libm.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a
+LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5\libatmega328p.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x16e0
+ *(.vectors)
+ .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x00000068       0x18 stacksinglebyte.o
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x00000080       0x18 stacksinglebyte.o
+ .progmem.gcc_sw_table._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x00000098       0x18 stacksinglebyte.o
+                0x000000b0                . = ALIGN (0x2)
+                0x000000b0                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000b0        0x0 linker stubs
+ *(.trampolines*)
+                0x000000b0                __trampolines_end = .
+ *(.progmem*)
+ .progmem.data  0x000000b0      0x100 stacksinglebyte.o
+                0x000000b0                _ZZN6IoLink17calculateChecksumEhhE9checksum6
+ .progmem.data  0x000001b0       0x20 main.o
+                0x000001b0                _ZZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE18configureStackBaseEvE19directDefaultConfig
+                0x000001d0                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000001d0                __ctors_start = .
+ *(.ctors)
+ .ctors         0x000001d0        0x2 stacksinglebyte.o
+                0x000001d2                __ctors_end = .
+                0x000001d2                __dtors_start = .
+ *(.dtors)
+                0x000001d2                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000001d2        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x000001d2                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000001d2        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000001de       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_clear_bss.o)
+                0x000001de                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x000001ee       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_ctors.o)
+                0x000001ee                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000204        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x0000020c        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x0000020c                __vector_22
+                0x0000020c                __vector_1
+                0x0000020c                __vector_24
+                0x0000020c                __vector_12
+                0x0000020c                __bad_interrupt
+                0x0000020c                __vector_6
+                0x0000020c                __vector_3
+                0x0000020c                __vector_23
+                0x0000020c                __vector_25
+                0x0000020c                __vector_11
+                0x0000020c                __vector_13
+                0x0000020c                __vector_17
+                0x0000020c                __vector_19
+                0x0000020c                __vector_7
+                0x0000020c                __vector_5
+                0x0000020c                __vector_9
+                0x0000020c                __vector_2
+                0x0000020c                __vector_21
+                0x0000020c                __vector_8
+                0x0000020c                __vector_14
+                0x0000020c                __vector_10
+                0x0000020c                __vector_16
+                0x0000020c                __vector_18
+                0x0000020c                __vector_20
+                0x0000020e                . = ALIGN (0x2)
+ *(.text.*)
+ .text._ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE6odReadEhh.isra.3
+                0x0000020e       0x2a stacksinglebyte.o
+ .text._ZN15StackSingleByte12restartTimerEv.isra.1.constprop.8
+                0x00000238        0xe stacksinglebyte.o
+ .text._ZN6IoLink17calculateChecksumEhh
+                0x00000246       0x16 stacksinglebyte.o
+                0x00000246                _ZN6IoLink17calculateChecksumEhh
+ .text._ZN15StackSingleByte25handleFirstOperatingModesEv
+                0x0000025c      0x128 stacksinglebyte.o
+                0x0000025c                _ZN15StackSingleByte25handleFirstOperatingModesEv
+ .text._ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12configurePhyEv
+                0x00000384       0x62 stacksinglebyte.o
+                0x00000384                _ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12configurePhyEv
+ .text._ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE22onTimer0CompBInterruptEv
+                0x000003e6       0xae stacksinglebyte.o
+                0x000003e6                _ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE22onTimer0CompBInterruptEv
+ .text.__vector_15
+                0x00000494       0x4a stacksinglebyte.o
+                0x00000494                __vector_15
+ .text._ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE18startCallbackTimerEh
+                0x000004de       0x98 stacksinglebyte.o
+                0x000004de                _ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE18startCallbackTimerEh
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x00000576      0x2a6 stacksinglebyte.o
+                0x00000576                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE4EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x0000081c      0x248 stacksinglebyte.o
+                0x0000081c                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE3EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+ .text._ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+                0x00000a64      0x24c stacksinglebyte.o
+                0x00000a64                _ZN15StackSingleByte19handleOperatingModeILN6IoLink12DeviceDLModeE2EEEN9StackBaseIS_Li4ELi0E16DefaultSsHandlerE13HandlerResultEv
+ .text.__vector_4
+                0x00000cb0      0x13a stacksinglebyte.o
+                0x00000cb0                __vector_4
+ .text.startup._GLOBAL__sub_I_directParameter
+                0x00000dea       0x38 stacksinglebyte.o
+ .text._ZN7DemoApp9configureEv
+                0x00000e22       0x16 demoapp.o
+                0x00000e22                _ZN7DemoApp9configureEv
+ .text._ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+                0x00000e38      0x100 demoapp.o
+                0x00000e38                _ZN7DemoApp20handleParameterWriteEPKN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+ .text._ZN7DemoApp11elapsed10msEv
+                0x00000f38       0x10 demoapp.o
+                0x00000f38                _ZN7DemoApp11elapsed10msEv
+ .text._ZN7DemoApp22updateProcessInputDataEv
+                0x00000f48      0x100 demoapp.o
+                0x00000f48                _ZN7DemoApp22updateProcessInputDataEv
+ .text._ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+                0x00001048       0x66 demoapp.o
+                0x00001048                _ZN7DemoApp3runEPKN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9ParameterE
+ .text.i2c_init
+                0x000010ae       0x40 i2c_master.o
+                0x000010ae                i2c_init
+ .text.i2c_start
+                0x000010ee       0x8e i2c_master.o
+                0x000010ee                i2c_start
+ .text.i2c_read_ack
+                0x0000117c       0x2e i2c_master.o
+                0x0000117c                i2c_read_ack
+ .text.i2c_read_nack
+                0x000011aa       0x2e i2c_master.o
+                0x000011aa                i2c_read_nack
+ .text.i2c_receive
+                0x000011d8       0x98 i2c_master.o
+                0x000011d8                i2c_receive
+ .text.i2c_stop
+                0x00001270       0x18 i2c_master.o
+                0x00001270                i2c_stop
+ .text._ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9configureEv
+                0x00001288      0x17e main.o
+                0x00001288                _ZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE9configureEv
+ .text.startup.main
+                0x00001406       0xd8 main.o
+                0x00001406                main
+ .text.spi_init_bitbanging
+                0x000014de       0x68 spi_master_bitbanging.o
+                0x000014de                spi_init_bitbanging
+ .text.spi_sendBytes_bitbanging
+                0x00001546       0x76 spi_master_bitbanging.o
+                0x00001546                spi_sendBytes_bitbanging
+ .text.spi_sendSingleByte
+                0x000015bc       0xc2 spi_master_bitbanging.o
+                0x000015bc                spi_sendSingleByte
+ .text.spi_selectSlave
+                0x0000167e       0x20 spi_master_bitbanging.o
+                0x0000167e                spi_selectSlave
+ .text.spi_unselectSlave
+                0x0000169e       0x20 spi_master_bitbanging.o
+                0x0000169e                spi_unselectSlave
+ .text.libgcc   0x000016be        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_tablejump2.o)
+                0x000016be                __tablejump2__
+ .text.avr-libc
+                0x000016ca       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr5\libc.a(memcpy_P.o)
+                0x000016ca                memcpy_P
+                0x000016dc                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000016dc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+                0x000016dc                _exit
+                0x000016dc                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000016dc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000016e0                _etext = .
+
+.data           0x00800100        0x0 load address 0x000016e0
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800100                . = ALIGN (0x2)
+                0x00800100                _edata = .
+                0x00800100                PROVIDE (__data_end, .)
+
+.bss            0x00800100       0x51
+                0x00800100                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss._ZZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+                0x00800100        0x1 stacksinglebyte.o
+                0x00800100                _ZZN9StackBaseI15StackSingleByteLi4ELi0E16DefaultSsHandlerE12setSioActiveEvE9wasDriven
+ .bss._ZN15StackSingleByte8instanceE
+                0x00800101       0x1e stacksinglebyte.o
+                0x00800101                _ZN15StackSingleByte8instanceE
+ .bss.eventPage
+                0x0080011f        0x8 stacksinglebyte.o
+                0x0080011f                eventPage
+ .bss.directParameter
+                0x00800127       0x20 stacksinglebyte.o
+                0x00800127                directParameter
+ .bss._ZN7DemoApp8instanceE
+                0x00800147        0x4 demoapp.o
+                0x00800147                _ZN7DemoApp8instanceE
+ .bss.spiData   0x0080014b        0x4 main.o
+                0x0080014b                spiData
+ .bss.i2cData   0x0080014f        0x2 main.o
+                0x0080014f                i2cData
+ *(COMMON)
+                0x00800151                PROVIDE (__bss_end, .)
+                0x000016e0                __data_load_start = LOADADDR (.data)
+                0x000016e0                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800151        0x0
+                0x00800151                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800151                PROVIDE (__noinit_end, .)
+                0x00800151                _end = .
+                0x00800151                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse           0x00820000        0x3
+ *(.fuse)
+ .fuse          0x00820000        0x3 main.o
+                0x00820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature      0x00840000        0x3
+ *(.signature*)
+ .signature     0x00840000        0x3 main.o
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 stacksinglebyte.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000030       0x31 demoapp.o
+ .comment       0x00000030       0x31 i2c_master.o
+ .comment       0x00000030       0x31 main.o
+ .comment       0x00000030       0x31 spi_master_bitbanging.o
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.98/gcc/dev/atmega328p/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xf8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x88 stacksinglebyte.o
+ .debug_aranges
+                0x00000088       0x48 demoapp.o
+ .debug_aranges
+                0x000000d0       0x28 main.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x8659
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x517a stacksinglebyte.o
+ .debug_info    0x0000517a     0x18b2 demoapp.o
+ .debug_info    0x00006a2c     0x1c2d main.o
+
+.debug_abbrev   0x00000000     0x146d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x75d stacksinglebyte.o
+ .debug_abbrev  0x0000075d      0x627 demoapp.o
+ .debug_abbrev  0x00000d84      0x6e9 main.o
+
+.debug_line     0x00000000      0xfcb
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0xa09 stacksinglebyte.o
+ .debug_line    0x00000a09      0x217 demoapp.o
+ .debug_line    0x00000c20      0x3ab main.o
+
+.debug_frame    0x00000000      0x298
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x1cc stacksinglebyte.o
+ .debug_frame   0x000001cc       0x8c demoapp.o
+ .debug_frame   0x00000258       0x40 main.o
+
+.debug_str      0x00000000     0x2bee
+ *(.debug_str)
+ .debug_str     0x00000000     0x2695 stacksinglebyte.o
+                               0x275e (size before relaxing)
+ .debug_str     0x00002695      0x355 demoapp.o
+                               0x222a (size before relaxing)
+ .debug_str     0x000029ea      0x204 main.o
+                               0x22d4 (size before relaxing)
+
+.debug_loc      0x00000000     0x21b4
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1a9c stacksinglebyte.o
+ .debug_loc     0x00001a9c      0x3a2 demoapp.o
+ .debug_loc     0x00001e3e      0x376 main.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x200
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x138 stacksinglebyte.o
+ .debug_ranges  0x00000138       0x38 demoapp.o
+ .debug_ranges  0x00000170       0x90 main.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(ministack.elf elf32-avr)
+LOAD linker stubs

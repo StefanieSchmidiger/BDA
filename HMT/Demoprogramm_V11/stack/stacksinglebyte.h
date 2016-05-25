@@ -54,7 +54,7 @@
  */
 class StackSingleByte : public StackBase<StackSingleByte, 
         4, // PD_IN_SIZE
-        0  // PD_OUT_SIZE
+        1  // PD_OUT_SIZE
 >
 {
 public:

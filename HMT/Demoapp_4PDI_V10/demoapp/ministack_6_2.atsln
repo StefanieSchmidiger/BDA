@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ministack", "ministack_6_2.cppproj", "{F109023D-8BA5-4145-9697-61E7DDD780DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		MultiByte|AVR = MultiByte|AVR
+		SingleByte|AVR = SingleByte|AVR
+		Transparent|AVR = Transparent|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.MultiByte|AVR.ActiveCfg = MultiByte|AVR
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.MultiByte|AVR.Build.0 = MultiByte|AVR
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.SingleByte|AVR.ActiveCfg = SingleByte|AVR
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.SingleByte|AVR.Build.0 = SingleByte|AVR
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.Transparent|AVR.ActiveCfg = Transparent|AVR
+		{F109023D-8BA5-4145-9697-61E7DDD780DD}.Transparent|AVR.Build.0 = Transparent|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
